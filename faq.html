@@ -1,0 +1,1812 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>FAQs – Sheria360 | Frequently Asked Questions</title>
+    <meta
+      name="description"
+      content="Find answers to frequently asked questions about Sheria360's AI-powered legal practice management platform, pricing, integrations, and support."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+
+    <style>
+      /* ── Utility overrides ── */
+      .text-dark {
+        color: #0b1a33;
+      }
+      .text-secondary {
+        color: #4a5568;
+      }
+      .bg-soft-blue {
+        background: #f0f7ff;
+      }
+      .gap-10 {
+        gap: 0.625rem;
+      }
+      .gap-16 {
+        gap: 1rem;
+      }
+
+      /* ── Header nav fix ── */
+      .header-bottom__main-menu nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li {
+        position: relative;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li > a {
+        padding: 35px 8px;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 12px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        z-index: 999;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .header-bottom__main-menu nav ul.submenu li {
+        display: block;
+      }
+      .header-bottom__main-menu nav ul.submenu li a {
+        padding: 8px 18px;
+        display: block;
+        font-size: 13px;
+      }
+      .header-bottom__main-menu nav ul.submenu li a:hover {
+        background: #f5f5f5;
+      }
+      .header__action-btn .tp-btn-border {
+        min-width: 80px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 36px !important;
+        border-radius: 6px;
+        margin-right: 10px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        min-width: 110px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 38px !important;
+        border-radius: 6px;
+      }
+      @media (max-width: 767.98px) {
+        .header__action-btn .tp-btn-border,
+        .header__action-btn .tp-btn-blue-sm {
+          display: none !important;
+        }
+      }
+
+      /* ── Enhanced Hero ── */
+      .hero-faq {
+        position: relative;
+        background: linear-gradient(165deg, #f8faff 0%, #e8f0fe 100%);
+        overflow: hidden;
+        padding: 80px 0 70px;
+      }
+      .hero-faq::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.07) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .hero-faq::after {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        left: -5%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .hero-faq .hero-grid {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-faq .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(37, 99, 235, 0.1);
+        color: #2563eb;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 6px 16px 6px 12px;
+        border-radius: 50px;
+        border: 1px solid rgba(37, 99, 235, 0.15);
+        margin-bottom: 20px;
+      }
+      .hero-faq .hero-badge .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #2563eb;
+        border-radius: 50%;
+      }
+      .hero-faq h1 {
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #0b1a33;
+      }
+      .hero-faq h1 .highlight {
+        background: linear-gradient(135deg, #2563eb, #4f46e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-faq .hero-lead {
+        font-size: 1.15rem;
+        color: #4b5563;
+        max-width: 540px;
+        line-height: 1.7;
+      }
+      .hero-faq .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 3rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(37, 99, 235, 0.1);
+      }
+      .hero-faq .hero-stats .stat-item .number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0b1a33;
+        letter-spacing: -0.02em;
+      }
+      .hero-faq .hero-stats .stat-item .label {
+        font-size: 0.85rem;
+        color: #6b7280;
+        margin-left: 4px;
+      }
+      .hero-faq .hero-visual {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-faq .hero-visual .card-stack {
+        position: relative;
+        padding: 20px;
+      }
+      .hero-faq .hero-visual .card-stack .floating-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 20px 24px;
+        box-shadow:
+          0 20px 60px -12px rgba(37, 99, 235, 0.15),
+          0 8px 24px -8px rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(4px);
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .hero-faq .hero-visual .card-stack .floating-card .icon-wrap {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: #eff6ff;
+        border-radius: 12px;
+        color: #2563eb;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+      .hero-faq .hero-visual .card-stack .floating-card h6 {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #0b1a33;
+        margin-bottom: 4px;
+      }
+      .hero-faq .hero-visual .card-stack .floating-card p {
+        font-size: 0.85rem;
+        color: #6b7280;
+        margin-bottom: 0;
+      }
+      .hero-faq .hero-visual .card-stack .badge-float {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        background: #fff;
+        border-radius: 50px;
+        padding: 6px 16px 6px 14px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #2563eb;
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+        border: 1px solid rgba(37, 99, 235, 0.08);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .hero-faq .hero-visual .card-stack .badge-float i {
+        font-size: 0.7rem;
+      }
+
+      /* ── Category filters ── */
+      .tp-faq-category {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: #4b5563;
+        background: #f3f6fa;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        user-select: none;
+        white-space: nowrap;
+      }
+      .tp-faq-category:hover {
+        background: #e5edf8;
+        color: #1f2937;
+      }
+      .tp-faq-category.active {
+        background: #2563eb;
+        color: #fff;
+        border-color: #2563eb;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+      }
+      .tp-faq-category.active:hover {
+        background: #1d4ed8;
+      }
+
+      /* ── Accordion ── */
+      .tp-faq-accordion .accordion-item {
+        border: none;
+        border-radius: 12px !important;
+        margin-bottom: 10px;
+        background: #fafcff;
+        border: 1px solid #eef2f8;
+        overflow: hidden;
+        transition: border-color 0.2s;
+      }
+      .tp-faq-accordion .accordion-item:hover {
+        border-color: #dbe3ef;
+      }
+      .tp-faq-accordion .accordion-header .accordion-button {
+        padding: 18px 24px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #0b1a33;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        gap: 12px;
+      }
+      .tp-faq-accordion .accordion-header .accordion-button:not(.collapsed) {
+        color: #2563eb;
+        background: transparent;
+      }
+      .tp-faq-accordion .accordion-header .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234b5563' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        background-size: 14px;
+        width: 14px;
+        height: 14px;
+        transition: transform 0.25s;
+        flex-shrink: 0;
+      }
+      .tp-faq-accordion
+        .accordion-header
+        .accordion-button:not(.collapsed)::after {
+        transform: rotate(180deg);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232563eb' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+      }
+      .tp-faq-accordion .accordion-body {
+        padding: 0 24px 22px 24px;
+        font-size: 0.925rem;
+        color: #4b5563;
+        line-height: 1.7;
+      }
+      .tp-faq-accordion .accordion-body strong {
+        color: #0b1a33;
+      }
+
+      /* ── Section titles ── */
+      .section-label-sm {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #2563eb;
+      }
+      .section-title-lg {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 700;
+        color: #0b1a33;
+        letter-spacing: -0.02em;
+      }
+
+      /* ── Help Cards ── */
+      .tp-help-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 32px 28px 30px;
+        border: 1px solid #eef2f8;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        text-align: center;
+      }
+      .tp-help-card:hover {
+        border-color: #dbe3ef;
+        box-shadow: 0 12px 40px -12px rgba(37, 99, 235, 0.08);
+      }
+      .tp-help-card .tp-help-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        background: #eff6ff;
+        border-radius: 16px;
+        color: #2563eb;
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+      }
+      .tp-help-card h5 {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: #0b1a33;
+        margin-bottom: 8px;
+      }
+      .tp-help-card p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+      .tp-help-card a {
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: #2563eb;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s;
+      }
+      .tp-help-card a i {
+        font-size: 0.7rem;
+        transition: transform 0.2s;
+      }
+      .tp-help-card a:hover i {
+        transform: translateX(4px);
+      }
+
+      /* ── CTA ── */
+      .cta-gradient {
+        background: linear-gradient(135deg, #0b1a33 0%, #1a2a4a 100%);
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        padding: 56px 40px;
+      }
+      .cta-gradient .glow {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .cta-gradient .glow.g1 {
+        top: -80px;
+        right: -60px;
+        width: 260px;
+        height: 260px;
+        background: rgba(37, 99, 235, 0.1);
+      }
+      .cta-gradient .glow.g2 {
+        bottom: -60px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+        background: rgba(37, 99, 235, 0.07);
+      }
+      .cta-gradient .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+      .cta-gradient .cta-content h3 {
+        font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.02em;
+      }
+      .cta-gradient .cta-content p {
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 480px;
+        margin: 0 auto 28px;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 991.98px) {
+        .hero-faq .hero-visual .card-stack .floating-card {
+          max-width: 100%;
+        }
+        .hero-faq .hero-visual .card-stack .badge-float {
+          top: -8px;
+          right: 4px;
+        }
+        .cta-gradient {
+          padding: 40px 24px;
+          border-radius: 20px;
+        }
+      }
+      @media (max-width: 575.98px) {
+        .hero-faq {
+          padding: 50px 0 40px;
+        }
+        .hero-faq .hero-stats {
+          gap: 1.2rem 2rem;
+        }
+        .hero-faq .hero-stats .stat-item .number {
+          font-size: 1.2rem;
+        }
+        .tp-help-card {
+          padding: 24px 18px 22px;
+        }
+        .tp-faq-accordion .accordion-header .accordion-button {
+          padding: 14px 18px;
+          font-size: 0.88rem;
+        }
+        .tp-faq-accordion .accordion-body {
+          padding: 0 18px 18px 18px;
+          font-size: 0.875rem;
+        }
+        .tp-faq-category {
+          padding: 0.35rem 1rem;
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- preloader end  -->
+
+    <!-- back-to-top-start  -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+    </button>
+    <!-- back-to-top-end  -->
+
+    <header class="tp-header-height">
+      <!-- tp-header-area-start -->
+      <div
+        id="header-sticky"
+        class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
+              <div class="header-bottom__logo">
+                <a href="index.html">
+                  <img
+                    src="assets/img/logo/logo-black.png"
+                    alt="Sheria360 Logo"
+                    style="max-height: 35px"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
+              <div class="header-bottom__main-menu header-bottom__main-menu-3">
+                <nav id="mobile-menu">
+                  <ul class="d-flex">
+                    <li class="me-20"><a href="index.html">Home</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="about-sheria.html">About Sheria </a>
+                    </li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Solutions <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
+                        <li><a href="inhouse.html">In-House Legal</a></li>
+                        <li><a href="law-firms.html">Law Firms</a></li>
+                        <li><a href="procurement.html">Procurement</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20"><a href="price.html">Pricing</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Resources <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li>
+                          <a href="https://docs.sheria360.com/" target="_blank"
+                            >Documentation</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!--<li class="has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Company <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="about-company.html">About</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                      </ul>
+                    </li> -->
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
+              <div
+                class="header-bottom__right d-flex align-items-center justify-content-end"
+              >
+                <div
+                  class="header__action-btn d-flex align-items-center gap-10"
+                >
+                  <a
+                    class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
+                    href="sign-in.html"
+                  >
+                    <span>Log In</span>
+                    <b></b>
+                  </a>
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="register.html"
+                  >
+                    <span>Try It Free</span>
+                    <b></b>
+                  </a>
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                    ><i class="fal fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tp-header-area-end -->
+    </header>
+
+    <!-- Mobile offcanvas -->
+    <div class="tpoffcanvas-area">
+      <div class="tpoffcanvas">
+        <div class="tpoffcanvas__close-btn">
+          <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="tpoffcanvas__logo text-center">
+          <a href="index.html">
+            <img src="assets/img/logo/logo-white.png" alt="Sheria360" />
+          </a>
+        </div>
+        <div class="mobile-menu"></div>
+      </div>
+    </div>
+    <div class="body-overlay"></div>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="fix">
+          <!-- ========================================= -->
+          <!--  HERO  –  enhanced visual, no animation   -->
+          <!-- ========================================= -->
+          <section class="hero-faq">
+            <div class="container">
+              <div class="row align-items-center hero-grid g-4">
+                <div class="col-lg-6">
+                  <h1>
+                    Frequently Asked<br />
+                    <span class="highlight">Questions</span>
+                  </h1>
+                  <p class="hero-lead">
+                    Everything you need to know about Sheria360. Can't find what
+                    you're looking for? Our support team is here to help.
+                  </p>
+                  <div class="hero-stats">
+                    <div class="stat-item">
+                      <span class="number">14+</span>
+                      <span class="label">categories</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="number">50+</span>
+                      <span class="label">articles</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="number">24/7</span>
+                      <span class="label">support</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 hero-visual">
+                  <div class="card-stack">
+                    <div class="floating-card">
+                      <div class="icon-wrap">
+                        <i class="fas fa-robot"></i>
+                      </div>
+                      <h6>AI-Powered Answers</h6>
+                      <p>
+                        Instant, accurate responses to your legal workflow
+                        questions.
+                      </p>
+                    </div>
+                    <div class="badge-float">
+                      <i class="fas fa-check-circle"></i> 98% satisfaction
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================= -->
+          <!--  CATEGORY FILTERS                         -->
+          <!-- ========================================= -->
+          <section class="py-4">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                  <div class="d-flex flex-wrap justify-content-center gap-10">
+                    <span class="tp-faq-category active" data-filter="all"
+                      >All Questions</span
+                    >
+                    <span class="tp-faq-category" data-filter="general"
+                      >General</span
+                    >
+                    <span class="tp-faq-category" data-filter="pricing"
+                      >Pricing &amp; Plans</span
+                    >
+                    <span class="tp-faq-category" data-filter="features"
+                      >Features</span
+                    >
+                    <span class="tp-faq-category" data-filter="security"
+                      >Security</span
+                    >
+                    <span class="tp-faq-category" data-filter="integration"
+                      >Integration</span
+                    >
+                    <span class="tp-faq-category" data-filter="support"
+                      >Support</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================= -->
+          <!--  FAQ ACCORDION                           -->
+          <!-- ========================================= -->
+          <section class="pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- General -->
+                  <div class="mb-4" data-category="general">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-info-circle"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        General
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqGeneral">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#gen1"
+                            aria-expanded="true"
+                          >
+                            What is Sheria360?
+                          </button>
+                        </h2>
+                        <div
+                          id="gen1"
+                          class="accordion-collapse collapse show"
+                          data-bs-parent="#faqGeneral"
+                        >
+                          <div class="accordion-body">
+                            Sheria360 is an AI-powered legal practice management
+                            platform designed for law firms, in-house legal
+                            teams, and legal professionals. It combines case
+                            management, contract lifecycle management, legal
+                            research, and document automation into one
+                            integrated system accessible via web, mobile, and MS
+                            Office add-ins.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#gen2"
+                          >
+                            Who can use Sheria360?
+                          </button>
+                        </h2>
+                        <div
+                          id="gen2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqGeneral"
+                        >
+                          <div class="accordion-body">
+                            Sheria360 is built for a wide range of legal
+                            professionals including solo practitioners, small to
+                            large law firms, corporate in-house legal
+                            departments, government legal agencies, procurement
+                            teams, and financial institutions. Our platform
+                            scales to meet the needs of any legal operation.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#gen3"
+                          >
+                            Is Sheria360 available on mobile?
+                          </button>
+                        </h2>
+                        <div
+                          id="gen3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqGeneral"
+                        >
+                          <div class="accordion-body">
+                            Yes. Sheria360 is accessible everywhere — via native
+                            mobile apps for iOS and Android, web portals, and MS
+                            Word &amp; Outlook add-ins. You can manage cases,
+                            review contracts, and access your legal dashboard
+                            from anywhere, on any device.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#gen4"
+                          >
+                            How does AI enhance the platform?
+                          </button>
+                        </h2>
+                        <div
+                          id="gen4"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqGeneral"
+                        >
+                          <div class="accordion-body">
+                            Sheria360's AI capabilities include automated
+                            contract analysis and risk identification,
+                            intelligent legal research with natural language
+                            processing, smart document drafting suggestions,
+                            predictive case outcome analysis, and automated
+                            compliance checking. These features reduce manual
+                            workload and improve accuracy.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pricing -->
+                  <div class="mb-4" data-category="pricing">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-tag"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        Pricing &amp; Plans
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqPricing">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#price1"
+                          >
+                            Does Sheria360 offer a free trial?
+                          </button>
+                        </h2>
+                        <div
+                          id="price1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqPricing"
+                        >
+                          <div class="accordion-body">
+                            Yes! Sheria360 offers a 14-day free trial with full
+                            access to all features. No credit card required.
+                            This gives you time to explore the platform, test
+                            integrations, and see how it fits your legal
+                            workflow before committing to a paid plan.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#price2"
+                          >
+                            What pricing plans are available?
+                          </button>
+                        </h2>
+                        <div
+                          id="price2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqPricing"
+                        >
+                          <div class="accordion-body">
+                            We offer three main tiers: Starter for solo
+                            practitioners and small firms, Professional for
+                            growing practices that need advanced features, and
+                            Enterprise for large organizations requiring custom
+                            configurations, dedicated support, and on-premise
+                            deployment options. Visit our pricing page for
+                            detailed comparisons.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#price3"
+                          >
+                            Can I change plans later?
+                          </button>
+                        </h2>
+                        <div
+                          id="price3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqPricing"
+                        >
+                          <div class="accordion-body">
+                            Absolutely. You can upgrade or downgrade your plan
+                            at any time. When upgrading, the new features are
+                            available immediately and billing is prorated. When
+                            downgrading, the change takes effect at the start of
+                            your next billing cycle.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#price4"
+                          >
+                            Are there discounts for annual billing?
+                          </button>
+                        </h2>
+                        <div
+                          id="price4"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqPricing"
+                        >
+                          <div class="accordion-body">
+                            Yes. Annual billing offers a 20% discount compared
+                            to monthly billing. We also offer special pricing
+                            for non-profits, academic institutions, and
+                            government agencies. Contact our sales team for more
+                            details.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Features -->
+                  <div class="mb-4" data-category="features">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-cogs"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        Features
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqFeatures">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#feat1"
+                          >
+                            What document formats does Sheria360 support?
+                          </button>
+                        </h2>
+                        <div
+                          id="feat1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqFeatures"
+                        >
+                          <div class="accordion-body">
+                            Sheria360 supports all major document formats
+                            including DOCX, PDF, TXT, RTF, and HTML. Our AI
+                            engine can analyze and extract information from
+                            scanned documents using OCR technology. You can also
+                            import documents directly from email attachments and
+                            cloud storage.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#feat2"
+                          >
+                            Can I customize workflows for my firm?
+                          </button>
+                        </h2>
+                        <div
+                          id="feat2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqFeatures"
+                        >
+                          <div class="accordion-body">
+                            Yes. Sheria360 offers fully customizable workflows,
+                            templates, and approval chains. You can create
+                            matter types specific to your practice areas, define
+                            custom fields, automate routine tasks, and configure
+                            notification rules to match your firm's unique
+                            processes.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#feat3"
+                          >
+                            Does Sheria360 support multi-language documents?
+                          </button>
+                        </h2>
+                        <div
+                          id="feat3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqFeatures"
+                        >
+                          <div class="accordion-body">
+                            Yes. Sheria360 supports document management and AI
+                            analysis across multiple languages, making it ideal
+                            for international law firms and cross-border legal
+                            operations. Our AI can translate, summarize, and
+                            extract key clauses from documents in various
+                            languages.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Security -->
+                  <div class="mb-4" data-category="security">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-shield-alt"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        Security &amp; Compliance
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqSecurity">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sec1"
+                          >
+                            Is my data secure on Sheria360?
+                          </button>
+                        </h2>
+                        <div
+                          id="sec1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSecurity"
+                        >
+                          <div class="accordion-body">
+                            Security is our top priority. Sheria360 is SOC 2
+                            Type II compliant, uses AES-256 encryption for data
+                            at rest and TLS 1.3 for data in transit, and
+                            maintains strict access controls. We undergo regular
+                            third-party security audits and penetration testing.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sec2"
+                          >
+                            Where is my data stored?
+                          </button>
+                        </h2>
+                        <div
+                          id="sec2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSecurity"
+                        >
+                          <div class="accordion-body">
+                            Data is stored in redundant, geographically
+                            distributed data centers with 99.99% uptime SLA.
+                            Enterprise customers can choose their preferred data
+                            residency region. We comply with GDPR, CCPA, and
+                            other data protection regulations.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sec3"
+                          >
+                            Can I export my data?
+                          </button>
+                        </h2>
+                        <div
+                          id="sec3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSecurity"
+                        >
+                          <div class="accordion-body">
+                            Yes. You own your data and can export it at any time
+                            in standard formats. We provide full data
+                            portability including documents, matter data,
+                            contact information, and audit logs. There are no
+                            lock-in contracts or hidden export fees.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Integration -->
+                  <div class="mb-4" data-category="integration">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-plug"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        Integration
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqIntegration">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#int1"
+                          >
+                            What integrations does Sheria360 support?
+                          </button>
+                        </h2>
+                        <div
+                          id="int1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqIntegration"
+                        >
+                          <div class="accordion-body">
+                            Sheria360 integrates with popular tools including
+                            Microsoft 365, Google Workspace, DocuSign,
+                            Salesforce, QuickBooks, Slack, and more. We also
+                            offer a REST API and webhook system for custom
+                            integrations with your existing legal tech stack.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#int2"
+                          >
+                            Can I connect Sheria360 to my existing tools?
+                          </button>
+                        </h2>
+                        <div
+                          id="int2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqIntegration"
+                        >
+                          <div class="accordion-body">
+                            Absolutely. Our open API and pre-built connectors
+                            make it easy to integrate Sheria360 with your
+                            existing systems. Our implementation team can help
+                            map your current workflows and ensure a smooth
+                            transition with minimal disruption.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Support -->
+                  <div class="mb-4" data-category="support">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <i
+                        class="fas fa-headset"
+                        style="color: #2563eb; font-size: 1.2rem"
+                      ></i>
+                      <h4
+                        class="mb-0"
+                        style="
+                          font-size: 1.1rem;
+                          font-weight: 700;
+                          color: #0b1a33;
+                        "
+                      >
+                        Support
+                      </h4>
+                    </div>
+                    <div class="tp-faq-accordion accordion" id="faqSupport">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sup1"
+                          >
+                            What support options are available?
+                          </button>
+                        </h2>
+                        <div
+                          id="sup1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSupport"
+                        >
+                          <div class="accordion-body">
+                            We offer email support for all plans, live chat for
+                            Professional and Enterprise plans, and dedicated
+                            phone support for Enterprise customers. Our
+                            knowledge base, video tutorials, and community forum
+                            are available 24/7 for self-service assistance.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sup2"
+                          >
+                            Do you offer training for new users?
+                          </button>
+                        </h2>
+                        <div
+                          id="sup2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSupport"
+                        >
+                          <div class="accordion-body">
+                            Yes. We provide comprehensive onboarding including
+                            live training sessions, recorded video walkthroughs,
+                            interactive tutorials, and a dedicated onboarding
+                            specialist for Enterprise plans. Our training covers
+                            all core features and best practices for your
+                            specific use case.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sup3"
+                          >
+                            What are your support hours?
+                          </button>
+                        </h2>
+                        <div
+                          id="sup3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#faqSupport"
+                        >
+                          <div class="accordion-body">
+                            Our standard support team is available Monday
+                            through Friday, 8 AM to 8 PM EAT. Enterprise
+                            customers receive 24/7 support with a guaranteed
+                            1-hour response time for critical issues. Our
+                            AI-powered help assistant is always available for
+                            instant answers.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================= -->
+          <!--  STILL HAVE QUESTIONS  –  help cards      -->
+          <!-- ========================================= -->
+          <section class="pb-4">
+            <div class="container">
+              <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                  <span class="section-label-sm">Get in touch</span>
+                  <h3 class="section-title-lg mt-1">Still Have Questions?</h3>
+                  <p
+                    style="
+                      color: #6b7280;
+                      font-size: 1.05rem;
+                      line-height: 1.7;
+                      max-width: 480px;
+                      margin: 0 auto;
+                    "
+                  >
+                    Our team is here to help. Reach out through any of these
+                    channels.
+                  </p>
+                </div>
+              </div>
+              <div class="row g-4">
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-help-card">
+                    <div class="tp-help-icon">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                    <h5>Live Chat</h5>
+                    <p>
+                      Chat with our support team in real-time for instant
+                      answers to your questions.
+                    </p>
+                    <a href="#"
+                      >Start Chat <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-help-card">
+                    <div class="tp-help-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <h5>Email Support</h5>
+                    <p>
+                      Send us a detailed message and we'll get back to you
+                      within 24 hours.
+                    </p>
+                    <a href="mailto:support@sheria360.com"
+                      >support@sheria360.com <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-help-card">
+                    <div class="tp-help-icon"><i class="fas fa-book"></i></div>
+                    <h5>Knowledge Base</h5>
+                    <p>
+                      Browse our extensive library of articles, guides, and
+                      video tutorials.
+                    </p>
+                    <a href="https://docs.sheria360.com/" target="_blank"
+                      >Browse Docs <i class="fas fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================= -->
+          <!--  CTA  –  clean, no animation              -->
+          <!-- ========================================= -->
+          <section class="pb-5">
+            <div class="container">
+              <div class="cta-gradient">
+                <div class="glow g1"></div>
+                <div class="glow g2"></div>
+                <div class="cta-content text-center">
+                  <h3>Ready to Get Started?</h3>
+                  <p>
+                    Start your 14-day free trial today. No credit card required.
+                  </p>
+                  <div
+                    class="d-flex flex-wrap align-items-center justify-content-center gap-2"
+                  >
+                    <a
+                      class="tp-btn-blue-lg tp-btn-hover alt-color-black"
+                      href="register.html"
+                    >
+                      <span>Start Free Trial</span><b></b>
+                    </a>
+                    <a
+                      class="tp-btn-border tp-btn-hover"
+                      href="contact.html"
+                      style="
+                        color: #fff;
+                        border-color: rgba(255, 255, 255, 0.25);
+                      "
+                    >
+                      <span>Contact Sales</span><b></b>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- ========================================= -->
+        <!--  FOOTER                                   -->
+        <!-- ========================================= -->
+        <footer>
+          <div class="tp-footer-slide pb-80">
+            <div class="container-fluid g-0">
+              <div class="row g-0 justify-content-center">
+                <div class="footer-slide-active">
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>Free trial</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i
+                      ><span>Lightning-fast onboarding.</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>All-in-one CRM</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i
+                      ><span>Cards for your whole team.</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>Free trial</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>Free migrations</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i
+                      ><span>Incredible support</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tp-footer__pl-pr">
+            <div class="tp-footer__area tp-footer__tp-border-bottom">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".3s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-1"
+                    >
+                      <div class="tp-footer__logo mb-25">
+                        <a href="index.html">
+                          <img
+                            src="assets/img/logo/logo-black.png"
+                            alt="Sheria360"
+                          />
+                        </a>
+                      </div>
+                      <div class="tp-footer__contact-info">
+                        <p>
+                          Sheria360 is a modern law practice software system
+                          that allows legal professionals to organize case
+                          files, track deadlines, draft documents, manage
+                          hearings, and manage day-to-day tasks.
+                        </p>
+                        <ul>
+                          <li>
+                            <span>
+                              <svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.3"
+                                  d="M7.08443 4.76996L7.84597 6.13453C8.53323 7.36598 8.25734 8.98143 7.17492 10.0639C7.17492 10.0639 7.17492 10.0639 7.17492 10.0639C7.1748 10.064 5.86209 11.3769 8.24247 13.7573C10.6222 16.137 11.9351 14.8257 11.9359 14.8249C11.936 14.8248 11.9359 14.8248 11.936 14.8248C13.0184 13.7424 14.6338 13.4666 15.8653 14.1538L17.2298 14.9153C19.0893 15.9531 19.3089 18.5609 17.6745 20.1953C16.6923 21.1775 15.4892 21.9417 14.1592 21.9921C11.9202 22.077 8.11782 21.5103 4.30364 17.6961C0.489452 13.882 -0.0771917 10.0796 0.00768762 7.84062C0.0581084 6.5106 0.822313 5.30745 1.80444 4.32532C3.43891 2.69085 6.04667 2.91046 7.08443 4.76996Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M11.1301 4.78659C11.2636 4.31926 11.7507 4.04866 12.2181 4.18218L11.9763 5.02836C12.2181 4.18218 12.2181 4.18218 12.2181 4.18218L12.2198 4.18266L12.2216 4.18318L12.2255 4.18433L12.2346 4.18704L12.2578 4.19427C12.2755 4.19993 12.2976 4.2073 12.3239 4.21665C12.3766 4.23535 12.4463 4.26194 12.5317 4.29856C12.7026 4.37182 12.9362 4.48496 13.2231 4.65476C13.7975 4.99467 14.5815 5.55928 15.5026 6.48035C16.4236 7.40143 16.9883 8.18547 17.3282 8.7598C17.498 9.04671 17.6111 9.28029 17.6844 9.45123C17.721 9.53666 17.7476 9.60631 17.7663 9.65901C17.7756 9.68535 17.783 9.70745 17.7887 9.72514L17.7959 9.74836L17.7986 9.75745L17.7997 9.76137L17.8003 9.76316C17.8003 9.76316 17.8007 9.76485 16.9546 10.0066L17.8007 9.76485C17.9343 10.2322 17.6637 10.7193 17.1963 10.8528C16.733 10.9852 16.2502 10.7203 16.1119 10.2602L16.1075 10.2476C16.1013 10.23 16.0883 10.1953 16.0666 10.1446C16.0232 10.0433 15.9445 9.87754 15.8135 9.65625C15.5519 9.21418 15.0793 8.54623 14.258 7.72492C13.4367 6.9036 12.7687 6.43107 12.3267 6.16944C12.1054 6.03847 11.9397 5.95974 11.8384 5.91633C11.7877 5.8946 11.753 5.88165 11.7353 5.8754L11.7227 5.87106C11.2626 5.73274 10.9977 5.24996 11.1301 4.78659Z"
+                                  fill="#01103D"
+                                />
+                              </svg>
+                            </span>
+                            <a class="first-child" href="tel:+25472179429"
+                              >+254-72-179-429</a
+                            >
+                          </li>
+                          <li>
+                            <span>
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.3"
+                                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 11.5997 0.375616 13.1116 1.04346 14.4525C1.22094 14.8088 1.28001 15.2161 1.17712 15.6006L0.581511 17.8267C0.322954 18.793 1.20701 19.677 2.17335 19.4185L4.39939 18.8229C4.78393 18.72 5.19121 18.7791 5.54753 18.9565C6.88836 19.6244 8.40032 20 10 20Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  d="M5.825 10.85C5.36937 10.85 5 11.2194 5 11.675C5 12.1306 5.36937 12.5 5.825 12.5H11.875C12.3306 12.5 12.7 12.1306 12.7 11.675C12.7 11.2194 12.3306 10.85 11.875 10.85H5.825Z"
+                                  fill="#1C274C"
+                                />
+                                <path
+                                  d="M5.825 7C5.36937 7 5 7.36937 5 7.825C5 8.28063 5.36937 8.65 5.825 8.65H14.625C15.0806 8.65 15.45 8.28063 15.45 7.825C15.45 7.36937 15.0806 7 14.625 7H5.825Z"
+                                  fill="#1C274C"
+                                />
+                              </svg>
+                            </span>
+                            <a href="mailto:info@sheria360.com"
+                              >info@sheria360.com</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".5s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-2"
+                    >
+                      <h4 class="tp-footer__widget-title">Quick Links</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about-sheria.html">About</a></li>
+                          <li><a href="price.html">Pricing</a></li>
+                          <li><a href="solutions.html">Solutions</a></li>
+                          <li><a href="blog.html">Blog</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".7s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-3"
+                    >
+                      <h4 class="tp-footer__widget-title">Other Pages</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="faq.html">FAQs</a></li>
+                          <li><a href="marketplace.html">Marketplace</a></li>
+                          <li><a href="sign-in.html">Login</a></li>
+                          <li><a href="register.html">Register</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".9s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-4"
+                    >
+                      <h4 class="tp-footer__widget-title">Our Newsletter</h4>
+                      <div class="tp-footer__input mb-35 p-relative">
+                        <form action="#">
+                          <input
+                            type="email"
+                            placeholder="Business email address"
+                          />
+                          <span>
+                            <svg
+                              width="18"
+                              height="16"
+                              viewBox="0 0 18 16"
+                              fill="none"
+                            >
+                              <path
+                                d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                opacity="0.4"
+                                d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          <button>
+                            <svg
+                              width="14"
+                              height="16"
+                              viewBox="0 0 14 14"
+                              fill="none"
+                            >
+                              <path
+                                d="M1.00098 7H13.001"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                              <path
+                                d="M7.00098 1L13.001 7L7.00098 13"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
+                      <div class="tp-footer__social-3">
+                        <h4>Social media</h4>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tp-copyright__area pt-25 pb-40">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div
+                      class="tp-copyright__text tp-copyright__text-3 text-center"
+                    >
+                      <span
+                        >Copyright © 2026 Sheria360. All Rights Reserved.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- FAQ Category Filter -->
+    <script>
+      document.querySelectorAll(".tp-faq-category").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".tp-faq-category").forEach(function (b) {
+            b.classList.remove("active");
+          });
+          this.classList.add("active");
+          var filter = this.getAttribute("data-filter");
+          document
+            .querySelectorAll("[data-category]")
+            .forEach(function (section) {
+              if (
+                filter === "all" ||
+                section.getAttribute("data-category") === filter
+              ) {
+                section.style.display = "block";
+              } else {
+                section.style.display = "none";
+              }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

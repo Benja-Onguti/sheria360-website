@@ -1,0 +1,1339 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      Finance Solutions | Sheria360 - AI-Powered Legal Practice Management
+    </title>
+    <meta
+      name="description"
+      content="Sheria360 helps finance teams control legal spend, automate invoice processing, allocate costs to budgets, and gain visibility into legal operations."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png?v=2"
+    />
+
+    <style>
+      /*  Header Menu Tight Spacing  */
+      .header-bottom__main-menu nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li {
+        position: relative;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li > a {
+        padding: 35px 8px;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 12px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        z-index: 999;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .header-bottom__main-menu nav ul.submenu li {
+        display: block;
+      }
+      .header-bottom__main-menu nav ul.submenu li a {
+        padding: 8px 18px;
+        display: block;
+        font-size: 13px;
+      }
+      .header-bottom__main-menu nav ul.submenu li a:hover {
+        background: #f5f5f5;
+      }
+      .header__action-btn .tp-btn-border {
+        min-width: 80px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 36px !important;
+        border-radius: 6px;
+        margin-right: 10px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        min-width: 110px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 38px !important;
+        border-radius: 6px;
+      }
+
+      /* NEW HERO DESIGN: Financial Analytics Dashboard  */
+      .hero-finance {
+        position: relative;
+        background: linear-gradient(
+          135deg,
+          #f8faff 0%,
+          #ffffff 60%,
+          #f0f4ff 100%
+        );
+        padding: 130px 0 100px;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      .hero-finance::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(37, 99, 235, 0.04) 0%,
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(37, 99, 235, 0.06) 0%,
+            transparent 40%
+          );
+        pointer-events: none;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        animation: fadeInLeft 0.8s ease-out;
+      }
+      .hero-badge {
+        display: inline-block;
+        background: #2563eb;
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 30px;
+        margin-bottom: 24px;
+        letter-spacing: 0.02em;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      }
+      .hero-content h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #0f172a;
+        margin-bottom: 20px;
+      }
+      .hero-content h1 span {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-description {
+        font-size: 1.15rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        max-width: 500px;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      .hero-cta .btn {
+        padding: 12px 28px;
+        font-weight: 600;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .hero-cta .btn-primary {
+        background: #2563eb;
+        border: 2px solid #2563eb;
+        color: #fff;
+      }
+      .hero-cta .btn-primary:hover {
+        background: #1d4ed8;
+        border-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+      }
+      .hero-cta .btn-outline-primary {
+        background: transparent;
+        border: 2px solid #2563eb;
+        color: #2563eb;
+      }
+      .hero-cta .btn-outline-primary:hover {
+        background: #2563eb;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+      }
+      .hero-trust {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+      .hero-trust .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .hero-trust .trust-item i {
+        color: #10b981;
+        font-size: 1rem;
+      }
+
+      /* Right side dashboard graphic */
+      .hero-visual {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeInRight 0.8s ease-out;
+      }
+      .dashboard-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow:
+          0 30px 60px rgba(0, 0, 0, 0.08),
+          0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        max-width: 450px;
+        width: 100%;
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .dashboard-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .dashboard-header h6 {
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+      .dashboard-header .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10b981;
+        display: inline-block;
+        margin-left: 8px;
+      }
+      .chart-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .bar-chart {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        height: 120px;
+      }
+      .bar {
+        flex: 1;
+        background: #e0e7ff;
+        border-radius: 6px 6px 0 0;
+        position: relative;
+        transition: background 0.3s;
+        min-width: 20px;
+      }
+      .bar.active {
+        background: #2563eb;
+      }
+      .bar:hover {
+        background: #1d4ed8;
+      }
+      .pie-chart {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: conic-gradient(#2563eb 0deg 216deg, #e0e7ff 216deg 360deg);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pie-chart::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border-radius: 50%;
+      }
+      .pie-label {
+        position: absolute;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #1e293b;
+        z-index: 1;
+      }
+      .stats-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #f1f5f9;
+      }
+      .stat-box {
+        text-align: center;
+      }
+      .stat-value {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #0f172a;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.7rem;
+        color: #64748b;
+        margin-top: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .floating-badge {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 12px;
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        z-index: 3;
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /*  GENERAL ENHANCEMENTS  */
+      .section-subtitle {
+        color: #2563eb;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-weight: 700;
+        color: #0f172a;
+      }
+      .hover-shadow {
+        transition: all 0.3s ease;
+      }
+      .hover-shadow:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        transform: translateY(-5px);
+      }
+      .feature-card {
+        border-radius: 20px;
+        border: 1px solid rgba(79, 95, 255, 0.08);
+        background: #fff;
+        padding: 36px 28px;
+        box-shadow: 0 1px 3px rgba(79, 95, 255, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        will-change: transform;
+        display: flex;
+        flex-direction: column;
+      }
+      .feature-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(79, 95, 255, 0.12), 0 4px 12px rgba(79, 95, 255, 0.08);
+      }
+      .feature-icon {
+        height: 48px;
+        display: flex;
+        align-items: center;
+      }
+      .feature-icon i {
+        font-size: 2.5rem;
+        color: #2563eb;
+      }
+      .feature-card h4 {
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      .feature-card p {
+        flex: 0 0 auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #6b7280;
+        line-height: 1.65;
+      }
+      .feature-card ul {
+        margin-top: auto;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .feature-card ul li {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.9rem;
+        color: #4b5563;
+      }
+      .feature-card ul li i {
+        flex-shrink: 0;
+        width: 16px;
+        text-align: center;
+      }
+      .tp-divider {
+        width: 60px;
+        height: 3px;
+        background: #2563eb;
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      @media (max-width: 991px) {
+        .hero-finance {
+          padding: 100px 0 80px;
+          text-align: center;
+        }
+        .hero-content h1 {
+          font-size: 2.4rem;
+        }
+        .hero-description {
+          max-width: 100%;
+          margin: 0 auto 30px;
+        }
+        .hero-cta {
+          justify-content: center;
+        }
+        .hero-trust {
+          justify-content: center;
+        }
+        .hero-visual {
+          margin-top: 50px;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .header__action-btn .tp-btn-border,
+        .header__action-btn .tp-btn-blue-sm {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/fix.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader"><span></span><span></span></div>
+    </div>
+    <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+    </button>
+
+    <!-- Offcanvas mobile menu -->
+    <div class="tpoffcanvas-area">
+      <div class="tpoffcanvas">
+        <div class="tpoffcanvas__close-btn">
+          <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="tpoffcanvas__logo text-center">
+          <a href="/"
+            ><img src="assets/img/logo/logo-white.png?v=2" alt="Sheria360"
+          /></a>
+        </div>
+        <div class="mobile-menu"></div>
+      </div>
+    </div>
+    <div class="body-overlay"></div>
+
+    <!-- Header -->
+    <header class="tp-header-height">
+      <div
+        id="header-sticky"
+        class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
+              <div class="header-bottom__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo-black.png"
+                    alt="Sheria360 Logo"
+                    style="max-height: 35px"
+                /></a>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
+              <div class="header-bottom__main-menu header-bottom__main-menu-3">
+                <nav id="mobile-menu">
+                  <ul class="d-flex">
+                    <li class="me-20"><a href="index.html">Home</a></li>
+                    <li class="me-20">
+                      <a href="about-sheria.html">About Sheria</a>
+                    </li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Solutions <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
+                        <li><a href="inhouse.html">In-House Legal</a></li>
+                        <li><a href="law-firms.html">Law Firms</a></li>
+                        <li><a href="procurement.html">Procurement</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20"><a href="price.html">Pricing</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Resources <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li>
+                          <a href="https://docs.sheria360.com/" target="_blank"
+                            >Documentation</a
+                          >
+                        </li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Company <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="about-sheria.html">About</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
+              <div
+                class="header-bottom__right d-flex align-items-center justify-content-end"
+              >
+                <div
+                  class="header__action-btn d-flex align-items-center gap-10"
+                >
+                  <a
+                    class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
+                    href="sign-in.html"
+                    ><span>Log In</span><b></b
+                  ></a>
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="register.html"
+                    ><span>Try It Free</span><b></b
+                  ></a>
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                    ><i class="fal fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="fix">
+          <!-- UNIQUE HERO: Financial Analytics Dashboard Graphic -->
+          <section class="hero-finance">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="hero-content">
+                    <span class="hero-badge">#1 Legal Spend Intelligence</span>
+                    <h1>
+                      Turn Legal Costs Into <span>Strategic Insights</span>
+                    </h1>
+                    <p class="hero-description">
+                      Automate invoice processing, track budgets in real time,
+                      and gain CFO-ready analytics all from one intelligent
+                      platform built for finance & legal ops teams.
+                    </p>
+                    <div class="hero-cta">
+                      <a href="/contact" class="btn btn-primary"
+                        >Request Demo</a
+                      >
+                      <a href="/register" class="btn btn-outline-primary"
+                        >Start Free Trial</a
+                      >
+                    </div>
+                    <div class="hero-trust">
+                      <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i> SOC 2 Type II
+                      </div>
+                      <div class="trust-item">
+                        <i class="fas fa-clock"></i> 99.9% Uptime
+                      </div>
+                      <div class="trust-item">
+                        <i class="fas fa-check-circle"></i> 500+ Teams
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hero-visual">
+                    <div class="dashboard-card">
+                      <span class="floating-badge">Live Analytics</span>
+                      <div class="dashboard-header">
+                        <h6>Legal Spend Overview <span class="dot"></span></h6>
+                        <small style="color: #64748b">This Quarter</small>
+                      </div>
+                      <div class="chart-row">
+                        <div class="bar-chart">
+                          <div class="bar active" style="height: 80px"></div>
+                          <div class="bar" style="height: 60px"></div>
+                          <div class="bar active" style="height: 95px"></div>
+                          <div class="bar" style="height: 45px"></div>
+                          <div class="bar active" style="height: 70px"></div>
+                          <div class="bar" style="height: 50px"></div>
+                        </div>
+                        <div class="pie-chart">
+                          <div class="pie-label">60%</div>
+                        </div>
+                      </div>
+                      <div class="stats-row">
+                        <div class="stat-box">
+                          <div class="stat-value">$1.2M</div>
+                          <div class="stat-label">Total Spend</div>
+                        </div>
+                        <div class="stat-box">
+                          <div class="stat-value">$320K</div>
+                          <div class="stat-label">Savings YTD</div>
+                        </div>
+                        <div class="stat-box">
+                          <div class="stat-value">98%</div>
+                          <div class="stat-label">Compliance</div>
+                        </div>
+                        <div class="stat-box">
+                          <div class="stat-value">14</div>
+                          <div class="stat-label">Active Matters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stats Section -->
+          <div
+            class="tp-counter-area tp-counter-space p-relative pb-140 pt-120"
+          >
+            <div class="container">
+              <div class="tp-counter-wrapper p-relative">
+                <div class="row gx-0">
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="tp-counter-wrap d-flex justify-content-center">
+                      <div class="tp-counter-item">
+                        <h4>
+                          <span
+                            data-purecounter-duration="1"
+                            data-purecounter-end="30"
+                            class="purecounter"
+                            >0</span
+                          >%
+                        </h4>
+                        <p>Reduced Invoice Processing</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="tp-counter-wrap d-flex justify-content-center">
+                      <div class="tp-counter-item">
+                        <h4>
+                          <span
+                            data-purecounter-duration="1"
+                            data-purecounter-end="25"
+                            class="purecounter"
+                            >0</span
+                          >%
+                        </h4>
+                        <p>Cost Savings on Legal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="tp-counter-wrap d-flex justify-content-center">
+                      <div class="tp-counter-item">
+                        <h4>
+                          <span
+                            data-purecounter-duration="1"
+                            data-purecounter-end="100"
+                            class="purecounter"
+                            >0</span
+                          >%
+                        </h4>
+                        <p>Audit-Ready Records</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="tp-counter-wrap d-flex justify-content-center">
+                      <div class="tp-counter-item">
+                        <h4>
+                          <span
+                            data-purecounter-duration="1"
+                            data-purecounter-end="50"
+                            class="purecounter"
+                            >0</span
+                          >K
+                        </h4>
+                        <p>Hours Saved Annually</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Grid (unchanged) -->
+          <div class="tp-features-area pt-120 pb-120">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="text-center mb-60">
+                    <span class="section-subtitle"
+                      >FINANCE & LEGAL OPS FEATURES</span
+                    >
+                    <h3 class="section-title mt-10">
+                      Financial Control Meets Legal Intelligence
+                    </h3>
+                    <p class="mt-20 text-muted">
+                      From invoice capture to ERP integration manage every
+                      dollar of legal spend with precision.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Cards same as before -->
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-file-invoice-dollar fa-3x"></i>
+                    </div>
+                    <h4>Invoice Capture & Processing</h4>
+                    <p class="mt-15">
+                      AI-powered invoice parsing extracts line items, matter
+                      codes, and billing guidelines. Auto-route for review and
+                      approval.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> OCR & AI
+                        line-item extraction
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Budget vs
+                        actual checking
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i>
+                        Multi-level approval workflows
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-chart-pie fa-3x"></i>
+                    </div>
+                    <h4>Legal Spend Analytics</h4>
+                    <p class="mt-15">
+                      Drill down into spend by law firm, matter type,
+                      department, or geography. Identify anomalies and savings
+                      opportunities.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Spend
+                        categorization
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Trend
+                        analysis & forecasting
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i> Custom
+                        dashboards
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-wallet fa-3x"></i>
+                    </div>
+                    <h4>Matter Budgeting</h4>
+                    <p class="mt-15">
+                      Set budgets at matter or department level. Get alerts when
+                      spend approaches limits. Forecast total expected cost.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Budget
+                        allocation & tracking
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i>
+                        Forecasting & burn rate alerts
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i> Change
+                        request workflows
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-coins fa-3x"></i>
+                    </div>
+                    <h4>Cost Allocation & Chargebacks</h4>
+                    <p class="mt-15">
+                      Automatically allocate legal costs to business units,
+                      projects, or cost centers. Generate chargeback reports for
+                      accounting.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Automated
+                        cost allocation rules
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i>
+                        Chargeback report generation
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i>
+                        Integration with ERP systems
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-cogs fa-3x"></i>
+                    </div>
+                    <h4>ERP & Accounting Integrations</h4>
+                    <p class="mt-15">
+                      Bidirectional sync with NetSuite, SAP, Oracle, Workday,
+                      and QuickBooks. Post invoices and reconcile automatically.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Chart of
+                        accounts sync
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Automated
+                        journal entries
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i> Vendor
+                        master data consistency
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="feature-card p-40 h-100">
+                    <div class="feature-icon mb-30">
+                      <i class="fas fa-file-alt fa-3x"></i>
+                    </div>
+                    <h4>Compliance & Audit</h4>
+                    <p class="mt-15">
+                      Complete audit trails, so you're always ready for internal
+                      or external audits. Track every change and decision point.
+                    </p>
+                    <ul class="list-unstyled mt-20">
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> Immutable
+                        audit logs
+                      </li>
+                      <li class="mb-2">
+                        <i class="fas fa-check text-primary me-2"></i> SOX
+                        compliance reports
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-primary me-2"></i> Data
+                        retention policies
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Finance Teams Choose Sheria360 (unchanged) -->
+          <div class="tp-service-area pt-60 pb-60 bg-light">
+            <div class="container">
+              <div class="row justify-content-center text-center mb-60">
+                <div class="col-xl-8">
+                  <h2>Why Finance Teams Choose Sheria360</h2>
+                  <div class="tp-divider"></div>
+                  <p class="text-muted">
+                    Bring transparency and control to legal spend one of the
+                    largest and least controllable budget items for growing
+                    organizations.
+                  </p>
+                </div>
+              </div>
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="text-center p-4 border rounded hover-shadow h-100 bg-white"
+                  >
+                    <i class="fas fa-piggy-bank fa-3x text-primary mb-20"></i>
+                    <h5>Real Cost Savings</h5>
+                    <p class="small">
+                      Identify duplicate vendor spend and negotiate better rates
+                      with data-backed insights.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="text-center p-4 border rounded hover-shadow h-100 bg-white"
+                  >
+                    <i class="fas fa-sync-alt fa-3x text-primary mb-20"></i>
+                    <h5>Accelerated Close</h5>
+                    <p class="small">
+                      Legal accruals are calculated automatically, shaving days
+                      off month-end close.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="text-center p-4 border rounded hover-shadow h-100 bg-white"
+                  >
+                    <i
+                      class="fas fa-balance-scale fa-3x text-primary mb-20"
+                    ></i>
+                    <h5>Policy Enforcement</h5>
+                    <p class="small">
+                      Prevent off-contract and unbudgeted spend with automated
+                      policy checks.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div
+                    class="text-center p-4 border rounded hover-shadow h-100 bg-white"
+                  >
+                    <i class="fas fa-chart-bar fa-3x text-primary mb-20"></i>
+                    <h5>CFO-Ready Reporting</h5>
+                    <p class="small">
+                      Board-ready dashboards showing legal spend trends,
+                      forecasts, and risk metrics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section (unchanged) -->
+          <div
+            class="tp-cta-area pt-120 pb-120"
+            style="
+              background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+            "
+          >
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                  <h3 class="mb-30">
+                    Ready to Take Control of
+                    <span style="color: #2563eb">Legal Spend?</span>
+                  </h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      <strong>Free 14-day trial</strong> no credit card required
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      <strong>Import your historical invoices</strong> at no
+                      cost
+                    </li>
+                    <li class="mb-3">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      <strong>24/7 support</strong> from finance integration
+                      experts
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-7">
+                  <div class="bg-white p-5 rounded-4 shadow-sm text-center">
+                    <i
+                      class="fas fa-calendar-check fa-4x text-primary mb-30"
+                    ></i>
+                    <h4>Book a Personalized Demo</h4>
+                    <p class="text-muted">
+                      See how Sheria360 gives finance teams visibility and
+                      control over legal spend.
+                    </p>
+                    <div
+                      class="mt-30 d-flex gap-3 justify-content-center flex-wrap"
+                    >
+                      <a href="/contact" class="btn btn-primary px-4 py-2"
+                        >Request Demo</a
+                      >
+                      <a
+                        href="/register"
+                        class="btn btn-outline-primary px-4 py-2"
+                        >Start Free Trial</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer (unchanged) -->
+        <footer>
+          <div class="tp-footer-slide pb-80">
+            <div class="container-fluid g-0">
+              <div class="row g-0 justify-content-center">
+                <div class="footer-slide-active">
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>Free trial</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i
+                      ><span>Lightning-fast onboarding</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>All-in-one CRM</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i><span>Free migrations</span>
+                    </div>
+                  </div>
+                  <div class="footer-slide-wrapper">
+                    <div class="footer-slide-item">
+                      <i class="fal fa-check"></i
+                      ><span>Incredible support</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tp-footer__pl-pr">
+            <div class="tp-footer__area tp-footer__tp-border-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                    <div class="tp-footer__widget">
+                      <div class="tp-footer__logo mb-25">
+                        <a href="index.html"
+                          ><img
+                            src="assets/img/logo/logo-black.png"
+                            alt="Sheria360"
+                        /></a>
+                      </div>
+                      <p>
+                        Sheria360 is a modern law practice software system that
+                        allows legal professionals to organize case files, track
+                        deadlines, draft documents, manage hearings, and manage
+                        day-to-day tasks.
+                      </p>
+                      <ul class="list-unstyled mt-20">
+                        <li class="mb-2">
+                          <span
+                            ><svg
+                              width="22"
+                              height="22"
+                              viewBox="0 0 22 22"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                opacity="0.3"
+                                d="M7.08443 4.76996L7.84597 6.13453C8.53323 7.36598 8.25734 8.98143 7.17492 10.0639C7.17492 10.0639 7.17492 10.0639 7.17492 10.0639C7.1748 10.064 5.86209 11.3769 8.24247 13.7573C10.6222 16.137 11.9351 14.8257 11.9359 14.8249C11.936 14.8248 11.9359 14.8248 11.936 14.8248C13.0184 13.7424 14.6338 13.4666 15.8653 14.1538L17.2298 14.9153C19.0893 15.9531 19.3089 18.5609 17.6745 20.1953C16.6923 21.1775 15.4892 21.9417 14.1592 21.9921C11.9202 22.077 8.11782 21.5103 4.30364 17.6961C0.489452 13.882 -0.0771917 10.0796 0.00768762 7.84062C0.0581084 6.5106 0.822313 5.30745 1.80444 4.32532C3.43891 2.69085 6.04667 2.91046 7.08443 4.76996Z"
+                                fill="#01103D"
+                              />
+                              <path
+                                d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
+                                fill="#01103D"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M11.1301 4.78659C11.2636 4.31926 11.7507 4.04866 12.2181 4.18218L11.9763 5.02836C12.2181 4.18218 12.2181 4.18218 12.2181 4.18218L12.2198 4.18266L12.2216 4.18318L12.2255 4.18433L12.2346 4.18704L12.2578 4.19427C12.2755 4.19993 12.2976 4.2073 12.3239 4.21665C12.3766 4.23535 12.4463 4.26194 12.5317 4.29856C12.7026 4.37182 12.9362 4.48496 13.2231 4.65476C13.7975 4.99467 14.5815 5.55928 15.5026 6.48035C16.4236 7.40143 16.9883 8.18547 17.3282 8.7598C17.498 9.04671 17.6111 9.28029 17.6844 9.45123C17.721 9.53666 17.7476 9.60631 17.7663 9.65901C17.7756 9.68535 17.783 9.70745 17.7887 9.72514L17.7959 9.74836L17.7986 9.75745L17.7997 9.76137L17.8003 9.76316C17.8003 9.76316 17.8007 9.76485 16.9546 10.0066L17.8007 9.76485C17.9343 10.2322 17.6637 10.7193 17.1963 10.8528C16.733 10.9852 16.2502 10.7203 16.1119 10.2602L16.1075 10.2476C16.1013 10.23 16.0883 10.1953 16.0666 10.1446C16.0232 10.0433 15.9445 9.87754 15.8135 9.65625C15.5519 9.21418 15.0793 8.54623 14.258 7.72492C13.4367 6.9036 12.7687 6.43107 12.3267 6.16944C12.1054 6.03847 11.9397 5.95974 11.8384 5.91633C11.7877 5.8946 11.753 5.88165 11.7353 5.8754L11.7227 5.87106C11.2626 5.73274 10.9977 5.24996 11.1301 4.78659Z"
+                                fill="#01103D"
+                              /></svg
+                          ></span>
+                          <a href="tel:+25472179429">+254-72-179-429</a>
+                        </li>
+                        <li>
+                          <span
+                            ><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                opacity="0.3"
+                                d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 11.5997 0.375616 13.1116 1.04346 14.4525C1.22094 14.8088 1.28001 15.2161 1.17712 15.6006L0.581511 17.8267C0.322954 18.793 1.20701 19.677 2.17335 19.4185L4.39939 18.8229C4.78393 18.72 5.19121 18.7791 5.54753 18.9565C6.88836 19.6244 8.40032 20 10 20Z"
+                                fill="#01103D"
+                              />
+                              <path
+                                d="M5.825 10.85C5.36937 10.85 5 11.2194 5 11.675C5 12.1306 5.36937 12.5 5.825 12.5H11.875C12.3306 12.5 12.7 12.1306 12.7 11.675C12.7 11.2194 12.3306 10.85 11.875 10.85H5.825Z"
+                                fill="#1C274C"
+                              />
+                              <path
+                                d="M5.825 7C5.36937 7 5 7.36937 5 7.825C5 8.28063 5.36937 8.65 5.825 8.65H14.625C15.0806 8.65 15.45 8.28063 15.45 7.825C15.45 7.36937 15.0806 7 14.625 7H5.825Z"
+                                fill="#1C274C"
+                              /></svg
+                          ></span>
+                          <a href="mailto:info@sheria360.com"
+                            >info@sheria360.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                    <div class="tp-footer__widget">
+                      <h4 class="tp-footer__widget-title">Quick Links</h4>
+                      <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2">
+                          <a href="about-sheria.html">About</a>
+                        </li>
+                        <li class="mb-2"><a href="price.html">Pricing</a></li>
+                        <li class="mb-2">
+                          <a href="solutions.html">Solutions</a>
+                        </li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-6 pb-30">
+                    <div class="tp-footer__widget">
+                      <h4 class="tp-footer__widget-title">Other Pages</h4>
+                      <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Features</a></li>
+                        <li class="mb-2"><a href="#">Team</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                        <li class="mb-2"><a href="#">Login</a></li>
+                        <li class="mb-2"><a href="#">Register</a></li>
+                        <li><a href="#">404 Not found</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 pb-30">
+                    <div class="tp-footer__widget">
+                      <h4 class="tp-footer__widget-title">Our Newsletter</h4>
+                      <div class="tp-footer__input mb-35 p-relative">
+                        <form action="#">
+                          <input
+                            type="text"
+                            placeholder="Business email address"
+                          /><span
+                            ><svg
+                              width="18"
+                              height="16"
+                              viewBox="0 0 18 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                opacity="0.4"
+                                d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              /></svg></span
+                          ><button>
+                            <svg
+                              width="14"
+                              height="16"
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1.00098 7H13.001"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M7.00098 1L13.001 7L7.00098 13"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
+                      <div class="tp-footer__social-3">
+                        <h4>Social media</h4>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a
+                        ><a href="#"><i class="fab fa-twitter"></i></a
+                        ><a href="#"><i class="fab fa-instagram"></i></a
+                        ><a href="#"><i class="fab fa-vimeo-v"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tp-copyright__area pt-25 pb-40">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-4 col-lg-6 col-md-6 text-center">
+                    <span
+                      >Copyright Â© 2026 Sheria360. All Rights Reserved.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      new PureCounter();
+    </script>
+  </body>
+</html>

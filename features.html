@@ -1,0 +1,537 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      Sheria360 - AI-Powered Legal Features | Smart Law Practice Management
+    </title>
+    <meta
+      name="description"
+      content="Explore Sheria360's AI-powered features: contract automation, legal research, practice management, and intelligent billing for modern law firms."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .header-bottom__main-menu nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li {
+        position: relative;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li > a {
+        padding: 35px 8px;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 12px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        z-index: 999;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .header-bottom__main-menu nav ul.submenu li {
+        display: block;
+      }
+      .header-bottom__main-menu nav ul.submenu li a {
+        padding: 8px 18px;
+        display: block;
+        font-size: 13px;
+      }
+      .header-bottom__main-menu nav ul.submenu li a:hover {
+        background: #f5f5f5;
+      }
+      .header__action-btn .tp-btn-border {
+        min-width: auto;
+        padding: 10px 18px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        padding: 10px 18px;
+      }
+      .me-20 {
+        margin-right: 20px !important;
+      }
+          @media (max-width: 767.98px) {
+        .header__action-btn .tp-btn-border,
+        .header__action-btn .tp-btn-blue-sm {
+          display: none !important;
+        }
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+    </button>
+
+    <header class="tp-header-height">
+      <div
+        id="header-sticky"
+        class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
+              <div class="header-bottom__logo">
+                <a href="index.html">
+                  <img
+                    src="assets/img/logo/logo-black.png"
+                    alt="Sheria360 Logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
+              <div class="header-bottom__main-menu header-bottom__main-menu-3">
+                <nav id="mobile-menu">
+                  <ul class="d-flex">
+                    <li class="me-20"><a href="index.html">Home</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Products <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li>
+                          <a href="sheria-mkataba.html">Sheria Mkataba</a>
+                        </li>
+                        <li><a href="lemis.html">LEMIS</a></li>
+                        <li><a href="sheria-ai.html">Sheria AI</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Solutions <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
+                        <li>
+                          <a href="solutions.html#in-house">In-House Legal</a>
+                        </li>
+                        <li>
+                          <a href="solutions.html#law-firms">Law Firms</a>
+                        </li>
+                        <li>
+                          <a href="solutions.html#procurement">Procurement</a>
+                        </li>
+                        <li><a href="solutions.html#hr">HR Teams</a></li>
+                        <li><a href="solutions.html#finance">Finance</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20"><a href="price.html">Pricing</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Resources <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li>
+                          <a href="https://docs.sheria360.com/" target="_blank"
+                            >Documentation</a
+                          >
+                        </li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Company <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="about-sheria.html">About</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
+              <div
+                class="header-bottom__right d-flex align-items-center justify-content-end"
+              >
+                <div class="header__action-btn d-flex align-items-center">
+                  <a
+                    class="tp-btn-border tp-btn-hover me-10 d-none d-md-inline-block"
+                    href="sign-in.html"
+                    style="padding: 8px 15px; font-size: 13px"
+                  >
+                    <span>Log In</span>
+                    <b></b>
+                  </a>
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="register.html"
+                    style="padding: 8px 15px; font-size: 13px"
+                  >
+                    <span>Try It Free</span>
+                    <b></b>
+                  </a>
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                    ><i class="fal fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="fix">
+          <!-- Page Banner -->
+          <div
+            class="tp-page-banner pt-180 pb-120"
+            data-background="assets/img/hero/hero-gradient-3.jpg"
+          >
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                  <div class="tp-page-title text-center">
+                    <h1 class="mb-30">
+                      AI-Powered Features for <span>Modern Legal Teams</span>
+                    </h1>
+                    <p class="tp-lead">
+                      Everything you need to run your law practice efficiently,
+                      powered by cutting-edge AI technology.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Features Grid -->
+          <div class="tp-features-area pt-120 pb-120">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i class="fas fa-file-contract fa-3x text-primary"></i>
+                    </div>
+                    <h4>AI Contract Analysis</h4>
+                    <p class="mt-15">
+                      Automatically review contracts, identify risks, and
+                      suggest amendments using advanced AI. Reduce review time
+                      by 80%.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Smart
+                        clause detection
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Risk
+                        assessment
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i>
+                        Auto-redlining
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i class="fas fa-robot fa-3x text-primary"></i>
+                    </div>
+                    <h4>Sheria AI Assistant</h4>
+                    <p class="mt-15">
+                      Your 24/7 intelligent legal assistant. Ask questions,
+                      draft documents, and get instant legal research support.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Natural
+                        language queries
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Document
+                        drafting
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Case law
+                        research
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i class="fas fa-gavel fa-3x text-primary"></i>
+                    </div>
+                    <h4>Practice Management</h4>
+                    <p class="mt-15">
+                      Complete case management with AI-driven insights. Track
+                      matters, deadlines, and client communications
+                      effortlessly.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Matter
+                        tracking
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Calendar
+                        integration
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Task
+                        automation
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i
+                        class="fas fa-file-invoice-dollar fa-3x text-primary"
+                      ></i>
+                    </div>
+                    <h4>Smart Billing</h4>
+                    <p class="mt-15">
+                      AI-powered time tracking and billing. Never miss billable
+                      hours again with automatic activity capture.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Auto
+                        time capture
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Invoice
+                        generation
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Payment
+                        processing
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i class="fas fa-database fa-3x text-primary"></i>
+                    </div>
+                    <h4>Document Automation</h4>
+                    <p class="mt-15">
+                      Generate complex legal documents in seconds. Smart
+                      templates with AI-powered clause suggestions.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Template
+                        library
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Bulk
+                        document generation
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Version
+                        control
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card p-40 border rounded h-100">
+                    <div class="tp-feature-icon mb-30">
+                      <i class="fas fa-chart-line fa-3x text-primary"></i>
+                    </div>
+                    <h4>Legal Analytics</h4>
+                    <p class="mt-15">
+                      Data-driven insights for your practice. Track performance,
+                      predict outcomes, and make informed decisions.
+                    </p>
+                    <ul class="tp-feature-list mt-20">
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Practice
+                        dashboards
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Outcome
+                        prediction
+                      </li>
+                      <li class="mb-10">
+                        <i class="fas fa-check text-primary me-10"></i> Custom
+                        reports
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="tp-cta-area pt-120 pb-120 bg-light">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-6">
+                  <h3 class="mb-30">
+                    Ready to Transform Your <span>Legal Practice?</span>
+                  </h3>
+                </div>
+                <div class="col-xl-6">
+                  <a
+                    class="tp-btn-blue-lg tp-btn-hover alt-color-black"
+                    href="contact.html"
+                  >
+                    <span>Request Demo</span>
+                    <b></b>
+                  </a>
+                  <a class="tp-btn-border tp-btn-hover ms-15" href="price.html">
+                    <span>View Pricing</span>
+                    <b></b>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer>
+          <div class="tp-footer__area">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                  <div class="tp-footer__widget">
+                    <div class="tp-footer__logo mb-25">
+                      <a href="index.html">
+                        <img src="assets/img/logo/logo-black.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="tp-footer__contact-info">
+                      <p>
+                        Sheria360 - AI-powered legal practice management for
+                        modern law firms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                  <div class="tp-footer__widget">
+                    <h4 class="tp-footer__widget-title">Quick Links</h4>
+                    <div class="tp-footer__content">
+                      <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="price.html">Pricing</a></li>
+                        <li><a href="about-sheria.html">About</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                  <div class="tp-footer__widget">
+                    <h4 class="tp-footer__widget-title">Resources</h4>
+                    <div class="tp-footer__content">
+                      <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">API Docs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                  <div class="tp-footer__widget">
+                    <h4 class="tp-footer__widget-title">Contact</h4>
+                    <div class="tp-footer__content">
+                      <ul>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>
+                          <a href="mailto:info@sheria360.com"
+                            >info@sheria360.com</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tp-copyright__area pt-25 pb-40">
+                <div class="row justify-content-center">
+                  <div class="col-xl-12">
+                    <div class="tp-copyright__text text-center">
+                      <span
+                        >Copyright Â© 2026 Sheria360. All Rights Reserved.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
