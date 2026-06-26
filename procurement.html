@@ -339,15 +339,21 @@
         border: 1px solid rgba(79, 95, 255, 0.08);
         background: #fff;
         padding: 36px 28px;
-        box-shadow: 0 1px 3px rgba(79, 95, 255, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
-        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow:
+          0 1px 3px rgba(79, 95, 255, 0.04),
+          0 4px 12px rgba(0, 0, 0, 0.02);
+        transition:
+          transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+          box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         will-change: transform;
         display: flex;
         flex-direction: column;
       }
       .feature-card:hover {
         transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 12px 40px rgba(79, 95, 255, 0.12), 0 4px 12px rgba(79, 95, 255, 0.08);
+        box-shadow:
+          0 12px 40px rgba(79, 95, 255, 0.12),
+          0 4px 12px rgba(79, 95, 255, 0.08);
       }
       .feature-icon {
         height: 48px;
@@ -1179,34 +1185,50 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
-                    <div class="tp-footer__widget">
+                  <div
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".5s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-2"
+                    >
                       <h4 class="tp-footer__widget-title">Quick Links</h4>
-                      <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html">Home</a></li>
-                        <li class="mb-2">
-                          <a href="about-sheria.html">About</a>
-                        </li>
-                        <li class="mb-2"><a href="price.html">Pricing</a></li>
-                        <li class="mb-2">
-                          <a href="solutions.html">Solutions</a>
-                        </li>
-                        <li class="mb-2"><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                      </ul>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="price.html">Pricing</a></li>
+                          <li>
+                            <a href="solutions.html">Solutions</a>
+                          </li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-xl-2 col-lg-2 col-md-6 pb-30">
-                    <div class="tp-footer__widget">
-                      <h4 class="tp-footer__widget-title">Other Pages</h4>
-                      <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">Features</a></li>
-                        <li class="mb-2"><a href="#">Team</a></li>
-                        <li class="mb-2"><a href="#">Careers</a></li>
-                        <li class="mb-2"><a href="#">Login</a></li>
-                        <li class="mb-2"><a href="#">Register</a></li>
-                        <li><a href="#">404 Not found</a></li>
-                      </ul>
+                  <div
+                    class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".7s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-3"
+                    >
+                      <h4 class="tp-footer__widget-title">Resources</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="faq.html">FAQs</a></li>
+                          <li><a href="blog.html">Blogs</a></li>
+                          <li><a href="marketplace.html">Market Place</a></li>
+                          <li>
+                            <a href="https://docs.sheria360.com/"
+                              >Documentation</a
+                            >
+                          </li>
+                          <li><a href="sign-in.html">Login</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-6 pb-30">

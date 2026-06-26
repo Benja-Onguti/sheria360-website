@@ -20,7 +20,7 @@
     />
 
     <style>
-      /* â”€â”€ Header Menu Tight Spacing â”€â”€ */
+      /* Header Menu Tight Spacing */
       .header-bottom__main-menu nav > ul {
         display: flex;
         align-items: center;
@@ -86,7 +86,7 @@
         border-radius: 6px;
       }
 
-      /* â”€â”€ Breadcrumb â”€â”€ */
+      /*  Breadcrumb  */
       .tp-breadcrumb {
         padding: 16px 0;
         font-size: 0.875rem;
@@ -109,7 +109,7 @@
         font-weight: 500;
       }
 
-      /* â”€â”€ Hero Enhancement â”€â”€ */
+      /* Hero Enhancement */
       .tp-page-banner {
         position: relative;
         overflow: hidden;
@@ -154,7 +154,7 @@
         line-height: 1.7;
       }
 
-      /* â”€â”€ Filter Tabs â”€â”€ */
+      /*  Filter Tabs  */
       .tp-filter-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -187,7 +187,7 @@
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
       }
 
-      /* â”€â”€ Solution Cards â”€â”€ */
+      /*  Solution Cards  */
       .tp-solution-card {
         border: 1.5px solid #e5e7eb;
         border-radius: 16px;
@@ -300,7 +300,7 @@
         color: #1e40af;
       }
 
-      /* â”€â”€ Trusted By Strip â”€â”€ */
+      /* Trusted By Strip*/
       .tp-trusted-strip {
         border-top: 1px solid #e5e7eb;
         border-bottom: 1px solid #e5e7eb;
@@ -330,7 +330,7 @@
         letter-spacing: 0.02em;
       }
 
-      /* â”€â”€ Stats Counter Row â”€â”€ */
+      /* Stats Counter Row  */
       .tp-stats-row {
         display: flex;
         flex-wrap: wrap;
@@ -355,7 +355,7 @@
         margin-top: 6px;
       }
 
-      /* â”€â”€ CTA Section â”€â”€ */
+      /*  CTA Section */
       .tp-cta-area {
         position: relative;
         overflow: hidden;
@@ -455,7 +455,7 @@
         }
       }
 
-      /* â”€â”€ Animations â”€â”€ */
+      /*Animations  */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -488,7 +488,7 @@
         animation-delay: 0.6s;
       }
 
-      /* â”€â”€ Mobile Tweaks â”€â”€ */
+      /*  Mobile Tweaks*/
       @media (max-width: 767px) {
         .tp-solution-card {
           padding: 28px 20px;
@@ -726,7 +726,14 @@
           <!-- Solutions Section -->
           <div class="tp-service-area pt-100 pb-120">
             <div class="container">
-              <h3 class="tp-section-title-3 mb-20" style="text-align: center; margin-left: auto; margin-right: auto;">
+              <h3
+                class="tp-section-title-3 mb-20"
+                style="
+                  text-align: center;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
                 By Team / Role
               </h3>
               <p
@@ -1049,10 +1056,11 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="index.html">Home</a></li>
-                          <li><a href="about-sheria.html">About</a></li>
+                          <li><a href="about.html">About</a></li>
                           <li><a href="price.html">Pricing</a></li>
-                          <li><a href="solutions.html">Solutions</a></li>
-                          <li><a href="blog.html">Blog</a></li>
+                          <li>
+                            <a href="solutions.html">Solutions</a>
+                          </li>
                           <li><a href="contact.html">Contact</a></li>
                         </ul>
                       </div>
@@ -1066,15 +1074,18 @@
                     <div
                       class="tp-footer__widget footer-widget-3 footer-col-3-3"
                     >
-                      <h4 class="tp-footer__widget-title">Solutions</h4>
+                      <h4 class="tp-footer__widget-title">Resources</h4>
                       <div class="tp-footer__content">
                         <ul>
-                          <li><a href="inhouse.html">In-House Legal</a></li>
-                          <li><a href="law-firms.html">Law Firms</a></li>
-                          <li><a href="procurement.html">Procurement</a></li>
-                          <li><a href="finance.html">Finance</a></li>
                           <li><a href="faq.html">FAQs</a></li>
-                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="blog.html">Blogs</a></li>
+                          <li><a href="marketplace.html">Market Place</a></li>
+                          <li>
+                            <a href="https://docs.sheria360.com/"
+                              >Documentation</a
+                            >
+                          </li>
+                          <li><a href="sign-in.html">Login</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1187,7 +1198,7 @@
     <!-- Filter & Intersection Observer Script -->
     <script>
       (function () {
-        // â”€â”€ Filter Functionality â”€â”€
+        //  Filter Functionality
         const filterTabs = document.querySelectorAll(
           "#solution-filters .tp-filter-tab",
         );
@@ -1232,7 +1243,7 @@
           });
         });
 
-        // â”€â”€ Intersection Observer for scroll animations â”€â”€
+        //  Intersection Observer for scroll animations
         if ("IntersectionObserver" in window) {
           const observerOptions = {
             root: null,
@@ -1282,7 +1293,7 @@
             });
         }
 
-        // â”€â”€ Smooth scroll for anchor links â”€â”€
+        //  Smooth scroll for anchor links â”€â”€
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
           anchor.addEventListener("click", function (e) {
             const targetId = this.getAttribute("href");
