@@ -93,6 +93,15 @@
         );
         border-bottom: 1px solid rgba(79, 70, 229, 0.1);
       }
+      .tp-btn-hover span {
+        position: relative;
+        z-index: 2;
+      }
+
+      .tp-btn-hover b {
+        display: none !important;
+      }
+
       .tp-page-banner::before {
         content: "";
         position: absolute;
@@ -452,18 +461,17 @@
                   <ul class="d-flex">
                     <li class="me-20"><a href="index.html">Home</a></li>
                     <li class="me-20 has-dropdown">
-                      <a href="about-sheria.html">About Sheria</a>
+                      <a href="about-sheria.html">About Sheria360</a>
                     </li>
                     <li class="me-20 has-dropdown">
                       <a href="javascript:void(0)"
                         >Solutions <i class="fas fa-chevron-down"></i
                       ></a>
                       <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
                         <li><a href="inhouse.html">In‑House Legal</a></li>
                         <li>
-                          <a href="government.html"
-                            >Government &amp; Parastatals</a
-                          >
+                          <a href="law-firms.html">Law Firms</a>
                         </li>
                         <li><a href="procurement.html">Procurement</a></li>
                         <li><a href="finance.html">Finance</a></li>
@@ -535,7 +543,7 @@
       <div id="smooth-content">
         <main class="fix">
           <!-- Hero Section with free images of Black legal professionals -->
-          <div class="tp-page-banner pt-100 pb-0">
+          <div class="tp-page-banner pt-100 pb-30">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -1128,9 +1136,9 @@
                       <a
                         href="register.html"
                         class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
-                        style="border-color: #4f46e5; color: #4f46e5"
-                        >Start Free Trial <b></b
-                      ></a>
+                        style="border-color: #4f46e5; color: #4f46e5; height: 48px; line-height: 48px;"
+                        >Start Free Trial
+                      </a>
                     </div>
                   </div>
                 </div>
