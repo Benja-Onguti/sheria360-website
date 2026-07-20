@@ -122,7 +122,7 @@ export default function Navbar() {
             <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
               <div className="header-bottom__right d-flex align-items-center justify-content-end">
                 <div className="header__action-btn d-flex align-items-center">
-                  <a className="tp-btn-border tp-btn-hover me-10" href="/sign-in">
+                  <a className="tp-btn-border tp-btn-hover me-10" href="https://demo.sheria360.com/users/login/">
                     <span>Log In</span>
                     <b></b>
                   </a>

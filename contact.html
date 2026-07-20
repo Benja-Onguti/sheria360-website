@@ -191,15 +191,25 @@
                 class="header-bottom__right d-flex align-items-center justify-content-end"
               >
                 <div class="header__action-btn d-flex align-items-center">
-                  <a class="tp-btn-border tp-btn-hover me-10 d-none d-md-inline-block" href="/sign-in">
+                  <a
+                    class="tp-btn-border tp-btn-hover me-10 d-none d-md-inline-block"
+                    href="https://demo.sheria360.com/users/login/"
+                  >
                     <span>Log In</span>
                     <b></b>
                   </a>
-                  <a class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block" href="/register">
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="https://demo.sheria360.com/modules/central/start-trial"
+                    target="_blank"
+                  >
                     <span>Try It Free</span>
                     <b></b>
                   </a>
-                  <a class="header-bottom__bar tp-menu-bar d-lg-none ms-10" href="javascript:void(0)">
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                  >
                     <i class="fal fa-bars"></i>
                   </a>
                 </div>
@@ -297,8 +307,12 @@
                     </div>
                     <div class="contact-form-social-box p-relative">
                       <div class="contact-form-social-item">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/sheria360" target="_blank"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360" target="_blank">
+                          <i class="fab fa-twitter"></i
+                        ></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                       </div>
@@ -314,41 +328,74 @@
                 <div class="col-xl-7 col-lg-6">
                   <div class="contact-form-right-warp">
                     <div class="postbox__comment-form">
-                      <form action="#" class="box">
+                      <form
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                        class="box"
+                      >
+                        <input
+                          type="hidden"
+                          name="access_key"
+                          value="dc254ee3-163d-491b-a96f-8a3de8e9fa99"
+                        />
+                        <input
+                          type="checkbox"
+                          name="hp"
+                          style="display: none"
+                        />
+
                         <div class="row gx-20">
                           <div class="col-12">
-                            <div class="postbox__comment-input mb-30">
-                              <input type="text" class="inputText" required />
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="text"
+                                name="name"
+                                class="inputText"
+                                required
+                              />
                               <span class="floating-label">Full Name</span>
                             </div>
                           </div>
                           <div class="col-12">
-                            <div class="postbox__comment-input mb-30">
-                              <input type="email" class="inputText" required />
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="email"
+                                name="email"
+                                class="inputText"
+                                required
+                              />
                               <span class="floating-label">Your Email</span>
                             </div>
                           </div>
                           <div class="col-12">
-                            <div class="postbox__comment-input mb-35">
-                              <input type="tel" class="inputText" required />
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="tel"
+                                name="phone"
+                                class="inputText"
+                              />
                               <span class="floating-label">Phone Number</span>
                             </div>
                           </div>
                           <div class="col-12">
-                            <div class="postbox__select mb-30">
-                              <select>
-                                <option>Your inquiry about</option>
-                                <option>Sheria Mkataba</option>
-                                <option>LEMIS</option>
-                                <option>Sheria AI</option>
-                                <option>Partnership</option>
-                                <option>General Inquiry</option>
+                            <div class="postbox__select mb-20">
+                              <select name="inquiry_type">
+                                <option value="">Select</option>
+
+                                <option value="In-House">Solutions</option>
+                                <option value="Law Firms">Request Demo</option>
+                                <option value="Sheria AI">Sheria AI</option>
+                                <option value="Pricing">Pricing</option>
+                                <option value="General Inquiry">
+                                  General Inquiry
+                                </option>
                               </select>
                             </div>
                           </div>
                           <div class="col-xxl-12">
-                            <div class="postbox__comment-input mb-30">
+                            <div class="postbox__comment-input mb-20">
                               <textarea
+                                name="message"
                                 class="textareaText"
                                 required
                               ></textarea>
@@ -357,7 +404,7 @@
                           </div>
                           <div class="col-xxl-12">
                             <div class="postbox__btn-box">
-                              <button class="submit-btn w-100">
+                              <button type="submit" class="submit-btn w-100">
                                 Send your Request
                               </button>
                             </div>
@@ -471,78 +518,12 @@
         </main>
 
         <footer>
-          <div class="tp-footer-slide pb-80">
-            <div class="container-fluid g-0">
-              <div class="row g-0 justify-content-center">
-                <div class="footer-slide-active">
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>Free trial</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i
-                      ><span>Lightning-fast onboarding.</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>All-in-one CRM</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i
-                      ><span>Cards for your whole team.</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>Free trial</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>Free migrations</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i
-                      ><span>Incredible support</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i
-                      ><span>Lightning-fast onboarding.</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i
-                      ><span>Cards for your whole team.</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>Free trial</span>
-                    </div>
-                  </div>
-                  <div class="footer-slide-wrapper">
-                    <div class="footer-slide-item">
-                      <i class="fal fa-check"></i><span>Free migrations</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="tp-footer__pl-pr">
             <div class="tp-footer__area tp-footer__tp-border-bottom">
-              <div class="container">
+              <div
+                class="container"
+                style="padding-top: 20px; padding-bottom: 2px"
+              >
                 <div class="row">
                   <div
                     class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
@@ -630,49 +611,55 @@
                     </div>
                   </div>
                   <div
-                      class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
-                      data-wow-duration=".9s"
-                      data-wow-delay=".5s"
-                    >
-                      <div
-                        class="tp-footer__widget footer-widget-3 footer-col-3-2"
-                      >
-                        <h4 class="tp-footer__widget-title">Quick Links</h4>
-                        <div class="tp-footer__content">
-                          <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="price.html">Pricing</a></li>
-                            <li>
-                              <a href="solutions.html">Solutions</a>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".5s"
+                  >
                     <div
-                      class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
-                      data-wow-duration=".9s"
-                      data-wow-delay=".7s"
+                      class="tp-footer__widget footer-widget-3 footer-col-3-2"
                     >
-                      <div
-                        class="tp-footer__widget footer-widget-3 footer-col-3-3"
-                      >
-                        <h4 class="tp-footer__widget-title">Resources</h4>
-                        <div class="tp-footer__content">
-                          <ul>
-                           <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="blog.html">Blogs</a></li>
-                            <li><a href="marketplace.html">Market Place</a></li>
-                            <li><a href="https://docs.sheria360.com/">Documentation</a></li>
-                            <li><a href="sign-in.html">Login</a></li>
-                            
-                            
-                          </ul>
-                        </div>
+                      <h4 class="tp-footer__widget-title">Quick Links</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="price.html">Pricing</a></li>
+                          <li>
+                            <a href="solutions.html">Solutions</a>
+                          </li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
                       </div>
                     </div>
+                  </div>
+                  <div
+                    class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".7s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-3"
+                    >
+                      <h4 class="tp-footer__widget-title">Resources</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="faq.html">FAQs</a></li>
+                          <li><a href="blog.html">Blogs</a></li>
+                          <li><a href="marketplace.html">Market Place</a></li>
+                          <li>
+                            <a href="https://docs.sheria360.com/"
+                              >Documentation</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://demo.sheria360.com/users/login/"
+                              >Login</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     class="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp"
                     data-wow-duration=".9s"
@@ -743,8 +730,12 @@
                       </div>
                       <div class="tp-footer__social-3">
                         <h4>Social media</h4>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/sheria360" target="_blank"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360" target="_blank">
+                          <i class="fab fa-twitter"></i
+                        ></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                       </div>
@@ -762,8 +753,7 @@
                     >
                       <span
                         >Copyright &copy; 2026 Sheria360. All Rights Reserved.
-                        
-                      >
+                      </span>
                     </div>
                   </div>
                 </div>

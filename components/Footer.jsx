@@ -103,7 +103,7 @@ export default function Footer() {
                       <li><Link href="/solutions">Solutions</Link></li>
                       <li><Link href="/faq">FAQs</Link></li>
                       <li><Link href="/partners">Partners</Link></li>
-                      <li><a href="/sign-in">Login</a></li>
+                       <li><a href="https://demo.sheria360.com/users/login/">Login</a></li>
                       <li><Link href="/register">Register</Link></li>
                     </ul>
                   </div>
