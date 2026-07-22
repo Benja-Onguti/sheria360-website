@@ -3,15 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>
-      Sheria360 - AI-Powered Legal Practice Management | Smart Law Solution
-    </title>
+    <title>Sheria360 - AI-Powered Legal Practice Management | Blogs</title>
     <meta
       name="description"
       content="Sheria360 combines AI-powered contract analysis, legal practice management, and intelligent automation to transform how law firms and legal teams work."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      /* Force page content to be visible */
+      html,
+      body,
+      #smooth-wrapper,
+      #smooth-content,
+      .tp-header-height,
+      main {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block !important;
+      }
+
+      /* Ensure preloader hides */
+      html.js #preloader {
+        display: none !important;
+      }
+
       .header-bottom__main-menu nav > ul {
         display: flex;
         align-items: center;
@@ -82,6 +97,21 @@
           display: none !important;
         }
       }
+
+      /* Ensure modal displays correctly */
+      .blog-modal {
+        z-index: 999999 !important;
+      }
+      .blog-modal .modal-dialog {
+        z-index: 999999 !important;
+      }
+      .blog-modal .modal-content {
+        z-index: 999999 !important;
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
     </style>
 
     <!-- Place favicon.ico in the root directory -->
@@ -107,6 +137,11 @@
   </head>
 
   <body>
+    <script>
+      // Replace no-js with js class to enable proper styling and hide preloader
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/, "js");
+    </script>
     <!-- preloader -->
     <div id="preloader">
       <div class="preloader">
@@ -216,7 +251,7 @@
                   </a>
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
-                    href="register.html"
+                    href="https://demo.sheria360.com/modules/central/start-trial"
                   >
                     <span>Try It Free</span>
                     <b></b>
@@ -245,38 +280,16 @@
           </a>
         </div>
         <div class="mobile-menu"></div>
-        <div class="tpoffcanvas__instagram text-center">
-          <div class="tpoffcanvas__instagram-title">
-            <h4>instagram</h4>
-          </div>
-          <a href="#"
-            ><img src="assets/img/project/project-inner-4.jpg" alt=""
-          /></a>
-          <a href="#"
-            ><img src="assets/img/project/project-inner-5.jpg" alt=""
-          /></a>
-          <a href="#"
-            ><img src="assets/img/project/project-inner-6.jpg" alt=""
-          /></a>
-          <a href="#"
-            ><img src="assets/img/project/project-inner-7.jpg" alt=""
-          /></a>
-        </div>
-        <div class="tpoffcanvas__info text-center">
-          <h4 class="offcanva-title">we are here</h4>
-          <a
-            href="https://www.google.com/maps/@-1.2676,36.7965,14z"
-            target="_blank"
-          >
-            BSK Village, Muguga Green,<br />
-            Westlands Nairobi
-          </a>
-        </div>
+
         <div class="tpoffcanvas__social">
           <div class="social-icon text-center">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://x.com/sheria360"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/sheria360"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://facebook.com/sheria360"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
             <a href="#"><i class="fab fa-dribbble"></i></a>
           </div>
         </div>
@@ -412,6 +425,7 @@
                           <div
                             class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
                             data-background="assets/img/blog/inner-blog-1.png"
+                            data-post-id="swiper1"
                           >
                             <div class="blog-grid-slider-wrapper">
                               <div class="blog-grid-slider-meta">
@@ -420,10 +434,8 @@
                               </div>
                               <div class="blog-grid-slider-title-box">
                                 <h4 class="blog-grid-slider-title">
-                                  <a href="blog-details.html"
-                                    >5 Companies doing Brand <br />
-                                    Marketing Right</a
-                                  >
+                                  5 Companies doing Brand <br />
+                                  Marketing Right
                                 </h4>
                                 <p>
                                   From publishing content and hoping to acquire
@@ -454,18 +466,17 @@
                           <div
                             class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
                             data-background="assets/img/blog/inner-blog-2.png"
+                            data-post-id="swiper2"
                           >
                             <div class="blog-grid-slider-wrapper">
                               <div class="blog-grid-slider-meta">
                                 <span class="child-one">Resources</span>
-                                <span class="child-two">October 20, 2023</span>
+                                <span class="child-two">July 20, 2026</span>
                               </div>
                               <div class="blog-grid-slider-title-box">
                                 <h4 class="blog-grid-slider-title">
-                                  <a href="blog-details.html"
-                                    >5 Companies doing Brand <br />
-                                    Marketing Right</a
-                                  >
+                                  5 Companies using AI <br />
+                                  Right
                                 </h4>
                                 <p>
                                   From publishing content and hoping to acquire
@@ -496,6 +507,7 @@
                           <div
                             class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
                             data-background="assets/img/blog/inner-blog-3.png"
+                            data-post-id="swiper3"
                           >
                             <div class="blog-grid-slider-wrapper">
                               <div class="blog-grid-slider-meta">
@@ -504,10 +516,8 @@
                               </div>
                               <div class="blog-grid-slider-title-box">
                                 <h4 class="blog-grid-slider-title">
-                                  <a href="#"
-                                    >5 Companies doing Brand <br />
-                                    Marketing Right</a
-                                  >
+                                  5 Companies doing Brand <br />
+                                  Marketing Right (Updated)
                                 </h4>
                                 <p>
                                   From publishing content and hoping to acquire
@@ -549,10 +559,9 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <div class="tp-about__section-box text-center mb-40">
-                    <h4 class="inner-section-subtitle">OVER 150K+ CLIENT</h4>
                     <h3 class="tp-section-title">Accomplish more, Together</h3>
                     <p>
-                      Softuch blog is your knowledge center for everything
+                      Sheria360 blog is your knowledge center for everything
                       remote.
                     </p>
                   </div>
@@ -564,40 +573,48 @@
                     <button data-filter="*" class="active">
                       <span>All</span>
                     </button>
-                    <button data-filter=".cat1"><span>Business</span></button>
-                    <button data-filter=".cat2"><span>Marketing</span></button>
-                    <button data-filter=".cat3"><span>Designing</span></button>
-                    <button data-filter=".cat4">
-                      <span>Development</span>
+                    <button data-filter=".legal-tech">
+                      <span>Legal Tech</span>
                     </button>
-                    <button data-filter=".cat5"><span>Resources</span></button>
+                    <button data-filter=".ai-automation">
+                      <span>AI & Automation</span>
+                    </button>
+                    <button data-filter=".compliance">
+                      <span>Compliance</span>
+                    </button>
+                    <button data-filter=".case-studies">
+                      <span>Case Studies</span>
+                    </button>
+                    <button data-filter=".resources">
+                      <span>Resources</span>
+                    </button>
                   </div>
                 </div>
               </div>
               <div class="row grid blog-grid-inner">
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat1 cat4 cat3 cat5"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item legal-tech"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post1">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-1.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-1.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
                         <div class="tp-blog-category category-color-1">
-                          <span>Marketing</span>
+                          <span>Legal Tech</span>
                         </div>
                         <div class="tp-blog-date">
                           <span>April 12, 2023</span>
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >2023 Professional Year In <br />
-                          Review</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          2023 Professional Year In <br />
+                          Review
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -614,13 +631,13 @@
                   </div>
                 </div>
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat4 cat3 cat2 cat1"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item resources"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post2">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-2.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-2.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
@@ -632,10 +649,10 @@
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >Leveraging Feedback on <br />
-                          Insights best.</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          Leveraging Feedback on <br />
+                          Insights best.
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -652,28 +669,28 @@
                   </div>
                 </div>
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat3 cat4 cat5"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item compliance"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post3">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-3.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-3.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
                         <div class="tp-blog-category category-color-1">
-                          <span>Crm Software</span>
+                          <span>Compliance</span>
                         </div>
                         <div class="tp-blog-date">
                           <span>28 April, 2023</span>
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >Typing Tutorials For Kids <br />
-                          And Beginners</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          Typing Tutorials For Kids <br />
+                          And Beginners
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -690,28 +707,28 @@
                   </div>
                 </div>
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat4 cat2 cat3 cat1"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item case-studies"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post4">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-4.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-4.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
                         <div class="tp-blog-category category-color-1">
-                          <span>Business</span>
+                          <span>Case Studies</span>
                         </div>
                         <div class="tp-blog-date">
                           <span>28 April, 2023</span>
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >Project Management at <br />
-                          Your fingertips.</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          Project Management at <br />
+                          Your fingertips.
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -728,28 +745,28 @@
                   </div>
                 </div>
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat1 cat2 cat3 cat5"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item resources"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post5">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-5.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-5.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
                         <div class="tp-blog-category category-color-1">
-                          <span>Development</span>
+                          <span>Resources</span>
                         </div>
                         <div class="tp-blog-date">
                           <span>28 April, 2023</span>
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >Designing the Kids Space <br />
-                          Universe</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          Designing the Kids Space <br />
+                          Universe
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -766,28 +783,28 @@
                   </div>
                 </div>
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat4 cat1 cat5 cat2"
+                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item ai-automation"
                 >
-                  <div class="tp-blog-item">
+                  <div class="tp-blog-item" data-post-id="post6">
                     <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-grid-6.jpg" alt=""
-                      /></a>
+                      <span class="d-block">
+                        <img src="assets/img/blog/blog-grid-6.jpg" alt=""
+                      /></span>
                     </div>
                     <div class="tp-blog-content">
                       <div class="tp-blog-meta d-flex align-items-center">
                         <div class="tp-blog-category category-color-1">
-                          <span>Designing</span>
+                          <span>AI & Automation</span>
                         </div>
                         <div class="tp-blog-date">
                           <span>28 April, 2023</span>
                         </div>
                       </div>
                       <div class="tp-blog-title-box">
-                        <a class="tp-blog-title-sm" href="blog-details.html"
-                          >How Chatbots Can Help You <br />
-                          Drive More Sales</a
-                        >
+                        <h4 class="tp-blog-title-sm mb-2">
+                          How Chatbots Can Help You <br />
+                          Drive More Sales
+                        </h4>
                       </div>
                       <div
                         class="tp-blog-author-info-box d-flex align-items-center"
@@ -840,6 +857,55 @@
           </div>
           <!-- tp-cta-area-end -->
         </main>
+
+        <!-- Blog Post Modal -->
+        <div
+          class="blog-modal modal fade"
+          id="blogModal"
+          tabindex="-1"
+          aria-labelledby="blogModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title" id="blogModalLabel">Blog Post</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body px-4 px-md-5 py-4">
+                <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                    <span
+                      class="blog-modal-category badge bg-primary mb-3"
+                      id="modalCategory"
+                    ></span>
+                    <h2 class="blog-modal-title mb-3" id="modalTitle"></h2>
+                    <div class="d-flex align-items-center mb-4">
+                      <img
+                        src=""
+                        alt=""
+                        id="modalAuthorImage"
+                        class="rounded-circle me-3"
+                        style="width: 48px; height: 48px; object-fit: cover"
+                      />
+                      <div>
+                        <h6 class="mb-0" id="modalAuthorName"></h6>
+                        <small class="text-muted" id="modalAuthorTitle"></small>
+                        <div class="text-muted small" id="modalDate"></div>
+                      </div>
+                    </div>
+                    <div class="blog-modal-content" id="modalContent"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <footer>
           <!-- tp-footer-area-start -->
@@ -946,7 +1012,7 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about-sheria.html">About</a></li>
+                          <li><a href="about-sheria.html">About</a></li>
                           <li><a href="price.html">Pricing</a></li>
                           <li>
                             <a href="solutions.html">Solutions</a>
@@ -1050,9 +1116,15 @@
                       </div>
                       <div class="tp-footer__social-3">
                         <h4>Social media</h4>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/sheria360"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="https://instagram.com/sheria360"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
                         <a href="#"><i class="fab fa-pinterest"></i></a>
                       </div>
                     </div>
@@ -1101,6 +1173,284 @@
     <script src="assets/js/isotope-pkgd.js"></script>
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+      // Blog posts data
+      const blogPosts = {
+        post1: {
+          category: "Legal Tech",
+          title: "2023 Professional Year In Review",
+          date: "April 12, 2023",
+          author: "Hilary Ouse",
+          authorTitle: "Founder & CEO Dulalix",
+          authorImage: "assets/img/avata/avata-1.png",
+          content: `
+               <p class="mb-4">From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, content marketing has evolved significantly. In this professional year review, we explore the key trends and transformations that shaped the industry.</p>
+               <h5 class="mt-5 mb-3">Key Highlights</h5>
+               <ul>
+                 <li>The rise of AI-powered content creation tools</li>
+                 <li>Increased focus on personalization at scale</li>
+                 <li>Video content dominating engagement metrics</li>
+                 <li>The emergence of voice search optimization</li>
+               </ul>
+               <p class="mb-4">As we look forward, the integration of technology and creativity promises even more exciting developments. Stay tuned for our upcoming year's insights.</p>
+             `,
+        },
+        post2: {
+          category: "Resources",
+          title: "Leveraging Feedback on Insights Best",
+          date: "July 12, 2023",
+          author: "Rudra Ghosh",
+          authorTitle: "Founder & CEO Dulalix",
+          authorImage: "assets/img/avata/avata-2.png",
+          content: `
+               <p class="mb-4">Feedback is the cornerstone of improvement. In this resource guide, we dive deep into the best practices for collecting, analyzing, and acting on customer feedback to drive meaningful insights.</p>
+               <h5 class="mt-5 mb-3">What You'll Learn</h5>
+               <ul>
+                 <li>How to design effective feedback mechanisms</li>
+                 <li>Tools for sentiment analysis</li>
+                 <li>Turning feedback into actionable roadmaps</li>
+                 <li>Measuring the impact of changes</li>
+               </ul>
+               <p class="mb-4">Whether you're a startup or an established enterprise, these strategies will help you build a culture of continuous improvement.</p>
+             `,
+        },
+        post3: {
+          category: "Compliance",
+          title: "Typing Tutorials For Kids And Beginners",
+          date: "28 April, 2023",
+          author: "Geraldine",
+          authorTitle: "Founder & CEO Dulalix",
+          authorImage: "assets/img/avata/avata-3.png",
+          content: `
+               <p class="mb-4">Compliance training doesn't have to be boring. We've developed interactive typing tutorials designed specifically for kids and beginners, making learning both engaging and effective.</p>
+               <h5 class="mt-5 mb-3">Features</h5>
+               <ul>
+                 <li>Gamified learning experience</li>
+                 <li>Progress tracking for parents and teachers</li>
+                 <li>Adaptive difficulty levels</li>
+                 <li>Fun animations and rewards</li>
+               </ul>
+               <p class="mb-4">Our approach ensures that users develop essential keyboard skills while enjoying the process.</p>
+             `,
+        },
+        post4: {
+          category: "Case Studies",
+          title: "Project Management at Your Fingertips",
+          date: "28 April, 2023",
+          author: "Helen M.",
+          authorImage: "assets/img/avata/avata-4.png",
+          authorTitle: "Founder & CEO Dulalix",
+          content: `
+               <p class="mb-4">Discover how leading organizations are streamlining their project management workflows with centralized platforms. This case study explores real-world implementations and measurable outcomes.</p>
+               <h5 class="mt-5 mb-3">Results Achieved</h5>
+               <ul>
+                 <li>30% reduction in project turnaround time</li>
+                 <li>Improved cross-department collaboration</li>
+                 <li>Real-time visibility into resource allocation</li>
+                 <li>Enhanced client satisfaction scores</li>
+               </ul>
+               <p class="mb-4">The key to success lies in choosing the right tools and fostering adoption across teams.</p>
+             `,
+        },
+        post5: {
+          category: "Resources",
+          title: "Designing the Kids Space Universe",
+          date: "28 April, 2023",
+          author: "R. Jones",
+          authorTitle: "Founder & CEO Dulalix",
+          authorImage: "assets/img/avata/avata-5.png",
+          content: `
+               <p class="mb-4">Creating an immersive digital environment for children requires careful consideration of both aesthetics and educational value. This resource outlines our design philosophy and process.</p>
+               <h5 class="mt-5 mb-3">Design Principles</h5>
+               <ul>
+                 <li>Bright, engaging color palettes</li>
+                 <li>Intuitive navigation for young users</li>
+                 <li>Integration of educational elements</li>
+                 <li>Safety-first approach to interactions</li>
+               </ul>
+               <p class="mb-4">The result is a space where kids can learn, play, and explore safely.</p>
+             `,
+        },
+        post6: {
+          category: "AI & Automation",
+          title: "How Chatbots Can Help You Drive More Sales",
+          date: "28 April, 2023",
+          author: "Frank P. Miller",
+          authorImage: "assets/img/avata/avata-6.png",
+          authorTitle: "Founder & CEO Dulalix",
+          content: `
+               <p class="mb-4">AI-powered chatbots are transforming customer engagement. Learn how automated conversations can qualify leads, answer queries instantly, and drive conversions around the clock.</p>
+               <h5 class="mt-5 mb-3">Benefits</h5>
+               <ul>
+                 <li>24/7 availability without increased staffing</li>
+                 <li>Instant response times</li>
+                 <li>Personalized recommendations</li>
+                 <li>Seamless handoff to human agents</li>
+               </ul>
+               <p class="mb-4">Implementing the right chatbot strategy can significantly boost your sales pipeline efficiency.</p>
+             `,
+        },
+        swiper1: {
+          category: "Resources",
+          title: "5 Companies doing Brand Marketing Right",
+          date: "October 20, 2023",
+          author: "Hilary Ouse",
+          authorImage: "assets/img/blog/blog-avata-3.png",
+          authorTitle: "Founder & CEO Dulalix",
+          content: `
+               <p class="mb-4">From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, brand marketing has evolved significantly. This article explores how five leading companies are mastering brand marketing right.</p>
+               <h5 class="mt-5 mb-3">Key Takeaways</h5>
+               <ul>
+                 <li>Consistent brand messaging across channels</li>
+                 <li>Leveraging data for personalization</li>
+                 <li>Creating memorable customer experiences</li>
+                 <li>Measuring brand equity effectively</li>
+               </ul>
+               <p class="mb-4">Learn from these examples to elevate your own brand marketing efforts and drive sustainable growth.</p>
+             `,
+        },
+        swiper2: {
+          category: "Resources",
+          title: "5 Companies using AI Right",
+          date: "July 20, 2026",
+          author: "Hilary Ouse",
+          authorImage: "assets/img/blog/blog-avata-2.png",
+          authorTitle: "Founder & CEO Dulalix",
+          content: `
+               <p class="mb-4">Artificial Intelligence is revolutionizing the way businesses operate. Discover how five innovative companies are implementing AI technologies to streamline processes, enhance customer experiences, and drive growth.</p>
+               <h5 class="mt-5 mb-3">Implementation Insights</h5>
+               <ul>
+                 <li>AI-powered customer support chatbots</li>
+                 <li>Predictive analytics for sales forecasting</li>
+                 <li>Automated content generation</li>
+                 <li>Intelligent process automation</li>
+               </ul>
+               <p class="mb-4">These case studies demonstrate the transformative power of AI when applied strategically.</p>
+             `,
+        },
+        swiper3: {
+          category: "Resources",
+          title: "5 Companies doing Brand Marketing Right (Updated)",
+          date: "October 20, 2023",
+          author: "Hilary Ouse",
+          authorImage: "assets/img/blog/blog-avata-1.png",
+          authorTitle: "Founder & CEO Dulalix",
+          content: `
+               <p class="mb-4">Brand marketing continues to evolve with new trends and consumer expectations. This updated showcase highlights five companies that are setting the standard for effective brand marketing in today's dynamic landscape.</p>
+               <h5 class="mt-5 mb-3">What's New</h5>
+               <ul>
+                 <li>Authentic storytelling resonates more than ever</li>
+                 <li>Social responsibility as a brand differentiator</li>
+                 <li>Interactive experiences driving engagement</li>
+                 <li>Agile marketing strategies for rapid adaptation</li>
+               </ul>
+               <p class="mb-4">Stay ahead of the curve with these inspiring examples of modern brand marketing excellence.</p>
+             `,
+        },
+      };
+
+      // Blog post click handlers
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Blog page loaded, initializing modal...");
+
+        // Check if bootstrap.Modal is available
+        if (
+          typeof bootstrap === "undefined" ||
+          typeof bootstrap.Modal === "undefined"
+        ) {
+          console.error("Bootstrap Modal is not available!");
+          return;
+        }
+
+        const blogModal = new bootstrap.Modal(
+          document.getElementById("blogModal"),
+        );
+        console.log("Modal initialized successfully");
+
+        // Add click listeners to both grid items and swiper slides with event delegation
+        const blogGridContainer = document.querySelector(".blog-grid-inner");
+        const swiperContainer = document.querySelector(
+          ".blog-grid-slider-active",
+        );
+
+        // Function to handle blog item clicks
+        function handleBlogClick(e) {
+          // Find the closest clickable item (either .tp-blog-item or .blog-grid-slider)
+          let targetItem = e.target.closest(".tp-blog-item, .blog-grid-slider");
+
+          if (!targetItem) return;
+
+          // Prevent clicks on actual links (like images or author info) from triggering modal
+          if (e.target.closest("a")) return;
+
+          e.preventDefault();
+
+          const postId = targetItem.dataset.postId;
+          console.log("Clicked post ID:", postId);
+
+          if (!postId) {
+            console.warn("No post ID found on element:", targetItem);
+            return;
+          }
+
+          const post = blogPosts[postId];
+
+          if (post) {
+            console.log("Loading post data:", post.title);
+            document.getElementById("modalCategory").textContent =
+              post.category;
+            document.getElementById("modalTitle").textContent = post.title;
+            document.getElementById("modalDate").textContent = post.date;
+            document.getElementById("modalAuthorName").textContent =
+              post.author;
+            document.getElementById("modalAuthorTitle").textContent =
+              post.authorTitle;
+            document.getElementById("modalAuthorImage").src = post.authorImage;
+            document.getElementById("modalContent").innerHTML = post.content;
+
+            console.log("Showing modal...");
+            blogModal.show();
+          } else {
+            console.warn("Post data not found for ID:", postId);
+          }
+        }
+
+        // Attach event listeners to containers (event delegation)
+        if (blogGridContainer) {
+          blogGridContainer.addEventListener("click", handleBlogClick);
+          console.log("Event listener attached to blog grid container");
+        } else {
+          console.warn("Blog grid container not found");
+        }
+
+        if (swiperContainer) {
+          swiperContainer.addEventListener("click", handleBlogClick);
+          console.log("Event listener attached to swiper container");
+        } else {
+          console.warn("Swiper container not found");
+        }
+
+        // Close modal handler
+        document
+          .getElementById("blogModal")
+          .addEventListener("hidden.bs.modal", function () {
+            console.log("Modal hidden");
+            // Clear content or reset if needed
+          });
+
+        // Also add direct listeners as fallback
+        document
+          .querySelectorAll(".tp-blog-item, .blog-grid-slider")
+          .forEach((item, index) => {
+            item.style.cursor = "pointer";
+            console.log(
+              `Found clickable item ${index + 1}:`,
+              item,
+              "with postId:",
+              item.dataset.postId,
+            );
+          });
+      });
+    </script>
   </body>
 </html>

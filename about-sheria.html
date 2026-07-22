@@ -27,74 +27,50 @@
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/fix.css" />
-    <style>
-      .tp-feature-card {
-        display: flex;
-        flex-direction: column;
-      }
-      .tp-feature-card .tp-feature-list {
-        margin-top: auto;
-      }
-      .tp-feature-card .tp-feature-icon {
-        height: 48px;
-        display: flex;
-        align-items: center;
-      }
-      .tp-feature-card .tp-feature-icon i {
-        font-size: 2.5rem;
-        margin: 0 auto;
-      }
-      .tp-feature-card h4 {
-        min-height: 3rem;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-      }
-      .tp-feature-card p {
-        flex: 0 0 auto;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-      .tp-feature-card .tp-feature-list {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .tp-feature-card .tp-feature-list li {
-        display: flex;
-        align-items: baseline;
-        gap: 10px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 10px;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .tp-feature-card .tp-feature-list li i {
-        flex-shrink: 0;
-        width: 16px;
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .tp-feature-card .tp-feature-list li {
-        display: flex;
-        align-items: baseline;
-        gap: 10px;
-        margin-bottom: 10px;
-        padding-left: 4px;
-      }
-      .tp-feature-card .tp-feature-list li i {
-        flex-shrink: 0;
-        width: 16px;
-        text-align: center;
-      }
-      @media (max-width: 767.98px) {
-        .header__action-btn .tp-btn-border,
-        .header__action-btn .tp-btn-blue-sm {
-          display: none !important;
-        }
-      }
-    </style>
+     <style>
+       .tp-feature-card {
+         display: flex;
+         flex-direction: column;
+       }
+       .tp-feature-card .tp-feature-list {
+         margin-top: auto;
+       }
+       .tp-feature-card .tp-feature-icon {
+         height: 48px;
+         display: flex;
+         align-items: center;
+       }
+       .tp-feature-card .tp-feature-icon i {
+         font-size: 2.5rem;
+         margin: 0 auto;
+       }
+       .tp-feature-card h4 {
+         min-height: 3rem;
+         display: flex;
+         align-items: center;
+       }
+       /* Responsive hero title */
+       .tp-hero-header-section .tp-hero-content-box h1 {
+         font-size: 52px;
+         line-height: 1.15;
+         font-weight: 800;
+         letter-spacing: -1px;
+       }
+       @media (max-width: 991.98px) {
+         .tp-hero-header-section .tp-hero-content-box h1 {
+           font-size: 32px;
+           line-height: 1.2;
+           letter-spacing: -0.5px;
+         }
+       }
+       @media (max-width: 575.98px) {
+         .tp-hero-header-section .tp-hero-content-box h1 {
+           font-size: 26px;
+           line-height: 1.25;
+           letter-spacing: 0;
+         }
+       }
+     </style>
   </head>
   <body>
     <div id="preloader">
@@ -208,6 +184,33 @@
       </div>
     </header>
 
+    <!-- tp-offcanvus-area-start -->
+    <div class="tpoffcanvas-area">
+      <div class="tpoffcanvas">
+        <div class="tpoffcanvas__close-btn">
+          <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="tpoffcanvas__logo text-center">
+          <a href="index.html">
+            <img src="assets/img/logo/logo-white.png" alt="Sheria360" />
+          </a>
+        </div>
+        <div class="mobile-menu"></div>
+
+        <div class="tpoffcanvas__social">
+          <div class="social-icon text-center">
+            <a href="https://x.com/sheria360"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/sheria360"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-overlay"></div>
+
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <main class="fix">
@@ -219,15 +222,7 @@
               <div class="row align-items-center">
                 <div class="col-xl-7 col-lg-7 mb-40">
                   <div class="tp-hero-content-box">
-                    <h1
-                      class="mb-25 text-dark"
-                      style="
-                        font-size: 52px;
-                        line-height: 1.15;
-                        font-weight: 800;
-                        letter-spacing: -1px;
-                      "
-                    >
+                    <h1 class="mb-25 text-dark">
                       Sheria360: In Any Case <br />
                       <span class="text-primary" style="color: #0d6efd"
                         >The Legal Practice Management Solution</span
@@ -1321,7 +1316,7 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about-sheria.html">About</a></li>
+                          <li><a href="about-sheria.html">About</a></li>
                           <li><a href="price.html">Pricing</a></li>
                           <li>
                             <a href="solutions.html">Solutions</a>
@@ -1422,9 +1417,15 @@
                       </div>
                       <div class="tp-footer__social-3">
                         <h4>Social media</h4>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/sheria360"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="https://instagram.com/sheria360"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
                         <a href="#"><i class="fab fa-vimeo-v"></i></a>
                       </div>
                     </div>

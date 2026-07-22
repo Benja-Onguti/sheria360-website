@@ -132,8 +132,8 @@ export default function Footer() {
                   </div>
                   <div className="tp-footer__social-3">
                     <h4>Social media</h4>
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a href="#"><i className="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/sheria360"><i className="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/sheria360"><i className="fab fa-twitter"></i></a>
                     <a href="#"><i className="fab fa-instagram"></i></a>
                     <a href="#"><i className="fab fa-vimeo-v"></i></a>
                   </div>
