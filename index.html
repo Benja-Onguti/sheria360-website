@@ -11,6 +11,8 @@
       content="Sheria360 combines AI-powered contract analysis, legal practice management, and intelligent automation to transform how law firms and corporate legal teams work."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Header styling (existing) -->
     <style>
       .header-bottom__main-menu nav > ul {
         display: flex;
@@ -76,11 +78,134 @@
         line-height: 38px !important;
         border-radius: 6px;
       }
-          @media (max-width: 767.98px) {
+      @media (max-width: 767.98px) {
         .header__action-btn .tp-btn-border,
         .header__action-btn .tp-btn-blue-sm {
           display: none !important;
         }
+      }
+    </style>
+
+    <!-- Onboarding modal styles (new) -->
+    <style>
+      .onboarding-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .onboarding-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .onboarding-modal {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px 30px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        animation: modalSlide 0.3s ease;
+      }
+      @keyframes modalSlide {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .onboarding-modal .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #666;
+      }
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+      .step h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #01103d;
+      }
+      .step p {
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+      .options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .option-btn {
+        padding: 12px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        background: #fff;
+        color: #01103d;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+      }
+      .option-btn:hover,
+      .option-btn.selected {
+        border-color: #1a56db;
+        background: #e1effe;
+        color: #1a56db;
+      }
+      .next-btn {
+        width: 100%;
+        padding: 14px;
+        background: #1a56db;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .next-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+      .step-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .step-buttons .option-btn {
+        flex: 1;
+      }
+      .final-message {
+        text-align: center;
+        padding: 20px 0;
+      }
+      .final-message i {
+        font-size: 3rem;
+        color: #0e9f6e;
       }
     </style>
 
@@ -164,7 +289,6 @@
                         <li>
                           <a href="procurement.html">Procurement</a>
                         </li>
-                      
                         <li><a href="finance.html">Finance</a></li>
                       </ul>
                     </li>
@@ -185,17 +309,6 @@
                         </li>
                       </ul>
                     </li>
-                    <!--<li class="has-dropdown">
-                      <a href="javascript:void(0)"
-                        >Company <i class="fas fa-chevron-down"></i
-                      ></a>
-                      <ul class="submenu">
-                        <li><a href="about-company.html">About</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                      </ul>
-                    </li> -->
                   </ul>
                 </nav>
               </div>
@@ -207,13 +320,18 @@
                 <div
                   class="header__action-btn d-flex align-items-center gap-10"
                 >
-                  <a class="tp-btn-border tp-btn-hover d-none d-md-inline-block" href="https://demo.sheria360.com/users/login/">
+                  <a
+                    class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
+                    href="https://demo.sheria360.com/users/login/"
+                  >
                     <span>Log In</span>
                     <b></b>
                   </a>
+                  <!-- MODIFIED: "Try It Free" now opens the onboarding modal -->
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
-                    href="https://demo.sheria360.com/modules/central/start-trial" target="_blank" 
+                    href="javascript:void(0)"
+                    id="tryFreeBtn"
                   >
                     <span>Try It Free</span>
                     <b></b>
@@ -262,12 +380,15 @@
           /></a>
         </div>
         <div class="tpoffcanvas__info text-center">
-  <h4 class="offcanva-title">we are here</h4>
-  <a href="https://www.google.com/maps/@-1.2676,36.7965,14z" target="_blank">
-    BSK Village, Muguga Green,<br />
-    Westlands Nairobi
-  </a>
-</div>
+          <h4 class="offcanva-title">we are here</h4>
+          <a
+            href="https://www.google.com/maps/@-1.2676,36.7965,14z"
+            target="_blank"
+          >
+            BSK Village, Muguga Green,<br />
+            Westlands Nairobi
+          </a>
+        </div>
         <div class="tpoffcanvas__social">
           <div class="social-icon text-center">
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -284,7 +405,7 @@
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <main class="fix">
-          <!-- tp-slider-area-start -->
+          <!-- ===== HERO SECTION (unchanged) ===== -->
           <div class="tp-hero-area tp-hero-pt pt-170 pb-70 p-relative">
             <div class="tp-hero-left-shape">
               <img src="assets/img/hero/hero-left-shape-3-1.png" alt="" />
@@ -325,7 +446,7 @@
                       <b></b>
                     </a>
                   </div>
-                  
+
                   <div class="tp-hero-3-wrapper p-relative">
                     <div class="tp-hero-3-border-wrap d-none d-md-block">
                       <span class="redius-shape-1"></span>
@@ -363,9 +484,9 @@
               </div>
             </div>
           </div>
-          <!-- tp-slider-area-end -->
+          <!-- end hero -->
 
-          <!-- tp-counter-area-start -->
+          <!-- ===== COUNTER SECTION (unchanged) ===== -->
           <div class="tp-counter-area tp-counter-space p-relative pb-140">
             <div class="tp-counter-shape-2">
               <img src="assets/img/counter/counter-shape-2.png" alt="" />
@@ -443,9 +564,9 @@
               </div>
             </div>
           </div>
-          <!-- tp-counter-area-end -->
+          <!-- end counter -->
 
-          <!-- tp-ai-features-area-start -->
+          <!-- ===== AI FEATURES SECTION (unchanged) ===== -->
           <div class="tp-ai-features-area pt-120 pb-120 bg-light">
             <div class="container">
               <div class="row align-items-center">
@@ -474,8 +595,8 @@
                       Assistant
                     </h3>
                     <p class="mb-25">
-                      SheriAI leverages cutting-edge artificial intelligence
-                       to revolutionize your legal workflow:
+                      SheriAI leverages cutting-edge artificial intelligence to
+                      revolutionize your legal workflow:
                     </p>
                     <ul class="tp-feature-list mb-30">
                       <li class="d-flex align-items-start mb-15">
@@ -540,9 +661,9 @@
               </div>
             </div>
           </div>
-          <!-- tp-ai-features-area-end -->
+          <!-- end ai features -->
 
-          <!-- tp-service-area-strat -->
+          <!-- ===== SERVICES SECTION (unchanged) ===== -->
           <div class="tp-service-area pb-90 z-index">
             <div class="container">
               <div class="row">
@@ -644,8 +765,8 @@
                       <span>AI Practice Management</span>
                       <h3 class="tp-service-sm-title">
                         <a href="service-details.html"
-                          >Smart case management with 
-                          AI-driven insights & automation.</a
+                          >Smart case management with AI-driven insights &
+                          automation.</a
                         >
                       </h3>
                       <div class="tp-service-sm-link">
@@ -809,9 +930,9 @@
               </div>
             </div>
           </div>
-          <!-- tp-service-area-end -->
+          <!-- end services -->
 
-          <!-- tp-solutions-area-start -->
+          <!-- ===== SOLUTIONS SECTION (unchanged) ===== -->
           <div class="tp-solutions-area pt-120 pb-120">
             <div class="container">
               <div class="row justify-content-center">
@@ -825,7 +946,8 @@
                     </h3>
                     <p class="mt-15">
                       Whether you're a law firm, in-house legal team, or
-                      corporate legal department, Sheria360 adapts to your workflow.
+                      corporate legal department, Sheria360 adapts to your
+                      workflow.
                     </p>
                   </div>
                 </div>
@@ -890,9 +1012,9 @@
               </div>
             </div>
           </div>
-          <!-- tp-solutions-area-end -->
+          <!-- end solutions -->
 
-          <!-- tp-rated-area-start -->
+          <!-- ===== RATED SECTION (unchanged) ===== -->
           <div class="tp-rated-area fix p-relative">
             <div
               class="tp-rated-bg pt-120"
@@ -1144,216 +1266,338 @@
               </div>
             </div>
           </div>
-          <!-- tp-rated-area-end -->
+          <!-- end rated -->
 
-          <!-- tp-card-area-start -->
-         <!-- <div class="tp-card-area tp-card-space pt-175 pb-185">
-            <div class="container">
-              <div class="row">
-                <div
-                  class="col-xl-6 col-lg-6 wow tpfadeLeft"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                >
-                  <div class="tp-card-thumb-wrapper p-relative">
-                    <div class="tp-card-main-img">
-                      <img src="assets/img/card/card-bg.png" alt="" />
-                    </div>
-                    <div class="tp-card-img-1">
-                      <img src="assets/img/card/card-shape-1.png" alt="" />
-                    </div>
-                    <div class="tp-card-img-2 d-none d-sm-block">
-                      <img src="assets/img/card/card-img-1.png" alt="" />
-                    </div>
-                    <div
-                      class="tp-card-img-3 d-none d-sm-block"
-                      data-parallax='{"x": 50, "smoothness": 30}'
-                    >
-                      <img src="assets/img/card/card-img-2.png" alt="" />
-                    </div>
-                    <div
-                      class="tp-card-img-4 d-none d-sm-block"
-                      data-parallax='{"x": -50, "smoothness": 30}'
-                    >
-                      <img src="assets/img/card/card-img-3.png" alt="" />
-                    </div>
-                    <div class="tp-card-img-5">
-                      <img src="assets/img/card/card-img-4.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-6 col-lg-6 wow tpfadeRight"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".7s"
-                >
-                  <div class="tp-card-title-box">
-                    <h3 class="tp-section-title-3 pb-15">
-                      Manage <span>All your Cards</span> in one Place
-                    </h3>
-                    <p class="">
-                      Digital products are where itâ€™s at! There are so many
-                      benefits to selling digital products. Itâ€™s easy to get
-                      started and they <br />
-                      can be extremely profitable
-                    </p>
-                    <a
-                      class="tp-btn-blue-lg tp-btn-hover alt-color-black"
-                      href="service-details.html"
-                    >
-                      <span>Get Started Free</span>
-                      <b></b>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- tp-card-area-end -->
-
-          <!-- tp-sales-area-start -->
-          <div class="tp-sales-area tp-sales-space">
-            <div class="container">
-              <div class="row align-items-center">
-                <div
-                  class="col-xl-6 col-lg-6 order-1 order-md-1 wow tpfadeLeft"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                >
-                  <div class="tp-sales-section-box pb-20">
-                    <h3 class="tp-section-title-3 pb-15">
-                      Track and <span>Analyze Billing</span> in Real time
-                    </h3>
-                    <p class="tp-title-anim">
-                      Centralize and simplify payments, and get comprehensive
-                      <br />
-                      insights on your financial transactions!
-                    </p>
-                  </div>
-                  <div class="tp-sales-feature">
-                    <ul>
-                      <li class="yellow-1">
-                        <span
-                          ><i class="far fa-check"></i>
-                          <em>No hidden fees.</em></span
-                        >
-                      </li>
-                      <li class="purple-2">
-                        <span
-                          ><i class="far fa-check"></i>
-                          <em>100% security. Guaranteed.</em></span
-                        >
-                      </li>
-                      <li class="green-3">
-                        <span
-                          ><i class="far fa-check"></i>
-                          <em>No training or maintenance needed</em></span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-6 col-lg-6 order-0 order-md-2 wow tpfadeRight"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".7s"
-                >
-                  <div class="tp-sales-img-wrapper p-relative text-end">
-                    <div class="tp-sales-main-thumb">
-                      <img src="assets/img/card/sale-1.png" alt="" />
-                    </div>
-                    <div class="tp-sales-sub-img-1">
-                      <img src="assets/img/card/sale-2.png" alt="" />
-                    </div>
-                    <div class="tp-sales-sub-img-2 d-none d-sm-block">
-                      <img src="assets/img/card/sale-3.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- tp-sales-area-end -->
-
-          <!-- tp-testimonial-area-start -->
-          <section class="tp-testimonial-area" style="background: #f8f9fc; padding: 100px 0;">
+          <!-- ===== TESTIMONIAL SECTION (unchanged) ===== -->
+          <section
+            class="tp-testimonial-area"
+            style="background: #f8f9fc; padding: 100px 0"
+          >
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-7 text-center mb-60">
-                  <h3 class="tp-section-title" style="margin-bottom: 15px; font-family: var(--tp-ff-urban); color: #01103D;">
-                    What Our <span style="color: #2563eb;">Clients Say</span>
+                  <h3
+                    class="tp-section-title"
+                    style="
+                      margin-bottom: 15px;
+                      font-family: var(--tp-ff-urban);
+                      color: #01103d;
+                    "
+                  >
+                    What Our <span style="color: #2563eb">Clients Say</span>
                   </h3>
-                  <p style="color: #6c757d; font-size: 16px; line-height: 1.7; font-family: var(--tp-ff-body);">
-                    Trusted by legal professionals worldwide to manage their legal practice efficiently.
+                  <p
+                    style="
+                      color: #6c757d;
+                      font-size: 16px;
+                      line-height: 1.7;
+                      font-family: var(--tp-ff-body);
+                    "
+                  >
+                    Trusted by legal professionals worldwide to manage their
+                    legal practice efficiently.
                   </p>
                 </div>
               </div>
               <div class="row g-4">
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div style="background: #fff; border-radius: 16px; padding: 40px 30px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 24px rgba(0,0,0,0.06)';">
-                    <div style="margin-bottom: 20px;">
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
+                  <div
+                    style="
+                      background: #fff;
+                      border-radius: 16px;
+                      padding: 40px 30px;
+                      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+                      height: 100%;
+                      transition:
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                    "
+                    onmouseover="
+                      this.style.transform = 'translateY(-5px)';
+                      this.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)';
+                    "
+                    onmouseout="
+                      this.style.transform = 'translateY(0)';
+                      this.style.boxShadow = '0 4px 24px rgba(0,0,0,0.06)';
+                    "
+                  >
+                    <div style="margin-bottom: 20px">
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
                     </div>
-                    <p style="font-size: 15px; line-height: 1.8; color: #4a5568; margin-bottom: 28px; font-style: italic; font-family: var(--tp-ff-body);">
-                      "Sheria360 has transformed how we manage cases. The document drafting and hearing tracking features are invaluable for our firm."
+                    <p
+                      style="
+                        font-size: 15px;
+                        line-height: 1.8;
+                        color: #4a5568;
+                        margin-bottom: 28px;
+                        font-style: italic;
+                        font-family: var(--tp-ff-body);
+                      "
+                    >
+                      "Sheria360 has transformed how we manage cases. The
+                      document drafting and hearing tracking features are
+                      invaluable for our firm."
                     </p>
                     <div class="d-flex align-items-center">
-                      <div style="width: 48px; height: 48px; border-radius: 50%; background: #01103D; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-right: 14px; flex-shrink: 0; font-family: var(--tp-ff-urban);">
+                      <div
+                        style="
+                          width: 48px;
+                          height: 48px;
+                          border-radius: 50%;
+                          background: #01103d;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 16px;
+                          margin-right: 14px;
+                          flex-shrink: 0;
+                          font-family: var(--tp-ff-urban);
+                        "
+                      >
                         JK
                       </div>
                       <div>
-                        <h6 style="margin: 0; font-weight: 700; font-size: 15px; color: #1a202c; font-family: var(--tp-ff-urban);">John Kamau</h6>
-                        <span style="font-size: 13px; color: #718096; font-family: var(--tp-ff-body);">Managing Partner, Kamau & Associates</span>
+                        <h6
+                          style="
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 15px;
+                            color: #1a202c;
+                            font-family: var(--tp-ff-urban);
+                          "
+                        >
+                          John Kamau
+                        </h6>
+                        <span
+                          style="
+                            font-size: 13px;
+                            color: #718096;
+                            font-family: var(--tp-ff-body);
+                          "
+                          >Managing Partner, Kamau & Associates</span
+                        >
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div style="background: #fff; border-radius: 16px; padding: 40px 30px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 24px rgba(0,0,0,0.06)';">
-                    <div style="margin-bottom: 20px;">
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
+                  <div
+                    style="
+                      background: #fff;
+                      border-radius: 16px;
+                      padding: 40px 30px;
+                      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+                      height: 100%;
+                      transition:
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                    "
+                    onmouseover="
+                      this.style.transform = 'translateY(-5px)';
+                      this.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)';
+                    "
+                    onmouseout="
+                      this.style.transform = 'translateY(0)';
+                      this.style.boxShadow = '0 4px 24px rgba(0,0,0,0.06)';
+                    "
+                  >
+                    <div style="margin-bottom: 20px">
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
                     </div>
-                    <p style="font-size: 15px; line-height: 1.8; color: #4a5568; margin-bottom: 28px; font-style: italic; font-family: var(--tp-ff-body);">
-                      "The AI-powered contract analysis saves us hours every week. It's like having an extra associate who never sleeps."
+                    <p
+                      style="
+                        font-size: 15px;
+                        line-height: 1.8;
+                        color: #4a5568;
+                        margin-bottom: 28px;
+                        font-style: italic;
+                        font-family: var(--tp-ff-body);
+                      "
+                    >
+                      "The AI-powered contract analysis saves us hours every
+                      week. It's like having an extra associate who never
+                      sleeps."
                     </p>
                     <div class="d-flex align-items-center">
-                      <div style="width: 48px; height: 48px; border-radius: 50%; background: #01103D; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-right: 14px; flex-shrink: 0; font-family: var(--tp-ff-urban);">
+                      <div
+                        style="
+                          width: 48px;
+                          height: 48px;
+                          border-radius: 50%;
+                          background: #01103d;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 16px;
+                          margin-right: 14px;
+                          flex-shrink: 0;
+                          font-family: var(--tp-ff-urban);
+                        "
+                      >
                         SO
                       </div>
                       <div>
-                        <h6 style="margin: 0; font-weight: 700; font-size: 15px; color: #1a202c; font-family: var(--tp-ff-urban);">Sarah Okonjo</h6>
-                        <span style="font-size: 13px; color: #718096; font-family: var(--tp-ff-body);">Head of Legal, Dulalix Corp</span>
+                        <h6
+                          style="
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 15px;
+                            color: #1a202c;
+                            font-family: var(--tp-ff-urban);
+                          "
+                        >
+                          Sarah Okonjo
+                        </h6>
+                        <span
+                          style="
+                            font-size: 13px;
+                            color: #718096;
+                            font-family: var(--tp-ff-body);
+                          "
+                          >Head of Legal, Dulalix Corp</span
+                        >
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                  <div style="background: #fff; border-radius: 16px; padding: 40px 30px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 24px rgba(0,0,0,0.06)';">
-                    <div style="margin-bottom: 20px;">
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
-                      <i class="fas fa-star" style="color: #f5a623; font-size: 14px;"></i>
+                  <div
+                    style="
+                      background: #fff;
+                      border-radius: 16px;
+                      padding: 40px 30px;
+                      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+                      height: 100%;
+                      transition:
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                    "
+                    onmouseover="
+                      this.style.transform = 'translateY(-5px)';
+                      this.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)';
+                    "
+                    onmouseout="
+                      this.style.transform = 'translateY(0)';
+                      this.style.boxShadow = '0 4px 24px rgba(0,0,0,0.06)';
+                    "
+                  >
+                    <div style="margin-bottom: 20px">
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
+                      <i
+                        class="fas fa-star"
+                        style="color: #f5a623; font-size: 14px"
+                      ></i>
                     </div>
-                    <p style="font-size: 15px; line-height: 1.8; color: #4a5568; margin-bottom: 28px; font-style: italic; font-family: var(--tp-ff-body);">
-                      "Clean, organized, and accessible from anywhere. Sheria360 keeps our entire team aligned and our clients happy."
+                    <p
+                      style="
+                        font-size: 15px;
+                        line-height: 1.8;
+                        color: #4a5568;
+                        margin-bottom: 28px;
+                        font-style: italic;
+                        font-family: var(--tp-ff-body);
+                      "
+                    >
+                      "Clean, organized, and accessible from anywhere. Sheria360
+                      keeps our entire team aligned and our clients happy."
                     </p>
                     <div class="d-flex align-items-center">
-                      <div style="width: 48px; height: 48px; border-radius: 50%; background: #01103D; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 16px; margin-right: 14px; flex-shrink: 0; font-family: var(--tp-ff-urban);">
+                      <div
+                        style="
+                          width: 48px;
+                          height: 48px;
+                          border-radius: 50%;
+                          background: #01103d;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          color: #fff;
+                          font-weight: 700;
+                          font-size: 16px;
+                          margin-right: 14px;
+                          flex-shrink: 0;
+                          font-family: var(--tp-ff-urban);
+                        "
+                      >
                         RG
                       </div>
                       <div>
-                        <h6 style="margin: 0; font-weight: 700; font-size: 15px; color: #1a202c; font-family: var(--tp-ff-urban);">Rudra Ghosh</h6>
-                        <span style="font-size: 13px; color: #718096; font-family: var(--tp-ff-body);">Senior Advocate, Ghosh Legal</span>
+                        <h6
+                          style="
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 15px;
+                            color: #1a202c;
+                            font-family: var(--tp-ff-urban);
+                          "
+                        >
+                          Rudra Ghosh
+                        </h6>
+                        <span
+                          style="
+                            font-size: 13px;
+                            color: #718096;
+                            font-family: var(--tp-ff-body);
+                          "
+                          >Senior Advocate, Ghosh Legal</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -1361,9 +1605,9 @@
               </div>
             </div>
           </section>
-          <!-- tp-testimonial-area-end -->
+          <!-- end testimonial -->
 
-          <!-- tp-integration-area-start -->
+          <!-- ===== INTEGRATION SECTION (unchanged) ===== -->
           <div class="tp-integration-area pb-110 tp-integration-mlr">
             <div class="container">
               <div class="row align-items-end tp-integration-section-space">
@@ -1473,133 +1717,14 @@
               </div>
             </div>
           </div>
-          <!-- tp-integration-area-end -->
-
-          <!-- tp-blog-area-start -->
-          <!-- <div class="tp-blog-area pb-80">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-xl-5">
-                  <div class="tp-blog-section-box text-center mb-50">
-                    <h3 class="tp-section-title-3">
-                      Our Latest <span>News and Articles</span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-60">
-                  <div class="tp-blog-item">
-                    <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-1.jpg" alt=""
-                      /></a>
-                    </div>
-                    <div class="tp-blog-meta d-flex align-items-center">
-                      <div class="tp-blog-category category-color-1">
-                        <span>Crm Software</span>
-                      </div>
-                      <div class="tp-blog-date">
-                        <span>28 April, 2023</span>
-                      </div>
-                    </div>
-                    <div class="tp-blog-title-box">
-                      <a class="tp-blog-title-sm" href="blog-details.html"
-                        >How Chatbots Can Help You <br />
-                        Drive More Sales</a
-                      >
-                    </div>
-                    <div
-                      class="tp-blog-author-info-box d-flex align-items-center"
-                    >
-                      <div class="tp-blog-avata">
-                        <img src="assets/img/blog/blog-avata-1.png" alt="" />
-                      </div>
-                      <div class="tp-blog-author-info">
-                        <h5>Hilary Ouse</h5>
-                        <span>Founder & CEO Dulalix</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-60">
-                  <div class="tp-blog-item">
-                    <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-2.jpg" alt=""
-                      /></a>
-                    </div>
-                    <div class="tp-blog-meta d-flex align-items-center">
-                      <div class="tp-blog-category category-color-2">
-                        <span>Sales Tools</span>
-                      </div>
-                      <div class="tp-blog-date">
-                        <span>28 April, 2023</span>
-                      </div>
-                    </div>
-                    <div class="tp-blog-title-box">
-                      <a class="tp-blog-title-sm" href="blog-details.html"
-                        >6 Tips for Personal Selling that Guarantee Success in
-                        2023</a
-                      >
-                    </div>
-                    <div
-                      class="tp-blog-author-info-box d-flex align-items-center"
-                    >
-                      <div class="tp-blog-avata">
-                        <img src="assets/img/blog/blog-avata-2.png" alt="" />
-                      </div>
-                      <div class="tp-blog-author-info">
-                        <h5>Rudra Ghosh</h5>
-                        <span>Founder & CEO Dulalix</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-60">
-                  <div class="tp-blog-item">
-                    <div class="tp-blog-thumb fix">
-                      <a href="blog-details.html"
-                        ><img src="assets/img/blog/blog-3.jpg" alt=""
-                      /></a>
-                    </div>
-                    <div class="tp-blog-meta d-flex align-items-center">
-                      <div class="tp-blog-category category-color-3">
-                        <span>Sales Management</span>
-                      </div>
-                      <div class="tp-blog-date">
-                        <span>28 April, 2023</span>
-                      </div>
-                    </div>
-                    <div class="tp-blog-title-box">
-                      <a class="tp-blog-title-sm" href="blog-details.html"
-                        >8 Things About Web Design Your Boss Wants To Know</a
-                      >
-                    </div>
-                    <div
-                      class="tp-blog-author-info-box d-flex align-items-center"
-                    >
-                      <div class="tp-blog-avata">
-                        <img src="assets/img/blog/blog-avata-3.png" alt="" />
-                      </div>
-                      <div class="tp-blog-author-info">
-                        <h5>Penny Tool</h5>
-                        <span>Founder & CEO Dulalix</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- tp-blog-area-end -->
+          <!-- end integration -->
         </main>
 
+        <!-- Existing footer area (unchanged) -->
         <div
           class="footer-bottom-content tp-browser-bg-shape"
           data-background="assets/img/footer/overly.png"
         >
-          <!-- tp-browser-area-start -->
           <div class="tp-browser-details-area pt-110 pb-30 p-relative">
             <div class="container">
               <div class="row align-items-center">
@@ -1662,10 +1787,8 @@
               </div>
             </div>
           </div>
-          <!-- tp-browser-area-end -->
 
           <footer>
-            <!-- tp-footer-feature-slide-start -->
             <div class="tp-footer-slide pb-80">
               <div class="container-fluid g-0">
                 <div class="row g-0 justify-content-center">
@@ -1740,9 +1863,7 @@
                 </div>
               </div>
             </div>
-            <!-- tp-footer-feature-slide-end -->
 
-            <!-- tp-footer-area-start -->
             <div class="tp-footer__pl-pr">
               <div class="tp-footer__area tp-footer__tp-border-bottom">
                 <div class="container">
@@ -1765,10 +1886,10 @@
                         </div>
                         <div class="tp-footer__contact-info">
                           <p>
-                            Sheria360 is a modern legal management system
-                            that allows legal professionals to organize case
-                            files, track deadlines, draft documents, manage
-                            hearings, and manage day-to-day tasks.
+                            Sheria360 is a modern legal management system that
+                            allows legal professionals to organize case files,
+                            track deadlines, draft documents, manage hearings,
+                            and manage day-to-day tasks.
                           </p>
                           <ul>
                             <li>
@@ -1845,7 +1966,7 @@
                         <div class="tp-footer__content">
                           <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                             <li><a href="about-sheria.html">About</a></li>
                             <li><a href="price.html">Pricing</a></li>
                             <li>
                               <a href="solutions.html">Solutions</a>
@@ -1866,13 +1987,19 @@
                         <h4 class="tp-footer__widget-title">Resources</h4>
                         <div class="tp-footer__content">
                           <ul>
-                           <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
                             <li><a href="blog.html">Blogs</a></li>
                             <li><a href="marketplace.html">Market Place</a></li>
-                            <li><a href="https://docs.sheria360.com/">Documentation</a></li>
-                            <li><a href="https://demo.sheria360.com/users/login/">Login</a></li>
-                            
-                            
+                            <li>
+                              <a href="https://docs.sheria360.com/"
+                                >Documentation</a
+                              >
+                            </li>
+                            <li>
+                              <a href="https://demo.sheria360.com/users/login/"
+                                >Login</a
+                              >
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -1965,18 +2092,90 @@
                         class="tp-copyright__text tp-copyright__text-3 text-center"
                       >
                         <span
-                          >Copyright © 2026 Sheria360. All Rights Reserved. 
-                          <!--<a href="#">Privacy Policy</a> |
-                          <a href="#">Terms of Services</a></span
-                        >-->
+                          >Copyright © 2026 Sheria360. All Rights Reserved.
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- tp-footer-area-end -->
           </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ONBOARDING MODAL (NEW) ===== -->
+    <div class="onboarding-overlay" id="onboardingOverlay">
+      <div class="onboarding-modal">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+        <!-- Step 0: Legal professional? -->
+        <div class="step active" id="step0">
+          <h3>Welcome to Sheria360</h3>
+          <p>Are you a legal professional?</p>
+          <div class="step-buttons">
+            <button class="option-btn" id="yesBtn">Yes, I am</button>
+            <button class="option-btn" id="noBtn">No, I'm not</button>
+          </div>
+        </div>
+        <!-- Step 1: Area of practice (Legal) -->
+        <div class="step" id="step1">
+          <h3>What's your primary area of practice?</h3>
+          <div class="options-grid" id="areaOptions">
+            <button class="option-btn" data-value="litigation">
+              Litigation
+            </button>
+            <button class="option-btn" data-value="corporate">
+              Corporate Law
+            </button>
+            <button class="option-btn" data-value="family">Family Law</button>
+            <button class="option-btn" data-value="criminal">
+              Criminal Law
+            </button>
+            <button class="option-btn" data-value="realestate">
+              Real Estate
+            </button>
+            <button class="option-btn" data-value="ip">
+              Intellectual Property
+            </button>
+          </div>
+          <button class="next-btn" id="nextAreaBtn" disabled>Next</button>
+        </div>
+        <!-- Step 2: Firm size -->
+        <div class="step" id="step2">
+          <h3>How large is your firm or legal team?</h3>
+          <div class="options-grid" id="sizeOptions">
+            <button class="option-btn" data-value="solo">
+              Solo Practitioner
+            </button>
+            <button class="option-btn" data-value="2-10">2 - 10</button>
+            <button class="option-btn" data-value="11-50">11 - 50</button>
+            <button class="option-btn" data-value="51-200">51 - 200</button>
+            <button class="option-btn" data-value="200+">200+</button>
+          </div>
+          <button class="next-btn" id="nextSizeBtn" disabled>Next</button>
+        </div>
+        <!-- Step 3: Non‑legal role -->
+        <div class="step" id="step3">
+          <h3>What best describes you?</h3>
+          <div class="options-grid" id="roleOptions">
+            <button class="option-btn" data-value="student">Student</button>
+            <button class="option-btn" data-value="business">
+              Business Owner
+            </button>
+            <button class="option-btn" data-value="it">IT Professional</button>
+            <button class="option-btn" data-value="finance">Finance</button>
+            <button class="option-btn" data-value="other">Other</button>
+          </div>
+          <button class="next-btn" id="nextRoleBtn" disabled>Next</button>
+        </div>
+        <!-- Final redirect step -->
+        <div class="step" id="stepFinal">
+          <div class="final-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>You're all set!</h3>
+            <p>Taking you to your free trial...</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2004,5 +2203,129 @@
     <script src="assets/js/purecounter.js"></script>
     <script src="assets/js/jarallax.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Onboarding modal logic -->
+    <script>
+      (function () {
+        const overlay = document.getElementById("onboardingOverlay");
+        const closeBtn = document.getElementById("closeModalBtn");
+        const tryBtn = document.getElementById("tryFreeBtn");
+        const steps = {
+          step0: document.getElementById("step0"),
+          step1: document.getElementById("step1"),
+          step2: document.getElementById("step2"),
+          step3: document.getElementById("step3"),
+          stepFinal: document.getElementById("stepFinal"),
+        };
+        let userType = null,
+          area = null,
+          size = null,
+          role = null;
+
+        function showStep(stepId) {
+          Object.values(steps).forEach((s) => s.classList.remove("active"));
+          if (steps[stepId]) steps[stepId].classList.add("active");
+        }
+
+        tryBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          overlay.classList.add("active");
+          showStep("step0");
+          userType = null;
+          area = null;
+          size = null;
+          role = null;
+          document
+            .querySelectorAll(".option-btn.selected")
+            .forEach((btn) => btn.classList.remove("selected"));
+          document.getElementById("nextAreaBtn").disabled = true;
+          document.getElementById("nextSizeBtn").disabled = true;
+          document.getElementById("nextRoleBtn").disabled = true;
+        });
+
+        function closeModal() {
+          overlay.classList.remove("active");
+        }
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal();
+        });
+
+        document.getElementById("yesBtn").addEventListener("click", () => {
+          userType = "legal";
+          showStep("step1");
+        });
+        document.getElementById("noBtn").addEventListener("click", () => {
+          userType = "non-legal";
+          showStep("step3");
+        });
+
+        const areaOptions = document.querySelectorAll(
+          "#areaOptions .option-btn",
+        );
+        areaOptions.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            areaOptions.forEach((b) => b.classList.remove("selected"));
+            this.classList.add("selected");
+            area = this.dataset.value;
+            document.getElementById("nextAreaBtn").disabled = false;
+          });
+        });
+        document.getElementById("nextAreaBtn").addEventListener("click", () => {
+          showStep("step2");
+        });
+
+        const sizeOptions = document.querySelectorAll(
+          "#sizeOptions .option-btn",
+        );
+        sizeOptions.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            sizeOptions.forEach((b) => b.classList.remove("selected"));
+            this.classList.add("selected");
+            size = this.dataset.value;
+            document.getElementById("nextSizeBtn").disabled = false;
+          });
+        });
+        document.getElementById("nextSizeBtn").addEventListener("click", () => {
+          showStep("stepFinal");
+          redirectToTrial();
+        });
+
+        const roleOptions = document.querySelectorAll(
+          "#roleOptions .option-btn",
+        );
+        roleOptions.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            roleOptions.forEach((b) => b.classList.remove("selected"));
+            this.classList.add("selected");
+            role = this.dataset.value;
+            document.getElementById("nextRoleBtn").disabled = false;
+          });
+        });
+        document.getElementById("nextRoleBtn").addEventListener("click", () => {
+          showStep("stepFinal");
+          redirectToTrial();
+        });
+
+        function redirectToTrial() {
+          let baseUrl =
+            "https://demo.sheria360.com/modules/central/start-trial";
+          let params = [];
+          if (userType === "legal") {
+            params.push("type=legal");
+            if (area) params.push("area=" + encodeURIComponent(area));
+            if (size) params.push("size=" + encodeURIComponent(size));
+          } else {
+            params.push("type=non-legal");
+            if (role) params.push("role=" + encodeURIComponent(role));
+          }
+          if (params.length > 0) baseUrl += "?" + params.join("&");
+          setTimeout(() => {
+            window.open(baseUrl, "_blank");
+            closeModal();
+          }, 1500);
+        }
+      })();
+    </script>
   </body>
 </html>
