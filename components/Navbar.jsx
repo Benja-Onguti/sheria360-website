@@ -32,10 +32,10 @@ const navItems = [
     label: 'Resources',
     href: '#',
     dropdown: [
-      { label: 'Blog', href: '/blog' },
-      { label: 'Documentation', href: 'https://docs.sheria360.com/', external: true },
-      { label: 'Training', href: '/training' },
-      { label: 'Marketplace', href: '/marketplace' },
+       { label: 'Blog', href: '/blog' },
+       { label: 'Documentation', href: 'https://docs.sheria360.com/', external: true },
+       { label: 'Training', href: '/training' },
+       // { label: 'Marketplace', href: '/marketplace' },
     ],
   },
   {
