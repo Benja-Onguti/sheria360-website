@@ -35,8 +35,8 @@
         --p-border-light: #f0f4fa;
         --p-success: #0e9f6e;
         --p-warning: #f5a623;
-        --p-radius: 16px;
-        --p-radius-sm: 10px;
+        --p-radius: 14px;
+        --p-radius-sm: 8px;
         --p-shadow-sm:
           0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
         --p-shadow-md: 0 8px 32px rgba(0, 0, 0, 0.06);
@@ -174,7 +174,7 @@
 
       .pricing-hero h1 {
         font-family: var(--p-font-heading);
-        font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+        font-size: clamp(2rem, 4vw, 3rem);
         font-weight: 800;
         letter-spacing: -0.03em;
         line-height: 1.12;
@@ -204,7 +204,7 @@
         align-items: center;
         justify-content: center;
         gap: 14px;
-        margin-bottom: 48px;
+        margin-bottom: 40px;
       }
       .toggle-wrap .label {
         font-size: 0.85rem;
@@ -257,19 +257,19 @@
         transform: translateX(24px);
       }
 
-      /* ===== PRICING GRID ===== */
+      /* ===== PRICING GRID — 4 columns ===== */
       .pricing-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
         margin-bottom: 60px;
       }
 
-      /* ===== CARDS ===== */
+      /* ===== CARDS — compact size ===== */
       .card {
         background: var(--p-surface);
         border-radius: var(--p-radius);
-        padding: 32px 24px 36px;
+        padding: 20px 16px 24px;
         box-shadow: var(--p-shadow-sm);
         border: 1px solid var(--p-border);
         transition: all var(--p-transition);
@@ -316,7 +316,6 @@
           var(--p-accent)
         );
       }
-
       .card.free-trial .btn-plan {
         background: rgba(37, 99, 235, 0.08);
         border-color: rgba(37, 99, 235, 0.15);
@@ -331,13 +330,13 @@
         color: var(--p-primary);
       }
 
-      /* Popular (Professional) */
-      .card.popular {
+      /* Standard — Most popular */
+      .card.standard {
         border-color: var(--p-primary);
         box-shadow: var(--p-shadow-lg);
         background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
       }
-      .card.popular::before {
+      .card.standard::before {
         opacity: 1;
         background: linear-gradient(
           90deg,
@@ -346,9 +345,9 @@
           var(--p-primary)
         );
       }
-      .card.popular .badge {
+      .card.standard .badge {
         position: absolute;
-        top: 14px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
@@ -358,15 +357,16 @@
           var(--p-primary-dark) 100%
         );
         color: #fff;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.06em;
-        padding: 5px 20px;
+        padding: 4px 8px;
         border-radius: 50px;
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        white-space: nowrap;
       }
-      .card.popular .btn-plan {
+      .card.standard .btn-plan {
         background: linear-gradient(
           135deg,
           var(--p-primary) 0%,
@@ -376,72 +376,87 @@
         border-color: var(--p-primary);
         box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25);
       }
-      .card.popular .btn-plan:hover {
+      .card.standard .btn-plan:hover {
         transform: translateY(-1px);
         box-shadow: 0 6px 24px rgba(37, 99, 235, 0.35);
       }
 
-      /* Card Inner */
+      /* Professional */
+      .card.professional .plan-name {
+        color: var(--p-slate-light);
+      }
 
-      .card .plan-name {
+      /* Custom */
+      .card.custom .plan-name {
+        color: var(--p-slate-light);
+      }
+
+/* Card Inner — compact */
+.card.standard .plan-name {
+  margin-top: 22px;
+}
+.card .plan-name {
         font-family: var(--p-font-heading);
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.06em;
         color: var(--p-slate-light);
         margin-bottom: 2px;
+        text-align: center;
       }
       .card .price-tag {
-        font-size: 2.6rem;
+        font-size: 2rem;
         font-weight: 800;
         letter-spacing: -0.03em;
         color: var(--p-navy-deep);
-        margin: 4px 0 2px;
+        margin: 2px 0 2px;
         font-family: var(--p-font-heading);
         display: flex;
         align-items: baseline;
-        gap: 4px;
+        gap: 3px;
         flex-wrap: wrap;
         justify-content: center;
       }
       .card .price-tag .currency {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: var(--p-slate-light);
       }
       .card .price-tag .per-unit {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         font-weight: 500;
         color: var(--p-slate-light);
         margin-left: 2px;
       }
       .card .price-tag small {
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 500;
         color: var(--p-slate-light);
         margin-left: 4px;
       }
       .card .billing-note {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: var(--p-slate-light);
-        margin-bottom: 18px;
+        margin-bottom: 12px;
+        text-align: center;
       }
       .card .desc {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: var(--p-slate-light);
-        margin-bottom: 22px;
+        margin-bottom: 14px;
         flex: 1;
-        line-height: 1.6;
+        line-height: 1.5;
+        text-align: center;
       }
       .card .btn-plan {
         display: inline-block;
         width: 100%;
         text-align: center;
-        padding: 12px 0;
+        padding: 10px 0;
         border-radius: 50px;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         border: 1.5px solid var(--p-border);
         background: transparent;
         color: var(--p-slate);
@@ -456,9 +471,9 @@
       }
 
       .card .features {
-        margin-top: 22px;
+        margin-top: 14px;
         border-top: 1px solid var(--p-border);
-        padding-top: 22px;
+        padding-top: 14px;
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
@@ -466,15 +481,15 @@
       .card .features li {
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 0.85rem;
-        padding: 5px 0;
+        gap: 8px;
+        font-size: 0.75rem;
+        padding: 3px 0;
         color: var(--p-slate-light);
       }
       .card .features li i {
         color: var(--p-primary);
-        font-size: 0.8rem;
-        width: 18px;
+        font-size: 0.7rem;
+        width: 16px;
         text-align: center;
         flex-shrink: 0;
       }
@@ -484,6 +499,10 @@
       .card .features li .highlight-text {
         color: var(--p-primary);
         font-weight: 600;
+      }
+      /* Free trial special */
+      .card.free-trial .features li i {
+        color: var(--p-primary);
       }
 
       /* ===== COMPARISON TABLE ===== */
@@ -525,12 +544,12 @@
       .compare-table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 0.85rem;
-        min-width: 480px;
+        font-size: 0.82rem;
+        min-width: 580px;
       }
       .compare-table th,
       .compare-table td {
-        padding: 13px 18px;
+        padding: 11px 14px;
         text-align: center;
         border-bottom: 1px solid var(--p-border);
       }
@@ -538,12 +557,12 @@
       .compare-table td:first-child {
         text-align: left;
         font-weight: 500;
-        padding-left: 22px;
+        padding-left: 20px;
         color: var(--p-slate);
       }
       .compare-table th {
         font-weight: 700;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.04em;
         color: var(--p-slate-light);
@@ -671,15 +690,10 @@
       }
 
       /* ===== RESPONSIVE ===== */
-      @media (max-width: 992px) {
+      @media (max-width: 1200px) {
         .pricing-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-        }
-        .pricing-grid .card:last-child {
-          grid-column: span 2;
-          max-width: 460px;
-          margin: 0 auto;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
         }
       }
       @media (max-width: 768px) {
@@ -690,21 +704,20 @@
           font-size: 1.9rem;
         }
         .pricing-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-          max-width: 400px;
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+          max-width: 520px;
           margin-left: auto;
           margin-right: auto;
         }
-        .pricing-grid .card:last-child {
-          grid-column: span 1;
-          max-width: 100%;
-        }
         .card {
-          padding: 26px 20px 30px;
+          padding: 18px 14px 20px;
         }
         .card .price-tag {
-          font-size: 2.2rem;
+          font-size: 1.7rem;
+        }
+        .card .plan-name {
+          font-size: 0.9rem;
         }
         .toggle-wrap {
           gap: 10px;
@@ -722,6 +735,10 @@
         }
       }
       @media (max-width: 480px) {
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 340px;
+        }
         .pricing-hero h1 {
           font-size: 1.6rem;
         }
@@ -729,10 +746,10 @@
           font-size: 0.9rem;
         }
         .card .price-tag {
-          font-size: 1.9rem;
+          font-size: 1.6rem;
         }
         .card .price-tag small {
-          font-size: 0.85rem;
+          font-size: 0.8rem;
         }
         .toggle-wrap .label {
           font-size: 0.78rem;
@@ -748,10 +765,10 @@
         .toggle.active .thumb {
           transform: translateX(20px);
         }
-        .card.popular .badge {
-          font-size: 0.6rem;
-          padding: 4px 14px;
-          top: 12px;
+        .card.standard .badge {
+          font-size: 0.55rem;
+          padding: 3px 12px;
+          top: 8px;
         }
       }
     </style>
@@ -769,6 +786,26 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-18205858668");
+      gtag("event", "conversion", {
+        send_to: "AW-18205858668/0-p4CM2HvbccEOy2nelD",
+        value: 1.0,
+        currency: "USD",
+      });
+    </script>
   </head>
 
   <body class="pricing-body">
@@ -936,7 +973,7 @@
             >
           </div>
 
-          <!-- ===== PRICING CARDS ===== -->
+          <!-- ===== PRICING CARDS — 4 compact cards ===== -->
           <div class="pricing-grid" id="pricingCards">
             <!-- 1. Free Trial -->
             <div class="card free-trial">
@@ -944,102 +981,122 @@
               <div
                 class="price-tag"
                 style="
-                  font-size: 1.8rem;
+                  font-size: 1.6rem;
                   display: flex;
                   align-items: baseline;
-                  gap: 6px;
+                  gap: 4px;
                   justify-content: center;
                 "
               >
                 14
                 <small
                   style="
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
                     font-weight: 600;
                     color: var(--p-primary);
                   "
-                  >Days Trial</small
+                  >Days</small
                 >
               </div>
-
-              <div class="desc">
-                Experience the full power of Sheria360 with zero commitment.
+              <div
+                class="billing-note"
+                style="
+                  color: var(--p-primary);
+                  font-weight: 500;
+                  font-size: 0.7rem;
+                "
+              >
+                No credit card
               </div>
+              <div class="desc">Experience Sheria360 with zero commitment.</div>
               <a
                 href="https://demo.sheria360.com/modules/central/start-trial"
                 target="_blank"
                 class="btn-plan"
-                >Start Free Trial →</a
+                >Start Free →</a
               >
               <ul class="features">
-                <li>
-                  <i class="fas fa-check"></i> Full Professional plan access
-                </li>
+                <li><i class="fas fa-check"></i> Full Professional access</li>
                 <li><i class="fas fa-check"></i> 14 days · no risk</li>
                 <li>
-                  <i class="fas fa-check"></i> All AI features enabled but
-                  limited tokens
+                  <i class="fas fa-check"></i> AI features (limited tokens)
                 </li>
-                <li>
-                  <i class="fas fa-check"></i> Priority onboarding support
-                </li>
+                <li><i class="fas fa-check"></i> Priority onboarding</li>
                 <li><i class="fas fa-check"></i> Cancel anytime</li>
               </ul>
             </div>
 
-            <!-- 2. Professional (combined) -->
-            <div class="card popular">
+            <!-- 2. Standard — Most popular -->
+            <div class="card standard">
               <div class="badge">Most popular</div>
-              <div class="plan-name">Professional</div>
+              <div class="plan-name">Standard</div>
               <div class="price-tag" data-monthly="1000" data-yearly="800">
                 <span class="currency">KES</span> 1,000
                 <span class="per-unit">/user /mo</span>
               </div>
               <div class="billing-note">Billed monthly</div>
-              <div class="desc">
-                All‑in‑one legal practice management for teams of any size.
-              </div>
+              <div class="desc">Core legal practice management for teams.</div>
               <a href="#" class="btn-plan">Subscribe</a>
               <ul class="features">
                 <li><i class="fas fa-check"></i> Unlimited team members</li>
                 <li><i class="fas fa-check"></i> 50 GB storage</li>
+                <li><i class="fas fa-check"></i> Analytics &amp; reporting</li>
+                <li><i class="fas fa-check"></i> Custom workflows</li>
+                <li><i class="fas fa-check"></i> Priority support</li>
+                <li><i class="fas fa-check"></i> API access</li>
+                <li><i class="fas fa-check"></i> AI contract review</li>
+              </ul>
+            </div>
+
+            <!-- 3. Professional -->
+            <div class="card professional">
+              <div class="plan-name">Professional</div>
+              <div class="price-tag" data-monthly="1500" data-yearly="1200">
+                <span class="currency">KES</span> 1,500
+                <span class="per-unit">/user /mo</span>
+              </div>
+              <div class="billing-note">Billed monthly</div>
+              <div class="desc">
+                Advanced tools for growing legal practices.
+              </div>
+              <a href="#" class="btn-plan">Subscribe</a>
+              <ul class="features">
+                <li><i class="fas fa-check"></i> Unlimited team members</li>
+                <li><i class="fas fa-check"></i> 200 GB storage</li>
+                <li><i class="fas fa-check"></i> Advanced analytics</li>
                 <li>
-                  <i class="fas fa-check"></i> Advanced analytics &amp;
-                  reporting
-                </li>
-                <li>
-                  <i class="fas fa-check"></i> Custom workflows &amp; automation
+                  <i class="fas fa-check"></i> Custom workflows + automation
                 </li>
                 <li><i class="fas fa-check"></i> Priority support</li>
                 <li><i class="fas fa-check"></i> Full API access</li>
                 <li>
-                  <i class="fas fa-check"></i> AI contract review &amp; drafting
+                  <i class="fas fa-check"></i> AI contract review + drafting
                 </li>
+                <li><i class="fas fa-check"></i> Advanced security</li>
               </ul>
             </div>
 
-            <!-- 3. Custom (Enterprise) -->
+            <!-- 4. Custom -->
             <div class="card custom">
               <div class="plan-name">Custom</div>
               <div
                 class="price-tag"
                 style="
-                  font-size: 2rem;
+                  font-size: 1.6rem;
                   display: flex;
                   align-items: baseline;
                   gap: 4px;
+                  justify-content: center;
                 "
               >
-                <span class="currency" style="filter: blur(4px)"
-                  >KES 5000/user</span
+                <span
+                  class="currency"
+                  style="filter: blur(3px); font-size: 1.2rem"
+                  >KES ●●●●●</span
                 >
-                <span style="font-weight: 600; font-size: 1.6rem"></span>
               </div>
               <div class="billing-note" style="opacity: 0">&nbsp;</div>
-              <div class="desc">
-                Tailored solutions for large firms and enterprises with specific
-                needs.
-              </div>
+              <div class="desc">Tailored solutions for enterprises.</div>
               <a href="contact.html" class="btn-plan">Contact sales</a>
               <ul class="features">
                 <li><i class="fas fa-check"></i> Everything in Professional</li>
@@ -1050,7 +1107,6 @@
                 </li>
                 <li>
                   <i class="fas fa-check"></i> Custom SLA &amp; on‑premise
-                  options
                 </li>
                 <li>
                   <i class="fas fa-check"></i> Advanced security &amp; auditing
@@ -1075,6 +1131,7 @@
                 <tr>
                   <th>Feature</th>
                   <th>Free Trial</th>
+                  <th>Standard</th>
                   <th>Professional</th>
                   <th>Custom</th>
                 </tr>
@@ -1085,15 +1142,18 @@
                   <td>Up to 5</td>
                   <td>Unlimited</td>
                   <td>Unlimited</td>
+                  <td>Unlimited</td>
                 </tr>
                 <tr>
                   <td>Storage</td>
+                  <td>20 GB</td>
+                  <td>50 GB</td>
                   <td>200 GB</td>
-                  <td>500 GB</td>
                   <td>Unlimited</td>
                 </tr>
                 <tr>
                   <td>Advanced analytics</td>
+                  <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
@@ -1103,10 +1163,19 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
                   <td>AI contract review</td>
                   <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
+                </tr>
+                <tr>
+                  <td>AI contract drafting</td>
+                  <td><i class="fas fa-times"></i></td>
+                  <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
@@ -1115,15 +1184,18 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
                   <td>24/7 dedicated support</td>
+                  <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
                   <td>SSO &amp; compliance</td>
+                  <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-check"></i></td>
@@ -1133,9 +1205,11 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
+                  <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
                   <td>Custom SLA</td>
+                  <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-times"></i></td>
                   <td><i class="fas fa-check"></i></td>
@@ -1253,27 +1327,52 @@
         const toggle = document.getElementById("billingToggle");
         const labelMonthly = document.getElementById("labelMonthly");
         const labelYearly = document.getElementById("labelYearly");
-        // Only the Professional card has data attributes for price switching
-        const proPrice = document.querySelector(".card.popular .price-tag");
-        const monthlyPrice = 1000;
-        const yearlyPrice = 800;
+
+        // Both Standard and Professional cards have data attributes
+        const standardPrice = document.querySelector(
+          ".card.standard .price-tag",
+        );
+        const professionalPrice = document.querySelector(
+          ".card.professional .price-tag",
+        );
+
+        const monthlyStandard = 1000;
+        const yearlyStandard = 800;
+        const monthlyProfessional = 1500;
+        const yearlyProfessional = 1200;
 
         function setBilling(isYearly) {
           toggle.classList.toggle("active", isYearly);
           labelMonthly.classList.toggle("active", !isYearly);
           labelYearly.classList.toggle("active", isYearly);
 
-          if (proPrice) {
-            const price = isYearly ? yearlyPrice : monthlyPrice;
+          // Update Standard card
+          if (standardPrice) {
+            const price = isYearly ? yearlyStandard : monthlyStandard;
             const formatted = price.toLocaleString("en-KE");
-            proPrice.innerHTML = `
+            standardPrice.innerHTML = `
                         <span class="currency">KES</span> ${formatted}
                         <span class="per-unit">/user /mo</span>
                     `;
           }
 
+          // Update Professional card
+          if (professionalPrice) {
+            const price = isYearly ? yearlyProfessional : monthlyProfessional;
+            const formatted = price.toLocaleString("en-KE");
+            professionalPrice.innerHTML = `
+                        <span class="currency">KES</span> ${formatted}
+                        <span class="per-unit">/user /mo</span>
+                    `;
+          }
+
+          // Update billing notes for both cards
           document.querySelectorAll(".card .billing-note").forEach((el) => {
-            if (el.closest(".card").classList.contains("popular")) {
+            const card = el.closest(".card");
+            if (
+              card.classList.contains("standard") ||
+              card.classList.contains("professional")
+            ) {
               el.textContent = isYearly ? "Billed annually" : "Billed monthly";
             }
           });
