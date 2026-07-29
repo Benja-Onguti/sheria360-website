@@ -1,0 +1,2270 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      Terms of Service & Privacy Policy - Sheria360 | AI-Powered Legal Practice
+      Management
+    </title>
+    <meta
+      name="description"
+      content="Terms of Service, Privacy Policy, and Disclaimer for Sheria360 - AI-powered legal practice management platform. Read our legal terms and conditions."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+
+    <style>
+      :root {
+        --blue: #1a56db;
+        --blue-dark: #0f3db8;
+        --blue-light: #e1effe;
+        --navy: #01103d;
+        --gray-50: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-300: #cbd5e1;
+        --gray-400: #94a3b8;
+        --gray-500: #64748b;
+        --gray-600: #475569;
+        --gray-700: #334155;
+        --gray-800: #1e293b;
+        --green: #0e9f6e;
+        --red: #ef4444;
+        --amber: #f59e0b;
+        --radius-sm: 8px;
+        --radius: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 20px;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+        --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: var(--gray-700);
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--navy);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      a {
+        color: var(--blue);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: var(--blue-dark);
+      }
+
+      /* Preloader */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s;
+      }
+      #preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .preloader {
+        display: flex;
+        gap: 8px;
+      }
+      .preloader span {
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--blue);
+        animation: bounce 0.6s infinite alternate;
+      }
+      .preloader span:nth-child(2) {
+        animation-delay: 0.2s;
+        background: var(--navy);
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0) scale(1);
+        }
+        100% {
+          transform: translateY(-18px) scale(1.15);
+        }
+      }
+
+      /* Scroll top */
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+      }
+      .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .scroll-top:hover {
+        background: var(--navy);
+        transform: translateY(-4px);
+      }
+
+      /* Header */
+      .header-bottom__main-menu nav > ul > li > a {
+        color: #000000;
+        transition: color 0.2s;
+        padding: 35px 10px;
+        font-size: 13.5px;
+        font-weight: 500;
+      }
+      .header-bottom__main-menu nav > ul > li > a:hover {
+        color: var(--blue);
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        box-shadow: var(--shadow-lg);
+        border-radius: var(--radius);
+        border: 1px solid var(--gray-200);
+      }
+      .header__action-btn .tp-btn-border,
+      .header__action-btn .tp-btn-blue-sm {
+        border-radius: 8px;
+        font-size: 0.8125rem;
+        height: 38px;
+        line-height: 38px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        background: var(--blue);
+        border: none;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(26, 86, 219, 0.25);
+      }
+
+      /* Page Header */
+      .page-header {
+        background: #e0eff9;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.03) 0%,
+          transparent 50%
+        );
+        animation: pulse 6s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
+      }
+      .page-header-content {
+        position: relative;
+        z-index: 1;
+      }
+      .page-header h1 {
+        color: #1b57db;
+        font-weight: 800;
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+      }
+      .page-header p {
+        color: #1b57db;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      .page-breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .page-breadcrumb a {
+        color: #1b57db;
+      }
+      .page-breadcrumb a:hover {
+        color: #fff;
+      }
+      .page-breadcrumb span {
+        color: #1b57db;
+      }
+
+      /* Tab Navigation */
+      .tab-nav {
+        display: flex;
+        gap: 0;
+        background: #fff;
+        border-radius: var(--radius-xl);
+        padding: 6px;
+        box-shadow: var(--shadow);
+        margin-bottom: 40px;
+        position: sticky;
+        top: 100px;
+        z-index: 100;
+        border: 1px solid var(--gray-100);
+      }
+      .tab-btn {
+        flex: 1;
+        padding: 14px 20px;
+        border: none;
+        background: transparent;
+        color: var(--gray-600);
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: var(--radius-lg);
+        transition: all 0.3s;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+      .tab-btn.active {
+        background: var(--blue);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
+      }
+      .tab-btn:hover:not(.active) {
+        color: var(--blue);
+        background: var(--blue-light);
+      }
+      .tab-content {
+        display: none;
+        animation: fadeIn 0.4s ease;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Content */
+      .legal-section {
+        padding: 60px 0;
+        background: var(--gray-50);
+      }
+      .legal-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: var(--radius-xl);
+        padding: 60px 50px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--gray-100);
+      }
+      .legal-meta {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 25px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid var(--gray-200);
+        flex-wrap: wrap;
+      }
+      .legal-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: var(--gray-500);
+      }
+      .legal-meta-item i {
+        color: var(--blue);
+      }
+      .legal-meta-item strong {
+        color: var(--gray-700);
+      }
+
+      .legal-content h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--navy);
+        margin-bottom: 14px;
+        padding-top: 16px;
+      }
+      .legal-content h3 {
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--gray-800);
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+      .legal-content p {
+        color: var(--gray-600);
+        line-height: 1.8;
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+      }
+      .legal-content ul,
+      .legal-content ol {
+        margin-bottom: 18px;
+        padding-left: 24px;
+      }
+      .legal-content ul li,
+      .legal-content ol li {
+        color: var(--gray-600);
+        line-height: 1.8;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+      }
+      .legal-content strong {
+        color: var(--gray-800);
+      }
+      .legal-content .uppercase {
+        text-transform: uppercase;
+      }
+
+      .legal-highlight {
+        background: var(--blue-light);
+        border-left: 4px solid var(--blue);
+        padding: 18px 22px;
+        border-radius: 0 var(--radius) var(--radius) 0;
+        margin: 22px 0;
+      }
+      .legal-highlight p {
+        margin: 0;
+        color: var(--gray-700);
+        font-weight: 500;
+      }
+      .legal-highlight i {
+        color: var(--blue);
+        margin-right: 8px;
+      }
+
+      .legal-disclaimer-box {
+        background: #fff8f0;
+        border: 1px solid #fde4c4;
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        margin: 24px 0;
+      }
+      .legal-disclaimer-box p {
+        margin: 0;
+        color: var(--gray-700);
+        font-size: 0.9rem;
+      }
+      .legal-disclaimer-box i {
+        color: var(--amber);
+        margin-right: 8px;
+      }
+
+      /* Footer */
+      footer {
+        background: #fff;
+        border-top: 1px solid var(--gray-100);
+        padding: 60px 0 30px;
+      }
+
+      @media (max-width: 991px) {
+        .legal-container {
+          padding: 40px 30px;
+        }
+        .page-header h1 {
+          font-size: 2rem;
+        }
+        .tab-nav {
+          flex-wrap: wrap;
+          gap: 4px;
+        }
+        .tab-btn {
+          flex: 1 1 auto;
+          font-size: 0.8rem;
+          padding: 12px 14px;
+        }
+      }
+      @media (max-width: 767px) {
+        .legal-container {
+          padding: 28px 18px;
+          border-radius: var(--radius-lg);
+        }
+        .page-header {
+          padding: 100px 0 60px;
+        }
+        .page-header h1 {
+          font-size: 1.5rem;
+        }
+        .legal-meta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        .tab-nav {
+          top: 80px;
+        }
+        .tab-btn {
+          font-size: 0.75rem;
+          padding: 10px 10px;
+        }
+        .legal-content h2 {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="preloader"><span></span><span></span></div>
+    </div>
+    <button class="scroll-top"><i class="far fa-angle-up"></i></button>
+
+    <!-- Header -->
+    <header class="tp-header-height">
+      <div
+        id="header-sticky"
+        class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
+              <div class="header-bottom__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo-black.png"
+                    alt="Sheria360"
+                    style="max-height: 35px"
+                /></a>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
+              <div class="header-bottom__main-menu header-bottom__main-menu-3">
+                <nav id="mobile-menu">
+                  <ul class="d-flex">
+                    <li class="me-20"><a href="index.html">Home</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="about-sheria.html">About Sheria</a>
+                    </li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Solutions <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
+                        <li><a href="inhouse.html">In-House Legal</a></li>
+                        <li><a href="law-firms.html">Law Firms</a></li>
+                        <li><a href="procurement.html">Procurement</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20"><a href="price.html">Pricing</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Resources <i class="fas fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                        <li>
+                          <a href="https://docs.sheria360.com/" target="_blank"
+                            >Documentation</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
+              <div
+                class="header-bottom__right d-flex align-items-center justify-content-end"
+              >
+                <div class="header__action-btn d-flex align-items-center">
+                  <a
+                    class="tp-btn-border d-none d-md-inline-block gap-2"
+                    href="https://demo.sheria360.com/users/login/"
+                    ><span>Log In</span></a
+                  >
+
+                  <a
+                    class="tp-btn-blue-sm d-none d-md-inline-block"
+                    href="javascript:void(0)"
+                    id="tryFreeBtn"
+                    ><span>Try It Free</span></a
+                  >
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                    ><i class="fal fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-content">
+            <h1>Sheria360 Privacy & Terms</h1>
+            <p>Terms of Service · Privacy Policy · Disclaimer</p>
+            <div class="page-breadcrumb">
+              <a href="index.html">Home</a><span>/</span
+              ><span>Privacy & Terms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab Navigation -->
+      <section class="legal-section">
+        <div class="container">
+          <div class="tab-nav" id="tabNav">
+            <button class="tab-btn active" data-tab="terms">
+              Terms of Service
+            </button>
+            <button class="tab-btn" data-tab="privacy">Privacy Policy</button>
+            <button class="tab-btn" data-tab="disclaimer">Disclaimer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terms of Service -->
+      <section class="legal-section" style="padding-top: 0">
+        <div class="container">
+          <div class="tab-content active" id="terms">
+            <div class="legal-container">
+              <div class="legal-meta">
+                <div class="legal-meta-item">
+                  <i class="far fa-calendar-alt"></i
+                  ><span>Last updated: <strong>2026-07-24</strong></span>
+                </div>
+                <div class="legal-meta-item">
+                  <i class="far fa-globe"></i
+                  ><span>Website: <strong>https://sheria360.com</strong></span>
+                </div>
+              </div>
+
+              <div class="legal-content">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Sheria360 ("Company", "we", "our", "us")!</p>
+                <p>
+                  These Terms of Service ("Terms", "Terms of Service") govern
+                  your use of our website located at
+                  <a href="https://sheria360.com">https://sheria360.com</a>
+                  (together or individually "Service") operated by Sheria360.
+                </p>
+                <p>
+                  Our Privacy Policy also governs your use of our Service and
+                  explains how we collect, safeguard and disclose information
+                  that results from your use of our web pages.
+                </p>
+                <p>
+                  Your agreement with us includes these Terms and our Privacy
+                  Policy ("Agreements"). You acknowledge that you have read and
+                  understood Agreements, and agree to be bound of them.
+                </p>
+                <p>
+                  If you do not agree with (or cannot comply with) Agreements,
+                  then you may not use the Service, but please let us know by
+                  emailing at
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >
+                  so we can try to find a solution. These Terms apply to all
+                  visitors, users and others who wish to access or use Service.
+                </p>
+
+                <h2>2. Communications</h2>
+                <p>
+                  By using our Service, you agree to subscribe to newsletters,
+                  marketing or promotional materials and other information we
+                  may send. However, you may opt out of receiving any, or all,
+                  of these communications from us by following the unsubscribe
+                  link or by emailing at
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+
+                <h2>3. Contests, Sweepstakes and Promotions</h2>
+                <p>
+                  Any contests, sweepstakes or other promotions (collectively,
+                  "Promotions") made available through Service may be governed
+                  by rules that are separate from these Terms of Service. If you
+                  participate in any Promotions, please review the applicable
+                  rules as well as our Privacy Policy. If the rules for a
+                  Promotion conflict with these Terms of Service, Promotion
+                  rules will apply.
+                </p>
+
+                <h2>4. Content</h2>
+                <p>
+                  Our Service allows you to post, link, store, share and
+                  otherwise make available certain information, text, graphics,
+                  videos, or other material ("Content"). You are responsible for
+                  Content that you post on or through Service, including its
+                  legality, reliability, and appropriateness.
+                </p>
+                <p>
+                  By posting Content on or through Service, You represent and
+                  warrant that: (i) Content is yours (you own it) and/or you
+                  have the right to use it and the right to grant us the rights
+                  and license as provided in these Terms, and (ii) that the
+                  posting of your Content on or through Service does not violate
+                  the privacy rights, publicity rights, copyrights, contract
+                  rights or any other rights of any person or entity. We reserve
+                  the right to terminate the account of anyone found to be
+                  infringing on a copyright.
+                </p>
+                <p>
+                  You retain any and all of your rights to any Content you
+                  submit, post or display on or through Service and you are
+                  responsible for protecting those rights. We take no
+                  responsibility and assume no liability for Content you or any
+                  third-party posts on or through Service. However, by posting
+                  Content using Service you grant us the right and license to
+                  use, modify, publicly perform, publicly display, reproduce,
+                  and distribute such Content on and through Service. You agree
+                  that this license includes the right for us to make your
+                  Content available to other users of Service, who may also use
+                  your Content subject to these Terms.
+                </p>
+                <p>
+                  Sheria360 has the right but not the obligation to monitor and
+                  edit all Content provided by users.
+                </p>
+                <p>
+                  In addition, Content found on or through this Service are the
+                  property of Sheria360 or used with permission. You may not
+                  distribute, modify, transmit, reuse, download, repost, copy,
+                  or use said Content, whether in whole or in part, for
+                  commercial purposes or for personal gain, without express
+                  advance written permission from us.
+                </p>
+
+                <h2>5. Prohibited Uses</h2>
+                <p>
+                  You may use Service only for lawful purposes and in accordance
+                  with Terms. You agree not to use Service:
+                </p>
+                <ol type="i">
+                  <li>
+                    In any way that violates any applicable national or
+                    international law or regulation.
+                  </li>
+                  <li>
+                    For the purpose of exploiting, harming, or attempting to
+                    exploit or harm minors in any way by exposing them to
+                    inappropriate content or otherwise.
+                  </li>
+                  <li>
+                    To transmit, or procure the sending of, any advertising or
+                    promotional material, including any "junk mail", "chain
+                    letter," "spam," or any other similar solicitation.
+                  </li>
+                  <li>
+                    To impersonate or attempt to impersonate Company, a Company
+                    employee, another user, or any other person or entity.
+                  </li>
+                  <li>
+                    In any way that infringes upon the rights of others, or in
+                    any way is illegal, threatening, fraudulent, or harmful, or
+                    in connection with any unlawful, illegal, fraudulent, or
+                    harmful purpose or activity.
+                  </li>
+                  <li>
+                    To engage in any other conduct that restricts or inhibits
+                    anyone's use or enjoyment of Service, or which, as
+                    determined by us, may harm or offend Company or users of
+                    Service or expose them to liability.
+                  </li>
+                </ol>
+                <p>Additionally, you agree not to:</p>
+                <ol type="i">
+                  <li>
+                    Use Service in any manner that could disable, overburden,
+                    damage, or impair Service or interfere with any other
+                    party's use of Service, including their ability to engage in
+                    real time activities through Service.
+                  </li>
+                  <li>
+                    Use any robot, spider, or other automatic device, process,
+                    or means to access Service for any purpose, including
+                    monitoring or copying any of the material on Service.
+                  </li>
+                  <li>
+                    Use any manual process to monitor or copy any of the
+                    material on Service or for any other unauthorized purpose
+                    without our prior written consent.
+                  </li>
+                  <li>
+                    Use any device, software, or routine that interferes with
+                    the proper working of Service.
+                  </li>
+                  <li>
+                    Introduce any viruses, trojan horses, worms, logic bombs, or
+                    other material which is malicious or technologically
+                    harmful.
+                  </li>
+                  <li>
+                    Attempt to gain unauthorized access to, interfere with,
+                    damage, or disrupt any parts of Service, the server on which
+                    Service is stored, or any server, computer, or database
+                    connected to Service.
+                  </li>
+                  <li>
+                    Attack Service via a denial-of-service attack or a
+                    distributed denial-of-service attack.
+                  </li>
+                  <li>
+                    Take any action that may damage or falsify Company rating.
+                  </li>
+                  <li>
+                    Otherwise attempt to interfere with the proper working of
+                    Service.
+                  </li>
+                </ol>
+
+                <h2>6. Analytics</h2>
+                <p>
+                  We may use third-party Service Providers to monitor and
+                  analyze the use of our Service.
+                </p>
+
+                <h2>7. No Use By Minors</h2>
+                <p>
+                  Service is intended only for access and use by individuals at
+                  least eighteen (18) years old. By accessing or using Service,
+                  you warrant and represent that you are at least eighteen (18)
+                  years of age and with the full authority, right, and capacity
+                  to enter into this agreement and abide by all of the terms and
+                  conditions of Terms. If you are not at least eighteen (18)
+                  years old, you are prohibited from both the access and usage
+                  of Service.
+                </p>
+
+                <h2>8. Accounts</h2>
+                <p>
+                  When you create an account with us, you guarantee that you are
+                  above the age of 18, and that the information you provide us
+                  is accurate, complete, and current at all times. Inaccurate,
+                  incomplete, or obsolete information may result in the
+                  immediate termination of your account on Service.
+                </p>
+                <p>
+                  You are responsible for maintaining the confidentiality of
+                  your account and password, including but not limited to the
+                  restriction of access to your computer and/or account. You
+                  agree to accept responsibility for any and all activities or
+                  actions that occur under your account and/or password, whether
+                  your password is with our Service or a third-party service.
+                  You must notify us immediately upon becoming aware of any
+                  breach of security or unauthorized use of your account.
+                </p>
+                <p>
+                  You may not use as a username the name of another person or
+                  entity or that is not lawfully available for use, a name or
+                  trademark that is subject to any rights of another person or
+                  entity other than you, without appropriate authorization. You
+                  may not use as a username any name that is offensive, vulgar
+                  or obscene.
+                </p>
+                <p>
+                  We reserve the right to refuse service, terminate accounts,
+                  remove or edit content, or cancel orders in our sole
+                  discretion.
+                </p>
+
+                <h2>9. Intellectual Property</h2>
+                <p>
+                  Service and its original content (excluding Content provided
+                  by users), features and functionality are and will remain the
+                  exclusive property of Sheria360 and its licensors. Service is
+                  protected by copyright, trademark, and other laws of and
+                  foreign countries. Our trademarks may not be used in
+                  connection with any product or service without the prior
+                  written consent of Sheria360.
+                </p>
+
+                <h2>10. Copyright Policy</h2>
+                <p>
+                  We respect the intellectual property rights of others. It is
+                  our policy to respond to any claim that Content posted on
+                  Service infringes on the copyright or other intellectual
+                  property rights ("Infringement") of any person or entity.
+                </p>
+                <p>
+                  If you are a copyright owner, or authorized on behalf of one,
+                  and you believe that the copyrighted work has been copied in a
+                  way that constitutes copyright infringement, please submit
+                  your claim via email to
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >, with the subject line: "Copyright Infringement" and include
+                  in your claim a detailed description of the alleged
+                  Infringement as detailed below, under "DMCA Notice and
+                  Procedure for Copyright Infringement Claims".
+                </p>
+                <p>
+                  You may be held accountable for damages (including costs and
+                  attorneys' fees) for misrepresentation or bad-faith claims on
+                  the infringement of any Content found on and/or through
+                  Service on your copyright.
+                </p>
+
+                <h2>
+                  11. DMCA Notice and Procedure for Copyright Infringement
+                  Claims
+                </h2>
+                <p>
+                  You may submit a notification pursuant to the Digital
+                  Millennium Copyright Act (DMCA) by providing our Copyright
+                  Agent with the following information in writing (see 17 U.S.C
+                  512(c)(3) for further detail):
+                </p>
+                <ol type="i">
+                  <li>
+                    an electronic or physical signature of the person authorized
+                    to act on behalf of the owner of the copyright's interest;
+                  </li>
+                  <li>
+                    a description of the copyrighted work that you claim has
+                    been infringed, including the URL (i.e., web page address)
+                    of the location where the copyrighted work exists or a copy
+                    of the copyrighted work;
+                  </li>
+                  <li>
+                    identification of the URL or other specific location on
+                    Service where the material that you claim is infringing is
+                    located;
+                  </li>
+                  <li>your address, telephone number, and email address;</li>
+                  <li>
+                    a statement by you that you have a good faith belief that
+                    the disputed use is not authorized by the copyright owner,
+                    its agent, or the law;
+                  </li>
+                  <li>
+                    a statement by you, made under penalty of perjury, that the
+                    above information in your notice is accurate and that you
+                    are the copyright owner or authorized to act on the
+                    copyright owner's behalf.
+                  </li>
+                </ol>
+                <p>
+                  You can contact our Copyright Agent via email at
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+
+                <h2>12. Error Reporting and Feedback</h2>
+                <p>
+                  You may provide us either directly at
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >
+                  or via third party sites and tools with information and
+                  feedback concerning errors, suggestions for improvements,
+                  ideas, problems, complaints, and other matters related to our
+                  Service ("Feedback"). You acknowledge and agree that: (i) you
+                  shall not retain, acquire or assert any intellectual property
+                  right or other right, title or interest in or to the Feedback;
+                  (ii) Company may have development ideas similar to the
+                  Feedback; (iii) Feedback does not contain confidential
+                  information or proprietary information from you or any third
+                  party; and (iv) Company is not under any obligation of
+                  confidentiality with respect to the Feedback. In the event the
+                  transfer of the ownership to the Feedback is not possible due
+                  to applicable mandatory laws, you grant Company and its
+                  affiliates an exclusive, transferable, irrevocable,
+                  free-of-charge, sub-licensable, unlimited and perpetual right
+                  to use (including copy, modify, create derivative works,
+                  publish, distribute and commercialize) Feedback in any manner
+                  and for any purpose.
+                </p>
+
+                <h2>13. Links To Other Web Sites</h2>
+                <p>
+                  Our Service may contain links to third party web sites or
+                  services that are not owned or controlled by Sheria360.
+                </p>
+                <p>
+                  Sheria360 has no control over, and assumes no responsibility
+                  for the content, privacy policies, or practices of any
+                  third-party web sites or services. We do not warrant the
+                  offerings of any of these entities/individuals or their
+                  websites.
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >You acknowledge and agree that company shall not be
+                    responsible or liable, directly or indirectly, for any
+                    damage or loss caused or alleged to be caused by or in
+                    connection with use of or reliance on any such content,
+                    goods or services available on or through any such
+                    third-party web sites or services.</strong
+                  >
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >We strongly advise you to read the terms of service and
+                    privacy policies of any third-party web sites or services
+                    that you visit.</strong
+                  >
+                </p>
+
+                <h2>14. Disclaimer Of Warranty</h2>
+                <p class="uppercase">
+                  <strong
+                    >These services are provided by company on an "as is" and
+                    "as available" basis. company makes no representations or
+                    warranties of any kind, express or implied, as to the
+                    operation of their services, or the information, content or
+                    materials included therein. you expressly agree that your
+                    use of these services, their content, and any services or
+                    items obtained from us is at your sole risk.</strong
+                  >
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >Neither company nor any person associated with company
+                    makes any warranty or representation with respect to the
+                    completeness, security, reliability, quality, accuracy, or
+                    availability of the services. without limiting the
+                    foregoing, neither company nor anyone associated with
+                    company represents or warrants that the services, their
+                    content, or any services or items obtained through the
+                    services will be accurate, reliable, error-free, or
+                    uninterrupted, that defects will be corrected, that the
+                    services or the server that makes it available are free of
+                    viruses or other harmful components or that the services or
+                    any services or items obtained through the services will
+                    otherwise meet your needs or expectations.</strong
+                  >
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >Company hereby disclaims all warranties of any kind,
+                    whether express or implied, statutory, or otherwise,
+                    including but not limited to any warranties of
+                    merchantability, non-infringement, and fitness for
+                    particular purpose.</strong
+                  >
+                </p>
+                <p>
+                  The foregoing does not affect any warranties which cannot be
+                  excluded or limited under applicable law.
+                </p>
+
+                <h2>15. Limitation Of Liability</h2>
+                <p class="uppercase">
+                  <strong
+                    >Except as prohibited by law, you will hold us and our
+                    officers, directors, employees, and agents harmless for any
+                    indirect, punitive, special, incidental, or consequential
+                    damage, however it arises (including attorneys' fees and all
+                    related costs and expenses of litigation and arbitration, or
+                    at trial or on appeal, if any, whether or not litigation or
+                    arbitration is instituted), whether in an action of
+                    contract, negligence, or other tortious action, or arising
+                    out of or in connection with this agreement, including
+                    without limitation any claim for personal injury or property
+                    damage, arising from this agreement and any violation by you
+                    of any federal, state, or local laws, statutes, rules, or
+                    regulations, even if company has been previously advised of
+                    the possibility of such damage. except as prohibited by law,
+                    if there is liability found on the part of company, it will
+                    be limited to the amount paid for the products and/or
+                    services, and under no circumstances will there be
+                    consequential or punitive damages. some states do not allow
+                    the exclusion or limitation of punitive, incidental or
+                    consequential damages, so the prior limitation or exclusion
+                    may not apply to you.</strong
+                  >
+                </p>
+
+                <h2>16. Termination</h2>
+                <p>
+                  We may terminate or suspend your account and bar access to
+                  Service immediately, without prior notice or liability, under
+                  our sole discretion, for any reason whatsoever and without
+                  limitation, including but not limited to a breach of Terms.
+                </p>
+                <p>
+                  If you wish to terminate your account, you may simply
+                  discontinue using Service.
+                </p>
+                <p>
+                  All provisions of Terms which by their nature should survive
+                  termination shall survive termination, including, without
+                  limitation, ownership provisions, warranty disclaimers,
+                  indemnity and limitations of liability.
+                </p>
+
+                <h2>17. Governing Law</h2>
+                <p>
+                  These Terms shall be governed and construed in accordance with
+                  the laws of <strong>Kenya</strong>, which governing law
+                  applies to agreement without regard to its conflict of law
+                  provisions.
+                </p>
+                <p>
+                  Our failure to enforce any right or provision of these Terms
+                  will not be considered a waiver of those rights. If any
+                  provision of these Terms is held to be invalid or
+                  unenforceable by a court, the remaining provisions of these
+                  Terms will remain in effect. These Terms constitute the entire
+                  agreement between us regarding our Service and supersede and
+                  replace any prior agreements we might have had between us
+                  regarding Service.
+                </p>
+
+                <h2>18. Changes To Service</h2>
+                <p>
+                  We reserve the right to withdraw or amend our Service, and any
+                  service or material we provide via Service, in our sole
+                  discretion without notice. We will not be liable if for any
+                  reason all or any part of Service is unavailable at any time
+                  or for any period. From time to time, we may restrict access
+                  to some parts of Service, or the entire Service, to users,
+                  including registered users.
+                </p>
+
+                <h2>19. Amendments To Terms</h2>
+                <p>
+                  We may amend Terms at any time by posting the amended terms on
+                  this site. It is your responsibility to review these Terms
+                  periodically.
+                </p>
+                <p>
+                  Your continued use of the Platform following the posting of
+                  revised Terms means that you accept and agree to the changes.
+                  You are expected to check this page frequently so you are
+                  aware of any changes, as they are binding on you.
+                </p>
+                <p>
+                  By continuing to access or use our Service after any revisions
+                  become effective, you agree to be bound by the revised terms.
+                  If you do not agree to the new terms, you are no longer
+                  authorized to use Service.
+                </p>
+
+                <h2>20. Waiver And Severability</h2>
+                <p>
+                  No waiver by Company of any term or condition set forth in
+                  Terms shall be deemed a further or continuing waiver of such
+                  term or condition or a waiver of any other term or condition,
+                  and any failure of Company to assert a right or provision
+                  under Terms shall not constitute a waiver of such right or
+                  provision.
+                </p>
+                <p>
+                  If any provision of Terms is held by a court or other tribunal
+                  of competent jurisdiction to be invalid, illegal or
+                  unenforceable for any reason, such provision shall be
+                  eliminated or limited to the minimum extent such that the
+                  remaining provisions of Terms will continue in full force and
+                  effect.
+                </p>
+
+                <h2>21. Acknowledgement</h2>
+                <p class="uppercase">
+                  <strong
+                    >By using service or other services provided by us, you
+                    acknowledge that you have read these terms of service and
+                    agree to be bound by them.</strong
+                  >
+                </p>
+
+                <h2>22. Contact Us</h2>
+                <p>
+                  Please send your feedback, comments, requests for technical
+                  support by email:
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Privacy Policy -->
+          <div class="tab-content" id="privacy">
+            <div class="legal-container">
+              <div class="legal-meta">
+                <div class="legal-meta-item">
+                  <i class="far fa-calendar-alt"></i
+                  ><span>Effective date: <strong>2026-07-24</strong></span>
+                </div>
+                <div class="legal-meta-item">
+                  <i class="far fa-globe"></i
+                  ><span>Website: <strong>https://sheria360.com</strong></span>
+                </div>
+              </div>
+
+              <div class="legal-content">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Sheria360.</p>
+                <p>
+                  Sheria360 ("us", "we", or "our") operates
+                  <a href="https://sheria360.com">https://sheria360.com</a>
+                  (hereinafter referred to as "Service").
+                </p>
+                <p>
+                  Our Privacy Policy governs your visit to
+                  <a href="https://sheria360.com">https://sheria360.com</a>, and
+                  explains how we collect, safeguard and disclose information
+                  that results from your use of our Service.
+                </p>
+                <p>
+                  We use your data to provide and improve Service. By using
+                  Service, you agree to the collection and use of information in
+                  accordance with this policy. Unless otherwise defined in this
+                  Privacy Policy, the terms used in this Privacy Policy have the
+                  same meanings as in our Terms and Conditions.
+                </p>
+                <p>
+                  Our Terms and Conditions ("Terms") govern all use of our
+                  Service and together with the Privacy Policy constitutes your
+                  agreement with us ("agreement").
+                </p>
+
+                <h2>2. Definitions</h2>
+                <p>
+                  <strong>SERVICE</strong> means the
+                  <a href="https://sheria360.com">https://sheria360.com</a>
+                  website operated by Sheria360.
+                </p>
+                <p>
+                  <strong>PERSONAL DATA</strong> means data about a living
+                  individual who can be identified from those data (or from
+                  those and other information either in our possession or likely
+                  to come into our possession).
+                </p>
+                <p>
+                  <strong>USAGE DATA</strong> is data collected automatically
+                  either generated by the use of Service or from Service
+                  infrastructure itself (for example, the duration of a page
+                  visit).
+                </p>
+                <p>
+                  <strong>COOKIES</strong> are small files stored on your device
+                  (computer or mobile device).
+                </p>
+                <p>
+                  <strong>DATA CONTROLLER</strong> means a natural or legal
+                  person who (either alone or jointly or in common with other
+                  persons) determines the purposes for which and the manner in
+                  which any personal data are, or are to be, processed. For the
+                  purpose of this Privacy Policy, we are a Data Controller of
+                  your data.
+                </p>
+                <p>
+                  <strong>DATA PROCESSORS (OR SERVICE PROVIDERS)</strong> means
+                  any natural or legal person who processes the data on behalf
+                  of the Data Controller. We may use the services of various
+                  Service Providers in order to process your data more
+                  effectively.
+                </p>
+                <p>
+                  <strong>DATA SUBJECT</strong> is any living individual who is
+                  the subject of Personal Data.
+                </p>
+                <p>
+                  <strong>THE USER</strong> is the individual using our Service.
+                  The User corresponds to the Data Subject, who is the subject
+                  of Personal Data.
+                </p>
+
+                <h2>3. Information Collection and Use</h2>
+                <p>
+                  We collect several different types of information for various
+                  purposes to provide and improve our Service to you.
+                </p>
+
+                <h2>4. Types of Data Collected</h2>
+                <h3>Personal Data</h3>
+                <p>
+                  While using our Service, we may ask you to provide us with
+                  certain personally identifiable information that can be used
+                  to contact or identify you ("Personal Data"). Personally
+                  identifiable information may include, but is not limited to:
+                </p>
+                <ol type="i">
+                  <li>Email address</li>
+                  <li>First name and last name</li>
+                  <li>Phone number</li>
+                  <li>
+                    Address, Country, State, Province, ZIP/Postal code, City
+                  </li>
+                  <li>Cookies and Usage Data</li>
+                </ol>
+                <p>
+                  We may use your Personal Data to contact you with newsletters,
+                  marketing or promotional materials and other information that
+                  may be of interest to you. You may opt out of receiving any,
+                  or all, of these communications from us by following the
+                  unsubscribe link.
+                </p>
+
+                <h3>Usage Data</h3>
+                <p>
+                  We may also collect information that your browser sends
+                  whenever you visit our Service or when you access Service by
+                  or through any device ("Usage Data").
+                </p>
+                <p>
+                  This Usage Data may include information such as your
+                  computer's Internet Protocol address (e.g. IP address),
+                  browser type, browser version, the pages of our Service that
+                  you visit, the time and date of your visit, the time spent on
+                  those pages, unique device identifiers and other diagnostic
+                  data.
+                </p>
+
+                <h3>Tracking Cookies Data</h3>
+                <p>
+                  We use cookies and similar tracking technologies to track the
+                  activity on our Service and we hold certain information.
+                </p>
+                <p>
+                  Cookies are files with a small amount of data which may
+                  include an anonymous unique identifier. Cookies are sent to
+                  your browser from a website and stored on your device. Other
+                  tracking technologies are also used such as beacons, tags and
+                  scripts to collect and track information and to improve and
+                  analyze our Service.
+                </p>
+                <p>
+                  You can instruct your browser to refuse all cookies or to
+                  indicate when a cookie is being sent. However, if you do not
+                  accept cookies, you may not be able to use some portions of
+                  our Service.
+                </p>
+                <p>Examples of Cookies we use:</p>
+                <ol type="i">
+                  <li>
+                    <strong>Session Cookies:</strong> We use Session Cookies to
+                    operate our Service.
+                  </li>
+                  <li>
+                    <strong>Preference Cookies:</strong> We use Preference
+                    Cookies to remember your preferences and various settings.
+                  </li>
+                  <li>
+                    <strong>Security Cookies:</strong> We use Security Cookies
+                    for security purposes.
+                  </li>
+                  <li>
+                    <strong>Advertising Cookies:</strong> Advertising Cookies
+                    are used to serve you with advertisements that may be
+                    relevant to you and your interests.
+                  </li>
+                </ol>
+
+                <h3>Other Data</h3>
+                <p>
+                  While using our Service, we may also collect the following
+                  information: sex, age, date of birth, place of birth, passport
+                  details, citizenship, registration at place of residence and
+                  actual address, telephone number (work, mobile), details of
+                  documents on education, qualification, professional training,
+                  employment agreements, NDA agreements, information on bonuses
+                  and compensation, information on marital status, family
+                  members, social security (or other taxpayer identification)
+                  number, office location and other data.
+                </p>
+
+                <h2>5. Use of Data</h2>
+                <p>Sheria360 uses the collected data for various purposes:</p>
+                <ol type="i">
+                  <li>to provide and maintain our Service;</li>
+                  <li>to notify you about changes to our Service;</li>
+                  <li>
+                    to allow you to participate in interactive features of our
+                    Service when you choose to do so;
+                  </li>
+                  <li>to provide customer support;</li>
+                  <li>
+                    to gather analysis or valuable information so that we can
+                    improve our Service;
+                  </li>
+                  <li>to monitor the usage of our Service;</li>
+                  <li>to detect, prevent and address technical issues;</li>
+                  <li>to fulfil any other purpose for which you provide it;</li>
+                  <li>
+                    to carry out our obligations and enforce our rights arising
+                    from any contracts entered into between you and us,
+                    including for billing and collection;
+                  </li>
+                  <li>
+                    to provide you with notices about your account and/or
+                    subscription, including expiration and renewal notices,
+                    email-instructions, etc.;
+                  </li>
+                  <li>
+                    to provide you with news, special offers and general
+                    information about other goods, services and events which we
+                    offer that are similar to those that you have already
+                    purchased or enquired about unless you have opted not to
+                    receive such information;
+                  </li>
+                  <li>
+                    in any other way we may describe when you provide the
+                    information;
+                  </li>
+                  <li>for any other purpose with your consent.</li>
+                </ol>
+
+                <h2>6. Retention of Data</h2>
+                <p>
+                  We will retain your Personal Data only for as long as is
+                  necessary for the purposes set out in this Privacy Policy. We
+                  will retain and use your Personal Data to the extent necessary
+                  to comply with our legal obligations (for example, if we are
+                  required to retain your data to comply with applicable laws),
+                  resolve disputes, and enforce our legal agreements and
+                  policies.
+                </p>
+                <p>
+                  We will also retain Usage Data for internal analysis purposes.
+                  Usage Data is generally retained for a shorter period, except
+                  when this data is used to strengthen the security or to
+                  improve the functionality of our Service, or we are legally
+                  obligated to retain this data for longer time periods.
+                </p>
+
+                <h2>7. Transfer of Data</h2>
+                <p>
+                  Your information, including Personal Data, may be transferred
+                  to – and maintained on – computers located outside of your
+                  state, province, country or other governmental jurisdiction
+                  where the data protection laws may differ from those of your
+                  jurisdiction.
+                </p>
+                <p>
+                  If you are located outside United Kingdom and choose to
+                  provide information to us, please note that we transfer the
+                  data, including Personal Data, to United Kingdom and process
+                  it there.
+                </p>
+                <p>
+                  Your consent to this Privacy Policy followed by your
+                  submission of such information represents your agreement to
+                  that transfer.
+                </p>
+                <p>
+                  Sheria360 will take all the steps reasonably necessary to
+                  ensure that your data is treated securely and in accordance
+                  with this Privacy Policy and no transfer of your Personal Data
+                  will take place to an organization or a country unless there
+                  are adequate controls in place including the security of your
+                  data and other personal information.
+                </p>
+
+                <h2>8. Disclosure of Data</h2>
+                <p>
+                  We may disclose personal information that we collect, or you
+                  provide:
+                </p>
+                <ol type="i">
+                  <li>
+                    <strong>Disclosure for Law Enforcement.</strong> Under
+                    certain circumstances, we may be required to disclose your
+                    Personal Data if required to do so by law or in response to
+                    valid requests by public authorities.
+                  </li>
+                  <li>
+                    <strong>Business Transaction.</strong> If we or our
+                    subsidiaries are involved in a merger, acquisition or asset
+                    sale, your Personal Data may be transferred.
+                  </li>
+                  <li>
+                    <strong>Other cases.</strong> We may disclose your
+                    information also:
+                    <ol type="1" style="margin-top: 8px">
+                      <li>to our subsidiaries and affiliates;</li>
+                      <li>
+                        to contractors, service providers, and other third
+                        parties we use to support our business;
+                      </li>
+                      <li>to fulfill the purpose for which you provide it;</li>
+                      <li>
+                        for the purpose of including your company's logo on our
+                        website;
+                      </li>
+                      <li>
+                        for any other purpose disclosed by us when you provide
+                        the information;
+                      </li>
+                      <li>with your consent in any other cases;</li>
+                      <li>
+                        if we believe disclosure is necessary or appropriate to
+                        protect the rights, property, or safety of the Company,
+                        our customers, or others.
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+
+                <h2>9. Security of Data</h2>
+                <p>
+                  The security of your data is important to us but remember that
+                  no method of transmission over the Internet or method of
+                  electronic storage is 100% secure. While we strive to use
+                  commercially acceptable means to protect your Personal Data,
+                  we cannot guarantee its absolute security.
+                </p>
+
+                <h2>
+                  10. Your Data Protection Rights Under General Data Protection
+                  Regulation (GDPR)
+                </h2>
+                <p>
+                  If you are a resident of the European Union (EU) and European
+                  Economic Area (EEA), you have certain data protection rights,
+                  covered by GDPR.
+                </p>
+                <p>
+                  We aim to take reasonable steps to allow you to correct,
+                  amend, delete, or limit the use of your Personal Data.
+                </p>
+                <p>
+                  If you wish to be informed what Personal Data we hold about
+                  you and if you want it to be removed from our systems, please
+                  email us at
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+                <p>
+                  In certain circumstances, you have the following data
+                  protection rights:
+                </p>
+                <ol type="1">
+                  <li>
+                    the right to access, update or to delete the information we
+                    have on you;
+                  </li>
+                  <li>
+                    the right of rectification. You have the right to have your
+                    information rectified if that information is inaccurate or
+                    incomplete;
+                  </li>
+                  <li>
+                    the right to object. You have the right to object to our
+                    processing of your Personal Data;
+                  </li>
+                  <li>
+                    the right of restriction. You have the right to request that
+                    we restrict the processing of your personal information;
+                  </li>
+                  <li>
+                    the right to data portability. You have the right to be
+                    provided with a copy of your Personal Data in a structured,
+                    machine-readable and commonly used format;
+                  </li>
+                  <li>
+                    the right to withdraw consent. You also have the right to
+                    withdraw your consent at any time where we rely on your
+                    consent to process your personal information;
+                  </li>
+                </ol>
+                <p>
+                  Please note that we may ask you to verify your identity before
+                  responding to such requests. Please note, we may not able to
+                  provide Service without some necessary data.
+                </p>
+                <p>
+                  You have the right to complain to a Data Protection Authority
+                  about our collection and use of your Personal Data. For more
+                  information, please contact your local data protection
+                  authority in the European Economic Area (EEA).
+                </p>
+
+                <h2>
+                  11. Your Data Protection Rights under the California Privacy
+                  Protection Act (CalOPPA)
+                </h2>
+                <p>
+                  CalOPPA is the first state law in the nation to require
+                  commercial websites and online services to post a privacy
+                  policy. The law's reach stretches well beyond California to
+                  require a person or company in the United States (and
+                  conceivable the world) that operates websites collecting
+                  personally identifiable information from California consumers
+                  to post a conspicuous privacy policy on its website stating
+                  exactly the information being collected and those individuals
+                  with whom it is being shared, and to comply with this policy.
+                </p>
+                <p>According to CalOPPA we agree to the following:</p>
+                <ol type="1">
+                  <li>users can visit our site anonymously;</li>
+                  <li>
+                    our Privacy Policy link includes the word "Privacy", and can
+                    easily be found on the home page of our website;
+                  </li>
+                  <li>
+                    users will be notified of any privacy policy changes on our
+                    Privacy Policy Page;
+                  </li>
+                  <li>
+                    users are able to change their personal information by
+                    emailing us at
+                    <a href="mailto:support@sheria360.com"
+                      >support@sheria360.com</a
+                    >.
+                  </li>
+                </ol>
+                <p>Our Policy on "Do Not Track" Signals:</p>
+                <p>
+                  We honor Do Not Track signals and do not track, plant cookies,
+                  or use advertising when a Do Not Track browser mechanism is in
+                  place. Do Not Track is a preference you can set in your web
+                  browser to inform websites that you do not want to be tracked.
+                </p>
+                <p>
+                  You can enable or disable Do Not Track by visiting the
+                  Preferences or Settings page of your web browser.
+                </p>
+
+                <h2>
+                  12. Your Data Protection Rights under the California Consumer
+                  Privacy Act (CCPA)
+                </h2>
+                <p>
+                  If you are a California resident, you are entitled to learn
+                  what data we collect about you, ask to delete your data and
+                  not to sell (share) it. To exercise your data protection
+                  rights, you can make certain requests and ask us:
+                </p>
+                <p>
+                  <strong
+                    >1. What personal information we have about you.</strong
+                  >
+                  If you make this request, we will return to you:
+                </p>
+                <ul>
+                  <li>
+                    The categories of personal information we have collected
+                    about you.
+                  </li>
+                  <li>
+                    The categories of sources from which we collect your
+                    personal information.
+                  </li>
+                  <li>
+                    The business or commercial purpose for collecting or selling
+                    your personal information.
+                  </li>
+                  <li>
+                    The categories of third parties with whom we share personal
+                    information.
+                  </li>
+                  <li>
+                    The specific pieces of personal information we have
+                    collected about you.
+                  </li>
+                  <li>
+                    A list of categories of personal information that we have
+                    sold, along with the category of any other company we sold
+                    it to. If we have not sold your personal information, we
+                    will inform you of that fact.
+                  </li>
+                  <li>
+                    A list of categories of personal information that we have
+                    disclosed for a business purpose, along with the category of
+                    any other company we shared it with.
+                  </li>
+                </ul>
+                <p>
+                  <strong>2. To delete your personal information.</strong> If
+                  you make this request, we will delete the personal information
+                  we hold about you as of the date of your request from our
+                  records and direct any service providers to do the same.
+                </p>
+                <p>
+                  <strong>3. To stop selling your personal information.</strong>
+                  We don't sell or rent your personal information to any third
+                  parties for any purpose. You are the only owner of your
+                  Personal Data and can request disclosure or deletion at any
+                  time.
+                </p>
+                <p>
+                  To exercise your California data protection rights described
+                  above, please send your request(s) by email:
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+
+                <h2>13. Service Providers</h2>
+                <p>
+                  We may employ third party companies and individuals to
+                  facilitate our Service ("Service Providers"), provide Service
+                  on our behalf, perform Service-related services or assist us
+                  in analysing how our Service is used.
+                </p>
+                <p>
+                  These third parties have access to your Personal Data only to
+                  perform these tasks on our behalf and are obligated not to
+                  disclose or use it for any other purpose.
+                </p>
+
+                <h2>14. Analytics</h2>
+                <p>
+                  We may use third-party Service Providers to monitor and
+                  analyze the use of our Service.
+                </p>
+
+                <h2>15. CI/CD tools</h2>
+                <p>
+                  We may use third-party Service Providers to automate the
+                  development process of our Service.
+                </p>
+
+                <h2>16. Behavioral Remarketing</h2>
+                <p>
+                  We may use remarketing services to advertise on third party
+                  websites to you after you visited our Service. We and our
+                  third-party vendors use cookies to inform, optimise and serve
+                  ads based on your past visits to our Service.
+                </p>
+
+                <h2>17. Payments</h2>
+                <p>
+                  We may provide paid products and/or services within Service.
+                  In that case, we use third-party services for payment
+                  processing (e.g. payment processors).
+                </p>
+                <p>
+                  We will not store or collect your payment card details. That
+                  information is provided directly to our third-party payment
+                  processors whose use of your personal information is governed
+                  by their Privacy Policy.
+                </p>
+
+                <h2>18. Links to Other Sites</h2>
+                <p>
+                  Our Service may contain links to other sites that are not
+                  operated by us. If you click a third party link, you will be
+                  directed to that third party's site. We strongly advise you to
+                  review the Privacy Policy of every site you visit.
+                </p>
+                <p>
+                  We have no control over and assume no responsibility for the
+                  content, privacy policies or practices of any third party
+                  sites or services.
+                </p>
+
+                <h2>19. Children's Privacy</h2>
+                <p>
+                  Our Services are not intended for use by children under the
+                  age of 18 ("Child" or "Children").
+                </p>
+                <p>
+                  We do not knowingly collect personally identifiable
+                  information from Children under 18. If you become aware that a
+                  Child has provided us with Personal Data, please contact us.
+                  If we become aware that we have collected Personal Data from
+                  Children without verification of parental consent, we take
+                  steps to remove that information from our servers.
+                </p>
+
+                <h2>20. Changes to This Privacy Policy</h2>
+                <p>
+                  We may update our Privacy Policy from time to time. We will
+                  notify you of any changes by posting the new Privacy Policy on
+                  this page.
+                </p>
+                <p>
+                  We will let you know via email and/or a prominent notice on
+                  our Service, prior to the change becoming effective and update
+                  "effective date" at the top of this Privacy Policy.
+                </p>
+                <p>
+                  You are advised to review this Privacy Policy periodically for
+                  any changes. Changes to this Privacy Policy are effective when
+                  they are posted on this page.
+                </p>
+
+                <h2>21. Contact Us</h2>
+                <p>
+                  If you have any questions about this Privacy Policy, please
+                  contact us by email:
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+                <p style="font-size: 0.85rem; color: var(--gray-400)">
+                  This Privacy Policy was created for https://sheria360.com/ by
+                  PolicyMaker.io on 2026-07-24.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="tab-content" id="disclaimer">
+            <div class="legal-container">
+              <div class="legal-meta">
+                <div class="legal-meta-item">
+                  <i class="far fa-calendar-alt"></i
+                  ><span>Last updated: <strong>2026-07-24</strong></span>
+                </div>
+              </div>
+
+              <div class="legal-disclaimer-box">
+                <p>
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <strong>Important:</strong> The information provided by
+                  Sheria360 on
+                  <a href="https://sheria360.com">https://sheria360.com</a> (the
+                  "Site") is for general informational purposes only. All
+                  information on the Site is provided in good faith, however we
+                  make no representation or warranty of any kind, express or
+                  implied, regarding the accuracy, adequacy, validity,
+                  reliability, availability, or completeness of any information
+                  on the Site.
+                </p>
+              </div>
+
+              <div class="legal-content">
+                <h2>Website Disclaimer</h2>
+                <p>
+                  The information provided by Sheria360 ("Company", "we", "our",
+                  "us") on
+                  <a href="https://sheria360.com">https://sheria360.com</a> (the
+                  "Site") is for general informational purposes only. All
+                  information on the Site is provided in good faith, however we
+                  make no representation or warranty of any kind, express or
+                  implied, regarding the accuracy, adequacy, validity,
+                  reliability, availability, or completeness of any information
+                  on the Site.
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >Under no circumstance shall we have any liability to you
+                    for any loss or damage of any kind incurred as a result of
+                    the use of the site or reliance on any information provided
+                    on the site. your use of the site and your reliance on any
+                    information on the site is solely at your own risk.</strong
+                  >
+                </p>
+
+                <h2>External Links Disclaimer</h2>
+                <p>
+                  The Site may contain (or you may be sent through the Site)
+                  links to other websites or content belonging to or originating
+                  from third parties or links to websites and features. Such
+                  external links are not investigated, monitored, or checked for
+                  accuracy, adequacy, validity, reliability, availability or
+                  completeness by us.
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >We do not warrant, endorse, guarantee, or assume
+                    responsibility for the accuracy or reliability of any
+                    information offered by third-party websites linked through
+                    the site or any website or feature linked in any banner or
+                    other advertising. we will not be a party to or in any way
+                    be responsible for monitoring any transaction between you
+                    and third-party providers of products or services.</strong
+                  >
+                </p>
+
+                <h2>Professional Disclaimer</h2>
+                <p>
+                  The Site can not and does not contain legal advice. The
+                  information is provided for general informational and
+                  educational purposes only and is not a substitute for
+                  professional legal advice. Accordingly, before taking any
+                  actions based upon such information, we encourage you to
+                  consult with the appropriate professionals. We do not provide
+                  any kind of legal advice.
+                </p>
+                <p>
+                  Content published on
+                  <a href="https://sheria360.com">https://sheria360.com</a> is
+                  intended to be used and must be used for informational
+                  purposes only. It is very important to do your own analysis
+                  before making any decision based on your own personal
+                  circumstances. You should take independent legal advice from a
+                  professional or independently research and verify any
+                  information that you find on our Website and wish to rely
+                  upon.
+                </p>
+                <p class="uppercase">
+                  <strong
+                    >The use or reliance of any information contained on this
+                    site is solely at your own risk.</strong
+                  >
+                </p>
+
+                <h2>Testimonials Disclaimer</h2>
+                <p>
+                  The Site may contain testimonials by users of our products
+                  and/or services. These testimonials reflect the real-life
+                  experiences and opinions of such users. However, the
+                  experiences are personal to those particular users, and may
+                  not necessarily be representative of all users of our products
+                  and/or services. We do not claim, and you should not assume
+                  that all users will have the same experiences.
+                </p>
+                <p><strong>Your individual results may vary.</strong></p>
+                <p>
+                  The testimonials on the Site are submitted in various forms
+                  such as text, audio and/or video, and are reviewed by us
+                  before being posted. They appear on the Site verbatim as given
+                  by the users, except for the correction of grammar or typing
+                  errors. Some testimonials may have been shortened for the sake
+                  of brevity, where the full testimonial contained extraneous
+                  information not relevant to the general public.
+                </p>
+                <p>
+                  The views and opinions contained in the testimonials belong
+                  solely to the individual user and do not reflect our views and
+                  opinions.
+                </p>
+
+                <h2>Errors and Omissions Disclaimer</h2>
+                <p>
+                  While we have made every attempt to ensure that the
+                  information contained in this site has been obtained from
+                  reliable sources, Sheria360 is not responsible for any errors
+                  or omissions or for the results obtained from the use of this
+                  information. All information in this site is provided "as is",
+                  with no guarantee of completeness, accuracy, timeliness or of
+                  the results obtained from the use of this information, and
+                  without warranty of any kind, express or implied, including,
+                  but not limited to warranties of performance, merchantability,
+                  and fitness for a particular purpose.
+                </p>
+                <p>
+                  In no event will Sheria360, its related partnerships or
+                  corporations, or the partners, agents or employees thereof be
+                  liable to you or anyone else for any decision made or action
+                  taken in reliance on the information in this Site or for any
+                  consequential, special or similar damages, even if advised of
+                  the possibility of such damages.
+                </p>
+
+                <h2>Logos and Trademarks Disclaimer</h2>
+                <p>
+                  All logos and trademarks of third parties referenced on
+                  <a href="https://sheria360.com">https://sheria360.com</a> are
+                  the trademarks and logos of their respective owners. Any
+                  inclusion of such trademarks or logos does not imply or
+                  constitute any approval, endorsement or sponsorship of
+                  Sheria360 by such owners.
+                </p>
+
+                <h2>Contact Us</h2>
+                <p>
+                  Should you have any feedback, comments, requests for technical
+                  support or other inquiries, please contact us by email:
+                  <a href="mailto:support@sheria360.com"
+                    >support@sheria360.com</a
+                  >.
+                </p>
+                <p style="font-size: 0.85rem; color: var(--gray-400)">
+                  This Disclaimer was created for https://sheria360.com/
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- tp-footer-feature-slide-start -->
+
+      <!-- tp-footer-area-start -->
+      <div class="tp-footer__pl-pr">
+        <div class="tp-footer__area tp-footer__tp-border-bottom">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".3s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-1">
+                  <div class="tp-footer__logo mb-25">
+                    <a href="index.html">
+                      <img
+                        src="assets/img/logo/logo-black.png"
+                        alt="Sheria360"
+                      />
+                    </a>
+                  </div>
+                  <div class="tp-footer__contact-info">
+                    <p>
+                      Sheria360 is a modern law practice software system that
+                      allows legal professionals to organize case files, track
+                      deadlines, draft documents, manage hearings, and manage
+                      day-to-day tasks.
+                    </p>
+                    <ul>
+                      <li>
+                        <span>
+                          <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.3"
+                              d="M7.08443 4.76996L7.84597 6.13453C8.53323 7.36598 8.25734 8.98143 7.17492 10.0639C7.17492 10.0639 7.17492 10.0639 7.17492 10.0639C7.1748 10.064 5.86209 11.3769 8.24247 13.7573C10.6222 16.137 11.9351 14.8257 11.9359 14.8249C11.936 14.8248 11.9359 14.8248 11.936 14.8248C13.0184 13.7424 14.6338 13.4666 15.8653 14.1538L17.2298 14.9153C19.0893 15.9531 19.3089 18.5609 17.6745 20.1953C16.6923 21.1775 15.4892 21.9417 14.1592 21.9921C11.9202 22.077 8.11782 21.5103 4.30364 17.6961C0.489452 13.882 -0.0771917 10.0796 0.00768762 7.84062C0.0581084 6.5106 0.822313 5.30745 1.80444 4.32532C3.43891 2.69085 6.04667 2.91046 7.08443 4.76996Z"
+                              fill="#01103D"
+                            />
+                            <path
+                              d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
+                              fill="#01103D"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M11.1301 4.78659C11.2636 4.31926 11.7507 4.04866 12.2181 4.18218L11.9763 5.02836C12.2181 4.18218 12.2181 4.18218 12.2181 4.18218L12.2198 4.18266L12.2216 4.18318L12.2255 4.18433L12.2346 4.18704L12.2578 4.19427C12.2755 4.19993 12.2976 4.2073 12.3239 4.21665C12.3766 4.23535 12.4463 4.26194 12.5317 4.29856C12.7026 4.37182 12.9362 4.48496 13.2231 4.65476C13.7975 4.99467 14.5815 5.55928 15.5026 6.48035C16.4236 7.40143 16.9883 8.18547 17.3282 8.7598C17.498 9.04671 17.6111 9.28029 17.6844 9.45123C17.721 9.53666 17.7476 9.60631 17.7663 9.65901C17.7756 9.68535 17.783 9.70745 17.7887 9.72514L17.7959 9.74836L17.7986 9.75745L17.7997 9.76137L17.8003 9.76316C17.8003 9.76316 17.8007 9.76485 16.9546 10.0066L17.8007 9.76485C17.9343 10.2322 17.6637 10.7193 17.1963 10.8528C16.733 10.9852 16.2502 10.7203 16.1119 10.2602L16.1075 10.2476C16.1013 10.23 16.0883 10.1953 16.0666 10.1446C16.0232 10.0433 15.9445 9.87754 15.8135 9.65625C15.5519 9.21418 15.0793 8.54623 14.258 7.72492C13.4367 6.9036 12.7687 6.43107 12.3267 6.16944C12.1054 6.03847 11.9397 5.95974 11.8384 5.91633C11.7877 5.8946 11.753 5.88165 11.7353 5.8754L11.7227 5.87106C11.2626 5.73274 10.9977 5.24996 11.1301 4.78659Z"
+                              fill="#01103D"
+                            />
+                          </svg>
+                        </span>
+                        <a class="first-child" href="tel:+254721779429">
+                          +254-721-779-429
+                        </a>
+                      </li>
+                      <li>
+                        <span>
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.3"
+                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 11.5997 0.375616 13.1116 1.04346 14.4525C1.22094 14.8088 1.28001 15.2161 1.17712 15.6006L0.581511 17.8267C0.322954 18.793 1.20701 19.677 2.17335 19.4185L4.39939 18.8229C4.78393 18.72 5.19121 18.7791 5.54753 18.9565C6.88836 19.6244 8.40032 20 10 20Z"
+                              fill="#01103D"
+                            />
+                            <path
+                              d="M5.825 10.85C5.36937 10.85 5 11.2194 5 11.675C5 12.1306 5.36937 12.5 5.825 12.5H11.875C12.3306 12.5 12.7 12.1306 12.7 11.675C12.7 11.2194 12.3306 10.85 11.875 10.85H5.825Z"
+                              fill="#1C274C"
+                            />
+                            <path
+                              d="M5.825 7C5.36937 7 5 7.36937 5 7.825C5 8.28063 5.36937 8.65 5.825 8.65H14.625C15.0806 8.65 15.45 8.28063 15.45 7.825C15.45 7.36937 15.0806 7 14.625 7H5.825Z"
+                              fill="#1C274C"
+                            />
+                          </svg>
+                        </span>
+                        <a href="mailto:contact@info.com">
+                          info@sheria360.com
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".5s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-2">
+                  <h4 class="tp-footer__widget-title">Quick Links</h4>
+                  <div class="tp-footer__content">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about-sheria.html">About</a></li>
+                      <li>
+                        <a href="price.html">Pricing</a>
+                      </li>
+                      <li>
+                        <a href="solutions.html">Solutions</a>
+                      </li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".7s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-3">
+                  <h4 class="tp-footer__widget-title">Resources</h4>
+                  <div class="tp-footer__content">
+                    <ul>
+                      <li><a href="faq.html">FAQs</a></li>
+                      <li><a href="blog.html">Blogs</a></li>
+                      <!-- <li><a href="marketplace.html">Market Place</a></li> -->
+                      <li>
+                        <a href="https://docs.sheria360.com/">Documentation</a>
+                      </li>
+                      <li>
+                        <a href="https://demo.sheria360.com/users/login/"
+                          >Login</a
+                        >
+                      </li>
+                      <li><a href="terms.html">Privacy Policy</a></li>
+                      <li>
+                        <a href="terms.html">Terms of Service</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".9s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-4">
+                  <h4 class="tp-footer__widget-title">Our Newsletter</h4>
+                  <div class="tp-footer__input mb-35 p-relative">
+                    <form action="#">
+                      <input type="text" placeholder="Business email adress" />
+                      <span>
+                        <svg
+                          width="18"
+                          height="16"
+                          viewBox="0 0 18 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
+                            stroke="#5F6168"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            opacity="0.4"
+                            d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
+                            stroke="#5F6168"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <button>
+                        <svg
+                          width="14"
+                          height="16"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.00098 7H13.001"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.00098 1L13.001 7L7.00098 13"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="tp-footer__social-3">
+                    <h4>Social media</h4>
+                    <a href="https://facebook.com/sheria360"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="https://x.com/sheria360"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tp-copyright__area pt-25 pb-40">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-4 col-lg-6 col-md-6">
+                <div
+                  class="tp-copyright__text tp-copyright__text-3 text-center"
+                >
+                  <span>
+                    Copyright &copy; 2026 Sheria360. All Rights Reserved.
+                    <!--<a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Services</a></span-->
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tp-footer-area-end -->
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Tab switching
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.tab;
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          tabContents.forEach((c) => c.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(target).classList.add("active");
+          // Update URL hash
+          window.location.hash = target;
+        });
+      });
+
+      // Handle hash on load
+      function handleHash() {
+        const hash = window.location.hash.replace("#", "");
+        if (hash && ["terms", "privacy", "disclaimer"].includes(hash)) {
+          tabBtns.forEach((b) => b.classList.remove("active"));
+          tabContents.forEach((c) => c.classList.remove("active"));
+          const activeBtn = document.querySelector(`[data-tab="${hash}"]`);
+          const activeContent = document.getElementById(hash);
+          if (activeBtn && activeContent) {
+            activeBtn.classList.add("active");
+            activeContent.classList.add("active");
+          }
+        }
+      }
+      handleHash();
+      window.addEventListener("hashchange", handleHash);
+
+      // Scroll top
+      const scrollBtn = document.querySelector(".scroll-top");
+      window.addEventListener("scroll", () =>
+        scrollBtn.classList.toggle("visible", window.scrollY > 400),
+      );
+      scrollBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+      );
+
+      // Preloader
+      window.addEventListener("load", () => {
+        setTimeout(
+          () => document.getElementById("preloader").classList.add("fade-out"),
+          400,
+        );
+      });
+
+      // Try Free button
+      document.getElementById("tryFreeBtn").addEventListener("click", () => {
+        window.open(
+          "https://demo.sheria360.com/modules/central/start-trial",
+          "_blank",
+        );
+      });
+    </script>
+  </body>
+</html>
