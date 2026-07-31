@@ -105,12 +105,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          var(--sheria-navy-deep) 0%,
-          var(--sheria-navy) 50%,
-          #1a3a5a 100%
-        );
+        background: #f8fafc;
         padding: 140px 0 80px;
       }
       .tp-features-hero::before {
@@ -151,16 +146,15 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(91, 109, 255, 0.12);
+        border: 1px solid rgba(91, 109, 255, 0.3);
         border-radius: 50px;
         padding: 8px 20px;
         margin-bottom: 24px;
         font-size: 13px;
         font-weight: 600;
-        color: #93c5fd;
+        color: var(--sheria-primary-dark);
         letter-spacing: 0.5px;
-        backdrop-filter: blur(10px);
       }
       .tp-features-hero .tp-hero-badge .badge-dot {
         width: 8px;
@@ -184,7 +178,7 @@
         font-size: clamp(2.5rem, 4.5vw, 4rem);
         font-weight: 800;
         line-height: 1.1;
-        color: #ffffff;
+        color: var(--sheria-navy);
         margin-bottom: 20px;
         letter-spacing: -0.03em;
       }
@@ -197,7 +191,7 @@
       .tp-features-hero .tp-hero-subtitle {
         font-size: 1.1rem;
         line-height: 1.7;
-        color: rgba(255, 255, 255, 0.85);
+        color: var(--sheria-slate);
         max-width: 520px;
         margin-bottom: 32px;
       }
@@ -234,21 +228,21 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
+        background: #ffffff;
+        color: var(--sheria-navy);
         font-size: 15px;
         font-weight: 600;
         padding: 16px 32px;
         border-radius: 12px;
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        border: 1.5px solid #dbe1ea;
         text-decoration: none;
         transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
       }
       .tp-features-hero .btn-secondary-hero:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: #f1f4ff;
+        border-color: rgba(91, 109, 255, 0.4);
         transform: translateY(-2px);
-        color: #fff;
+        color: var(--sheria-navy);
       }
       .hero-visual {
         position: relative;
@@ -279,6 +273,7 @@
         font-size: 2.2rem;
         font-weight: 700;
         color: var(--sheria-navy);
+         margin: 0 auto 10px;
       }
       .section-title-box .tp-section-title span {
         color: var(--sheria-primary);
@@ -379,7 +374,11 @@
         border-radius: 10px;
         font-weight: 600;
         text-decoration: none;
-        display: inline-block;
+         display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
         transition: all 0.3s ease;
       }
       .tp-cta-area .tp-btn-blue-sm:hover {
@@ -394,7 +393,10 @@
         border-radius: 10px;
         font-weight: 600;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         transition: all 0.3s ease;
       }
       .tp-cta-area .tp-btn-border:hover {
@@ -712,7 +714,7 @@
                     <h3 class="tp-section-title">
                       Complete Case <span>Lifecycle</span>
                     </h3>
-                    <div class="tp-divider"></div>
+                    
                     <p class="mt-20">
                       Streamline case management from intake to resolution with
                       comprehensive tools for every stage.
@@ -1208,7 +1210,7 @@
                           ><i class="fab fa-twitter"></i
                         ></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                       </div>
                     </div>
                   </div>

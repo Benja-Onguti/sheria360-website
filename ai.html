@@ -129,12 +129,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          var(--blue-900) 0%,
-          var(--blue-800) 50%,
-          var(--blue-700) 100%
-        );
+        background: #f8fafc;
         padding: 140px 0 100px;
       }
       .tp-features-hero::before {
@@ -152,7 +147,7 @@
         left: 0;
         right: 0;
         height: 120px;
-        background: linear-gradient(to top, var(--bg-light), transparent);
+        background: #f8fafc;
         pointer-events: none;
       }
       .tp-features-hero .container {
@@ -198,12 +193,12 @@
         font-size: clamp(2.4rem, 4.5vw, 3.8rem);
         font-weight: 800;
         line-height: 1.1;
-        color: #ffffff;
+        color: #0f172a;
         margin-bottom: 24px;
         letter-spacing: -0.03em;
       }
       .tp-hero-title .highlight {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -211,7 +206,7 @@
       .tp-hero-subtitle {
         font-size: 1.15rem;
         line-height: 1.75;
-        color: rgba(255, 255, 255, 0.75);
+        color: #0f172a;
         max-width: 540px;
         margin-bottom: 36px;
       }
@@ -246,7 +241,7 @@
         align-items: center;
         gap: 10px;
         background: rgba(255, 255, 255, 0.08);
-        color: #ffffff;
+        color: #0f172a;
         font-size: 15px;
         font-weight: 600;
         padding: 16px 32px;
@@ -257,7 +252,7 @@
         backdrop-filter: blur(4px);
       }
       .btn-secondary-hero:hover {
-        background: rgba(255, 255, 255, 0.15);
+        background: var(--accent);
         transform: translateY(-2px);
         border-color: rgba(255, 255, 255, 0.35);
       }
@@ -548,7 +543,10 @@
         border-radius: var(--radius);
         font-weight: 600;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         transition: all 0.3s ease;
         box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
         border: none;
@@ -566,7 +564,10 @@
         border-radius: var(--radius);
         font-weight: 600;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         transition: all 0.3s ease;
       }
       .tp-cta-area .tp-btn-border:hover {
@@ -621,18 +622,18 @@
       .hero-stat .number {
         font-size: 1.6rem;
         font-weight: 800;
-        color: #fff;
+        color: #0f172a;
         line-height: 1;
       }
       .hero-stat .number span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: #0f172a;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
       .hero-stat .label {
         font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.55);
+        color: #0f172a;
         margin-top: 4px;
         font-weight: 500;
       }
@@ -931,29 +932,12 @@
                   <div class="hero-visual">
                     <div class="hero-visual-inner">
                       <img
-                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
+                        src="assets/img/clients/AI in Sheria"
                         alt="AI Legal Technology"
                       />
-                      <div class="hero-visual-badge">
-                        <div class="icon"><i class="fas fa-robot"></i></div>
-                        <div>
-                          <div
-                            style="
-                              font-size: 0.75rem;
-                              opacity: 0.7;
-                              margin-bottom: 2px;
-                            "
-                          >
-                            AI Assistant
-                          </div>
-                          <div>Processing 12 documents...</div>
-                        </div>
-                      </div>
+                      
                     </div>
-                    <div class="hero-visual-floating">
-                      <span class="dot"></span>
-                      Live AI Analysis Active
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -969,7 +953,7 @@
                     <h3 class="tp-section-title">
                       AI-Powered <span>Legal Intelligence</span>
                     </h3>
-                    <div class="tp-divider"></div>
+                    
                     <p class="section-subtitle mt-20">
                       Sheria360 incorporates state-of-the-art AI to transform
                       how legal services are delivered. Reduce manual effort by
