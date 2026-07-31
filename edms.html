@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheria360 · Document Management</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background: #f5f7fb;
+        font-family: "Inter", sans-serif;
+      }
+      .feature-module {
+        max-width: 1200px;
+        margin: 3rem auto;
+        background: white;
+        border-radius: 28px;
+        padding: 2.5rem 2.8rem;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+        border: 1px solid #e9edf4;
+      }
+      .module-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 2px solid #eef2f6;
+        padding-bottom: 1.2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .module-header i {
+        font-size: 2.6rem;
+        color: #b45309;
+        background: #fef3e8;
+        padding: 0.8rem;
+        border-radius: 18px;
+      }
+      .module-header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0b2b4a;
+        margin: 0;
+      }
+      .module-desc {
+        background: #f8fafd;
+        border-radius: 16px;
+        padding: 1.5rem 2rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid #b45309;
+        color: #1e293b;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.2rem;
+      }
+      .feature-item {
+        background: #fafcff;
+        border-radius: 16px;
+        padding: 1.2rem 1.4rem;
+        border: 1px solid #edf2f9;
+        transition: 0.15s;
+      }
+      .feature-item:hover {
+        background: white;
+        border-color: #cbd5e1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      }
+      .feature-item .fi-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      .feature-item .fi-header i {
+        color: #b45309;
+        font-size: 1.1rem;
+        margin-top: 0.1rem;
+        width: 1.4rem;
+      }
+      .feature-item .fi-header strong {
+        font-size: 0.98rem;
+        color: #0b2b4a;
+      }
+      .feature-item .fi-desc {
+        font-size: 0.88rem;
+        color: #475569;
+        margin-top: 0.3rem;
+        padding-left: 2.1rem;
+        line-height: 1.5;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 2.5rem;
+        color: #0b2b4a;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .back-link i {
+        margin-right: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .feature-module {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="feature-module">
+        <div class="module-header">
+          <i class="fas fa-folder-tree"></i>
+          <h1>Embedded Document Management</h1>
+        </div>
+        <div class="module-desc">
+          <strong
+            >Centralized document repository with intelligent search.</strong
+          >
+          Sheria360 provides a powerful document management system embedded
+          across all modules. Full-text search, OCR capabilities, and
+          integrations with Google Drive, SharePoint, and Dropbox ensure you can
+          find any document instantly. Digitize past records and maintain
+          version control for complete document lifecycle management.
+        </div>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fas fa-search"></i
+              ><strong>Full Text Search capabilities</strong>
+            </div>
+            <div class="fi-desc">
+              Powerful full-text search across all documents, including scanned
+              files, with advanced filtering and relevance ranking.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fas fa-eye"></i
+              ><strong>Embedded Optical Character Recognition (OCR)</strong>
+            </div>
+            <div class="fi-desc">
+              Integrated OCR technology extracts text from scanned documents,
+              making them searchable and editable.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fab fa-google-drive"></i
+              ><strong>Google Drive Integration</strong>
+            </div>
+            <div class="fi-desc">
+              Seamless integration with Google Drive for document storage,
+              sharing, and collaboration directly from Sheria360.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fab fa-microsoft"></i
+              ><strong>SharePoint Integration</strong>
+            </div>
+            <div class="fi-desc">
+              Connect to Microsoft SharePoint for enterprise document management
+              with unified search and access controls.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fab fa-dropbox"></i><strong>Dropbox Integration</strong>
+            </div>
+            <div class="fi-desc">
+              Integrate with Dropbox for cloud storage and file sharing,
+              ensuring documents are accessible across platforms.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fas fa-archive"></i
+              ><strong>Digitization of Past Records</strong>
+            </div>
+            <div class="fi-desc">
+              Comprehensive digitization services for historical records, making
+              legacy documents searchable and accessible.
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-header">
+              <i class="fas fa-code-branch"></i
+              ><strong>Versioning & Secure Sharing</strong>
+            </div>
+            <div class="fi-desc">
+              Complete document version history with secure sharing controls,
+              access permissions, and audit trails.
+            </div>
+          </div>
+        </div>
+        <a href="features.html" class="back-link"
+          ><i class="fas fa-arrow-left"></i> Back to all features</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

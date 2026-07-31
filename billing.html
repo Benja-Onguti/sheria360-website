@@ -3,34 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Artificial Intelligence | Sheria360</title>
+    <title>Billing Management | Sheria360</title>
     <meta
       name="description"
-      content="AI-powered legal automation with summarization, smart drafting, legal research, risk detection, and intelligent contract review."
+      content="Complete financial management for legal operations with dashboards, invoicing, fee notes, external counsel management, and automated payment triggers."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
       :root {
-        --blue-900: #0a192f;
-        --blue-800: #0f2440;
-        --blue-700: #15355c;
-        --blue-600: #1a4678;
-        --blue-500: #2165a6;
-        --blue-400: #3b82c9;
-        --blue-300: #6ba3db;
-        --blue-200: #a3c9ec;
-        --blue-100: #d6e8f7;
-        --blue-50: #edf5fc;
-        --accent: #2563eb;
-        --accent-light: #3b82f6;
-        --accent-dark: #1d4ed8;
+        --blue-900: #0b2b4a;
+        --blue-800: #0f3a5e;
+        --blue-700: #154a72;
+        --accent: #0d9488;
+        --accent-light: #14b8a6;
+        --accent-dark: #0f766e;
         --text-primary: #0f172a;
         --text-secondary: #475569;
         --text-muted: #94a3b8;
-        --bg-light: #f8fafc;
+        --bg-light: #f5f7fb;
         --bg-card: #ffffff;
-        --border: #e2e8f0;
+        --border: #e9edf4;
         --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
         --shadow:
           0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -129,12 +122,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          var(--blue-900) 0%,
-          var(--blue-800) 50%,
-          var(--blue-700) 100%
-        );
+        background: #5b6dff;
         padding: 140px 0 100px;
       }
       .tp-features-hero::before {
@@ -164,14 +152,14 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(37, 99, 235, 0.15);
-        border: 1px solid rgba(37, 99, 235, 0.3);
+        background: rgba(20, 184, 166, 0.15);
+        border: 1px solid rgba(20, 184, 166, 0.3);
         border-radius: 50px;
         padding: 8px 20px;
         margin-bottom: 28px;
         font-size: 13px;
         font-weight: 600;
-        color: var(--blue-200);
+        color: #5b6dff;
         letter-spacing: 0.5px;
         backdrop-filter: blur(4px);
       }
@@ -181,7 +169,7 @@
         background: var(--accent-light);
         border-radius: 50%;
         animation: pulse-dot 2s infinite;
-        box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+        box-shadow: 0 0 8px rgba(20, 184, 166, 0.6);
       }
       @keyframes pulse-dot {
         0%,
@@ -203,7 +191,7 @@
         letter-spacing: -0.03em;
       }
       .tp-hero-title .highlight {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #5b6dff, #5b6dff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -225,7 +213,7 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: var(--accent);
+        background: #5b6dff;
         color: #ffffff;
         font-size: 15px;
         font-weight: 600;
@@ -234,12 +222,12 @@
         border: none;
         text-decoration: none;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.35);
       }
       .btn-primary-hero:hover {
         background: var(--accent-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+        box-shadow: 0 8px 28px rgba(13, 148, 136, 0.45);
       }
       .btn-secondary-hero {
         display: inline-flex;
@@ -280,8 +268,8 @@
         overflow: hidden;
         background: linear-gradient(
           145deg,
-          rgba(37, 99, 235, 0.2),
-          rgba(15, 23, 42, 0.4)
+          rgba(13, 148, 136, 0.2),
+          rgba(6, 78, 59, 0.4)
         );
         border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow:
@@ -298,7 +286,7 @@
         position: absolute;
         bottom: 24px;
         left: 24px;
-        background: rgba(15, 23, 42, 0.85);
+        background: rgba(6, 78, 59, 0.85);
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: var(--radius);
@@ -314,7 +302,7 @@
       .hero-visual-badge .icon {
         width: 36px;
         height: 36px;
-        background: var(--accent);
+        background: #5b6dff;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -341,7 +329,7 @@
       .hero-visual-floating .dot {
         width: 10px;
         height: 10px;
-        background: #22c55e;
+        background: #5b6dff;
         border-radius: 50%;
         box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
       }
@@ -372,7 +360,7 @@
         line-height: 1.2;
       }
       .tp-section-title span {
-        background: linear-gradient(135deg, var(--blue-500), var(--accent));
+        background: linear-gradient(#5b6dff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -380,7 +368,7 @@
       .tp-divider {
         width: 60px;
         height: 4px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
+        background: linear-gradient(#5b6dff);
         margin: 20px auto;
         border-radius: 2px;
       }
@@ -410,13 +398,13 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
+        background: linear-gradient(#5b6dff);
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .tp-feature-card:hover {
-        border-color: var(--blue-200);
+        border-color: #5b6dff;
         box-shadow: var(--shadow-xl);
         transform: translateY(-6px);
       }
@@ -426,19 +414,19 @@
       .tp-feature-icon {
         width: 56px;
         height: 56px;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+        background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
         border-radius: var(--radius);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--accent);
+        color: #5b6dff;
         margin-bottom: 20px;
         font-size: 1.4rem;
         transition: all 0.3s ease;
       }
       .tp-feature-card:hover .tp-feature-icon {
-        background: linear-gradient(135deg, var(--accent), var(--blue-500));
-        color: #fff;
+        background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+        color: #5b6dff;
         transform: scale(1.05);
       }
       .tp-feature-card h4 {
@@ -476,7 +464,7 @@
         border-bottom: none;
       }
       .tp-feature-list li i {
-        color: var(--accent);
+        color: #5b6dff;
         margin-top: 3px;
         flex-shrink: 0;
         font-size: 0.85rem;
@@ -486,25 +474,21 @@
       }
       .feature-tag {
         display: inline-block;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+        background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
         font-size: 0.65rem;
         font-weight: 700;
         padding: 0.25rem 0.7rem;
         border-radius: 30px;
-        color: var(--accent);
+        color: #5b6dff;
         letter-spacing: 0.3px;
         text-transform: uppercase;
-        border: 1px solid var(--blue-200);
+        border: 1px solid #5b6dff;
       }
 
       /* ===== CTA SECTION ===== */
       .tp-cta-area {
         padding: 100px 0;
-        background: linear-gradient(
-          135deg,
-          var(--blue-900) 0%,
-          var(--blue-800) 100%
-        );
+        background: #a7a7deef;
         position: relative;
         overflow: hidden;
       }
@@ -517,7 +501,7 @@
         height: 600px;
         background: radial-gradient(
           circle,
-          rgba(37, 99, 235, 0.15) 0%,
+          rgba(13, 148, 136, 0.15) 0%,
           transparent 70%
         );
         pointer-events: none;
@@ -530,7 +514,7 @@
         line-height: 1.2;
       }
       .tp-cta-area h3 span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #5b6dff, #5b6dff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -542,7 +526,7 @@
         margin-top: 12px;
       }
       .tp-cta-area .tp-btn-blue-sm {
-        background: var(--accent);
+        background: #5b6dff;
         color: #ffffff;
         padding: 16px 36px;
         border-radius: var(--radius);
@@ -550,13 +534,13 @@
         text-decoration: none;
         display: inline-block;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.35);
         border: none;
       }
       .tp-cta-area .tp-btn-blue-sm:hover {
         background: var(--accent-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+        box-shadow: 0 8px 28px rgba(13, 148, 136, 0.45);
       }
       .tp-cta-area .tp-btn-border {
         background: transparent;
@@ -591,19 +575,8 @@
       }
       .module-nav a:hover,
       .module-nav a.active {
-        background: var(--accent);
+        background: #5b6dff;
         color: #ffffff;
-      }
-      .ai-badge {
-        display: inline-block;
-        background: var(--blue-50);
-        font-size: 0.6rem;
-        font-weight: 600;
-        padding: 0.1rem 0.6rem;
-        border-radius: 30px;
-        color: var(--blue-600);
-        border: 1px solid var(--blue-100);
-        margin-left: 0.3rem;
       }
 
       /* Stats row */
@@ -625,7 +598,7 @@
         line-height: 1;
       }
       .hero-stat .number span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #5b6dff, #5b6dff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -773,9 +746,7 @@
                       ></a>
                       <ul class="submenu">
                         <li><a href="features.html">All Features</a></li>
-                        <li>
-                          <a href="legalservices.html">Legal Services </a>
-                        </li>
+                        <li><a href="legalservices.html">Legal Services</a></li>
                         <li>
                           <a href="case-management.html">Cases Management</a>
                         </li>
@@ -894,13 +865,13 @@
               <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                   <h1 class="tp-hero-title">
-                    Artificial <span class="highlight">Intelligence</span>
+                    Billing <span class="highlight">Management</span>
                   </h1>
                   <p class="tp-hero-subtitle">
-                    Intelligent automation for legal workflows. From
-                    summarization and smart drafting to risk detection and legal
-                    research, AI empowers legal teams to work faster, smarter,
-                    and with greater accuracy.
+                    Complete financial management for legal operations. From
+                    expenses and invoices to fee notes and external counsel
+                    management — integrated dashboards and automated triggers
+                    ensure real-time visibility into all financial transactions.
                   </p>
                   <div class="tp-hero-cta">
                     <a href="register.html" class="btn-primary-hero">
@@ -914,16 +885,16 @@
                   </div>
                   <div class="hero-stats">
                     <div class="hero-stat">
-                      <span class="number"><span>80</span>%</span>
-                      <span class="label">Manual effort reduced</span>
+                      <span class="number"><span>100</span>%</span>
+                      <span class="label">Payment tracking</span>
                     </div>
                     <div class="hero-stat">
-                      <span class="number"><span>3</span>x</span>
-                      <span class="label">Faster turnaround</span>
+                      <span class="number"><span>50</span>%</span>
+                      <span class="label">Faster invoicing</span>
                     </div>
                     <div class="hero-stat">
-                      <span class="number"><span>99</span>%</span>
-                      <span class="label">Accuracy rate</span>
+                      <span class="number"><span>0</span></span>
+                      <span class="label">Revenue leakage</span>
                     </div>
                   </div>
                 </div>
@@ -931,28 +902,9 @@
                   <div class="hero-visual">
                     <div class="hero-visual-inner">
                       <img
-                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
-                        alt="AI Legal Technology"
+                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop&q=80"
+                        alt="Billing and Financial Management"
                       />
-                      <div class="hero-visual-badge">
-                        <div class="icon"><i class="fas fa-robot"></i></div>
-                        <div>
-                          <div
-                            style="
-                              font-size: 0.75rem;
-                              opacity: 0.7;
-                              margin-bottom: 2px;
-                            "
-                          >
-                            AI Assistant
-                          </div>
-                          <div>Processing 12 documents...</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="hero-visual-floating">
-                      <span class="dot"></span>
-                      Live AI Analysis Active
                     </div>
                   </div>
                 </div>
@@ -967,289 +919,337 @@
                 <div class="col-lg-8">
                   <div class="section-title-box text-center">
                     <h3 class="tp-section-title">
-                      AI-Powered <span>Legal Intelligence</span>
+                      Complete Financial <span>Management</span>
                     </h3>
                     <div class="tp-divider"></div>
                     <p class="section-subtitle mt-20">
-                      Sheria360 incorporates state-of-the-art AI to transform
-                      how legal services are delivered. Reduce manual effort by
-                      up to 80% while improving quality and consistency.
+                      Sheria360's billing module provides comprehensive
+                      financial oversight — from expenses and invoices to fee
+                      notes and external counsel management. Integrated
+                      dashboards and automated triggers ensure real-time
+                      visibility into all financial transactions.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="row g-4">
-                <!-- AI Summarization -->
+                <!-- Dashboards & Reports -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-file-lines"></i>
+                      <i class="fas fa-chart-pie"></i>
                     </div>
                     <h4>
-                      AI Summarization <span class="feature-tag">AI</span>
+                      Dashboards & Reports <span class="feature-tag">AI</span>
                     </h4>
                     <p class="feature-desc">
-                      Generate concise executive summaries of complex matters
-                      and contracts instantly, highlighting key information and
-                      critical clauses.
+                      Real-time financial dashboards with comprehensive reports
+                      on billing, expenses, and revenue performance.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Matters
+                        <i class="fas fa-check-circle"></i> Real-time financial
+                        dashboards
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Contracts
+                        <i class="fas fa-check-circle"></i> Revenue and expense
+                        tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Executive summaries
+                        <i class="fas fa-check-circle"></i> Billing performance
+                        metrics
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Custom report
                         generation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
+                        <i class="fas fa-check-circle"></i> AI-powered financial
+                        insights
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- AI Review & Drafting - Contracts -->
+                <!-- Expenses & Bills Management -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-pen-fancy"></i>
+                      <i class="fas fa-receipt"></i>
                     </div>
-                    <h4>
-                      AI Review & Drafting — Contracts
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Expenses & Bills Management</h4>
                     <p class="feature-desc">
-                      Leverage AI for intelligent contract review and drafting
-                      with automated redlining suggestions and best-practice
-                      recommendations.
+                      Track all matter-related expenses and bills with approval
+                      workflows and integration to finance systems.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Contracts
+                        <i class="fas fa-check-circle"></i> Expense logging and
+                        categorization
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
+                        <i class="fas fa-check-circle"></i> Bill approval
+                        workflows
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
+                        <i class="fas fa-check-circle"></i> Matter expense
+                        tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting with
-                        contextual suggestions
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- AI Review & Drafting - Advisory -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-gavel"></i>
-                    </div>
-                    <h4>
-                      AI Review & Drafting — Advisory
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      AI-powered drafting and review of legal opinions and
-                      advisory documents with consistency checking and precedent
-                      integration.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Legal Advisory/Opinions
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Consistency checking
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Precedent
+                        <i class="fas fa-check-circle"></i> Finance system
                         integration
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Template generation
+                        <i class="fas fa-check-circle"></i> Reimbursement
+                        management
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- AI Legal Research -->
+                <!-- Invoicing Management -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-scale-balanced"></i>
+                      <i class="fas fa-file-invoice"></i>
                     </div>
                     <h4>
-                      AI Legal Research <span class="feature-tag">AI</span>
+                      Invoicing Management <span class="feature-tag">AI</span>
                     </h4>
                     <p class="feature-desc">
-                      Intelligent legal research with natural language queries,
-                      case law retrieval, and summarization of legal precedents.
+                      Generate professional invoices, track payments, and manage
+                      the complete billing cycle from a central hub.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered Legal
-                        Research
+                        <i class="fas fa-check-circle"></i> Automated invoice
+                        generation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Natural language
-                        queries
+                        <i class="fas fa-check-circle"></i> Custom invoice
+                        templates
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Case law retrieval
+                        <i class="fas fa-check-circle"></i> Payment tracking and
+                        reconciliation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Precedent
-                        summarization
+                        <i class="fas fa-check-circle"></i> Recurring invoice
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> AI-powered billing
+                        predictions
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Risk Identification & Redlining -->
+                <!-- Fee Notes Management -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-flag"></i>
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h4>Fee Notes Management</h4>
+                    <p class="feature-desc">
+                      Create and manage fee notes linked to matters and external
+                      counsel with status tracking and reporting.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Fee note generation
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> External counsel
+                        linkage
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Status tracking
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Approval workflows
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Comprehensive
+                        reporting
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- External Counsel Management -->
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon">
+                      <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>External Counsel Management</h4>
+                    <p class="feature-desc">
+                      Manage relationships with external counsel, track their
+                      fees, and link to specific matters for accurate billing.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Counsel profiles and
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Fee tracking and
+                        reporting
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Matter-to-counsel
+                        linkage
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Performance metrics
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Payment processing
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Finance Administration -->
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon">
+                      <i class="fas fa-building-columns"></i>
+                    </div>
+                    <h4>Finance Administration</h4>
+                    <p class="feature-desc">
+                      Centralized financial administration with full oversight
+                      of all billing, expenses, and financial transactions.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Centralized
+                        financial control
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Role-based access
+                        permissions
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Audit trail and
+                        compliance
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Financial reporting
+                        and analytics
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> System
+                        administration tools
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Automated Payment Triggers -->
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon">
+                      <i class="fas fa-bolt"></i>
                     </div>
                     <h4>
-                      Risk Identification & Redlining
+                      Automated Payment Triggers
                       <span class="feature-tag">AI</span>
                     </h4>
                     <p class="feature-desc">
-                      Automated detection of potential risks in contracts with
-                      intelligent redlining recommendations to strengthen legal
-                      positions.
+                      Configure automated workflows triggered by payment status
+                      changes to streamline financial operations.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Risk Identification
+                        <i class="fas fa-check-circle"></i> Payment status
+                        monitoring
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
+                        <i class="fas fa-check-circle"></i> Automated
+                        notifications and reminders
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
+                        <i class="fas fa-check-circle"></i> Workflow automation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Compliance gap
-                        analysis
+                        <i class="fas fa-check-circle"></i> Payment
+                        reconciliation
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> AI-powered payment
+                        predictions
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Clause Comparison & Missing Clause Detection -->
+                <!-- Trust Accounting -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-code-compare"></i>
+                      <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4>
-                      Clause Comparison & Detection
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Trust Accounting</h4>
                     <p class="feature-desc">
-                      Compare clauses across contracts and detect missing
-                      clauses against industry standards and best practices.
+                      Complete trust account management with full compliance
+                      tracking and reconciliation tools.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
+                        <i class="fas fa-check-circle"></i> Trust account
+                        tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
+                        <i class="fas fa-check-circle"></i> Client fund
+                        management
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Industry standard
-                        benchmarking
+                        <i class="fas fa-check-circle"></i> Compliance reporting
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Best practice
-                        recommendations
+                        <i class="fas fa-check-circle"></i> Reconciliation tools
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Audit-ready records
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Obligation Extraction & Key Terms -->
+                <!-- Payment Processing -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-list-check"></i>
+                      <i class="fas fa-credit-card"></i>
                     </div>
-                    <h4>
-                      Obligation Extraction & Key Terms
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Payment Processing</h4>
                     <p class="feature-desc">
-                      Extract and categorize obligations and key terms from
-                      contracts, making compliance tracking effortless.
+                      Integrated payment processing with multiple payment
+                      methods and automated reconciliation.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
+                        <i class="fas fa-check-circle"></i> Multiple payment
+                        methods
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
+                        <i class="fas fa-check-circle"></i> Secure payment
+                        gateway integration
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Categorization and
-                        tagging
+                        <i class="fas fa-check-circle"></i> Automated
+                        reconciliation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Compliance tracking
-                        integration
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Contextual Suggestion & Smart Drafting -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h4>
-                      Contextual Suggestion & Smart Drafting
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      Get contextual suggestions while drafting with AI-powered
-                      smart drafting that learns from your organization's style.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> Contextual
-                        Suggestion
+                        <i class="fas fa-check-circle"></i> Payment receipt
+                        generation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Style learning and
-                        adaptation
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Template generation
+                        <i class="fas fa-check-circle"></i> Payment history
+                        tracking
                       </li>
                     </ul>
                   </div>
@@ -1264,12 +1264,11 @@
               <div class="row align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
                   <h3>
-                    Ready to Harness the Power of
-                    <span>AI in Your Practice?</span>
+                    Ready to Transform Your <span>Financial Management?</span>
                   </h3>
                   <p>
-                    Join hundreds of legal professionals who have transformed
-                    their workflows with Sheria360 AI.
+                    Join hundreds of legal professionals who have streamlined
+                    their billing operations with Sheria360.
                   </p>
                 </div>
                 <div class="col-lg-5 text-lg-end">

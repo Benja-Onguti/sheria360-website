@@ -1,0 +1,1954 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Legal Services Management | Sheria360</title>
+    <meta
+      name="description"
+      content="Complete legal services management with ADR, Civil Litigation, Criminal Cases, and AI-powered automation."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      :root {
+        --sheria-primary: #1a56db;
+        --sheria-primary-dark: #1042b0;
+        --sheria-primary-light: #e1effe;
+        --sheria-navy: #0e2b5c;
+        --sheria-navy-deep: #01103d;
+        --sheria-slate: #334155;
+        --sheria-slate-light: #64748b;
+        --sheria-gray: #94a3b8;
+        --sheria-bg: #ffffff;
+        --sheria-bg-alt: #f8fafc;
+        --sheria-bg-warm: #f1f5f9;
+        --sheria-border: #e2e8f0;
+        --sheria-border-light: #f1f5f9;
+        --sheria-success: #0e9f6e;
+        --sheria-warning: #f5a623;
+        --sheria-radius-sm: 8px;
+        --sheria-radius: 12px;
+        --sheria-radius-lg: 16px;
+        --sheria-radius-xl: 24px;
+        --sheria-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+        --sheria-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+        --sheria-shadow-md:
+          0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        --sheria-shadow-lg:
+          0 10px 15px -3px rgba(0, 0, 0, 0.08),
+          0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        --sheria-shadow-xl:
+          0 20px 25px -5px rgba(0, 0, 0, 0.08),
+          0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        --sheria-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --sheria-transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        --sheria-font-heading:
+          "Urbanist", "Plus Jakarta Sans", "Inter", system-ui, -apple-system,
+          sans-serif;
+        --sheria-font-body:
+          "Inter", "DM Sans", system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        font-family: var(--sheria-font-body);
+        color: var(--sheria-slate);
+        background: var(--sheria-bg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--sheria-font-heading);
+        color: var(--sheria-navy-deep);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        line-height: 1.75;
+        color: var(--sheria-slate-light);
+      }
+      a {
+        text-decoration: none;
+        transition: var(--sheria-transition);
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Header */
+      .header-bottom__area {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--sheria-border-light);
+        transition: var(--sheria-transition);
+      }
+      .header-bottom__logo img {
+        max-height: 36px;
+        transition: var(--sheria-transition);
+      }
+      .header-bottom__main-menu nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li {
+        position: relative;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li > a {
+        padding: 35px 10px;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .header-bottom__main-menu nav > ul > li > a:hover,
+      .header-bottom__main-menu nav > ul > li:hover > a {
+        color: var(--sheria-primary);
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: var(--sheria-shadow-xl);
+        border: 1px solid var(--sheria-border-light);
+        padding: 8px 0;
+        min-width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: var(--sheria-radius);
+        z-index: 999;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .header-bottom__main-menu nav ul.submenu li {
+        display: block;
+      }
+      .header-bottom__main-menu nav ul.submenu li a {
+        padding: 10px 20px;
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--sheria-slate);
+        transition: var(--sheria-transition);
+      }
+      .header-bottom__main-menu nav ul.submenu li a:hover {
+        background: var(--sheria-primary-light);
+        color: var(--sheria-primary);
+        padding-left: 24px;
+      }
+      .header-bottom__main-menu nav > ul > li > a::after {
+        content: "";
+        position: absolute;
+        bottom: 24px;
+        left: 14px;
+        right: 14px;
+        height: 2px;
+        background: var(--sheria-primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        border-radius: 2px;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > a::after {
+        transform: scaleX(1);
+      }
+      .header__action-btn .tp-btn-border {
+        min-width: 80px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 36px !important;
+        border-radius: 6px;
+        margin-right: 10px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        min-width: 110px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 38px !important;
+        border-radius: 6px;
+      }
+      .header__action-btn .tp-btn-border:hover {
+        border-color: var(--sheria-primary);
+        color: var(--sheria-primary);
+        background: var(--sheria-primary-light);
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        background: linear-gradient(
+          135deg,
+          var(--sheria-primary) 0%,
+          var(--sheria-primary-dark) 100%
+        );
+        color: #fff;
+        font-weight: 600;
+        font-size: 13px;
+        height: 40px !important;
+        line-height: 40px !important;
+        border-radius: var(--sheria-radius-sm);
+        padding: 0 22px !important;
+        box-shadow: 0 4px 14px rgba(26, 86, 219, 0.3);
+        transition: var(--sheria-transition);
+      }
+      .header__action-btn .tp-btn-blue-sm:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(26, 86, 219, 0.4);
+      }
+      .header-bottom__bar {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--sheria-radius-sm);
+        background: var(--sheria-bg-alt);
+        color: var(--sheria-navy-deep);
+        font-size: 18px;
+        transition: var(--sheria-transition);
+      }
+      .header-bottom__bar:hover {
+        background: var(--sheria-primary);
+        color: #fff;
+      }
+
+      /* Hero */
+      .tp-features-hero {
+        position: relative;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #f8fafc 0%,
+          #eef2ff 50%,
+          #e0e7ff 100%
+        );
+        padding: 140px 0 100px;
+      }
+      .tp-features-hero::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(26, 86, 219, 0.12) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .tp-features-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: -5%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(14, 159, 110, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .tp-features-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .tp-features-hero .tp-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 8px 20px;
+        margin-bottom: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #93c5fd;
+        letter-spacing: 0.5px;
+        backdrop-filter: blur(10px);
+      }
+      .tp-features-hero .tp-hero-badge .badge-dot {
+        width: 8px;
+        height: 8px;
+        background: #60a5fa;
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.8);
+        }
+      }
+      .tp-features-hero .tp-hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--sheria-navy-deep);
+        margin-bottom: 25px;
+        letter-spacing: -0.03em;
+      }
+      .tp-features-hero .tp-hero-title .highlight {
+        background: linear-gradient(135deg, var(--sheria-primary) 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .tp-features-hero .tp-hero-subtitle {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: var(--sheria-slate);
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+      .tp-features-hero .tp-hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+      .tp-features-hero .btn-primary-hero {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(
+          135deg,
+          var(--sheria-primary) 0%,
+          var(--sheria-primary-dark) 100%
+        );
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        border: none;
+        text-decoration: none;
+        transition: var(--sheria-transition);
+        box-shadow: 0 8px 24px rgba(26, 86, 219, 0.35);
+      }
+      .tp-features-hero .btn-primary-hero:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(26, 86, 219, 0.45);
+        color: #fff;
+      }
+      .tp-features-hero .btn-secondary-hero {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #ffffff;
+        color: var(--sheria-navy-deep);
+        font-size: 15px;
+        font-weight: 600;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        border: 1.5px solid var(--sheria-border);
+        text-decoration: none;
+        transition: var(--sheria-transition);
+        box-shadow: var(--sheria-shadow-sm);
+      }
+      .tp-features-hero .btn-secondary-hero:hover {
+        background: var(--sheria-bg-warm);
+        transform: translateY(-2px);
+        color: var(--sheria-navy-deep);
+      }
+      .tp-features-hero .tp-hero-left {
+        text-align: left;
+      }
+      .tp-features-hero .tp-hero-left .tp-hero-subtitle {
+        margin: 0 0 40px;
+        max-width: 560px;
+      }
+      .tp-features-hero .tp-hero-left .tp-hero-cta {
+        justify-content: flex-start;
+      }
+      .tp-hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+      }
+      .tp-hero-visual .dashboard-mockup {
+        position: relative;
+        width: 100%;
+        max-width: 620px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow:
+          0 25px 80px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(255, 255, 255, 0.08);
+        transform: perspective(1000px) rotateY(-5deg) rotateX(3deg);
+        transition: transform 0.5s ease;
+      }
+      .tp-hero-visual .dashboard-mockup:hover {
+        transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
+      }
+      .tp-hero-visual .dashboard-mockup img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .tp-hero-visual .hero-float-card {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 14px;
+        padding: 14px 18px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+        animation: float-card 4s ease-in-out infinite;
+        z-index: 10;
+      }
+      .tp-hero-visual .hero-float-card.card-1 {
+        top: 12%;
+        left: -24px;
+      }
+      .tp-hero-visual .hero-float-card.card-2 {
+        bottom: 18%;
+        right: -16px;
+        animation-delay: 2s;
+      }
+      .hero-float-card .float-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6px;
+        font-size: 13px;
+      }
+      .hero-float-card .float-icon.blue {
+        background: rgba(13, 110, 253, 0.12);
+        color: #0d6efd;
+      }
+      .hero-float-card .float-icon.green {
+        background: rgba(25, 135, 84, 0.12);
+        color: #198754;
+      }
+      .hero-float-card .float-label {
+        font-size: 11px;
+        color: #64748b;
+        margin-bottom: 2px;
+      }
+      .hero-float-card .float-value {
+        font-size: 17px;
+        font-weight: 700;
+        color: #01103d;
+      }
+      @keyframes float-card {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+
+      /* Features Grid */
+      .tp-features-grid {
+        padding: 100px 0;
+        background: var(--sheria-bg-alt);
+      }
+      .section-title-box {
+        margin-bottom: 60px;
+      }
+      .section-title-box .tp-section-title {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 800;
+        color: var(--sheria-navy-deep);
+        letter-spacing: -0.03em;
+      }
+      .section-title-box .tp-section-title span {
+        color: var(--sheria-primary);
+      }
+      .tp-divider {
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--sheria-primary), #3b82f6);
+        margin: 20px auto;
+        border-radius: 2px;
+      }
+      .section-title-box p {
+        color: var(--sheria-slate-light);
+        font-size: 1.05rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Feature Cards */
+      .tp-feature-card {
+        background: #ffffff;
+        border-radius: var(--sheria-radius-xl);
+        padding: 0;
+        border: 1px solid var(--sheria-border-light);
+        transition: var(--sheria-transition);
+        height: 100%;
+        box-shadow: var(--sheria-shadow-sm);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .tp-feature-card:hover {
+        border-color: var(--sheria-primary-light);
+        box-shadow: var(--sheria-shadow-xl);
+        transform: translateY(-6px);
+      }
+      .tp-feature-card .card-header {
+        padding: 36px 32px 24px;
+        position: relative;
+      }
+      .tp-feature-card .tp-feature-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--sheria-primary-light);
+        border-radius: var(--sheria-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--sheria-primary);
+        font-size: 24px;
+        margin-bottom: 20px;
+        transition: var(--sheria-transition);
+      }
+      .tp-feature-card:hover .tp-feature-icon {
+        background: var(--sheria-primary);
+        color: #fff;
+        transform: scale(1.05);
+      }
+      .tp-feature-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--sheria-navy-deep);
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .feature-tag {
+        display: inline-block;
+        background: var(--sheria-primary-light);
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 20px;
+        color: var(--sheria-primary);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .tp-feature-card .feature-desc {
+        color: var(--sheria-slate-light);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Expandable List */
+      .tp-feature-list-wrapper {
+        padding: 0 32px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .tp-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .tp-feature-list.collapsed {
+        max-height: 200px;
+        position: relative;
+      }
+      .tp-feature-list.collapsed::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(to bottom, transparent, #fff);
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .tp-feature-list.expanded {
+        max-height: 2000px;
+      }
+      .tp-feature-list.expanded::after {
+        opacity: 0;
+      }
+      .tp-feature-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.9rem;
+        color: var(--sheria-slate);
+        padding: 10px 0;
+        border-bottom: 1px solid var(--sheria-border-light);
+        transition: var(--sheria-transition);
+      }
+      .tp-feature-list li:last-child {
+        border-bottom: none;
+      }
+      .tp-feature-list li i {
+        color: var(--sheria-primary);
+        margin-top: 3px;
+        flex-shrink: 0;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        background: var(--sheria-primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tp-feature-list li:hover {
+        color: var(--sheria-navy-deep);
+        padding-left: 4px;
+      }
+
+      /* Toggle Button */
+      .card-toggle-btn {
+        width: 100%;
+        padding: 16px 32px;
+        background: none;
+        border: none;
+        border-top: 1px solid var(--sheria-border-light);
+        color: var(--sheria-primary);
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: var(--sheria-transition);
+        margin-top: auto;
+        font-family: var(--sheria-font-body);
+      }
+      .card-toggle-btn:hover {
+        background: var(--sheria-bg-alt);
+        color: var(--sheria-primary-dark);
+      }
+      .card-toggle-btn i {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+      }
+      .card-toggle-btn.active i {
+        transform: rotate(180deg);
+      }
+
+      /* CTA Area */
+      .tp-cta-area {
+        padding: 100px 0;
+        background: linear-gradient(
+          135deg,
+          var(--sheria-navy-deep) 0%,
+          var(--sheria-navy) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+      .tp-cta-area::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(26, 86, 219, 0.2) 0%,
+          transparent 60%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .tp-cta-area h3 {
+        color: #ffffff;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+      .tp-cta-area h3 span {
+        color: #93c5fd;
+      }
+      .tp-cta-area p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.1rem;
+        max-width: 540px;
+      }
+      .tp-cta-area .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        color: var(--sheria-navy-deep);
+        font-weight: 700;
+        font-size: 15px;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        transition: var(--sheria-transition);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+      }
+      .tp-cta-area .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      }
+      .tp-cta-area .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        transition: var(--sheria-transition);
+        text-decoration: none;
+      }
+      .tp-cta-area .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Footer */
+      .tp-footer__area {
+        background: var(--sheria-bg-alt);
+      }
+      .tp-footer__widget-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--sheria-navy-deep);
+        margin-bottom: 24px;
+        font-family: var(--sheria-font-heading);
+      }
+      .tp-footer__content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .tp-footer__content ul li {
+        margin-bottom: 10px;
+      }
+      .tp-footer__content ul li a {
+        font-size: 14px;
+        color: var(--sheria-slate-light);
+        font-weight: 500;
+        display: inline-block;
+        transition: var(--sheria-transition);
+      }
+      .tp-footer__content ul li a:hover {
+        color: var(--sheria-primary);
+        padding-left: 4px;
+      }
+      .tp-footer__contact-info p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--sheria-slate-light);
+      }
+      .tp-footer__contact-info ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .tp-footer__contact-info ul li a {
+        font-size: 14px;
+        color: var(--sheria-slate);
+        font-weight: 600;
+      }
+      .tp-footer__input input {
+        background: #fff;
+        border: 1px solid var(--sheria-border);
+        border-radius: var(--sheria-radius-sm);
+        padding: 14px 44px 14px 16px;
+        font-size: 14px;
+        width: 100%;
+        transition: var(--sheria-transition);
+      }
+      .tp-footer__input input:focus {
+        outline: none;
+        border-color: var(--sheria-primary);
+        box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);
+      }
+      .tp-footer__social-3 a {
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--sheria-bg-warm);
+        color: var(--sheria-slate-light);
+        font-size: 14px;
+        margin-right: 8px;
+        transition: var(--sheria-transition);
+      }
+      .tp-footer__social-3 a:hover {
+        background: var(--sheria-primary);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .tp-copyright__area {
+        border-top: 1px solid var(--sheria-border-light);
+      }
+      .tp-copyright__text span {
+        font-size: 13px;
+        color: var(--sheria-gray);
+      }
+
+      /* Scroll Reveal */
+      .sr-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .sr-reveal.sr-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .sr-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .sr-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .sr-delay-3 {
+        transition-delay: 0.3s;
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .tp-features-hero {
+          min-height: auto;
+          padding: 140px 0 80px;
+        }
+        .tp-features-hero .tp-hero-title {
+          font-size: 2.5rem;
+        }
+        .tp-hero-visual {
+          margin-top: 40px;
+        }
+        .tp-cta-area {
+          text-align: center;
+        }
+        .tp-cta-area p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      @media (max-width: 767px) {
+        .tp-feature-card .card-header {
+          padding: 28px 24px 20px;
+        }
+        .tp-feature-list-wrapper {
+          padding: 0 24px;
+        }
+        .card-toggle-btn {
+          padding: 14px 24px;
+        }
+        .tp-features-grid {
+          padding: 60px 0;
+        }
+        .tp-hero-visual .hero-float-card {
+          display: none;
+        }
+      }
+    </style>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png?v=2"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fix.css" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-18205858668");
+    </script>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="preloader"><span></span><span></span></div>
+    </div>
+    <button
+      class="scroll-top scroll-to-target"
+      data-target="html"
+      aria-label="Scroll to top"
+    >
+      <i class="far fa-angle-double-up"></i>
+    </button>
+
+    <div class="tpoffcanvas-area">
+      <div class="tpoffcanvas">
+        <div class="tpoffcanvas__close-btn">
+          <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="tpoffcanvas__logo text-center">
+          <a href="index.html"
+            ><img src="assets/img/logo/logo-white.png?v=2" alt="Sheria360"
+          /></a>
+        </div>
+        <div class="mobile-menu"></div>
+      </div>
+    </div>
+    <div class="body-overlay"></div>
+
+    <!-- Header -->
+    <header class="tp-header-height">
+      <div
+        id="header-sticky"
+        class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
+              <div class="header-bottom__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo-black.png"
+                    alt="Sheria360 Logo"
+                    style="max-height: 35px"
+                /></a>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
+              <div class="header-bottom__main-menu header-bottom__main-menu-3">
+                <nav id="mobile-menu">
+                  <ul class="d-flex">
+                    <li class="me-20"><a href="index.html">Home</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Features
+                        <i
+                          class="fas fa-chevron-down"
+                          style="
+                            font-size: 10px;
+                            margin-left: 4px;
+                            opacity: 0.6;
+                          "
+                        ></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="features.html">All Features</a></li>
+                        <li>
+                          <a href="legalservices.html">Legal Services </a>
+                        </li>
+                        <li>
+                          <a href="case-management.html">Cases Management</a>
+                        </li>
+                        <li>
+                          <a href="contracts-management.html"
+                            >Contracts Management</a
+                          >
+                        </li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li>
+                          <a href="clientportal.html">Collaboration Portals</a>
+                        </li>
+                        <li><a href="billing.html">Billing</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Solutions
+                        <i
+                          class="fas fa-chevron-down"
+                          style="
+                            font-size: 10px;
+                            margin-left: 4px;
+                            opacity: 0.6;
+                          "
+                        ></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="solutions.html">All Solutions</a></li>
+                        <li><a href="inhouse.html">In-House Legal</a></li>
+                        <li><a href="law-firms.html">Law Firms</a></li>
+                        <li><a href="procurement.html">Procurement</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                      </ul>
+                    </li>
+                    <li class="me-20"><a href="price.html">Pricing</a></li>
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Resources
+                        <i
+                          class="fas fa-chevron-down"
+                          style="
+                            font-size: 10px;
+                            margin-left: 4px;
+                            opacity: 0.6;
+                          "
+                        ></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
+                          <a href="https://docs.sheria360.com/" target="_blank"
+                            >Documentation</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
+              <div
+                class="header-bottom__right d-flex align-items-center justify-content-end"
+              >
+                <div
+                  class="header__action-btn d-flex align-items-center gap-10"
+                >
+                  <a
+                    class="tp-btn-border d-none d-md-inline-block"
+                    href="https://demo.sheria360.com/users/login/"
+                    target="_blank"
+                    ><span>Log In</span><b></b
+                  ></a>
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="https://demo.sheria360.com/modules/central/start-trial"
+                    target="_blank"
+                    ><span>Try It Free</span><b></b
+                  ></a>
+                  <a
+                    class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
+                    href="javascript:void(0)"
+                    ><i class="fal fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="fix">
+          <!-- ===== HERO SECTION ===== -->
+          <section class="tp-features-hero">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                  <div class="tp-hero-left">
+                    <h1 class="tp-hero-title sr-reveal sr-delay-1">
+                      Legal Services <span class="highlight">Management</span>
+                    </h1>
+                    <p class="tp-hero-subtitle sr-reveal sr-delay-2">
+                      Complete management of all legal processes — ADR, Civil
+                      Litigation, Criminal Cases, and more. Streamline matter
+                      intake, automate assignments, collaborate with
+                      stakeholders, and maintain full audit trails.
+                    </p>
+                    <div class="tp-hero-cta sr-reveal sr-delay-3">
+                      <a
+                        href="https://demo.sheria360.com/modules/central/start-trial"
+                        target="_blank"
+                        class="btn-primary-hero"
+                      >
+                        <span>Start Free Trial</span
+                        ><i class="fas fa-arrow-right"></i>
+                      </a>
+                      <a href="contact.html" class="btn-secondary-hero">
+                        <i class="fas fa-play-circle"></i
+                        ><span>Request Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                  <div class="tp-hero-visual">
+                    <div class="dashboard-mockup">
+                      <img
+                        src="assets/img/clients/legal-policies.png"
+                        alt="Sheria360 Legal Services Dashboard"
+                      />
+                    </div>
+                    <div class="hero-float-card card-1">
+                      <div class="float-icon blue">
+                        <i class="fas fa-scale-balanced"></i>
+                      </div>
+                      <div class="float-label">Active matters</div>
+                      <div class="float-value">2,400+</div>
+                    </div>
+                    <div class="hero-float-card card-2">
+                      <div class="float-icon green">
+                        <i class="fas fa-check-circle"></i>
+                      </div>
+                      <div class="float-label">Resolved this month</div>
+                      <div class="float-value">98%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== FEATURES GRID ===== -->
+          <div class="tp-features-grid">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="section-title-box text-center sr-reveal">
+                    <h3 class="tp-section-title">
+                      Comprehensive <span>Legal Operations</span>
+                    </h3>
+                    <div class="tp-divider"></div>
+                    <p class="mt-20">
+                      Sheria360 provides a unified platform for managing all
+                      legal services with precision, speed, and AI-powered
+                      efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-4">
+                <!-- ADR Cases Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                      </div>
+                      <h4>
+                        ADR Cases Management <span class="feature-tag">AI</span>
+                      </h4>
+                      <p class="feature-desc">
+                        Complete management of Alternative Dispute Resolution
+                        cases from intake to resolution.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="adr">
+                        <li>
+                          <i class="fas fa-check"></i> Matter
+                          registration/intake management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Auto/Manual assignment
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Arbitrator nomination
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Parties' management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Matter progress logging
+                          and monitoring
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Internal/External
+                          Stakeholder collaboration
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Documents management,
+                          versioning, search & retrieval
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related tasks assignments
+                          and progress tracking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> ADR sessions management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Reminders and
+                          notifications management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Expenses management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related matters &
+                          contracts linking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Timelines and key matter
+                          dates management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Workflow automation with
+                          event triggers
+                        </li>
+                        <li><i class="fas fa-check"></i> Privacy management</li>
+                        <li>
+                          <i class="fas fa-check"></i> Audit trail and history
+                          tracking
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="adr">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Civil Litigation Cases -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-gavel"></i>
+                      </div>
+                      <h4>
+                        Civil Litigation Cases
+                        <span class="feature-tag">AI</span>
+                      </h4>
+                      <p class="feature-desc">
+                        End-to-end management of civil litigation cases with
+                        full court activity tracking.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="civil">
+                        <li>
+                          <i class="fas fa-check"></i> Case registration/intake
+                          management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Auto/Manual assignment
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> External counsel
+                          appointment
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Parties' management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Case progress logging and
+                          monitoring
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Internal/External
+                          stakeholder collaboration
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Documents management,
+                          versioning, search & retrieval
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related tasks assignments
+                          and progress tracking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Court activity sessions
+                          management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Reminders and
+                          notifications management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related fee notes and
+                          expenses management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related matters &
+                          contracts linking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Timelines and key case
+                          dates management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Workflow automation with
+                          event triggers
+                        </li>
+                        <li><i class="fas fa-check"></i> Privacy management</li>
+                        <li>
+                          <i class="fas fa-check"></i> Audit trail and history
+                          tracking
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="civil">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Criminal Cases Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-handcuffs"></i>
+                      </div>
+                      <h4>
+                        Criminal Cases Management
+                        <span class="feature-tag">AI</span>
+                      </h4>
+                      <p class="feature-desc">
+                        Comprehensive management of criminal cases with suspect
+                        and evidence tracking.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul
+                        class="tp-feature-list collapsed"
+                        data-card="criminal"
+                      >
+                        <li>
+                          <i class="fas fa-check"></i> Case registration/intake
+                          management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Auto/Manual assignment
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> External counsel
+                          appointment
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Parties' management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Case progress logging and
+                          monitoring
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Internal/External
+                          stakeholder collaboration
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Documents management,
+                          versioning, search & retrieval
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related tasks assignments
+                          and progress tracking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Court activity sessions
+                          management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Reminders and
+                          notifications management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related fee notes
+                          expenses management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Related matters &
+                          contracts linking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Timelines and key case
+                          dates management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Workflow automation with
+                          event triggers
+                        </li>
+                        <li><i class="fas fa-check"></i> Privacy management</li>
+                        <li>
+                          <i class="fas fa-check"></i> Audit trail and history
+                          tracking
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="criminal">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Advanced Reports & Analytics -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-chart-simple"></i>
+                      </div>
+                      <h4>Advanced Reports & Analytics</h4>
+                      <p class="feature-desc">
+                        Data-driven insights for informed decision-making across
+                        all legal services.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="reports">
+                        <li>
+                          <i class="fas fa-check"></i> Case summary report
+                          generation
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Custom reports generation
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Advanced filtering
+                          criteria
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Universal search
+                          capabilities
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="reports">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Fee Notes Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                      </div>
+                      <h4>Fee Notes Management</h4>
+                      <p class="feature-desc">
+                        Streamlined fee note generation and tracking with
+                        finance system integration.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="fees">
+                        <li>
+                          <i class="fas fa-check"></i> Fee notes generation
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> External Counsel linkage
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Finance system
+                          integration for status tracking
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Automated triggers for
+                          payment status changes
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="fees">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Time Tracking -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-stopwatch"></i>
+                      </div>
+                      <h4>Time Tracking</h4>
+                      <p class="feature-desc">
+                        Accurate time logging with automated and manual options
+                        for billable hours.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="time">
+                        <li>
+                          <i class="fas fa-check"></i> Time logging for tasks
+                          and matters
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Automated time logging
+                          using a timer
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Manual time logs
+                          management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Time logs approvals
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Billing status management
+                        </li>
+                        <li><i class="fas fa-check"></i> Time logs reports</li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="time">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Intellectual Property Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-copyright"></i>
+                      </div>
+                      <h4>Intellectual Property Management</h4>
+                      <p class="feature-desc">
+                        Complete management of intellectual property assets and
+                        registrations.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="ip">
+                        <li><i class="fas fa-check"></i> IP registration</li>
+                        <li>
+                          <i class="fas fa-check"></i> IP
+                          categories/sub-categories management
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> IP Class management
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="ip">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Inline Document Editing -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="tp-feature-card">
+                    <div class="card-header">
+                      <div class="tp-feature-icon">
+                        <i class="fas fa-file-word"></i>
+                      </div>
+                      <h4>
+                        Inline Document Editing
+                        <span class="feature-tag">New</span>
+                      </h4>
+                      <p class="feature-desc">
+                        Edit Word documents directly within the platform with
+                        full change tracking.
+                      </p>
+                    </div>
+                    <div class="tp-feature-list-wrapper">
+                      <ul class="tp-feature-list collapsed" data-card="docs">
+                        <li>
+                          <i class="fas fa-check"></i> Word documents editing
+                        </li>
+                        <li>
+                          <i class="fas fa-check"></i> Tracking of comments and
+                          changes
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="card-toggle-btn" data-target="docs">
+                      <span>Show all features</span
+                      ><i class="fas fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CTA SECTION ===== -->
+          <div class="tp-cta-area">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0 sr-reveal">
+                  <h3>Ready to Transform Your <span>Legal Services?</span></h3>
+                  <p>
+                    Join hundreds of legal professionals who have streamlined
+                    their operations with Sheria360.
+                  </p>
+                </div>
+                <div class="col-lg-5 text-lg-end sr-reveal sr-delay-1">
+                  <a href="contact.html" class="btn-white me-2 mb-2 mb-md-0"
+                    ><span>Request Demo</span><i class="far fa-arrow-right"></i
+                  ></a>
+                  <a
+                    href="https://demo.sheria360.com/modules/central/start-trial"
+                    target="_blank"
+                    class="btn-outline-white"
+                    ><span>Start Free Trial</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+          <div class="tp-footer__pl-pr">
+            <div class="tp-footer__area tp-footer__tp-border-bottom">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".3s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-1"
+                    >
+                      <div class="tp-footer__logo mb-25">
+                        <a href="index.html"
+                          ><img
+                            src="assets/img/logo/logo-black.png"
+                            alt="Sheria360"
+                        /></a>
+                      </div>
+                      <div class="tp-footer__contact-info">
+                        <p>
+                          Sheria360 is a modern law practice software system
+                          that allows legal professionals to organize case
+                          files, track deadlines, draft documents, manage
+                          hearings, and manage day-to-day tasks.
+                        </p>
+                        <ul>
+                          <li>
+                            <span>
+                              <svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.3"
+                                  d="M7.08443 4.76996L7.84597 6.13453C8.53323 7.36598 8.25734 8.98143 7.17492 10.0639C7.17492 10.0639 7.17492 10.0639 7.17492 10.0639C7.1748 10.064 5.86209 11.3769 8.24247 13.7573C10.6222 16.137 11.9351 14.8257 11.9359 14.8249C11.936 14.8248 11.9359 14.8248 11.936 14.8248C13.0184 13.7424 14.6338 13.4666 15.8653 14.1538L17.2298 14.9153C19.0893 15.9531 19.3089 18.5609 17.6745 20.1953C16.6923 21.1775 15.4892 21.9417 14.1592 21.9921C11.9202 22.077 8.11782 21.5103 4.30364 17.6961C0.489452 13.882 -0.0771917 10.0796 0.00768762 7.84062C0.0581084 6.5106 0.822313 5.30745 1.80444 4.32532C3.43891 2.69085 6.04667 2.91046 7.08443 4.76996Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M11.1301 4.78659C11.2636 4.31926 11.7507 4.04866 12.2181 4.18218L11.9763 5.02836C12.2181 4.18218 12.2181 4.18218 12.2181 4.18218L12.2198 4.18266L12.2216 4.18318L12.2255 4.18433L12.2346 4.18704L12.2578 4.19427C12.2755 4.19993 12.2976 4.2073 12.3239 4.21665C12.3766 4.23535 12.4463 4.26194 12.5317 4.29856C12.7026 4.37182 12.9362 4.48496 13.2231 4.65476C13.7975 4.99467 14.5815 5.55928 15.5026 6.48035C16.4236 7.40143 16.9883 8.18547 17.3282 8.7598C17.498 9.04671 17.6111 9.28029 17.6844 9.45123C17.721 9.53666 17.7476 9.60631 17.7663 9.65901C17.7756 9.68535 17.783 9.70745 17.7887 9.72514L17.7959 9.74836L17.7986 9.75745L17.7997 9.76137L17.8003 9.76316C17.8003 9.76316 17.8007 9.76485 16.9546 10.0066L17.8007 9.76485C17.9343 10.2322 17.6637 10.7193 17.1963 10.8528C16.733 10.9852 16.2502 10.7203 16.1119 10.2602L16.1075 10.2476C16.1013 10.23 16.0883 10.1953 16.0666 10.1446C16.0232 10.0433 15.9445 9.87754 15.8135 9.65625C15.5519 9.21418 15.0793 8.54623 14.258 7.72492C13.4367 6.9036 12.7687 6.43107 12.3267 6.16944C12.1054 6.03847 11.9397 5.95974 11.8384 5.91633C11.7877 5.8946 11.753 5.88165 11.7353 5.8754L11.7227 5.87106C11.2626 5.73274 10.9977 5.24996 11.1301 4.78659Z"
+                                  fill="#01103D"
+                                />
+                              </svg>
+                            </span>
+                            <a class="first-child" href="tel:+254721779429"
+                              >+254-721-779-429</a
+                            >
+                          </li>
+                          <li>
+                            <span>
+                              <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.3"
+                                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 11.5997 0.375616 13.1116 1.04346 14.4525C1.22094 14.8088 1.28001 15.2161 1.17712 15.6006L0.581511 17.8267C0.322954 18.793 1.20701 19.677 2.17335 19.4185L4.39939 18.8229C4.78393 18.72 5.19121 18.7791 5.54753 18.9565C6.88836 19.6244 8.40032 20 10 20Z"
+                                  fill="#01103D"
+                                />
+                                <path
+                                  d="M5.825 10.85C5.36937 10.85 5 11.2194 5 11.675C5 12.1306 5.36937 12.5 5.825 12.5H11.875C12.3306 12.5 12.7 12.1306 12.7 11.675C12.7 11.2194 12.3306 10.85 11.875 10.85H5.825Z"
+                                  fill="#1C274C"
+                                />
+                                <path
+                                  d="M5.825 7C5.36937 7 5 7.36937 5 7.825C5 8.28063 5.36937 8.65 5.825 8.65H14.625C15.0806 8.65 15.45 8.28063 15.45 7.825C15.45 7.36937 15.0806 7 14.625 7H5.825Z"
+                                  fill="#1C274C"
+                                />
+                              </svg>
+                            </span>
+                            <a href="mailto:info@sheria360.com"
+                              >info@sheria360.com</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".5s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-2"
+                    >
+                      <h4 class="tp-footer__widget-title">Quick Links</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about-sheria.html">About</a></li>
+                          <li><a href="price.html">Pricing</a></li>
+                          <li><a href="solutions.html">Solutions</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".7s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-3"
+                    >
+                      <h4 class="tp-footer__widget-title">Resources</h4>
+                      <div class="tp-footer__content">
+                        <ul>
+                          <li><a href="faq.html">FAQs</a></li>
+                          <li><a href="blog.html">Blogs</a></li>
+                          <li>
+                            <a href="https://docs.sheria360.com/"
+                              >Documentation</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://demo.sheria360.com/users/login/"
+                              >Login</a
+                            >
+                          </li>
+                          <li><a href="terms.html">Privacy Policy</a></li>
+                          <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp"
+                    data-wow-duration=".9s"
+                    data-wow-delay=".9s"
+                  >
+                    <div
+                      class="tp-footer__widget footer-widget-3 footer-col-3-4"
+                    >
+                      <h4 class="tp-footer__widget-title">Our Newsletter</h4>
+                      <div class="tp-footer__input mb-35 p-relative">
+                        <form action="#">
+                          <input
+                            type="email"
+                            placeholder="Business email address"
+                          />
+                          <span>
+                            <svg
+                              width="18"
+                              height="16"
+                              viewBox="0 0 18 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                opacity="0.4"
+                                d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
+                                stroke="#5F6168"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          <button>
+                            <svg
+                              width="14"
+                              height="16"
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1.00098 7H13.001"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M7.00098 1L13.001 7L7.00098 13"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
+                      <div class="tp-footer__social-3">
+                        <h4>Social media</h4>
+                        <a href="https://facebook.com/sheria360"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tp-copyright__area pt-25 pb-40">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div
+                      class="tp-copyright__text tp-copyright__text-3 text-center"
+                    >
+                      <span
+                        >Copyright &copy; 2026 Sheria360. All Rights
+                        Reserved.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Expand/Collapse + Scroll Reveal -->
+    <script>
+      (function () {
+        /* Scroll Reveal */
+        const revealEls = document.querySelectorAll(".sr-reveal");
+        if ("IntersectionObserver" in window) {
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("sr-visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+          );
+          revealEls.forEach((el) => revealObserver.observe(el));
+        } else {
+          revealEls.forEach((el) => el.classList.add("sr-visible"));
+        }
+
+        /* Card Expand/Collapse */
+        document.querySelectorAll(".card-toggle-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const targetId = this.getAttribute("data-target");
+            const list = document.querySelector(
+              `.tp-feature-list[data-card="${targetId}"]`,
+            );
+            const isExpanded = list.classList.contains("expanded");
+
+            if (isExpanded) {
+              list.classList.remove("expanded");
+              list.classList.add("collapsed");
+              this.querySelector("span").textContent = "Show all features";
+              this.classList.remove("active");
+            } else {
+              list.classList.remove("collapsed");
+              list.classList.add("expanded");
+              this.querySelector("span").textContent = "Show less";
+              this.classList.add("active");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

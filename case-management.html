@@ -3,49 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Artificial Intelligence | Sheria360</title>
+    <title>Case Management | Sheria360</title>
     <meta
       name="description"
-      content="AI-powered legal automation with summarization, smart drafting, legal research, risk detection, and intelligent contract review."
+      content="Complete case management with intake, investigations, court monitoring, evidence tracking, and AI-powered insights."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
       :root {
-        --blue-900: #0a192f;
-        --blue-800: #0f2440;
-        --blue-700: #15355c;
-        --blue-600: #1a4678;
-        --blue-500: #2165a6;
-        --blue-400: #3b82c9;
-        --blue-300: #6ba3db;
-        --blue-200: #a3c9ec;
-        --blue-100: #d6e8f7;
-        --blue-50: #edf5fc;
-        --accent: #2563eb;
-        --accent-light: #3b82f6;
-        --accent-dark: #1d4ed8;
-        --text-primary: #0f172a;
-        --text-secondary: #475569;
-        --text-muted: #94a3b8;
-        --bg-light: #f8fafc;
-        --bg-card: #ffffff;
-        --border: #e2e8f0;
-        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-        --shadow:
-          0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        --shadow-lg:
-          0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        --shadow-xl:
-          0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        --radius-sm: 8px;
-        --radius: 12px;
-        --radius-lg: 16px;
-        --radius-xl: 24px;
-      }
-
-      * {
-        box-sizing: border-box;
+        --sheria-primary: #5b6dff;
+        --sheria-primary-dark: #4a5cd6;
+        --sheria-primary-light: #e8ebff;
+        --sheria-navy: #0b2b4a;
+        --sheria-navy-deep: #061b30;
+        --sheria-slate: #334155;
+        --sheria-slate-light: #64748b;
+        --sheria-bg-alt: #f0f4ff;
       }
 
       .header-bottom__main-menu nav > ul {
@@ -112,76 +86,88 @@
         line-height: 38px !important;
         border-radius: 6px;
       }
+
       @media (max-width: 767.98px) {
         .header__action-btn .tp-btn-border,
         .header__action-btn .tp-btn-blue-sm {
           display: none !important;
         }
       }
+
       .tp-btn-hover b {
         display: none !important;
       }
 
-      /* ===== HERO SECTION ===== */
+      /* ===== UPDATED HERO — TWO COLUMN ===== */
       .tp-features-hero {
         position: relative;
-        min-height: 90vh;
+        min-height: 85vh;
         display: flex;
         align-items: center;
         overflow: hidden;
         background: linear-gradient(
           135deg,
-          var(--blue-900) 0%,
-          var(--blue-800) 50%,
-          var(--blue-700) 100%
+          var(--sheria-navy-deep) 0%,
+          var(--sheria-navy) 50%,
+          #1a3a5a 100%
         );
-        padding: 140px 0 100px;
+        padding: 140px 0 80px;
       }
       .tp-features-hero::before {
         content: "";
         position: absolute;
-        inset: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        opacity: 0.6;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(91, 109, 255, 0.2) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
         pointer-events: none;
       }
       .tp-features-hero::after {
         content: "";
         position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-        height: 120px;
-        background: linear-gradient(to top, var(--bg-light), transparent);
+        bottom: -10%;
+        left: -5%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(91, 109, 255, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
         pointer-events: none;
       }
       .tp-features-hero .container {
         position: relative;
         z-index: 2;
       }
-
-      .tp-hero-badge {
+      .tp-features-hero .tp-hero-badge {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(37, 99, 235, 0.15);
-        border: 1px solid rgba(37, 99, 235, 0.3);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50px;
         padding: 8px 20px;
-        margin-bottom: 28px;
+        margin-bottom: 24px;
         font-size: 13px;
         font-weight: 600;
-        color: var(--blue-200);
+        color: #93c5fd;
         letter-spacing: 0.5px;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(10px);
       }
-      .tp-hero-badge .badge-dot {
+      .tp-features-hero .tp-hero-badge .badge-dot {
         width: 8px;
         height: 8px;
-        background: var(--accent-light);
+        background: var(--sheria-primary);
         border-radius: 50%;
         animation: pulse-dot 2s infinite;
-        box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
       }
       @keyframes pulse-dot {
         0%,
@@ -194,376 +180,218 @@
           transform: scale(0.8);
         }
       }
-      .tp-hero-title {
-        font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      .tp-features-hero .tp-hero-title {
+        font-size: clamp(2.5rem, 4.5vw, 4rem);
         font-weight: 800;
         line-height: 1.1;
         color: #ffffff;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         letter-spacing: -0.03em;
       }
-      .tp-hero-title .highlight {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      .tp-features-hero .tp-hero-title .highlight {
+        background: linear-gradient(135deg, var(--sheria-primary), #8b9aff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-      .tp-hero-subtitle {
-        font-size: 1.15rem;
-        line-height: 1.75;
-        color: rgba(255, 255, 255, 0.75);
-        max-width: 540px;
-        margin-bottom: 36px;
+      .tp-features-hero .tp-hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 520px;
+        margin-bottom: 32px;
       }
-      .tp-hero-cta {
+      .tp-features-hero .tp-hero-cta {
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
-        margin-bottom: 40px;
+        gap: 16px;
       }
-      .btn-primary-hero {
+      .tp-features-hero .btn-primary-hero {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: var(--accent);
-        color: #ffffff;
+        background: linear-gradient(
+          135deg,
+          var(--sheria-primary) 0%,
+          var(--sheria-primary-dark) 100%
+        );
+        color: #fff;
         font-size: 15px;
         font-weight: 600;
         padding: 16px 32px;
-        border-radius: var(--radius);
+        border-radius: 12px;
         border: none;
         text-decoration: none;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 8px 24px rgba(91, 109, 255, 0.35);
       }
-      .btn-primary-hero:hover {
-        background: var(--accent-dark);
+      .tp-features-hero .btn-primary-hero:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+        box-shadow: 0 12px 32px rgba(91, 109, 255, 0.5);
+        color: #fff;
       }
-      .btn-secondary-hero {
+      .tp-features-hero .btn-secondary-hero {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.1);
         color: #ffffff;
         font-size: 15px;
         font-weight: 600;
         padding: 16px 32px;
-        border-radius: var(--radius);
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
         text-decoration: none;
         transition: all 0.3s ease;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(10px);
       }
-      .btn-secondary-hero:hover {
-        background: rgba(255, 255, 255, 0.15);
+      .tp-features-hero .btn-secondary-hero:hover {
+        background: rgba(255, 255, 255, 0.2);
         transform: translateY(-2px);
-        border-color: rgba(255, 255, 255, 0.35);
+        color: #fff;
       }
-
-      /* Hero image / visual */
       .hero-visual {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        min-height: 400px;
-      }
-      .hero-visual-inner {
-        position: relative;
-        width: 100%;
-        max-width: 560px;
-        aspect-ratio: 4/3;
-        border-radius: var(--radius-xl);
+        border-radius: 20px;
         overflow: hidden;
-        background: linear-gradient(
-          145deg,
-          rgba(37, 99, 235, 0.2),
-          rgba(15, 23, 42, 0.4)
-        );
-        border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow:
-          0 25px 50px -12px rgba(0, 0, 0, 0.4),
-          0 0 0 1px rgba(255, 255, 255, 0.05);
-      }
-      .hero-visual-inner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.9;
-      }
-      .hero-visual-badge {
-        position: absolute;
-        bottom: 24px;
-        left: 24px;
-        background: rgba(15, 23, 42, 0.85);
-        backdrop-filter: blur(12px);
+          0 25px 80px rgba(0, 0, 0, 0.3),
+          0 0 0 1px rgba(255, 255, 255, 0.08);
+        transform: perspective(1000px) rotateY(-5deg) rotateX(3deg);
+        transition: transform 0.5s ease;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: var(--radius);
-        padding: 14px 20px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #fff;
-        font-size: 0.85rem;
-        font-weight: 500;
-        box-shadow: var(--shadow-lg);
       }
-      .hero-visual-badge .icon {
-        width: 36px;
-        height: 36px;
-        background: var(--accent);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 1rem;
+      .hero-visual:hover {
+        transform: perspective(1000px) rotateY(-2deg) rotateX(1deg);
       }
-      .hero-visual-floating {
-        position: absolute;
-        top: -20px;
-        right: -20px;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: var(--radius);
-        padding: 14px 18px;
-        box-shadow: var(--shadow-xl);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-primary);
-        font-size: 0.8rem;
-        font-weight: 600;
-        animation: float 4s ease-in-out infinite;
-      }
-      .hero-visual-floating .dot {
-        width: 10px;
-        height: 10px;
-        background: #22c55e;
-        border-radius: 50%;
-        box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
-      }
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
+      .hero-visual img {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
       }
 
       /* ===== FEATURES GRID ===== */
       .tp-features-grid {
-        padding: 100px 0 120px;
-        background: var(--bg-light);
-        position: relative;
+        padding: 100px 0;
+        background: var(--sheria-bg-alt);
       }
-      .section-title-box {
-        margin-bottom: 60px;
+      .section-title-box .tp-section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--sheria-navy);
       }
-      .tp-section-title {
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
-        font-weight: 800;
-        color: var(--text-primary);
-        letter-spacing: -0.02em;
-        line-height: 1.2;
-      }
-      .tp-section-title span {
-        background: linear-gradient(135deg, var(--blue-500), var(--accent));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      .section-title-box .tp-section-title span {
+        color: var(--sheria-primary);
       }
       .tp-divider {
         width: 60px;
         height: 4px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
+        background: linear-gradient(90deg, var(--sheria-primary), #8b9aff);
         margin: 20px auto;
         border-radius: 2px;
       }
-      .section-subtitle {
-        color: var(--text-secondary);
-        font-size: 1.05rem;
-        max-width: 640px;
-        margin: 0 auto;
-        line-height: 1.7;
-      }
-
       .tp-feature-card {
-        background: var(--bg-card);
-        border-radius: var(--radius-lg);
-        padding: 36px 32px;
-        border: 1px solid var(--border);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 30px 28px;
+        border: 1px solid #e9edf4;
+        transition: all 0.3s ease;
         height: 100%;
-        box-shadow: var(--shadow-sm);
-        position: relative;
-        overflow: hidden;
-      }
-      .tp-feature-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
       }
       .tp-feature-card:hover {
-        border-color: var(--blue-200);
-        box-shadow: var(--shadow-xl);
-        transform: translateY(-6px);
+        border-color: var(--sheria-primary);
+        box-shadow: 0 16px 40px rgba(91, 109, 255, 0.08);
+        transform: translateY(-4px);
       }
-      .tp-feature-card:hover::before {
-        transform: scaleX(1);
-      }
-      .tp-feature-icon {
-        width: 56px;
-        height: 56px;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
-        border-radius: var(--radius);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--accent);
-        margin-bottom: 20px;
-        font-size: 1.4rem;
-        transition: all 0.3s ease;
-      }
-      .tp-feature-card:hover .tp-feature-icon {
-        background: linear-gradient(135deg, var(--accent), var(--blue-500));
-        color: #fff;
-        transform: scale(1.05);
+      .tp-feature-card .tp-feature-icon {
+        color: var(--sheria-primary);
       }
       .tp-feature-card h4 {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--text-primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--sheria-navy);
         margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
       }
-      .feature-desc {
-        color: var(--text-secondary);
+      .tp-feature-card .feature-desc {
+        color: var(--sheria-slate-light);
         font-size: 0.95rem;
-        line-height: 1.65;
-        margin-bottom: 20px;
+        line-height: 1.6;
+        margin-bottom: 16px;
       }
-      .tp-feature-list {
+      .tp-feature-card .tp-feature-list {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      .tp-feature-list li {
+      .tp-feature-card .tp-feature-list li {
         display: flex;
         align-items: flex-start;
         gap: 10px;
         font-size: 0.88rem;
-        color: var(--text-primary);
-        padding: 8px 0;
-        border-bottom: 1px solid #f1f5f9;
-        transition: all 0.2s ease;
+        color: #1e293b;
+        padding: 4px 0;
+        border-bottom: 1px solid #f1f4f9;
       }
-      .tp-feature-list li:last-child {
+      .tp-feature-card .tp-feature-list li:last-child {
         border-bottom: none;
       }
-      .tp-feature-list li i {
-        color: var(--accent);
+      .tp-feature-card .tp-feature-list li i {
+        color: var(--sheria-primary);
         margin-top: 3px;
         flex-shrink: 0;
-        font-size: 0.85rem;
-      }
-      .tp-feature-card:hover .tp-feature-list li {
-        border-color: #e2e8f0;
       }
       .feature-tag {
         display: inline-block;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
-        font-size: 0.65rem;
+        background: var(--sheria-primary-light);
+        font-size: 0.6rem;
         font-weight: 700;
-        padding: 0.25rem 0.7rem;
+        padding: 0.15rem 0.7rem;
         border-radius: 30px;
-        color: var(--accent);
-        letter-spacing: 0.3px;
+        color: var(--sheria-primary);
+        letter-spacing: 0.2px;
+        margin-left: 0.4rem;
+        vertical-align: middle;
         text-transform: uppercase;
-        border: 1px solid var(--blue-200);
       }
 
-      /* ===== CTA SECTION ===== */
+      /* ===== CTA ===== */
       .tp-cta-area {
-        padding: 100px 0;
-        background: linear-gradient(
-          135deg,
-          var(--blue-900) 0%,
-          var(--blue-800) 100%
-        );
-        position: relative;
-        overflow: hidden;
-      }
-      .tp-cta-area::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(
-          circle,
-          rgba(37, 99, 235, 0.15) 0%,
-          transparent 70%
-        );
-        pointer-events: none;
+        padding: 80px 0;
+        background: var(--sheria-navy);
       }
       .tp-cta-area h3 {
         color: #ffffff;
-        font-size: clamp(1.8rem, 3vw, 2.4rem);
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        line-height: 1.2;
+        font-size: 2.2rem;
+        font-weight: 700;
       }
       .tp-cta-area h3 span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--sheria-primary);
       }
       .tp-cta-area p {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.8);
         font-size: 1.05rem;
-        max-width: 520px;
-        margin-top: 12px;
       }
       .tp-cta-area .tp-btn-blue-sm {
-        background: var(--accent);
-        color: #ffffff;
-        padding: 16px 36px;
-        border-radius: var(--radius);
+        background: var(--sheria-primary);
+        color: #fff;
+        padding: 14px 32px;
+        border-radius: 10px;
         font-weight: 600;
         text-decoration: none;
         display: inline-block;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
-        border: none;
       }
       .tp-cta-area .tp-btn-blue-sm:hover {
-        background: var(--accent-dark);
+        background: var(--sheria-primary-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
       }
       .tp-cta-area .tp-btn-border {
         background: transparent;
         color: #ffffff;
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-        padding: 16px 36px;
-        border-radius: var(--radius);
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        padding: 14px 32px;
+        border-radius: 10px;
         font-weight: 600;
         text-decoration: none;
         display: inline-block;
@@ -572,75 +400,34 @@
       .tp-cta-area .tp-btn-border:hover {
         background: rgba(255, 255, 255, 0.1);
         transform: translateY(-2px);
-        border-color: rgba(255, 255, 255, 0.4);
       }
 
+      /* ===== MODULE NAV ===== */
       .module-nav {
-        background: var(--bg-light);
+        background: #f8fafd;
         padding: 20px 0;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid #e9edf4;
       }
       .module-nav a {
-        color: var(--text-primary);
+        color: var(--sheria-navy);
         text-decoration: none;
         font-weight: 500;
         padding: 8px 16px;
-        border-radius: var(--radius-sm);
+        border-radius: 6px;
         transition: all 0.3s ease;
         font-size: 0.9rem;
       }
       .module-nav a:hover,
       .module-nav a.active {
-        background: var(--accent);
+        background: var(--sheria-primary);
         color: #ffffff;
       }
-      .ai-badge {
-        display: inline-block;
-        background: var(--blue-50);
-        font-size: 0.6rem;
-        font-weight: 600;
-        padding: 0.1rem 0.6rem;
-        border-radius: 30px;
-        color: var(--blue-600);
-        border: 1px solid var(--blue-100);
-        margin-left: 0.3rem;
-      }
 
-      /* Stats row */
-      .hero-stats {
-        display: flex;
-        gap: 32px;
-        margin-top: 8px;
-        padding-top: 24px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .hero-stat {
-        display: flex;
-        flex-direction: column;
-      }
-      .hero-stat .number {
-        font-size: 1.6rem;
-        font-weight: 800;
-        color: #fff;
-        line-height: 1;
-      }
-      .hero-stat .number span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .hero-stat .label {
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.55);
-        margin-top: 4px;
-        font-weight: 500;
-      }
-
-      @media (max-width: 991.98px) {
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 991px) {
         .tp-features-hero {
           min-height: auto;
-          padding: 120px 0 80px;
+          padding: 120px 0 60px;
           text-align: center;
         }
         .tp-features-hero .tp-hero-subtitle {
@@ -650,30 +437,15 @@
         .tp-features-hero .tp-hero-cta {
           justify-content: center;
         }
-        .hero-stats {
-          justify-content: center;
-        }
         .hero-visual {
-          margin-top: 48px;
-          min-height: 300px;
-        }
-        .tp-cta-area {
-          text-align: center;
-        }
-        .tp-cta-area p {
+          transform: none;
+          margin-top: 40px;
+          max-width: 500px;
           margin-left: auto;
           margin-right: auto;
         }
-      }
-      @media (max-width: 575.98px) {
-        .tp-feature-card {
-          padding: 28px 22px;
-        }
-        .hero-visual-floating {
-          display: none;
-        }
-        .hero-stats {
-          gap: 20px;
+        .tp-cta-area {
+          text-align: center;
         }
       }
     </style>
@@ -703,13 +475,13 @@
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
       gtag("config", "AW-18205858668");
     </script>
-    <base target="_blank" />
   </head>
 
   <body>
@@ -834,14 +606,18 @@
                     class="tp-btn-border d-none d-md-inline-block"
                     href="https://demo.sheria360.com/users/login/"
                     target="_blank"
-                    ><span>Log In</span><b></b
-                  ></a>
+                  >
+                    <span>Log In</span>
+                    <b></b>
+                  </a>
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
                     href="https://demo.sheria360.com/modules/central/start-trial"
                     target="_blank"
-                    ><span>Try It Free</span><b></b
-                  ></a>
+                  >
+                    <span>Try It Free</span>
+                    <b></b>
+                  </a>
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
                     href="javascript:void(0)"
@@ -888,19 +664,19 @@
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <main class="fix">
-          <!-- ===== HERO SECTION ===== -->
+          <!-- ===== HERO SECTION — TWO COLUMN ===== -->
           <section class="tp-features-hero">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                   <h1 class="tp-hero-title">
-                    Artificial <span class="highlight">Intelligence</span>
+                    Case <span class="highlight">Management</span>
                   </h1>
                   <p class="tp-hero-subtitle">
-                    Intelligent automation for legal workflows. From
-                    summarization and smart drafting to risk detection and legal
-                    research, AI empowers legal teams to work faster, smarter,
-                    and with greater accuracy.
+                    End-to-end case lifecycle management from intake to
+                    resolution. Handle investigations, court monitoring,
+                    evidence custody, and suspect management all in one place
+                    with AI-powered insights.
                   </p>
                   <div class="tp-hero-cta">
                     <a href="register.html" class="btn-primary-hero">
@@ -912,48 +688,15 @@
                       <span>Request Demo</span>
                     </a>
                   </div>
-                  <div class="hero-stats">
-                    <div class="hero-stat">
-                      <span class="number"><span>80</span>%</span>
-                      <span class="label">Manual effort reduced</span>
-                    </div>
-                    <div class="hero-stat">
-                      <span class="number"><span>3</span>x</span>
-                      <span class="label">Faster turnaround</span>
-                    </div>
-                    <div class="hero-stat">
-                      <span class="number"><span>99</span>%</span>
-                      <span class="label">Accuracy rate</span>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-xl-6 col-lg-6">
+                <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0">
                   <div class="hero-visual">
-                    <div class="hero-visual-inner">
-                      <img
-                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
-                        alt="AI Legal Technology"
-                      />
-                      <div class="hero-visual-badge">
-                        <div class="icon"><i class="fas fa-robot"></i></div>
-                        <div>
-                          <div
-                            style="
-                              font-size: 0.75rem;
-                              opacity: 0.7;
-                              margin-bottom: 2px;
-                            "
-                          >
-                            AI Assistant
-                          </div>
-                          <div>Processing 12 documents...</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="hero-visual-floating">
-                      <span class="dot"></span>
-                      Live AI Analysis Active
-                    </div>
+                    <img
+                      src="assets/img/clients/lawfirm.jpg"
+                      alt="Sheria360 Case Management Dashboard"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
               </div>
@@ -965,291 +708,256 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
-                  <div class="section-title-box text-center">
+                  <div class="section-title-box text-center mb-60">
                     <h3 class="tp-section-title">
-                      AI-Powered <span>Legal Intelligence</span>
+                      Complete Case <span>Lifecycle</span>
                     </h3>
                     <div class="tp-divider"></div>
-                    <p class="section-subtitle mt-20">
-                      Sheria360 incorporates state-of-the-art AI to transform
-                      how legal services are delivered. Reduce manual effort by
-                      up to 80% while improving quality and consistency.
+                    <p class="mt-20">
+                      Streamline case management from intake to resolution with
+                      comprehensive tools for every stage.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="row g-4">
-                <!-- AI Summarization -->
-                <div class="col-xl-4 col-lg-6">
+              <div class="row">
+                <!-- Cases Intake Management -->
+                <div class="col-xl-4 col-lg-6 mb-40">
                   <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-file-lines"></i>
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-inbox fa-3x"></i>
                     </div>
                     <h4>
-                      AI Summarization <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      Generate concise executive summaries of complex matters
-                      and contracts instantly, highlighting key information and
-                      critical clauses.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Matters
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Contracts
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Executive summaries
-                        generation
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- AI Review & Drafting - Contracts -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h4>
-                      AI Review & Drafting — Contracts
+                      Cases Intake Management
                       <span class="feature-tag">AI</span>
                     </h4>
                     <p class="feature-desc">
-                      Leverage AI for intelligent contract review and drafting
-                      with automated redlining suggestions and best-practice
-                      recommendations.
+                      Streamlined case intake with custom forms, validation, and
+                      automated assignment workflows.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Contracts
+                        <i class="fas fa-check-circle"></i> Custom forms for
+                        different case types
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
+                        <i class="fas fa-check-circle"></i> Case details capture
+                        with data validation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
+                        <i class="fas fa-check-circle"></i> Case Source tracking
+                        and logging
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting with
-                        contextual suggestions
+                        <i class="fas fa-check-circle"></i> Case assignment and
+                        delegation
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- AI Review & Drafting - Advisory -->
-                <div class="col-xl-4 col-lg-6">
+                <!-- Investigations Management -->
+                <div class="col-xl-4 col-lg-6 mb-40">
                   <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-gavel"></i>
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-search fa-3x"></i>
                     </div>
-                    <h4>
-                      AI Review & Drafting — Advisory
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Investigations Management</h4>
                     <p class="feature-desc">
-                      AI-powered drafting and review of legal opinions and
-                      advisory documents with consistency checking and precedent
-                      integration.
+                      Comprehensive logging and tracking of all investigation
+                      activities and progress.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Legal Advisory/Opinions
+                        <i class="fas fa-check-circle"></i> Complaints and
+                        enquiries logging and tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Consistency checking
+                        <i class="fas fa-check-circle"></i> Investigations and
+                        surveillance activities logging
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Precedent
-                        integration
+                        <i class="fas fa-check-circle"></i> Updates and progress
+                        monitoring
+                      </li>
+                      <li><i class="fas fa-check-circle"></i> Action logs</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Court/Regulatory Status Monitoring -->
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-gavel fa-3x"></i>
+                    </div>
+                    <h4>Court/Regulatory Status Monitoring</h4>
+                    <p class="feature-desc">
+                      Real-time tracking of court proceedings and regulatory
+                      compliance status.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Case progress
+                        monitoring
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Template generation
+                        <i class="fas fa-check-circle"></i> Court proceeding
+                        updates
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Court activity dates
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Stakeholders'
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Case privacy and
+                        sharing management
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- AI Legal Research -->
-                <div class="col-xl-4 col-lg-6">
+                <!-- Suspects/Accused Management -->
+                <div class="col-xl-4 col-lg-6 mb-40">
                   <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-scale-balanced"></i>
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-user-secret fa-3x"></i>
                     </div>
-                    <h4>
-                      AI Legal Research <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Suspects/Accused Management</h4>
                     <p class="feature-desc">
-                      Intelligent legal research with natural language queries,
-                      case law retrieval, and summarization of legal precedents.
+                      Complete management of suspect and accused profiles with
+                      arrest and status tracking.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered Legal
-                        Research
+                        <i class="fas fa-check-circle"></i> Suspects/accused
+                        addition
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Natural language
-                        queries
+                        <i class="fas fa-check-circle"></i> Location of arrest
+                        management
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Case law retrieval
+                        <i class="fas fa-check-circle"></i> Arrest details
+                        management
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Precedent
-                        summarization
+                        <i class="fas fa-check-circle"></i> Related documents
+                        processing
+                      </li>
+                      <li><i class="fas fa-check-circle"></i> Status update</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Evidence/Exhibits Management -->
+                <div class="col-xl-4 col-lg-6 mb-40">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-box fa-3x"></i>
+                    </div>
+                    <h4>Evidence/Exhibits Management</h4>
+                    <p class="feature-desc">
+                      Secure custody and tracking of all evidence and exhibits
+                      with full audit trail.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Evidence/exhibits
+                        logging
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Evidence/exhibits
+                        details update
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Custody management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Temporary release
+                        and return management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Related attachments
+                        management
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Risk Identification & Redlining -->
-                <div class="col-xl-4 col-lg-6">
+                <!-- Conversion to Litigation Pipeline -->
+                <div class="col-xl-4 col-lg-6 mb-40">
                   <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-flag"></i>
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-arrow-right-arrow-left fa-3x"></i>
                     </div>
-                    <h4>
-                      Risk Identification & Redlining
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Conversion to Litigation Pipeline</h4>
                     <p class="feature-desc">
-                      Automated detection of potential risks in contracts with
-                      intelligent redlining recommendations to strengthen legal
-                      positions.
+                      Seamless transition from investigations to litigation with
+                      prosecution recommendations.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Risk Identification
+                        <i class="fas fa-check-circle"></i> Investigations
+                        qualification to Litigation
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Compliance gap
-                        analysis
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Clause Comparison & Missing Clause Detection -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-code-compare"></i>
-                    </div>
-                    <h4>
-                      Clause Comparison & Detection
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      Compare clauses across contracts and detect missing
-                      clauses against industry standards and best practices.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Industry standard
-                        benchmarking
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Best practice
+                        <i class="fas fa-check-circle"></i> Prosecution actions
                         recommendations
                       </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Obligation Extraction & Key Terms -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-list-check"></i>
-                    </div>
-                    <h4>
-                      Obligation Extraction & Key Terms
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      Extract and categorize obligations and key terms from
-                      contracts, making compliance tracking effortless.
-                    </p>
-                    <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
+                        <i class="fas fa-check-circle"></i> Court proceedings
+                        monitoring and tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Categorization and
-                        tagging
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Compliance tracking
-                        integration
+                        <i class="fas fa-check-circle"></i> Stakeholders'
+                        collaboration
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Contextual Suggestion & Smart Drafting -->
-                <div class="col-xl-4 col-lg-6">
+                <!-- Progress Tracking/Updates -->
+                <div class="col-xl-4 col-lg-6 mb-40">
                   <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-lightbulb"></i>
+                    <div class="tp-feature-icon mb-20">
+                      <i class="fas fa-timeline fa-3x"></i>
                     </div>
                     <h4>
-                      Contextual Suggestion & Smart Drafting
+                      Progress Tracking/Updates
                       <span class="feature-tag">AI</span>
                     </h4>
                     <p class="feature-desc">
-                      Get contextual suggestions while drafting with AI-powered
-                      smart drafting that learns from your organization's style.
+                      Visual timeline with real-time updates on case progress
+                      and key actions.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Contextual
-                        Suggestion
+                        <i class="fas fa-check-circle"></i> Case timeline with
+                        updates
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting
+                        <i class="fas fa-check-circle"></i> Update case progress
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Style learning and
-                        adaptation
+                        <i class="fas fa-check-circle"></i> Add/edit
+                        accused/suspects
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Template generation
+                        <i class="fas fa-check-circle"></i> Add/Edit
+                        evidence/exhibits
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Related documents
+                        tracking
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Actions and
+                        recommendations
                       </li>
                     </ul>
                   </div>
@@ -1263,13 +971,10 @@
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                  <h3>
-                    Ready to Harness the Power of
-                    <span>AI in Your Practice?</span>
-                  </h3>
+                  <h3>Ready to Transform Your <span>Case Management?</span></h3>
                   <p>
-                    Join hundreds of legal professionals who have transformed
-                    their workflows with Sheria360 AI.
+                    Join hundreds of legal professionals who have streamlined
+                    their operations with Sheria360.
                   </p>
                 </div>
                 <div class="col-lg-5 text-lg-end">
@@ -1300,11 +1005,12 @@
                       class="tp-footer__widget footer-widget-3 footer-col-3-1"
                     >
                       <div class="tp-footer__logo mb-25">
-                        <a href="index.html"
-                          ><img
+                        <a href="index.html">
+                          <img
                             src="assets/img/logo/logo-black.png"
                             alt="Sheria360"
-                        /></a>
+                          />
+                        </a>
                       </div>
                       <div class="tp-footer__contact-info">
                         <p>

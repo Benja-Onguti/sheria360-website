@@ -3,34 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Artificial Intelligence | Sheria360</title>
+    <title>Client Portal | Sheria360</title>
     <meta
       name="description"
-      content="AI-powered legal automation with summarization, smart drafting, legal research, risk detection, and intelligent contract review."
+      content="Secure client collaboration hub with ticket management, legal requests, case tracking, and secure file exchange."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
       :root {
-        --blue-900: #0a192f;
-        --blue-800: #0f2440;
-        --blue-700: #15355c;
-        --blue-600: #1a4678;
-        --blue-500: #2165a6;
-        --blue-400: #3b82c9;
-        --blue-300: #6ba3db;
-        --blue-200: #a3c9ec;
-        --blue-100: #d6e8f7;
-        --blue-50: #edf5fc;
-        --accent: #2563eb;
-        --accent-light: #3b82f6;
-        --accent-dark: #1d4ed8;
+        --blue-900: #0b2b4a;
+        --blue-800: #0f3a5e;
+        --blue-700: #154a72;
+        --blue-600: #1a5a86;
+        --accent: #5b6dff;
+        --accent-light: #7b8aff;
+        --accent-dark: #4a5ce6;
         --text-primary: #0f172a;
         --text-secondary: #475569;
         --text-muted: #94a3b8;
-        --bg-light: #f8fafc;
+        --bg-light: #f5f7fb;
         --bg-card: #ffffff;
-        --border: #e2e8f0;
+        --border: #e9edf4;
         --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
         --shadow:
           0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -164,24 +158,24 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(37, 99, 235, 0.15);
-        border: 1px solid rgba(37, 99, 235, 0.3);
+        background: rgba(91, 109, 255, 0.15);
+        border: 1px solid rgba(91, 109, 255, 0.3);
         border-radius: 50px;
         padding: 8px 20px;
         margin-bottom: 28px;
         font-size: 13px;
         font-weight: 600;
-        color: var(--blue-200);
+        color: var(--accent-light);
         letter-spacing: 0.5px;
         backdrop-filter: blur(4px);
       }
       .tp-hero-badge .badge-dot {
         width: 8px;
         height: 8px;
-        background: var(--accent-light);
+        background: var(--accent);
         border-radius: 50%;
         animation: pulse-dot 2s infinite;
-        box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+        box-shadow: 0 0 8px rgba(91, 109, 255, 0.6);
       }
       @keyframes pulse-dot {
         0%,
@@ -203,7 +197,7 @@
         letter-spacing: -0.03em;
       }
       .tp-hero-title .highlight {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #8b9cff, var(--accent));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -234,12 +228,12 @@
         border: none;
         text-decoration: none;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 4px 20px rgba(91, 109, 255, 0.35);
       }
       .btn-primary-hero:hover {
         background: var(--accent-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+        box-shadow: 0 8px 28px rgba(91, 109, 255, 0.45);
       }
       .btn-secondary-hero {
         display: inline-flex;
@@ -280,7 +274,7 @@
         overflow: hidden;
         background: linear-gradient(
           145deg,
-          rgba(37, 99, 235, 0.2),
+          rgba(91, 109, 255, 0.2),
           rgba(15, 23, 42, 0.4)
         );
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -372,7 +366,7 @@
         line-height: 1.2;
       }
       .tp-section-title span {
-        background: linear-gradient(135deg, var(--blue-500), var(--accent));
+        background: linear-gradient(135deg, var(--accent), var(--accent-light));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -380,7 +374,7 @@
       .tp-divider {
         width: 60px;
         height: 4px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
+        background: linear-gradient(90deg, var(--accent), var(--accent-light));
         margin: 20px auto;
         border-radius: 2px;
       }
@@ -410,13 +404,13 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--accent), var(--blue-400));
+        background: linear-gradient(90deg, var(--accent), var(--accent-light));
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .tp-feature-card:hover {
-        border-color: var(--blue-200);
+        border-color: #c7d2fe;
         box-shadow: var(--shadow-xl);
         transform: translateY(-6px);
       }
@@ -426,7 +420,7 @@
       .tp-feature-icon {
         width: 56px;
         height: 56px;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+        background: linear-gradient(135deg, #eef0ff, #dbe0ff);
         border-radius: var(--radius);
         display: flex;
         align-items: center;
@@ -437,7 +431,7 @@
         transition: all 0.3s ease;
       }
       .tp-feature-card:hover .tp-feature-icon {
-        background: linear-gradient(135deg, var(--accent), var(--blue-500));
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
         color: #fff;
         transform: scale(1.05);
       }
@@ -486,7 +480,7 @@
       }
       .feature-tag {
         display: inline-block;
-        background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+        background: linear-gradient(135deg, #eef0ff, #dbe0ff);
         font-size: 0.65rem;
         font-weight: 700;
         padding: 0.25rem 0.7rem;
@@ -494,7 +488,7 @@
         color: var(--accent);
         letter-spacing: 0.3px;
         text-transform: uppercase;
-        border: 1px solid var(--blue-200);
+        border: 1px solid #c7d2fe;
       }
 
       /* ===== CTA SECTION ===== */
@@ -517,7 +511,7 @@
         height: 600px;
         background: radial-gradient(
           circle,
-          rgba(37, 99, 235, 0.15) 0%,
+          rgba(91, 109, 255, 0.15) 0%,
           transparent 70%
         );
         pointer-events: none;
@@ -530,7 +524,7 @@
         line-height: 1.2;
       }
       .tp-cta-area h3 span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #8b9cff, var(--accent));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -550,13 +544,13 @@
         text-decoration: none;
         display: inline-block;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 4px 20px rgba(91, 109, 255, 0.35);
         border: none;
       }
       .tp-cta-area .tp-btn-blue-sm:hover {
         background: var(--accent-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+        box-shadow: 0 8px 28px rgba(91, 109, 255, 0.45);
       }
       .tp-cta-area .tp-btn-border {
         background: transparent;
@@ -594,17 +588,6 @@
         background: var(--accent);
         color: #ffffff;
       }
-      .ai-badge {
-        display: inline-block;
-        background: var(--blue-50);
-        font-size: 0.6rem;
-        font-weight: 600;
-        padding: 0.1rem 0.6rem;
-        border-radius: 30px;
-        color: var(--blue-600);
-        border: 1px solid var(--blue-100);
-        margin-left: 0.3rem;
-      }
 
       /* Stats row */
       .hero-stats {
@@ -625,7 +608,7 @@
         line-height: 1;
       }
       .hero-stat .number span {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        background: linear-gradient(135deg, #8b9cff, var(--accent));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -773,9 +756,7 @@
                       ></a>
                       <ul class="submenu">
                         <li><a href="features.html">All Features</a></li>
-                        <li>
-                          <a href="legalservices.html">Legal Services </a>
-                        </li>
+                        <li><a href="legalservices.html">Legal Services</a></li>
                         <li>
                           <a href="case-management.html">Cases Management</a>
                         </li>
@@ -893,14 +874,18 @@
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
+                  <div class="tp-hero-badge">
+                    <span class="badge-dot"></span>
+                    Collaboration Portal
+                  </div>
                   <h1 class="tp-hero-title">
-                    Artificial <span class="highlight">Intelligence</span>
+                    Client <span class="highlight">Portal</span>
                   </h1>
                   <p class="tp-hero-subtitle">
-                    Intelligent automation for legal workflows. From
-                    summarization and smart drafting to risk detection and legal
-                    research, AI empowers legal teams to work faster, smarter,
-                    and with greater accuracy.
+                    Secure external collaboration hub for clients. Submit
+                    requests, track cases, exchange documents, and communicate
+                    seamlessly with your legal team — all in one centralized
+                    portal.
                   </p>
                   <div class="tp-hero-cta">
                     <a href="register.html" class="btn-primary-hero">
@@ -914,16 +899,16 @@
                   </div>
                   <div class="hero-stats">
                     <div class="hero-stat">
-                      <span class="number"><span>80</span>%</span>
-                      <span class="label">Manual effort reduced</span>
+                      <span class="number"><span>24/7</span></span>
+                      <span class="label">Portal access</span>
+                    </div>
+                    <div class="hero-stat">
+                      <span class="number"><span>100</span>%</span>
+                      <span class="label">Secure exchange</span>
                     </div>
                     <div class="hero-stat">
                       <span class="number"><span>3</span>x</span>
-                      <span class="label">Faster turnaround</span>
-                    </div>
-                    <div class="hero-stat">
-                      <span class="number"><span>99</span>%</span>
-                      <span class="label">Accuracy rate</span>
+                      <span class="label">Faster response</span>
                     </div>
                   </div>
                 </div>
@@ -931,11 +916,13 @@
                   <div class="hero-visual">
                     <div class="hero-visual-inner">
                       <img
-                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
-                        alt="AI Legal Technology"
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=80"
+                        alt="Client Portal Collaboration"
                       />
                       <div class="hero-visual-badge">
-                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <div class="icon">
+                          <i class="fas fa-shield-halved"></i>
+                        </div>
                         <div>
                           <div
                             style="
@@ -944,15 +931,15 @@
                               margin-bottom: 2px;
                             "
                           >
-                            AI Assistant
+                            Secure Connection
                           </div>
-                          <div>Processing 12 documents...</div>
+                          <div>End-to-end encrypted</div>
                         </div>
                       </div>
                     </div>
                     <div class="hero-visual-floating">
                       <span class="dot"></span>
-                      Live AI Analysis Active
+                      Live Portal Active
                     </div>
                   </div>
                 </div>
@@ -967,289 +954,257 @@
                 <div class="col-lg-8">
                   <div class="section-title-box text-center">
                     <h3 class="tp-section-title">
-                      AI-Powered <span>Legal Intelligence</span>
+                      Client Collaboration <span>Hub</span>
                     </h3>
                     <div class="tp-divider"></div>
                     <p class="section-subtitle mt-20">
-                      Sheria360 incorporates state-of-the-art AI to transform
-                      how legal services are delivered. Reduce manual effort by
-                      up to 80% while improving quality and consistency.
+                      Sheria360's client portal enables seamless interaction
+                      with external stakeholders. Clients can submit requests,
+                      track cases, and exchange documents securely — building
+                      trust through transparency and responsive communication.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="row g-4">
-                <!-- AI Summarization -->
+                <!-- Tickets Dashboard -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-file-lines"></i>
+                      <i class="fas fa-ticket"></i>
                     </div>
-                    <h4>
-                      AI Summarization <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Tickets Dashboard</h4>
                     <p class="feature-desc">
-                      Generate concise executive summaries of complex matters
-                      and contracts instantly, highlighting key information and
-                      critical clauses.
+                      Comprehensive dashboard showing all client tickets,
+                      requests, and their current status for quick overview.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Matters
+                        <i class="fas fa-check-circle"></i> Real-time ticket
+                        status
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered
-                        Summarization in Contracts
+                        <i class="fas fa-check-circle"></i> Filter and search
+                        capabilities
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Executive summaries
-                        generation
+                        <i class="fas fa-check-circle"></i> Priority and
+                        category sorting
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
+                        <i class="fas fa-check-circle"></i> Assignment tracking
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- AI Review & Drafting - Contracts -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h4>
-                      AI Review & Drafting — Contracts
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      Leverage AI for intelligent contract review and drafting
-                      with automated redlining suggestions and best-practice
-                      recommendations.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Contracts
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting with
-                        contextual suggestions
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- AI Review & Drafting - Advisory -->
-                <div class="col-xl-4 col-lg-6">
-                  <div class="tp-feature-card">
-                    <div class="tp-feature-icon">
-                      <i class="fas fa-gavel"></i>
-                    </div>
-                    <h4>
-                      AI Review & Drafting — Advisory
-                      <span class="feature-tag">AI</span>
-                    </h4>
-                    <p class="feature-desc">
-                      AI-powered drafting and review of legal opinions and
-                      advisory documents with consistency checking and precedent
-                      integration.
-                    </p>
-                    <ul class="tp-feature-list">
-                      <li>
-                        <i class="fas fa-check-circle"></i> AI powered Review
-                        and Drafting in Legal Advisory/Opinions
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Consistency checking
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Precedent
-                        integration
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Template generation
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- AI Legal Research -->
+                <!-- Request for Legal/Advisory Opinions -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
                       <i class="fas fa-scale-balanced"></i>
                     </div>
-                    <h4>
-                      AI Legal Research <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Legal/Advisory Opinions Requests</h4>
                     <p class="feature-desc">
-                      Intelligent legal research with natural language queries,
-                      case law retrieval, and summarization of legal precedents.
+                      Clients can submit requests for legal opinions and
+                      advisory services with full tracking and response
+                      management.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> AI Powered Legal
-                        Research
+                        <i class="fas fa-check-circle"></i> Request submission
+                        forms
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Natural language
-                        queries
+                        <i class="fas fa-check-circle"></i> Status tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Case law retrieval
+                        <i class="fas fa-check-circle"></i> Document attachments
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Precedent
-                        summarization
+                        <i class="fas fa-check-circle"></i> Response management
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Risk Identification & Redlining -->
+                <!-- Request for Conveyance -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-flag"></i>
+                      <i class="fas fa-home"></i>
                     </div>
-                    <h4>
-                      Risk Identification & Redlining
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Conveyance Requests</h4>
                     <p class="feature-desc">
-                      Automated detection of potential risks in contracts with
-                      intelligent redlining recommendations to strengthen legal
-                      positions.
+                      Streamlined submission and tracking of conveyance requests
+                      with document management and progress visibility.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Risk Identification
+                        <i class="fas fa-check-circle"></i> Property details
+                        capture
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Redlining
-                        suggestions
+                        <i class="fas fa-check-circle"></i> Document upload
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
+                        <i class="fas fa-check-circle"></i> Progress tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Compliance gap
-                        analysis
+                        <i class="fas fa-check-circle"></i> Notification alerts
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Clause Comparison & Missing Clause Detection -->
+                <!-- Agreement's Request -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-code-compare"></i>
+                      <i class="fas fa-file-contract"></i>
                     </div>
-                    <h4>
-                      Clause Comparison & Detection
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Agreement Requests (MOUs, TCAs, etc.)</h4>
                     <p class="feature-desc">
-                      Compare clauses across contracts and detect missing
-                      clauses against industry standards and best practices.
+                      Submit requests for various agreements including MOUs,
+                      TCAs, DTPs with automated workflow and approval tracking.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Clause comparison
+                        <i class="fas fa-check-circle"></i> Agreement type
+                        selection
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Missing clause
-                        detection
+                        <i class="fas fa-check-circle"></i> Automated workflow
+                        routing
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Industry standard
-                        benchmarking
+                        <i class="fas fa-check-circle"></i> Approval tracking
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Best practice
-                        recommendations
+                        <i class="fas fa-check-circle"></i> Version management
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Obligation Extraction & Key Terms -->
+                <!-- Case Tracking -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-list-check"></i>
+                      <i class="fas fa-folder-open"></i>
                     </div>
-                    <h4>
-                      Obligation Extraction & Key Terms
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Case Tracking <span class="feature-tag">AI</span></h4>
                     <p class="feature-desc">
-                      Extract and categorize obligations and key terms from
-                      contracts, making compliance tracking effortless.
+                      Clients can track the progress of their cases with
+                      real-time updates, documents, and status visibility.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Obligation
-                        extraction
+                        <i class="fas fa-check-circle"></i> Real-time case
+                        status
+                      </li>
+                      <li><i class="fas fa-check-circle"></i> Timeline view</li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Document access
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Key terms extraction
+                        <i class="fas fa-check-circle"></i> Update notifications
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Categorization and
-                        tagging
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle"></i> Compliance tracking
-                        integration
+                        <i class="fas fa-check-circle"></i> AI-powered case
+                        summaries
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Contextual Suggestion & Smart Drafting -->
+                <!-- Secure File Exchange -->
                 <div class="col-xl-4 col-lg-6">
                   <div class="tp-feature-card">
                     <div class="tp-feature-icon">
-                      <i class="fas fa-lightbulb"></i>
+                      <i class="fas fa-cloud-upload-alt"></i>
                     </div>
-                    <h4>
-                      Contextual Suggestion & Smart Drafting
-                      <span class="feature-tag">AI</span>
-                    </h4>
+                    <h4>Secure File Exchange</h4>
                     <p class="feature-desc">
-                      Get contextual suggestions while drafting with AI-powered
-                      smart drafting that learns from your organization's style.
+                      Encrypted file sharing between clients and legal teams
+                      with complete audit trails and access controls.
                     </p>
                     <ul class="tp-feature-list">
                       <li>
-                        <i class="fas fa-check-circle"></i> Contextual
-                        Suggestion
+                        <i class="fas fa-check-circle"></i> End-to-end
+                        encryption
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Smart drafting
+                        <i class="fas fa-check-circle"></i> Large file support
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Style learning and
-                        adaptation
+                        <i class="fas fa-check-circle"></i> Access permissions
                       </li>
                       <li>
-                        <i class="fas fa-check-circle"></i> Template generation
+                        <i class="fas fa-check-circle"></i> Audit trail logging
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Expiration controls
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Client Communication -->
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Client Communication</h4>
+                    <p class="feature-desc">
+                      Secure messaging and communication tools for seamless
+                      client-lawyer interaction.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Secure messaging
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Threaded
+                        conversations
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Document sharing in
+                        chat
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Notification alerts
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Client Onboarding -->
+                <div class="col-xl-4 col-lg-6">
+                  <div class="tp-feature-card">
+                    <div class="tp-feature-icon">
+                      <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h4>Client Onboarding</h4>
+                    <p class="feature-desc">
+                      Streamlined client onboarding with digital intake forms,
+                      document collection, and automated workflows.
+                    </p>
+                    <ul class="tp-feature-list">
+                      <li>
+                        <i class="fas fa-check-circle"></i> Digital intake forms
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Document collection
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Automated welcome
+                        workflows
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i> Client profile
+                        creation
                       </li>
                     </ul>
                   </div>
@@ -1264,12 +1219,11 @@
               <div class="row align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
                   <h3>
-                    Ready to Harness the Power of
-                    <span>AI in Your Practice?</span>
+                    Ready to Transform Your <span>Client Experience?</span>
                   </h3>
                   <p>
-                    Join hundreds of legal professionals who have transformed
-                    their workflows with Sheria360 AI.
+                    Join hundreds of legal professionals who have improved
+                    client satisfaction with Sheria360's client portal.
                   </p>
                 </div>
                 <div class="col-lg-5 text-lg-end">

@@ -3,30 +3,64 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sheria360 - AI-Powered Legal Practice Management | Blogs</title>
+    <title>
+      Sheria360 Blog | Insights on Legal Tech, AI & Practice Management
+    </title>
     <meta
       name="description"
-      content="Sheria360 combines AI-powered contract analysis, legal practice management, and intelligent automation to transform how law firms and legal teams work."
+      content="Explore expert insights on legal technology, AI-powered contract analysis, compliance, and modern law practice management from the Sheria360 team."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png"
+    />
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===== BLOG CUSTOM CSS ===== -->
     <style>
-      /* Force page content to be visible */
+      :root {
+        --b-primary: #2563eb;
+        --b-primary-dark: #1d4ed8;
+        --b-primary-light: #eff6ff;
+        --b-navy: #0e2b5c;
+        --b-navy-deep: #01103d;
+        --b-slate: #1e293b;
+        --b-slate-light: #475569;
+        --b-gray: #94a3b8;
+        --b-bg: #f6f9fc;
+        --b-surface: #ffffff;
+        --b-border: #e8edf4;
+        --b-radius: 16px;
+        --b-radius-sm: 12px;
+        --b-shadow-sm:
+          0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+        --b-shadow-md: 0 8px 32px rgba(0, 0, 0, 0.06);
+        --b-shadow-lg: 0 20px 60px rgba(37, 99, 235, 0.1);
+        --b-transition: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        --b-font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        --b-font-heading: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+      }
+
       html,
-      body,
-      #smooth-wrapper,
-      #smooth-content,
-      .tp-header-height,
-      main {
-        visibility: visible !important;
-        opacity: 1 !important;
-        display: block !important;
+      body {
+        font-family: var(--b-font);
+        background: var(--b-bg);
+        color: var(--b-slate);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
       }
 
-      /* Ensure preloader hides */
-      html.js #preloader {
-        display: none !important;
-      }
-
+      /* ===== HEADER OVERRIDES ===== */
       .header-bottom__main-menu nav > ul {
         display: flex;
         align-items: center;
@@ -98,30 +132,615 @@
         }
       }
 
-      /* Ensure modal displays correctly */
-      .blog-modal {
-        z-index: 999999 !important;
+      /* ===== BLOG HERO ===== */
+      .blog-hero {
+        position: relative;
+        padding: 100px 0 60px;
+        background: linear-gradient(
+          135deg,
+          #f8faff 0%,
+          #eef4ff 50%,
+          #f6f9fc 100%
+        );
+        overflow: hidden;
+      }
+      .blog-hero::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .blog-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.04) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .blog-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      .blog-hero h1 {
+        font-family: var(--b-font-heading);
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        color: var(--b-navy-deep);
+        margin-bottom: 16px;
+      }
+      .blog-hero h1 span {
+        background: linear-gradient(
+          135deg,
+          var(--b-primary) 0%,
+          var(--b-primary-dark) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .blog-hero .sub {
+        font-size: 1.1rem;
+        color: var(--b-slate-light);
+        max-width: 520px;
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+      .blog-hero-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--b-gray);
+        margin-bottom: 24px;
+      }
+      .blog-hero-breadcrumb a {
+        color: var(--b-slate-light);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .blog-hero-breadcrumb a:hover {
+        color: var(--b-primary);
+      }
+      .blog-hero-breadcrumb i {
+        font-size: 0.7rem;
+      }
+
+      /* ===== FEATURED SWIPER ===== */
+      .featured-section {
+        padding: 0 0 60px;
+        background: var(--b-bg);
+      }
+      .featured-card {
+        position: relative;
+        border-radius: var(--b-radius);
+        overflow: hidden;
+        background: var(--b-surface);
+        box-shadow: var(--b-shadow-md);
+        transition: all var(--b-transition);
+        cursor: pointer;
+        height: 420px;
+      }
+      .featured-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--b-shadow-lg);
+      }
+      .featured-card .featured-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      .featured-card:hover .featured-img {
+        transform: scale(1.05);
+      }
+      .featured-card .featured-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(1, 16, 61, 0.92) 0%,
+          rgba(1, 16, 61, 0.4) 50%,
+          transparent 100%
+        );
+      }
+      .featured-card .featured-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 40px;
+        color: #fff;
+      }
+      .featured-card .featured-badge {
+        display: inline-block;
+        background: var(--b-primary);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 5px 12px;
+        border-radius: 50px;
+        margin-bottom: 14px;
+      }
+      .featured-card .featured-title {
+        font-family: var(--b-font-heading);
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        color: #fff;
+      }
+      .featured-card .featured-excerpt {
+        font-size: 0.95rem;
+        opacity: 0.85;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        max-width: 480px;
+      }
+      .featured-card .featured-meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.85rem;
+        opacity: 0.8;
+      }
+      .featured-card .featured-meta img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Swiper custom nav */
+      .swiper-nav-custom {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .swiper-nav-custom button {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1.5px solid var(--b-border);
+        background: var(--b-surface);
+        color: var(--b-slate);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all var(--b-transition);
+        font-size: 0.9rem;
+      }
+      .swiper-nav-custom button:hover {
+        background: var(--b-primary);
+        border-color: var(--b-primary);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      /* ===== FILTER BAR ===== */
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 40px;
+      }
+      .filter-btn {
+        padding: 8px 20px;
+        border-radius: 50px;
+        border: 1.5px solid var(--b-border);
+        background: var(--b-surface);
+        color: var(--b-slate-light);
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all var(--b-transition);
+        font-family: var(--b-font);
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--b-primary);
+        border-color: var(--b-primary);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      }
+
+      /* ===== BLOG GRID ===== */
+      .blog-grid-section {
+        padding: 0 0 100px;
+        background: var(--b-bg);
+      }
+      .blog-card {
+        background: var(--b-surface);
+        border-radius: var(--b-radius);
+        overflow: hidden;
+        box-shadow: var(--b-shadow-sm);
+        border: 1px solid var(--b-border);
+        transition: all var(--b-transition);
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--b-shadow-lg);
+        border-color: #d5dde8;
+      }
+      .blog-card .blog-thumb {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+      }
+      .blog-card .blog-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      .blog-card:hover .blog-thumb img {
+        transform: scale(1.08);
+      }
+      .blog-card .blog-category-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: #fff;
+        color: var(--b-primary);
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 5px 12px;
+        border-radius: 50px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      .blog-card .blog-body {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card .blog-date {
+        font-size: 0.8rem;
+        color: var(--b-gray);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .blog-card .blog-title {
+        font-family: var(--b-font-heading);
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.35;
+        color: var(--b-navy-deep);
+        margin-bottom: 12px;
+        transition: color 0.2s;
+      }
+      .blog-card:hover .blog-title {
+        color: var(--b-primary);
+      }
+      .blog-card .blog-excerpt {
+        font-size: 0.9rem;
+        color: var(--b-slate-light);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex: 1;
+      }
+      .blog-card .blog-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid var(--b-border);
+      }
+      .blog-card .blog-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .blog-card .blog-author img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .blog-card .blog-author-info h6 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--b-slate);
+        margin: 0;
+      }
+      .blog-card .blog-author-info span {
+        font-size: 0.75rem;
+        color: var(--b-gray);
+      }
+      .blog-card .read-time {
+        font-size: 0.75rem;
+        color: var(--b-gray);
+        font-weight: 500;
+      }
+
+      /* ===== CTA SECTION ===== */
+      .blog-cta {
+        position: relative;
+        padding: 80px 0;
+        background: linear-gradient(
+          135deg,
+          var(--b-navy-deep) 0%,
+          var(--b-navy) 100%
+        );
+        overflow: hidden;
+        margin-bottom: 0;
+      }
+      .blog-cta::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.2) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+      .blog-cta .container {
+        position: relative;
+        z-index: 2;
+      }
+      .blog-cta h3 {
+        font-family: var(--b-font-heading);
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .blog-cta p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      .blog-cta .btn-primary-white {
+        display: inline-block;
+        background: #fff;
+        color: var(--b-navy-deep);
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all var(--b-transition);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+      .blog-cta .btn-primary-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ===== MODAL ===== */
+      .blog-modal.modal {
+        z-index: 99999 !important;
       }
       .blog-modal .modal-dialog {
-        z-index: 999999 !important;
+        max-width: 800px;
+        margin: 1.75rem auto;
       }
       .blog-modal .modal-content {
-        z-index: 999999 !important;
+        border: none;
+        border-radius: var(--b-radius);
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      .blog-modal .modal-header {
+        padding: 20px 28px;
+        border-bottom: 1px solid var(--b-border);
+        background: var(--b-surface);
+      }
+      .blog-modal .modal-title {
+        font-family: var(--b-font-heading);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--b-navy-deep);
+      }
+      .blog-modal .btn-close {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--b-bg);
+        opacity: 1;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+      .blog-modal .btn-close:hover {
+        background: var(--b-primary-light);
+        transform: rotate(90deg);
+      }
+      .blog-modal .modal-body {
+        padding: 0;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+      }
+      .blog-modal .modal-body::-webkit-scrollbar {
+        width: 6px;
+      }
+      .blog-modal .modal-body::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .blog-modal .modal-body::-webkit-scrollbar-thumb {
+        background: var(--b-border);
+        border-radius: 10px;
+      }
+
+      .modal-hero-img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      .modal-content-inner {
+        padding: 32px 40px 40px;
+      }
+      .modal-category {
+        display: inline-block;
+        background: var(--b-primary-light);
+        color: var(--b-primary);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 5px 14px;
+        border-radius: 50px;
+        margin-bottom: 16px;
+      }
+      .modal-title-text {
+        font-family: var(--b-font-heading);
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--b-navy-deep);
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      .modal-meta-bar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--b-border);
+      }
+      .modal-meta-bar img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .modal-meta-bar h6 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--b-slate);
+        margin: 0;
+      }
+      .modal-meta-bar .meta-line {
+        font-size: 0.85rem;
+        color: var(--b-gray);
+      }
+      .modal-body-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--b-slate-light);
+      }
+      .modal-body-text h5 {
+        font-family: var(--b-font-heading);
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--b-navy-deep);
+        margin: 28px 0 14px;
+      }
+      .modal-body-text ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .modal-body-text ul li {
+        margin-bottom: 10px;
         position: relative;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .modal-body-text ul li::marker {
+        color: var(--b-primary);
+      }
+      .modal-body-text p {
+        margin-bottom: 16px;
+      }
+
+      /* ===== FOOTER OVERRIDES ===== */
+      footer {
+        background: var(--b-surface) !important;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 991px) {
+        .blog-hero {
+          padding: 70px 0 40px;
+        }
+        .featured-card {
+          height: 360px;
+        }
+        .featured-card .featured-content {
+          padding: 28px;
+        }
+        .featured-card .featured-title {
+          font-size: 1.3rem;
+        }
+        .modal-hero-img {
+          height: 200px;
+        }
+        .modal-content-inner {
+          padding: 24px;
+        }
+        .modal-title-text {
+          font-size: 1.4rem;
+        }
+      }
+      @media (max-width: 767px) {
+        .blog-hero h1 {
+          font-size: 1.8rem;
+        }
+        .featured-card {
+          height: 320px;
+        }
+        .featured-card .featured-content {
+          padding: 24px;
+        }
+        .featured-card .featured-title {
+          font-size: 1.15rem;
+        }
+        .featured-card .featured-excerpt {
+          display: none;
+        }
+        .blog-card .blog-thumb {
+          height: 180px;
+        }
+        .filter-bar {
+          gap: 6px;
+        }
+        .filter-btn {
+          padding: 6px 14px;
+          font-size: 0.8rem;
+        }
       }
     </style>
 
-    <!-- Place favicon.ico in the root directory -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/favicon.png"
-    />
-
-    <!-- CSS here -->
+    <!-- ===== TEMPLATE CSS ===== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/custom-animation.css" />
@@ -133,48 +752,47 @@
     <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/spacing.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18205858668');
-</script>
-<!-- Event snippet for Page view conversion page -->
-<script>
-gtag('event', 'conversion', {
-'send_to': 'AW-18205858668/0-p4CM2HvbccEOy2nelD',
-'value': 1.0,
-'currency': 'USD'
-});
-</script>
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google tag -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-18205858668");
+      gtag("event", "conversion", {
+        send_to: "AW-18205858668/0-p4CM2HvbccEOy2nelD",
+        value: 1.0,
+        currency: "USD",
+      });
+    </script>
+    <base target="_blank" />
+  </head>
 
   <body>
     <script>
-      // Replace no-js with js class to enable proper styling and hide preloader
       document.documentElement.className =
         document.documentElement.className.replace(/\bno-js\b/, "js");
     </script>
+
     <!-- preloader -->
     <div id="preloader">
-      <div class="preloader">
-        <span></span>
-        <span></span>
-      </div>
+      <div class="preloader"><span></span><span></span></div>
     </div>
-    <!-- preloader end  -->
 
-    <!-- back-to-top-start  -->
+    <!-- back-to-top -->
     <button class="scroll-top scroll-to-target" data-target="html">
       <i class="far fa-angle-double-up"></i>
     </button>
-    <!-- back-to-top-end  -->
 
+    <!-- ===== HEADER ===== -->
     <header class="tp-header-height">
-      <!-- tp-header-area-start -->
       <div
         id="header-sticky"
         class="header-bottom__area header__space header-sticky-bg-2 header-bottom__transparent z-index-5"
@@ -183,13 +801,12 @@ gtag('event', 'conversion', {
           <div class="row align-items-center">
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
               <div class="header-bottom__logo">
-                <a href="index.html">
-                  <img
+                <a href="index.html"
+                  ><img
                     src="assets/img/logo/logo-black.png"
                     alt="Sheria360 Logo"
                     style="max-height: 35px"
-                  />
-                </a>
+                /></a>
               </div>
             </div>
             <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
@@ -198,7 +815,36 @@ gtag('event', 'conversion', {
                   <ul class="d-flex">
                     <li class="me-20"><a href="index.html">Home</a></li>
                     <li class="me-20 has-dropdown">
-                      <a href="about-sheria.html">About Sheria360 </a>
+                      <a href="javascript:void(0)"
+                        >Features
+                        <i
+                          class="fas fa-chevron-down"
+                          style="
+                            font-size: 10px;
+                            margin-left: 4px;
+                            opacity: 0.6;
+                          "
+                        ></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="features.html">All Features</a></li>
+                        <li>
+                          <a href="legalservices.html">Legal Services </a>
+                        </li>
+                        <li>
+                          <a href="case-management.html">Cases Management</a>
+                        </li>
+                        <li>
+                          <a href="contracts-management.html"
+                            >Contracts Management</a
+                          >
+                        </li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li>
+                          <a href="clientportal.html">Collaboration Portals</a>
+                        </li>
+                        <li><a href="billing.html">Billing</a></li>
+                      </ul>
                     </li>
                     <li class="me-20 has-dropdown">
                       <a href="javascript:void(0)"
@@ -207,15 +853,12 @@ gtag('event', 'conversion', {
                       <ul class="submenu">
                         <li><a href="solutions.html">All Solutions</a></li>
                         <li>
-                          <a href="inhouse.html">In-House Legal Departments</a>
+                          <a href="inhouse.html">In-House Legal </a>
                         </li>
-                        <li>
-                          <a href="law-firms.html">Law Firms</a>
-                        </li>
+                        <li><a href="law-firms.html">Law Firms</a></li>
                         <li>
                           <a href="procurement.html">Procurement Departments</a>
                         </li>
-
                         <li><a href="finance.html">Finance Departments</a></li>
                       </ul>
                     </li>
@@ -227,26 +870,14 @@ gtag('event', 'conversion', {
                       <ul class="submenu">
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="faq.html">FAQs</a></li>
-                         <li><a href="contact.html">Contact Us</a></li>
-                         <!-- <li><a href="marketplace.html">Marketplace</a></li> -->
-                         <li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
                           <a href="https://docs.sheria360.com/" target="_blank"
                             >Documentation</a
                           >
                         </li>
                       </ul>
                     </li>
-                    <!-- <li class="has-dropdown">
-                      <a href="javascript:void(0)"
-                        >Company <i class="fas fa-chevron-down"></i
-                      ></a>
-                      <ul class="submenu">
-                        <li><a href="about-company.html">About</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                      </ul>
-                    </li> -->
                   </ul>
                 </nav>
               </div>
@@ -261,17 +892,13 @@ gtag('event', 'conversion', {
                   <a
                     class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
                     href="https://demo.sheria360.com/users/login/"
-                  >
-                    <span>Log In</span>
-                    <b></b>
-                  </a>
+                    ><span>Log In</span><b></b
+                  ></a>
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
                     href="https://demo.sheria360.com/modules/central/start-trial"
-                  >
-                    <span>Try It Free</span>
-                    <b></b>
-                  </a>
+                    ><span>Try It Free</span><b></b
+                  ></a>
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
                     href="javascript:void(0)"
@@ -283,20 +910,20 @@ gtag('event', 'conversion', {
           </div>
         </div>
       </div>
-      <!-- tp-header-area-end -->
     </header>
+
+    <!-- Mobile offcanvas -->
     <div class="tpoffcanvas-area">
       <div class="tpoffcanvas">
         <div class="tpoffcanvas__close-btn">
           <button class="close-btn"><i class="fal fa-times"></i></button>
         </div>
         <div class="tpoffcanvas__logo text-center">
-          <a href="index.html">
-            <img src="assets/img/logo/logo-white.png" alt="Sheria360" />
-          </a>
+          <a href="index.html"
+            ><img src="assets/img/logo/logo-white.png" alt="Sheria360"
+          /></a>
         </div>
         <div class="mobile-menu"></div>
-
         <div class="tpoffcanvas__social">
           <div class="social-icon text-center">
             <a href="https://x.com/sheria360"><i class="fab fa-twitter"></i></a>
@@ -313,557 +940,111 @@ gtag('event', 'conversion', {
     </div>
     <div class="body-overlay"></div>
 
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <main>
-          <!-- breadcrumb-area-start -->
-          <style>
-            .breadcrumb-gradient-bg {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: 0;
-            }
-            .breadcrumb-gradient-bg img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-            .blog-breadcrumb .breadcrumb__title {
-              color: #0a0a0a;
-            }
-            .blog-breadcrumb .breadcrumb__list span {
-              color: #333;
-            }
-            .blog-breadcrumb .breadcrumb__list span.child-one {
-              color: #555;
-            }
-            .blog-breadcrumb .breadcrumb__list span.dvdr i {
-              color: #555;
-            }
-          </style>
-          <div
-            class="breadcrumb__area breadcrumb-height p-relative blog-breadcrumb"
-            style="overflow: hidden"
-          >
-            <div class="breadcrumb-gradient-bg">
-              <img src="assets/img/hero/hero-gradient-3.jpg" alt="" />
-            </div>
-            <div class="container" style="position: relative; z-index: 5">
-              <div class="row align-items-center">
-                <div class="col-xl-9 col-lg-7">
-                  <div class="breadcrumb__content">
-                    <h3 class="breadcrumb__title">Read our blogs</h3>
-                    <div
-                      class="breadcrumb__list wow tpfadeUp"
-                      data-wow-duration=".9s"
-                      data-wow-delay=".4s"
-                    >
-                      <span class="child-one"
-                        ><a href="index.html">Home</a></span
-                      >
-                      <span class="dvdr"
-                        ><i class="fal fa-angle-right"></i
-                      ></span>
-                      <span>Blog</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-5 col-lg-4 text-center text-md-end">
-                  <div class="breadcrumb__img p-relative text-start z-index">
-                    <img
-                      class="z-index-3"
-                      src="assets/img/breadcrumb/breadcrumb-3.png"
-                      alt=""
-                    />
-                    <div
-                      class="breadcrumb__sub-img wow tpfadeUp"
-                      data-wow-duration=".9s"
-                      data-wow-delay=".4s"
-                    >
-                      <img
-                        src="assets/img/breadcrumb/breadcrumb-sub-1.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- ===== MAIN ===== -->
+    <main>
+      <!-- Blog Hero -->
+      <section class="blog-hero">
+        <div class="container">
+          <div class="blog-hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fal fa-angle-right"></i>
+            <span>Blog</span>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-xl-8 col-lg-7">
+              <h1>Insights on <span>Legal Tech</span> & Practice Management</h1>
+              <p class="sub">
+                Expert perspectives on AI-powered legal workflows, compliance
+                strategies, and transforming your law practice with modern
+                technology.
+              </p>
             </div>
           </div>
-          <!-- breadcrumb-area-end -->
+        </div>
+      </section>
 
-          <!-- blog-grid-area-start -->
-          <div class="blog-grid-area pt-100 pb-100">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <div class="blog-grid-arrow p-relative">
-                    <div class="grid-next d-none d-sm-block">
-                      <button>
-                        <i class="far fa-angle-left"></i>
-                        <svg
-                          width="36"
-                          height="100"
-                          viewBox="0 0 36 100"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.99999 14C0 7.5 0.5 3.5 0 0L-0.000484467 99.5C-0.000415802 96.7234 1.00003 88 23 71.5C44.9999 55 32.5 37.1667 24 30.5C19.8333 27.1667 9.48375 19.8289 4.99999 14Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="grid-prev d-none d-sm-block">
-                      <button>
-                        <i class="far fa-angle-right"></i>
-                        <svg
-                          width="36"
-                          height="100"
-                          viewBox="0 0 36 100"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M30.3164 14C35.3164 7.5 34.8164 3.5 35.3164 0L35.3169 99.5C35.3168 96.7234 34.3164 88 12.3164 71.5C-9.68354 55 2.81642 37.1667 11.3164 30.5C15.4831 27.1667 25.8327 19.8289 30.3164 14Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="swiper-container blog-grid-slider-active">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div
-                            class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
-                            data-background="assets/img/blog/inner-blog-1.png"
-                            data-post-id="swiper1"
-                          >
-                            <div class="blog-grid-slider-wrapper">
-                              <div class="blog-grid-slider-meta">
-                                <span class="child-one">Resources</span>
-                                <span class="child-two">October 20, 2023</span>
-                              </div>
-                              <div class="blog-grid-slider-title-box">
-                                <h4 class="blog-grid-slider-title">
-                                  5 Companies doing Brand <br />
-                                  Marketing Right
-                                </h4>
-                                <p>
-                                  From publishing content and hoping to acquire
-                                  leads to <br />
-                                  gaining audience insights and making
-                                  personalized <br />
-                                  content, content marketing.
-                                </p>
-                              </div>
-                              <div
-                                class="tp-blog-author-info-box blog-grid-avata-box d-flex align-items-center"
-                              >
-                                <div class="tp-blog-avata">
-                                  <img
-                                    src="assets/img/blog/blog-avata-3.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="tp-blog-author-info">
-                                  <h5>Hilary Ouse</h5>
-                                  <span>Founder & CEO Dulalix</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div
-                            class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
-                            data-background="assets/img/blog/inner-blog-2.png"
-                            data-post-id="swiper2"
-                          >
-                            <div class="blog-grid-slider-wrapper">
-                              <div class="blog-grid-slider-meta">
-                                <span class="child-one">Resources</span>
-                                <span class="child-two">July 20, 2026</span>
-                              </div>
-                              <div class="blog-grid-slider-title-box">
-                                <h4 class="blog-grid-slider-title">
-                                  5 Companies using AI <br />
-                                  Right
-                                </h4>
-                                <p>
-                                  From publishing content and hoping to acquire
-                                  leads to <br />
-                                  gaining audience insights and making
-                                  personalized <br />
-                                  content, content marketing.
-                                </p>
-                              </div>
-                              <div
-                                class="tp-blog-author-info-box blog-grid-avata-box d-flex align-items-center"
-                              >
-                                <div class="tp-blog-avata">
-                                  <img
-                                    src="assets/img/blog/blog-avata-2.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="tp-blog-author-info">
-                                  <h5>Hilary Ouse</h5>
-                                  <span>Founder & CEO Dulalix</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div
-                            class="blog-grid-slider blog-grid-slider-bg d-flex align-items-center blog-grid-slider-height"
-                            data-background="assets/img/blog/inner-blog-3.png"
-                            data-post-id="swiper3"
-                          >
-                            <div class="blog-grid-slider-wrapper">
-                              <div class="blog-grid-slider-meta">
-                                <span class="child-one">Resources</span>
-                                <span class="child-two">October 20, 2023</span>
-                              </div>
-                              <div class="blog-grid-slider-title-box">
-                                <h4 class="blog-grid-slider-title">
-                                  5 Companies doing Brand <br />
-                                  Marketing Right (Updated)
-                                </h4>
-                                <p>
-                                  From publishing content and hoping to acquire
-                                  leads to <br />
-                                  gaining audience insights and making
-                                  personalized <br />
-                                  content, content marketing.
-                                </p>
-                              </div>
-                              <div
-                                class="tp-blog-author-info-box blog-grid-avata-box d-flex align-items-center"
-                              >
-                                <div class="tp-blog-avata">
-                                  <img
-                                    src="assets/img/blog/blog-avata-1.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="tp-blog-author-info">
-                                  <h5>Hilary Ouse</h5>
-                                  <span>Founder & CEO Dulalix</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- blog-grid-area-end -->
-
-          <!--Portfolio Start-->
-          <div class="portfolio blog-grid-inner mb-80">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="tp-about__section-box text-center mb-40">
-                    <h3 class="tp-section-title">Accomplish more, Together</h3>
-                    <p>
-                      Sheria360 blog is your knowledge center for everything
-                      remote.
+      <!-- Featured Posts Swiper -->
+      <section class="featured-section">
+        <div class="container">
+          <div class="swiper-container blog-featured-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="featured-card" data-post-id="swiper1">
+                  <img
+                    src="assets/img/blog/inner-blog-1.png"
+                    alt=""
+                    class="featured-img"
+                  />
+                  <div class="featured-overlay"></div>
+                  <div class="featured-content">
+                    <span class="featured-badge">Featured</span>
+                    <h3 class="featured-title">
+                      5 Companies Doing Brand Marketing Right
+                    </h3>
+                    <p class="featured-excerpt">
+                      From publishing content and hoping to acquire leads to
+                      gaining audience insights and making personalized content,
+                      content marketing.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-12">
-                  <div class="portfolio-filter masonary-menu text-center mb-35">
-                    <button data-filter="*" class="active">
-                      <span>All</span>
-                    </button>
-                    <button data-filter=".legal-tech">
-                      <span>Legal Tech</span>
-                    </button>
-                    <button data-filter=".ai-automation">
-                      <span>AI & Automation</span>
-                    </button>
-                    <button data-filter=".compliance">
-                      <span>Compliance</span>
-                    </button>
-                    <button data-filter=".case-studies">
-                      <span>Case Studies</span>
-                    </button>
-                    <button data-filter=".resources">
-                      <span>Resources</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="row grid blog-grid-inner">
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item legal-tech"
-                >
-                  <div class="tp-blog-item" data-post-id="post1">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-1.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>Legal Tech</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>April 12, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          2023 Professional Year In <br />
-                          Review
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
+                    <div class="featured-meta">
+                      <img src="assets/img/blog/blog-avata-3.png" alt="" />
+                      <span
+                        ><strong>Hilary Ouse</strong> &middot; October 20,
+                        2023</span
                       >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-1.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>Hilary Ouse</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item resources"
-                >
-                  <div class="tp-blog-item" data-post-id="post2">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-2.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>Resources</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>July 12, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          Leveraging Feedback on <br />
-                          Insights best.
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
-                      >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-2.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>Rudra Ghosh</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item compliance"
-                >
-                  <div class="tp-blog-item" data-post-id="post3">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-3.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>Compliance</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>28 April, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          Typing Tutorials For Kids <br />
-                          And Beginners
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
-                      >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-3.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>Geraldine</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item case-studies"
-                >
-                  <div class="tp-blog-item" data-post-id="post4">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-4.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>Case Studies</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>28 April, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          Project Management at <br />
-                          Your fingertips.
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
-                      >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-4.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>Helen M.</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item resources"
-                >
-                  <div class="tp-blog-item" data-post-id="post5">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-5.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>Resources</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>28 April, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          Designing the Kids Space <br />
-                          Universe
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
-                      >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-5.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>R. Jones</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item ai-automation"
-                >
-                  <div class="tp-blog-item" data-post-id="post6">
-                    <div class="tp-blog-thumb fix">
-                      <span class="d-block">
-                        <img src="assets/img/blog/blog-grid-6.jpg" alt=""
-                      /></span>
-                    </div>
-                    <div class="tp-blog-content">
-                      <div class="tp-blog-meta d-flex align-items-center">
-                        <div class="tp-blog-category category-color-1">
-                          <span>AI & Automation</span>
-                        </div>
-                        <div class="tp-blog-date">
-                          <span>28 April, 2023</span>
-                        </div>
-                      </div>
-                      <div class="tp-blog-title-box">
-                        <h4 class="tp-blog-title-sm mb-2">
-                          How Chatbots Can Help You <br />
-                          Drive More Sales
-                        </h4>
-                      </div>
-                      <div
-                        class="tp-blog-author-info-box d-flex align-items-center"
-                      >
-                        <div class="tp-blog-avata">
-                          <img src="assets/img/avata/avata-6.png" alt="" />
-                        </div>
-                        <div class="tp-blog-author-info">
-                          <h5>Frank P. Miller</h5>
-                          <span>Founder & CEO Dulalix</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <!--Portfolio End-->
-
-          <!-- tp-cta-area-start -->
-          <div class="tp-cta-area p-relative">
-            <div class="tp-cta-grey-bg grey-bg-2"></div>
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <div
-                    class="tp-cta-bg"
-                    data-background="assets/img/cta/cta-bg.jpg"
-                  >
-                    <div class="tp-cta-content tp-inner-font text-center">
-                      <h3 class="tp-section-title text-white">
-                        Try our service now!
-                      </h3>
-                      <p>
-                        Eyerything you need to accept cord payments and grow
-                        your business <br />
-                        anywhere on the planet.
-                      </p>
-                      <a
-                        class="tp-btn-inner white-bg text-black"
-                        href="service-details.html"
-                        >Get Started Now</a
+              <div class="swiper-slide">
+                <div class="featured-card" data-post-id="swiper2">
+                  <img
+                    src="assets/img/blog/inner-blog-2.png"
+                    alt=""
+                    class="featured-img"
+                  />
+                  <div class="featured-overlay"></div>
+                  <div class="featured-content">
+                    <span class="featured-badge">AI Spotlight</span>
+                    <h3 class="featured-title">5 Companies Using AI Right</h3>
+                    <p class="featured-excerpt">
+                      Discover how leading organizations are leveraging
+                      artificial intelligence to transform operations and drive
+                      measurable outcomes.
+                    </p>
+                    <div class="featured-meta">
+                      <img src="assets/img/blog/blog-avata-2.png" alt="" />
+                      <span
+                        ><strong>Hilary Ouse</strong> &middot; July 20,
+                        2026</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-card" data-post-id="swiper3">
+                  <img
+                    src="assets/img/blog/inner-blog-3.png"
+                    alt=""
+                    class="featured-img"
+                  />
+                  <div class="featured-overlay"></div>
+                  <div class="featured-content">
+                    <span class="featured-badge">Resources</span>
+                    <h3 class="featured-title">
+                      5 Companies Doing Brand Marketing Right (Updated)
+                    </h3>
+                    <p class="featured-excerpt">
+                      An updated look at how innovative brands are mastering
+                      modern marketing strategies with data-driven
+                      personalization.
+                    </p>
+                    <div class="featured-meta">
+                      <img src="assets/img/blog/blog-avata-1.png" alt="" />
+                      <span
+                        ><strong>Hilary Ouse</strong> &middot; October 20,
+                        2023</span
                       >
                     </div>
                   </div>
@@ -871,307 +1052,531 @@ gtag('event', 'conversion', {
               </div>
             </div>
           </div>
-          <!-- tp-cta-area-end -->
-        </main>
+          <div class="swiper-nav-custom">
+            <button class="featured-prev">
+              <i class="far fa-angle-left"></i>
+            </button>
+            <button class="featured-next">
+              <i class="far fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
 
-        <!-- Blog Post Modal -->
-        <div
-          class="blog-modal modal fade"
-          id="blogModal"
-          tabindex="-1"
-          aria-labelledby="blogModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title" id="blogModalLabel">Blog Post</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body px-4 px-md-5 py-4">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto">
-                    <span
-                      class="blog-modal-category badge bg-primary mb-3"
-                      id="modalCategory"
-                    ></span>
-                    <h2 class="blog-modal-title mb-3" id="modalTitle"></h2>
-                    <div class="d-flex align-items-center mb-4">
+      <!-- Blog Grid Section -->
+      <section class="blog-grid-section">
+        <div class="container">
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+              <h2
+                style="
+                  font-family: var(--b-font-heading);
+                  font-size: clamp(1.5rem, 3vw, 2rem);
+                  font-weight: 800;
+                  color: var(--b-navy-deep);
+                  margin-bottom: 8px;
+                "
+              >
+                Latest Articles
+              </h2>
+              <p style="color: var(--b-slate-light); font-size: 1rem">
+                Curated insights for legal professionals and tech leaders.
+              </p>
+            </div>
+          </div>
+
+          <!-- Filter Bar -->
+          <div class="filter-bar" id="blogFilter">
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter="legal-tech">
+              Legal Tech
+            </button>
+            <button class="filter-btn" data-filter="ai-automation">
+              AI & Automation
+            </button>
+            <button class="filter-btn" data-filter="compliance">
+              Compliance
+            </button>
+            <button class="filter-btn" data-filter="case-studies">
+              Case Studies
+            </button>
+            <button class="filter-btn" data-filter="resources">
+              Resources
+            </button>
+          </div>
+
+          <!-- Blog Grid -->
+          <div class="row grid" id="blogGrid">
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item legal-tech">
+              <article class="blog-card" data-post-id="post1">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-1.jpg"
+                    alt="2023 Professional Year In Review"
+                  />
+                  <span class="blog-category-badge">Legal Tech</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> April 12, 2023
+                  </div>
+                  <h3 class="blog-title">2023 Professional Year In Review</h3>
+                  <p class="blog-excerpt">
+                    A comprehensive look at how legal technology evolved this
+                    year, from AI contract review to automated compliance
+                    workflows.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
                       <img
-                        src=""
-                        alt=""
-                        id="modalAuthorImage"
-                        class="rounded-circle me-3"
-                        style="width: 48px; height: 48px; object-fit: cover"
+                        src="assets/img/avata/avata-1.png"
+                        alt="Hilary Ouse"
                       />
-                      <div>
-                        <h6 class="mb-0" id="modalAuthorName"></h6>
-                        <small class="text-muted" id="modalAuthorTitle"></small>
-                        <div class="text-muted small" id="modalDate"></div>
+                      <div class="blog-author-info">
+                        <h6>Hilary Ouse</h6>
+                        <span>Founder & CEO</span>
                       </div>
                     </div>
-                    <div class="blog-modal-content" id="modalContent"></div>
+                    <span class="read-time">5 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item resources">
+              <article class="blog-card" data-post-id="post2">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-2.jpg"
+                    alt="Leveraging Feedback Insights"
+                  />
+                  <span class="blog-category-badge">Resources</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> July 12, 2023
+                  </div>
+                  <h3 class="blog-title">
+                    Leveraging Feedback on Insights Best
+                  </h3>
+                  <p class="blog-excerpt">
+                    Transform client and team feedback into actionable product
+                    roadmaps with our proven framework for legal tech teams.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
+                      <img
+                        src="assets/img/avata/avata-2.png"
+                        alt="Rudra Ghosh"
+                      />
+                      <div class="blog-author-info">
+                        <h6>Rudra Ghosh</h6>
+                        <span>Product Lead</span>
+                      </div>
+                    </div>
+                    <span class="read-time">4 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item compliance">
+              <article class="blog-card" data-post-id="post3">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-3.jpg"
+                    alt="Typing Tutorials"
+                  />
+                  <span class="blog-category-badge">Compliance</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> April 28, 2023
+                  </div>
+                  <h3 class="blog-title">
+                    Typing Tutorials For Kids And Beginners
+                  </h3>
+                  <p class="blog-excerpt">
+                    Compliance training reimagined: interactive tutorials that
+                    make learning engaging for new team members and young
+                    professionals.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
+                      <img src="assets/img/avata/avata-3.png" alt="Geraldine" />
+                      <div class="blog-author-info">
+                        <h6>Geraldine</h6>
+                        <span>Training Specialist</span>
+                      </div>
+                    </div>
+                    <span class="read-time">6 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item case-studies">
+              <article class="blog-card" data-post-id="post4">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-4.jpg"
+                    alt="Project Management"
+                  />
+                  <span class="blog-category-badge">Case Studies</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> April 28, 2023
+                  </div>
+                  <h3 class="blog-title">
+                    Project Management at Your Fingertips
+                  </h3>
+                  <p class="blog-excerpt">
+                    How a mid-sized law firm reduced project turnaround by 30%
+                    using Sheria360's integrated matter management dashboard.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
+                      <img src="assets/img/avata/avata-4.png" alt="Helen M." />
+                      <div class="blog-author-info">
+                        <h6>Helen M.</h6>
+                        <span>Case Study Lead</span>
+                      </div>
+                    </div>
+                    <span class="read-time">7 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item resources">
+              <article class="blog-card" data-post-id="post5">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-5.jpg"
+                    alt="Designing Kids Space"
+                  />
+                  <span class="blog-category-badge">Resources</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> April 28, 2023
+                  </div>
+                  <h3 class="blog-title">Designing the Kids Space Universe</h3>
+                  <p class="blog-excerpt">
+                    Our design philosophy for creating intuitive, safe, and
+                    engaging digital environments for the next generation of
+                    legal professionals.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
+                      <img src="assets/img/avata/avata-5.png" alt="R. Jones" />
+                      <div class="blog-author-info">
+                        <h6>R. Jones</h6>
+                        <span>Design Director</span>
+                      </div>
+                    </div>
+                    <span class="read-time">5 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-xl-4 col-lg-6 col-md-6 mb-4 grid-item ai-automation"
+            >
+              <article class="blog-card" data-post-id="post6">
+                <div class="blog-thumb">
+                  <img
+                    src="assets/img/blog/blog-grid-6.jpg"
+                    alt="Chatbots and Sales"
+                  />
+                  <span class="blog-category-badge">AI & Automation</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-date">
+                    <i class="far fa-calendar-alt"></i> April 28, 2023
+                  </div>
+                  <h3 class="blog-title">
+                    How Chatbots Can Help You Drive More Sales
+                  </h3>
+                  <p class="blog-excerpt">
+                    AI-powered conversational interfaces are qualifying leads
+                    and converting prospects 24/7. Here is how to implement them
+                    effectively.
+                  </p>
+                  <div class="blog-footer">
+                    <div class="blog-author">
+                      <img
+                        src="assets/img/avata/avata-6.png"
+                        alt="Frank P. Miller"
+                      />
+                      <div class="blog-author-info">
+                        <h6>Frank P. Miller</h6>
+                        <span>AI Strategist</span>
+                      </div>
+                    </div>
+                    <span class="read-time">6 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="blog-cta">
+        <div class="container text-center">
+          <h3>Ready to transform your legal practice?</h3>
+          <p>
+            Join thousands of legal professionals using Sheria360 to streamline
+            workflows,<br class="d-none d-md-block" />
+            automate compliance, and deliver better client outcomes.
+          </p>
+          <a
+            href="https://demo.sheria360.com/modules/central/start-trial"
+            class="btn-primary-white"
+            >Start Your Free Trial</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== BLOG MODAL ===== -->
+    <div
+      class="blog-modal modal fade"
+      id="blogModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Article</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="" alt="" class="modal-hero-img" id="modalHeroImg" />
+            <div class="modal-content-inner">
+              <span class="modal-category" id="modalCategory"></span>
+              <h2 class="modal-title-text" id="modalTitle"></h2>
+              <div class="modal-meta-bar">
+                <img src="" alt="" id="modalAuthorImage" />
+                <div>
+                  <h6 id="modalAuthorName"></h6>
+                  <div class="meta-line">
+                    <span id="modalAuthorTitle"></span> &middot;
+                    <span id="modalDate"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body-text" id="modalContent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="tp-footer__pl-pr grey-bg-2 pt-105">
+        <div class="tp-footer__area p-relative tp-footer__tp-border-bottom">
+          <div class="tp-footer__shape-1 d-none d-xxl-block">
+            <img src="assets/img/footer/footer-inner-1.png" alt="" />
+          </div>
+          <div class="tp-footer__shape-2 d-none d-xxl-block">
+            <img src="assets/img/footer/footer-inner-2.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
+                <div
+                  class="tp-footer__widget tp-footer__input-inner footer-widget-3 footer-col-3-1"
+                >
+                  <div class="tp-footer__logo mb-25">
+                    <a href="index.html"
+                      ><img src="assets/img/logo/logo-black.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="tp-footer__contact-info">
+                    <p>
+                      Sheria360 is a modern law practice software system that
+                      allows legal professionals to organize case files, track
+                      deadlines, draft documents, manage hearings, and manage
+                      day-to-day tasks.
+                    </p>
+                    <ul>
+                      <li>
+                        <span
+                          ><svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M13.2906 0.249174C12.878 0.211673 12.5132 0.51568 12.4757 0.928192C12.4382 1.3407 12.7422 1.70551 13.1548 1.74301L13.2906 0.249174ZM22.2533 10.8416C22.2908 11.2541 22.6556 11.5581 23.0681 11.5206C23.4806 11.4831 23.7846 11.1183 23.7471 10.7058L22.2533 10.8416Z"
+                              fill="#595B62"
+                            /></svg></span
+                        ><a href="tel:+254721779429">+254-721-779-429</a>
+                      </li>
+                      <li>
+                        <span
+                          ><svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M13 2.06635C11.8233 1.38567 10.4571 0.996094 9 0.996094C4.58172 0.996094 1 4.57782 1 8.99609C1 10.2758 1.30049 11.4854 1.83477 12.5581C1.97675 12.8431 2.02401 13.1689 1.94169 13.4766L1.46521 15.2574C1.25836 16.0305 1.96561 16.7377 2.73868 16.5309L4.51951 16.0544C4.82715 15.9721 5.15297 16.0193 5.43802 16.1613C6.51069 16.6956 7.72025 16.9961 9 16.9961C13.4183 16.9961 17 13.4144 17 8.99609C17 7.53895 16.6104 6.17279 15.9297 4.99609"
+                              stroke="#595B62"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                            /></svg></span
+                        ><a href="mailto:info@sheria360.com"
+                          >info@sheria360.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".5s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-2">
+                  <h4 class="tp-footer__widget-title">Quick Links</h4>
+                  <div class="tp-footer__content">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about-sheria.html">About</a></li>
+                      <li><a href="price.html">Pricing</a></li>
+                      <li><a href="solutions.html">Solutions</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
+                data-wow-duration=".9s"
+                data-wow-delay=".7s"
+              >
+                <div class="tp-footer__widget footer-widget-3 footer-col-3-3">
+                  <h4 class="tp-footer__widget-title">Resources</h4>
+                  <div class="tp-footer__content">
+                    <ul>
+                      <li><a href="faq.html">FAQs</a></li>
+                      <li><a href="blog.html">Blogs</a></li>
+                      <li>
+                        <a href="https://docs.sheria360.com/">Documentation</a>
+                      </li>
+                      <li>
+                        <a href="https://demo.sheria360.com/users/login/"
+                          >Login</a
+                        >
+                      </li>
+                      <li><a href="terms.html">Privacy Policy</a></li>
+                      <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 pb-30 z-index-3">
+                <div
+                  class="tp-footer__widget tp-footer__input-inner footer-widget-3 footer-col-3-4"
+                >
+                  <h4 class="tp-footer__widget-title">Our Newsletter</h4>
+                  <div class="tp-footer__input mb-35 p-relative">
+                    <form action="#">
+                      <input type="text" placeholder="Business email address" />
+                      <span
+                        ><svg
+                          width="18"
+                          height="16"
+                          viewBox="0 0 18 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
+                            stroke="#5F6168"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          /></svg
+                      ></span>
+                      <button>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M1.00098 7H13.001"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.00098 1L13.001 7L7.00098 13"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="tp-footer__social-3">
+                    <h4>Social media</h4>
+                    <a href="https://facebook.com/sheria360"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="https://x.com/sheria360"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="https://instagram.com/sheria360"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <footer>
-          <!-- tp-footer-area-start -->
-          <div class="tp-footer__pl-pr grey-bg-2 pt-105">
-            <div class="tp-footer__area p-relative tp-footer__tp-border-bottom">
-              <div class="tp-footer__shape-1 d-none d-xxl-block">
-                <img src="assets/img/footer/footer-inner-1.png" alt="" />
-              </div>
-              <div class="tp-footer__shape-2 d-none d-xxl-block">
-                <img src="assets/img/footer/footer-inner-2.png" alt="" />
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-6 pb-30">
-                    <div
-                      class="tp-footer__widget tp-footer__input-inner footer-widget-3 footer-col-3-1"
-                    >
-                      <div class="tp-footer__logo mb-25">
-                        <a href="index.html">
-                          <img src="assets/img/logo/logo-black.png" alt="" />
-                        </a>
-                      </div>
-                      <div class="tp-footer__contact-info">
-                        <p>
-                          Sheria360 is a modern law practice software system
-                          that allows legal professionals to organize case
-                          files, track deadlines, draft documents, manage
-                          hearings, and manage day-to-day tasks.
-                        </p>
-                        <ul>
-                          <li>
-                            <span>
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M13.2906 0.249174C12.878 0.211673 12.5132 0.51568 12.4757 0.928192C12.4382 1.3407 12.7422 1.70551 13.1548 1.74301L13.2906 0.249174ZM22.2533 10.8416C22.2908 11.2541 22.6556 11.5581 23.0681 11.5206C23.4806 11.4831 23.7846 11.1183 23.7471 10.7058L22.2533 10.8416ZM13.2227 0.996094C13.1548 1.74301 13.1543 1.74298 13.1539 1.74294C13.1538 1.74293 13.1534 1.74289 13.1532 1.74287C13.1527 1.74283 13.1523 1.74279 13.1519 1.74275C13.1511 1.74267 13.1505 1.74261 13.15 1.74256C13.149 1.74247 13.1487 1.74243 13.1491 1.74247C13.1497 1.74254 13.1529 1.74289 13.1585 1.74361C13.1698 1.74506 13.191 1.74798 13.2216 1.75308C13.2827 1.76327 13.3816 1.78217 13.5144 1.81537C13.7798 1.88173 14.1816 2.0054 14.6902 2.23144C15.7057 2.68274 17.157 3.54668 18.8033 5.19301L19.864 4.13235C18.0881 2.35653 16.484 1.38718 15.2994 0.860723C14.7081 0.597886 14.2238 0.446563 13.8782 0.360151C13.7054 0.316962 13.5674 0.290028 13.4682 0.273485C13.4186 0.265215 13.3786 0.259543 13.3488 0.255735C13.334 0.253832 13.3216 0.252394 13.3119 0.251331C13.307 0.2508 13.3028 0.250362 13.2992 0.250006C13.2975 0.249828 13.2959 0.249671 13.2944 0.249533C13.2937 0.249464 13.293 0.249399 13.2924 0.249339C13.292 0.24931 13.2916 0.249268 13.2914 0.249253C13.291 0.249213 13.2906 0.249174 13.2227 0.996094ZM18.8033 5.19301C20.4496 6.83934 21.3136 8.29066 21.7649 9.30608C21.9909 9.81467 22.1146 10.2165 22.181 10.482C22.2141 10.6148 22.233 10.7136 22.2432 10.7747C22.2483 10.8053 22.2513 10.8265 22.2527 10.8378C22.2534 10.8434 22.2538 10.8466 22.2538 10.8473C22.2539 10.8476 22.2538 10.8473 22.2538 10.8463C22.2537 10.8459 22.2536 10.8452 22.2536 10.8444C22.2535 10.844 22.2535 10.8436 22.2534 10.8431C22.2534 10.8429 22.2534 10.8425 22.2534 10.8424C22.2533 10.842 22.2533 10.8416 23.0002 10.7737C23.7471 10.7058 23.7471 10.7053 23.7471 10.7049C23.747 10.7047 23.747 10.7043 23.747 10.704C23.7469 10.7033 23.7469 10.7026 23.7468 10.7019C23.7466 10.7005 23.7465 10.6988 23.7463 10.6971C23.746 10.6935 23.7455 10.6893 23.745 10.6844C23.7439 10.6747 23.7425 10.6624 23.7406 10.6475C23.7368 10.6177 23.7311 10.5778 23.7228 10.5281C23.7063 10.4289 23.6794 10.2909 23.6362 10.1182C23.5498 9.77251 23.3984 9.28826 23.1356 8.69687C22.6091 7.51234 21.6398 5.90817 19.864 4.13235L18.8033 5.19301Z"
-                                  fill="#595B62"
-                                />
-                                <path
-                                  d="M13.6816 4.59526C13.2834 4.48147 12.8682 4.71209 12.7544 5.11037C12.6406 5.50864 12.8713 5.92376 13.2695 6.03755L13.6816 4.59526ZM17.9398 10.7078C18.0536 11.1061 18.4687 11.3367 18.867 11.2229C19.2652 11.1091 19.4959 10.694 19.3821 10.2957L17.9398 10.7078ZM13.4756 5.31641C13.2695 6.03755 13.2692 6.03745 13.2689 6.03735C13.2688 6.03732 13.2684 6.03723 13.2682 6.03716C13.2678 6.03704 13.2674 6.03692 13.267 6.03681C13.2662 6.03658 13.2655 6.03638 13.2648 6.03619C13.2636 6.03581 13.2626 6.03552 13.2619 6.03531C13.2605 6.03489 13.2603 6.03481 13.2612 6.03511C13.2631 6.03569 13.2695 6.03778 13.2803 6.04163C13.302 6.04932 13.3415 6.0641 13.3976 6.08814C13.5097 6.13618 13.6887 6.22145 13.9254 6.36154C14.3984 6.64147 15.1051 7.14237 15.97 8.00729L17.0307 6.94663C16.0808 5.99669 15.2751 5.41731 14.6894 5.07068C14.3968 4.89749 14.1599 4.7829 13.9884 4.70942C13.9027 4.67269 13.8335 4.64628 13.7819 4.62798C13.7561 4.61884 13.7348 4.61172 13.718 4.60636C13.7096 4.60368 13.7024 4.60143 13.6963 4.5996C13.6933 4.59868 13.6905 4.59786 13.6881 4.59714C13.6869 4.59678 13.6857 4.59644 13.6846 4.59613C13.6841 4.59597 13.6836 4.59582 13.6831 4.59568C13.6828 4.59561 13.6825 4.5955 13.6823 4.59547C13.682 4.59536 13.6816 4.59526 13.4756 5.31641ZM15.97 8.00729C16.835 8.87222 17.3359 9.57894 17.6158 10.0519C17.7559 10.2886 17.8411 10.4677 17.8892 10.5798C17.9132 10.6359 17.928 10.6753 17.9357 10.697C17.9396 10.7079 17.9416 10.7143 17.9422 10.7161C17.9425 10.717 17.9424 10.7168 17.942 10.7154C17.9418 10.7147 17.9415 10.7138 17.9411 10.7125C17.941 10.7118 17.9407 10.7111 17.9405 10.7104C17.9404 10.71 17.9403 10.7096 17.9402 10.7091C17.9401 10.7089 17.94 10.7086 17.94 10.7085C17.9399 10.7081 17.9398 10.7078 18.6609 10.5017C19.3821 10.2957 19.382 10.2953 19.3819 10.295C19.3818 10.2949 19.3817 10.2945 19.3816 10.2943C19.3815 10.2937 19.3814 10.2932 19.3812 10.2927C19.3809 10.2916 19.3805 10.2905 19.3802 10.2892C19.3795 10.2868 19.3787 10.284 19.3777 10.281C19.3759 10.2749 19.3737 10.2677 19.371 10.2593C19.3656 10.2425 19.3585 10.2212 19.3493 10.1954C19.331 10.1438 19.3046 10.0746 19.2679 9.9889C19.1944 9.81744 19.0798 9.58057 18.9067 9.28794C18.56 8.70224 17.9806 7.89658 17.0307 6.94663L15.97 8.00729Z"
-                                  fill="#595B62"
-                                />
-                                <path
-                                  d="M9.17234 6.47135L8.51742 6.83685V6.83685L9.17234 6.47135ZM8.37912 5.05003L7.7242 5.41552V5.41552L8.37912 5.05003ZM1.75747 8.27682C1.77316 7.8629 1.45034 7.51464 1.03642 7.49895C0.622503 7.48326 0.274237 7.80608 0.258546 8.22L1.75747 8.27682ZM5.48265 18.5139L6.01298 17.9836L5.48265 18.5139ZM9.58533 14.4112L10.1157 13.8809L9.58533 14.4112ZM17.5252 14.8242L17.1597 15.4791L17.5252 14.8242ZM18.9465 15.6174L19.312 14.9625L18.9465 15.6174ZM15.7481 22.9885L15.7765 23.738L15.7481 22.9885ZM19.4097 21.117L19.94 21.6474L19.4097 21.117ZM2.34917 4.05656C2.05628 4.34945 2.05628 4.82432 2.34917 5.11722C2.64206 5.41011 3.11694 5.41011 3.40983 5.11722L2.34917 4.05656ZM12.2065 21.8003C11.8083 21.6861 11.393 21.9163 11.2788 22.3145C11.1646 22.7127 11.3949 23.128 11.793 23.2422L12.2065 21.8003ZM7.92664 21.4669C8.27472 21.6914 8.73891 21.5912 8.96344 21.2431C9.18796 20.895 9.08779 20.4309 8.73971 20.2063L7.92664 21.4669ZM8.47337 10.5641L9.00372 11.0944L8.47337 10.5641ZM8.47337 10.5641L9.00371 11.0944L8.47337 10.5641ZM13.4324 15.5232L12.9022 14.9927L13.4324 15.5232ZM13.4325 15.5231L13.9628 16.0535L13.4325 15.5231ZM9.82725 6.10585L9.03403 4.68453L7.7242 5.41552L8.51742 6.83685L9.82725 6.10585ZM0.258546 8.22C0.163585 10.7249 0.808273 14.9002 4.95232 19.0442L6.01298 17.9836C2.21135 14.1819 1.67561 10.4361 1.75747 8.27682L0.258546 8.22ZM10.1157 13.8809C8.97185 12.7371 8.83028 11.9694 8.84863 11.5946C8.86791 11.201 9.07325 11.0249 9.00372 11.0944L7.94302 10.0338C7.87337 10.1035 7.39499 10.6112 7.35043 11.5212C7.30494 12.4501 7.71941 13.6059 9.055 14.9415L10.1157 13.8809ZM17.1597 15.4791L18.581 16.2723L19.312 14.9625L17.8907 14.1693L17.1597 15.4791ZM9.055 14.9415C10.3902 16.2768 11.5458 16.6914 12.4746 16.6461C13.3846 16.6018 13.8925 16.1237 13.9626 16.0537L12.9022 14.9927C12.9715 14.9235 12.7953 15.1287 12.4016 15.1479C12.0267 15.1662 11.2592 15.0244 10.1157 13.8809L9.055 14.9415ZM18.8793 20.5867C17.918 21.548 16.8344 22.1968 15.7197 22.2391L15.7765 23.738C17.4326 23.6752 18.8553 22.732 19.94 21.6474L18.8793 20.5867ZM18.581 16.2723C20.0065 17.0679 20.2947 19.1714 18.8793 20.5867L19.94 21.6474C21.9296 19.6578 21.7603 16.3288 19.312 14.9625L18.581 16.2723ZM13.9628 16.0535C14.8811 15.1352 16.2031 14.9453 17.1597 15.4791L17.8907 14.1693C16.282 13.2715 14.2387 13.6562 12.9021 14.9928L13.9628 16.0535ZM9.03403 4.68453C7.6677 2.23628 4.33875 2.06698 2.34917 4.05656L3.40983 5.11722C4.82517 3.70188 6.92867 3.99006 7.7242 5.41552L9.03403 4.68453ZM9.00371 11.0944C10.3403 9.75784 10.7251 7.71459 9.82725 6.10585L8.51742 6.83685C9.05129 7.79345 8.86133 9.1155 7.94304 10.0338L9.00371 11.0944ZM15.7197 22.2391C14.7923 22.2742 13.5816 22.1945 12.2065 21.8003L11.793 23.2422C13.3423 23.6864 14.7141 23.7783 15.7765 23.738L15.7197 22.2391ZM8.73971 20.2063C7.85142 19.6334 6.93498 18.9056 6.01298 17.9836L4.95232 19.0442C5.94723 20.0391 6.94627 20.8345 7.92664 21.4669L8.73971 20.2063ZM9.00372 11.0944L9.00371 11.0944L7.94304 10.0338L7.94302 10.0338L9.00372 11.0944ZM13.9626 16.0537L13.9628 16.0535L12.9021 14.9928L12.9022 14.9927L13.9626 16.0537Z"
-                                  fill="#595B62"
-                                />
-                              </svg>
-                            </span>
-<a class="first-child" href="tel:+254721779429"
->+254-721-779-429</a
-                            >
-                          </li>
-                          <li>
-                            <span>
-                              <svg
-                                width="18"
-                                height="18"
-                                viewBox="0 0 18 18"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M6.6 8.99531C6.6 9.43714 6.24183 9.79531 5.8 9.79531C5.35817 9.79531 5 9.43714 5 8.99531C5 8.55348 5.35817 8.19531 5.8 8.19531C6.24183 8.19531 6.6 8.55348 6.6 8.99531Z"
-                                  fill="#595B62"
-                                />
-                                <path
-                                  d="M9.8 8.99531C9.8 9.43714 9.44183 9.79531 9 9.79531C8.55817 9.79531 8.2 9.43714 8.2 8.99531C8.2 8.55348 8.55817 8.19531 9 8.19531C9.44183 8.19531 9.8 8.55348 9.8 8.99531Z"
-                                  fill="#595B62"
-                                />
-                                <path
-                                  d="M13 8.99531C13 9.43714 12.6418 9.79531 12.2 9.79531C11.7582 9.79531 11.4 9.43714 11.4 8.99531C11.4 8.55348 11.7582 8.19531 12.2 8.19531C12.6418 8.19531 13 8.55348 13 8.99531Z"
-                                  fill="#595B62"
-                                />
-                                <path
-                                  d="M13 2.06635C11.8233 1.38567 10.4571 0.996094 9 0.996094C4.58172 0.996094 1 4.57782 1 8.99609C1 10.2758 1.30049 11.4854 1.83477 12.5581C1.97675 12.8431 2.02401 13.1689 1.94169 13.4766L1.46521 15.2574C1.25836 16.0305 1.96561 16.7377 2.73868 16.5309L4.51951 16.0544C4.82715 15.9721 5.15297 16.0193 5.43802 16.1613C6.51069 16.6956 7.72025 16.9961 9 16.9961C13.4183 16.9961 17 13.4144 17 8.99609C17 7.53895 16.6104 6.17279 15.9297 4.99609"
-                                  stroke="#595B62"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                />
-                              </svg>
-                            </span>
-                            <a href="mailto:info@sheria360.com"
-                              >info@sheria360.com</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
-                    data-wow-duration=".9s"
-                    data-wow-delay=".5s"
+        <div class="tp-copyright__area pt-25 pb-40">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-4 col-lg-6 col-md-6">
+                <div
+                  class="tp-copyright__text tp-copyright__text-3 text-center"
+                >
+                  <span
+                    >Copyright &copy; 2026 Sheria360. All Rights Reserved.</span
                   >
-                    <div
-                      class="tp-footer__widget footer-widget-3 footer-col-3-2"
-                    >
-                      <h4 class="tp-footer__widget-title">Quick Links</h4>
-                      <div class="tp-footer__content">
-                        <ul>
-                          <li><a href="index.html">Home</a></li>
-                          <li><a href="about-sheria.html">About</a></li>
-                          <li><a href="price.html">Pricing</a></li>
-                          <li>
-                            <a href="solutions.html">Solutions</a>
-                          </li>
-                          <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
-                    data-wow-duration=".9s"
-                    data-wow-delay=".7s"
-                  >
-                    <div
-                      class="tp-footer__widget footer-widget-3 footer-col-3-3"
-                    >
-                      <h4 class="tp-footer__widget-title">Resources</h4>
-                      <div class="tp-footer__content">
-                         <ul>
-                           <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="blog.html">Blogs</a></li>
-                            <!-- <li><a href="marketplace.html">Market Place</a></li> -->
-                            <li>
-                             <a href="https://docs.sheria360.com/"
-                               >Documentation</a
-                             >
-                           </li>
-                           <li>
-                             <a href="https://demo.sheria360.com/users/login/"
-                               >Login</a
-                             >
-                           </li>
-                           <li><a href="terms.html">Privacy Policy</a></li>
-                           <li><a href="terms.html">Terms of Service</a></li>
-                         </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-4 col-md-6 pb-30 z-index-3">
-                    <div
-                      class="tp-footer__widget tp-footer__input-inner footer-widget-3 footer-col-3-4"
-                    >
-                      <h4 class="tp-footer__widget-title">Our Newsletter</h4>
-                      <div class="tp-footer__input mb-35 p-relative">
-                        <form action="#">
-                          <input
-                            type="text"
-                            placeholder="Business email adress"
-                          />
-                          <span>
-                            <svg
-                              width="18"
-                              height="16"
-                              viewBox="0 0 18 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
-                                stroke="#5F6168"
-                                stroke-width="1.5"
-                                stroke-miterlimit="10"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                opacity="0.4"
-                                d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
-                                stroke="#5F6168"
-                                stroke-width="1.5"
-                                stroke-miterlimit="10"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-                          </span>
-                          <button>
-                            <svg
-                              width="14"
-                              height="14"
-                              viewBox="0 0 14 14"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1.00098 7H13.001"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M7.00098 1L13.001 7L7.00098 13"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-                          </button>
-                        </form>
-                      </div>
-                      <div class="tp-footer__social-3">
-                        <h4>Social media</h4>
-                        <a href="https://facebook.com/sheria360"
-                          ><i class="fab fa-facebook-f"></i
-                        ></a>
-                        <a href="https://x.com/sheria360"
-                          ><i class="fab fa-twitter"></i
-                        ></a>
-                        <a href="https://instagram.com/sheria360"
-                          ><i class="fab fa-instagram"></i
-                        ></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tp-copyright__area pt-25 pb-40">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div
-                      class="tp-copyright__text tp-copyright__text-3 text-center"
-                    >
-                      <span
-                        >Copyright © 2026 Sheria360. All Rights Reserved.</span
-                      >
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- tp-footer-area-end -->
-        </footer>
+        </div>
       </div>
-    </div>
+    </footer>
 
-    <!-- JS here -->
+    <!-- ===== TEMPLATE JS ===== -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/waypoints.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1191,230 +1596,282 @@ gtag('event', 'conversion', {
     <script src="assets/js/isotope-pkgd.js"></script>
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- ===== BLOG APP JS ===== -->
     <script>
-      // Blog posts data
-      const blogPosts = {
-        post1: {
-          category: "Legal Tech",
-          title: "2023 Professional Year In Review",
-          date: "April 12, 2023",
-          author: "Hilary Ouse",
-          authorTitle: "Founder & CEO Dulalix",
-          authorImage: "assets/img/avata/avata-1.png",
-          content: `
-               <p class="mb-4">From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, content marketing has evolved significantly. In this professional year review, we explore the key trends and transformations that shaped the industry.</p>
-               <h5 class="mt-5 mb-3">Key Highlights</h5>
-               <ul>
-                 <li>The rise of AI-powered content creation tools</li>
-                 <li>Increased focus on personalization at scale</li>
-                 <li>Video content dominating engagement metrics</li>
-                 <li>The emergence of voice search optimization</li>
-               </ul>
-               <p class="mb-4">As we look forward, the integration of technology and creativity promises even more exciting developments. Stay tuned for our upcoming year's insights.</p>
-             `,
-        },
-        post2: {
-          category: "Resources",
-          title: "Leveraging Feedback on Insights Best",
-          date: "July 12, 2023",
-          author: "Rudra Ghosh",
-          authorTitle: "Founder & CEO Dulalix",
-          authorImage: "assets/img/avata/avata-2.png",
-          content: `
-               <p class="mb-4">Feedback is the cornerstone of improvement. In this resource guide, we dive deep into the best practices for collecting, analyzing, and acting on customer feedback to drive meaningful insights.</p>
-               <h5 class="mt-5 mb-3">What You'll Learn</h5>
-               <ul>
-                 <li>How to design effective feedback mechanisms</li>
-                 <li>Tools for sentiment analysis</li>
-                 <li>Turning feedback into actionable roadmaps</li>
-                 <li>Measuring the impact of changes</li>
-               </ul>
-               <p class="mb-4">Whether you're a startup or an established enterprise, these strategies will help you build a culture of continuous improvement.</p>
-             `,
-        },
-        post3: {
-          category: "Compliance",
-          title: "Typing Tutorials For Kids And Beginners",
-          date: "28 April, 2023",
-          author: "Geraldine",
-          authorTitle: "Founder & CEO Dulalix",
-          authorImage: "assets/img/avata/avata-3.png",
-          content: `
-               <p class="mb-4">Compliance training doesn't have to be boring. We've developed interactive typing tutorials designed specifically for kids and beginners, making learning both engaging and effective.</p>
-               <h5 class="mt-5 mb-3">Features</h5>
-               <ul>
-                 <li>Gamified learning experience</li>
-                 <li>Progress tracking for parents and teachers</li>
-                 <li>Adaptive difficulty levels</li>
-                 <li>Fun animations and rewards</li>
-               </ul>
-               <p class="mb-4">Our approach ensures that users develop essential keyboard skills while enjoying the process.</p>
-             `,
-        },
-        post4: {
-          category: "Case Studies",
-          title: "Project Management at Your Fingertips",
-          date: "28 April, 2023",
-          author: "Helen M.",
-          authorImage: "assets/img/avata/avata-4.png",
-          authorTitle: "Founder & CEO Dulalix",
-          content: `
-               <p class="mb-4">Discover how leading organizations are streamlining their project management workflows with centralized platforms. This case study explores real-world implementations and measurable outcomes.</p>
-               <h5 class="mt-5 mb-3">Results Achieved</h5>
-               <ul>
-                 <li>30% reduction in project turnaround time</li>
-                 <li>Improved cross-department collaboration</li>
-                 <li>Real-time visibility into resource allocation</li>
-                 <li>Enhanced client satisfaction scores</li>
-               </ul>
-               <p class="mb-4">The key to success lies in choosing the right tools and fostering adoption across teams.</p>
-             `,
-        },
-        post5: {
-          category: "Resources",
-          title: "Designing the Kids Space Universe",
-          date: "28 April, 2023",
-          author: "R. Jones",
-          authorTitle: "Founder & CEO Dulalix",
-          authorImage: "assets/img/avata/avata-5.png",
-          content: `
-               <p class="mb-4">Creating an immersive digital environment for children requires careful consideration of both aesthetics and educational value. This resource outlines our design philosophy and process.</p>
-               <h5 class="mt-5 mb-3">Design Principles</h5>
-               <ul>
-                 <li>Bright, engaging color palettes</li>
-                 <li>Intuitive navigation for young users</li>
-                 <li>Integration of educational elements</li>
-                 <li>Safety-first approach to interactions</li>
-               </ul>
-               <p class="mb-4">The result is a space where kids can learn, play, and explore safely.</p>
-             `,
-        },
-        post6: {
-          category: "AI & Automation",
-          title: "How Chatbots Can Help You Drive More Sales",
-          date: "28 April, 2023",
-          author: "Frank P. Miller",
-          authorImage: "assets/img/avata/avata-6.png",
-          authorTitle: "Founder & CEO Dulalix",
-          content: `
-               <p class="mb-4">AI-powered chatbots are transforming customer engagement. Learn how automated conversations can qualify leads, answer queries instantly, and drive conversions around the clock.</p>
-               <h5 class="mt-5 mb-3">Benefits</h5>
-               <ul>
-                 <li>24/7 availability without increased staffing</li>
-                 <li>Instant response times</li>
-                 <li>Personalized recommendations</li>
-                 <li>Seamless handoff to human agents</li>
-               </ul>
-               <p class="mb-4">Implementing the right chatbot strategy can significantly boost your sales pipeline efficiency.</p>
-             `,
-        },
-        swiper1: {
-          category: "Resources",
-          title: "5 Companies doing Brand Marketing Right",
-          date: "October 20, 2023",
-          author: "Hilary Ouse",
-          authorImage: "assets/img/blog/blog-avata-3.png",
-          authorTitle: "Founder & CEO Dulalix",
-          content: `
-               <p class="mb-4">From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, brand marketing has evolved significantly. This article explores how five leading companies are mastering brand marketing right.</p>
-               <h5 class="mt-5 mb-3">Key Takeaways</h5>
-               <ul>
-                 <li>Consistent brand messaging across channels</li>
-                 <li>Leveraging data for personalization</li>
-                 <li>Creating memorable customer experiences</li>
-                 <li>Measuring brand equity effectively</li>
-               </ul>
-               <p class="mb-4">Learn from these examples to elevate your own brand marketing efforts and drive sustainable growth.</p>
-             `,
-        },
-        swiper2: {
-          category: "Resources",
-          title: "5 Companies using AI Right",
-          date: "July 20, 2026",
-          author: "Hilary Ouse",
-          authorImage: "assets/img/blog/blog-avata-2.png",
-          authorTitle: "Founder & CEO Dulalix",
-          content: `
-               <p class="mb-4">Artificial Intelligence is revolutionizing the way businesses operate. Discover how five innovative companies are implementing AI technologies to streamline processes, enhance customer experiences, and drive growth.</p>
-               <h5 class="mt-5 mb-3">Implementation Insights</h5>
-               <ul>
-                 <li>AI-powered customer support chatbots</li>
-                 <li>Predictive analytics for sales forecasting</li>
-                 <li>Automated content generation</li>
-                 <li>Intelligent process automation</li>
-               </ul>
-               <p class="mb-4">These case studies demonstrate the transformative power of AI when applied strategically.</p>
-             `,
-        },
-        swiper3: {
-          category: "Resources",
-          title: "5 Companies doing Brand Marketing Right (Updated)",
-          date: "October 20, 2023",
-          author: "Hilary Ouse",
-          authorImage: "assets/img/blog/blog-avata-1.png",
-          authorTitle: "Founder & CEO Dulalix",
-          content: `
-               <p class="mb-4">Brand marketing continues to evolve with new trends and consumer expectations. This updated showcase highlights five companies that are setting the standard for effective brand marketing in today's dynamic landscape.</p>
-               <h5 class="mt-5 mb-3">What's New</h5>
-               <ul>
-                 <li>Authentic storytelling resonates more than ever</li>
-                 <li>Social responsibility as a brand differentiator</li>
-                 <li>Interactive experiences driving engagement</li>
-                 <li>Agile marketing strategies for rapid adaptation</li>
-               </ul>
-               <p class="mb-4">Stay ahead of the curve with these inspiring examples of modern brand marketing excellence.</p>
-             `,
-        },
-      };
+      (function () {
+        "use strict";
 
-      // Blog post click handlers
-      document.addEventListener("DOMContentLoaded", function () {
-        console.log("Blog page loaded, initializing modal...");
+        // ── Blog Posts Data ──
+        const blogPosts = {
+          post1: {
+            category: "Legal Tech",
+            title: "2023 Professional Year In Review",
+            date: "April 12, 2023",
+            author: "Hilary Ouse",
+            authorTitle: "Founder & CEO, Sheria360",
+            authorImage: "assets/img/avata/avata-1.png",
+            heroImage: "assets/img/blog/blog-grid-1.jpg",
+            content: `
+            <p>From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, content marketing has evolved significantly. In this professional year review, we explore the key trends and transformations that shaped the legal technology industry.</p>
+            <h5>Key Highlights</h5>
+            <ul>
+              <li>The rise of AI-powered content creation tools in legal document drafting</li>
+              <li>Increased focus on personalization at scale for client communications</li>
+              <li>Automated compliance monitoring becoming standard practice</li>
+              <li>The emergence of predictive analytics for case outcome forecasting</li>
+            </ul>
+            <p>As we look forward, the integration of technology and legal expertise promises even more exciting developments. Law firms that embraced digital transformation saw an average of 34% improvement in operational efficiency.</p>
+            <h5>Looking Ahead</h5>
+            <p>The convergence of AI and legal practice management is no longer a distant future—it is happening now. Firms that invest in modern tools today will be the leaders of tomorrow.</p>
+          `,
+          },
+          post2: {
+            category: "Resources",
+            title: "Leveraging Feedback on Insights Best",
+            date: "July 12, 2023",
+            author: "Rudra Ghosh",
+            authorTitle: "Product Lead, Sheria360",
+            authorImage: "assets/img/avata/avata-2.png",
+            heroImage: "assets/img/blog/blog-grid-2.jpg",
+            content: `
+            <p>Feedback is the cornerstone of improvement. In this resource guide, we dive deep into the best practices for collecting, analyzing, and acting on client feedback to drive meaningful insights for your legal practice.</p>
+            <h5>What You Will Learn</h5>
+            <ul>
+              <li>How to design effective feedback mechanisms that clients actually respond to</li>
+              <li>Tools for sentiment analysis applied to client communications</li>
+              <li>Turning feedback into actionable product and service roadmaps</li>
+              <li>Measuring the impact of changes on client satisfaction scores</li>
+            </ul>
+            <p>Whether you are a solo practitioner or an established enterprise firm, these strategies will help you build a culture of continuous improvement that translates directly to better client retention.</p>
+          `,
+          },
+          post3: {
+            category: "Compliance",
+            title: "Typing Tutorials For Kids And Beginners",
+            date: "April 28, 2023",
+            author: "Geraldine",
+            authorTitle: "Training Specialist, Sheria360",
+            authorImage: "assets/img/avata/avata-3.png",
+            heroImage: "assets/img/blog/blog-grid-3.jpg",
+            content: `
+            <p>Compliance training does not have to be boring. We have developed interactive tutorials designed specifically for new team members and young professionals, making learning both engaging and effective.</p>
+            <h5>Features</h5>
+            <ul>
+              <li>Gamified learning experience with progress badges</li>
+              <li>Progress tracking for supervisors and team leads</li>
+              <li>Adaptive difficulty levels based on user performance</li>
+              <li>Fun animations and rewards to maintain engagement</li>
+            </ul>
+            <p>Our approach ensures that users develop essential skills while enjoying the process. Early adopters reported a 45% increase in training completion rates.</p>
+          `,
+          },
+          post4: {
+            category: "Case Studies",
+            title: "Project Management at Your Fingertips",
+            date: "April 28, 2023",
+            author: "Helen M.",
+            authorTitle: "Case Study Lead, Sheria360",
+            authorImage: "assets/img/avata/avata-4.png",
+            heroImage: "assets/img/blog/blog-grid-4.jpg",
+            content: `
+            <p>Discover how leading organizations are streamlining their project management workflows with centralized platforms. This case study explores real-world implementations and measurable outcomes.</p>
+            <h5>Results Achieved</h5>
+            <ul>
+              <li>30% reduction in project turnaround time within 90 days</li>
+              <li>Improved cross-department collaboration and visibility</li>
+              <li>Real-time visibility into resource allocation and billable hours</li>
+              <li>Enhanced client satisfaction scores rising from 3.8 to 4.7</li>
+            </ul>
+            <p>The key to success lies in choosing the right tools and fostering adoption across teams. Change management proved just as important as the technology itself.</p>
+          `,
+          },
+          post5: {
+            category: "Resources",
+            title: "Designing the Kids Space Universe",
+            date: "April 28, 2023",
+            author: "R. Jones",
+            authorTitle: "Design Director, Sheria360",
+            authorImage: "assets/img/avata/avata-5.png",
+            heroImage: "assets/img/blog/blog-grid-5.jpg",
+            content: `
+            <p>Creating an immersive digital environment requires careful consideration of both aesthetics and educational value. This resource outlines our design philosophy and process.</p>
+            <h5>Design Principles</h5>
+            <ul>
+              <li>Bright, engaging color palettes that reduce cognitive load</li>
+              <li>Intuitive navigation patterns for users of all technical levels</li>
+              <li>Integration of educational elements without disrupting workflow</li>
+              <li>Safety-first approach to data handling and interactions</li>
+            </ul>
+            <p>The result is a space where professionals can learn, work, and explore safely. User testing showed a 60% decrease in time-to-completion for common tasks.</p>
+          `,
+          },
+          post6: {
+            category: "AI & Automation",
+            title: "How Chatbots Can Help You Drive More Sales",
+            date: "April 28, 2023",
+            author: "Frank P. Miller",
+            authorTitle: "AI Strategist, Sheria360",
+            authorImage: "assets/img/avata/avata-6.png",
+            heroImage: "assets/img/blog/blog-grid-6.jpg",
+            content: `
+            <p>AI-powered chatbots are transforming client engagement. Learn how automated conversations can qualify leads, answer queries instantly, and drive conversions around the clock.</p>
+            <h5>Benefits</h5>
+            <ul>
+              <li>24/7 availability without increased staffing costs</li>
+              <li>Instant response times that improve client satisfaction</li>
+              <li>Personalized recommendations based on case history</li>
+              <li>Seamless handoff to human agents when complexity demands it</li>
+            </ul>
+            <p>Implementing the right chatbot strategy can significantly boost your client intake pipeline efficiency. One firm reported a 50% increase in qualified leads after deployment.</p>
+          `,
+          },
+          swiper1: {
+            category: "Resources",
+            title: "5 Companies Doing Brand Marketing Right",
+            date: "October 20, 2023",
+            author: "Hilary Ouse",
+            authorTitle: "Founder & CEO, Sheria360",
+            authorImage: "assets/img/blog/blog-avata-3.png",
+            heroImage: "assets/img/blog/inner-blog-1.png",
+            content: `
+            <p>From publishing content and hoping to acquire leads to gaining audience insights and making personalized content, brand marketing has evolved significantly. This article explores how five leading companies are mastering brand marketing.</p>
+            <h5>Key Takeaways</h5>
+            <ul>
+              <li>Consistent brand messaging across every client touchpoint</li>
+              <li>Leveraging data for hyper-personalization at scale</li>
+              <li>Creating memorable client experiences that drive referrals</li>
+              <li>Measuring brand equity through modern attribution models</li>
+            </ul>
+            <p>Learn from these examples to elevate your own brand marketing efforts and drive sustainable growth in a competitive legal market.</p>
+          `,
+          },
+          swiper2: {
+            category: "AI Spotlight",
+            title: "5 Companies Using AI Right",
+            date: "July 20, 2026",
+            author: "Hilary Ouse",
+            authorTitle: "Founder & CEO, Sheria360",
+            authorImage: "assets/img/blog/blog-avata-2.png",
+            heroImage: "assets/img/blog/inner-blog-2.png",
+            content: `
+            <p>Artificial Intelligence is revolutionizing the way businesses operate. Discover how five innovative companies are implementing AI technologies to streamline processes, enhance customer experiences, and drive growth.</p>
+            <h5>Implementation Insights</h5>
+            <ul>
+              <li>AI-powered customer support with natural language understanding</li>
+              <li>Predictive analytics for resource planning and forecasting</li>
+              <li>Automated document generation and contract review</li>
+              <li>Intelligent process automation reducing manual work by 40%</li>
+            </ul>
+            <p>These case studies demonstrate the transformative power of AI when applied strategically with clear objectives and proper governance.</p>
+          `,
+          },
+          swiper3: {
+            category: "Resources",
+            title: "5 Companies Doing Brand Marketing Right (Updated)",
+            date: "October 20, 2023",
+            author: "Hilary Ouse",
+            authorTitle: "Founder & CEO, Sheria360",
+            authorImage: "assets/img/blog/blog-avata-1.png",
+            heroImage: "assets/img/blog/inner-blog-3.png",
+            content: `
+            <p>Brand marketing continues to evolve with new trends and consumer expectations. This updated showcase highlights five companies that are setting the standard for effective brand marketing.</p>
+            <h5>What is New</h5>
+            <ul>
+              <li>Authentic storytelling resonates more than polished advertising</li>
+              <li>Social responsibility as a genuine brand differentiator</li>
+              <li>Interactive experiences driving deeper engagement</li>
+              <li>Agile marketing strategies for rapid market adaptation</li>
+            </ul>
+            <p>Stay ahead of the curve with these inspiring examples of modern brand marketing excellence tailored for professional services.</p>
+          `,
+          },
+        };
 
-        // Check if bootstrap.Modal is available
-        if (
-          typeof bootstrap === "undefined" ||
-          typeof bootstrap.Modal === "undefined"
-        ) {
-          console.error("Bootstrap Modal is not available!");
-          return;
+        // ── Initialize Swiper ──
+        let featuredSwiper;
+        function initSwiper() {
+          if (typeof Swiper === "undefined") {
+            setTimeout(initSwiper, 100);
+            return;
+          }
+          featuredSwiper = new Swiper(".blog-featured-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            speed: 700,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            navigation: {
+              nextEl: ".featured-next",
+              prevEl: ".featured-prev",
+            },
+            breakpoints: {
+              768: { slidesPerView: 1.2, centeredSlides: true },
+              992: { slidesPerView: 1.5, centeredSlides: true },
+            },
+          });
         }
 
-        const blogModal = new bootstrap.Modal(
-          document.getElementById("blogModal"),
-        );
-        console.log("Modal initialized successfully");
+        // ── Initialize Isotope Filter ──
+        let iso;
+        function initIsotope() {
+          if (typeof Isotope === "undefined") {
+            setTimeout(initIsotope, 100);
+            return;
+          }
+          const grid = document.querySelector("#blogGrid");
+          if (!grid) return;
+          iso = new Isotope(grid, {
+            itemSelector: ".grid-item",
+            layoutMode: "masonry",
+            transitionDuration: "0.4s",
+            masonry: { columnWidth: ".grid-item", gutter: 0 },
+          });
 
-        // Add click listeners to both grid items and swiper slides with event delegation
-        const blogGridContainer = document.querySelector(".blog-grid-inner");
-        const swiperContainer = document.querySelector(
-          ".blog-grid-slider-active",
-        );
+          // Filter buttons
+          document
+            .querySelectorAll("#blogFilter .filter-btn")
+            .forEach((btn) => {
+              btn.addEventListener("click", function () {
+                document
+                  .querySelectorAll("#blogFilter .filter-btn")
+                  .forEach((b) => b.classList.remove("active"));
+                this.classList.add("active");
+                const filter = this.dataset.filter;
+                iso.arrange({ filter: filter === "*" ? "*" : "." + filter });
+              });
+            });
+        }
 
-        // Function to handle blog item clicks
-        function handleBlogClick(e) {
-          // Find the closest clickable item (either .tp-blog-item or .blog-grid-slider)
-          let targetItem = e.target.closest(".tp-blog-item, .blog-grid-slider");
-
-          if (!targetItem) return;
-
-          // Prevent clicks on actual links (like images or author info) from triggering modal
-          if (e.target.closest("a")) return;
-
-          e.preventDefault();
-
-          const postId = targetItem.dataset.postId;
-          console.log("Clicked post ID:", postId);
-
-          if (!postId) {
-            console.warn("No post ID found on element:", targetItem);
+        // ── Modal Logic ──
+        let blogModal;
+        function initModal() {
+          const modalEl = document.getElementById("blogModal");
+          if (!modalEl) return;
+          if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
+            blogModal = new bootstrap.Modal(modalEl);
+          } else {
+            setTimeout(initModal, 100);
             return;
           }
 
-          const post = blogPosts[postId];
+          // Click handler using event delegation
+          function handleBlogClick(e) {
+            const card = e.target.closest(".blog-card, .featured-card");
+            if (!card) return;
+            if (e.target.closest("a")) return; // Ignore actual link clicks
 
-          if (post) {
-            console.log("Loading post data:", post.title);
+            const postId = card.dataset.postId;
+            if (!postId) return;
+
+            const post = blogPosts[postId];
+            if (!post) {
+              console.warn("Post not found:", postId);
+              return;
+            }
+
+            // Populate modal
             document.getElementById("modalCategory").textContent =
               post.category;
             document.getElementById("modalTitle").textContent = post.title;
@@ -1424,51 +1881,34 @@ gtag('event', 'conversion', {
             document.getElementById("modalAuthorTitle").textContent =
               post.authorTitle;
             document.getElementById("modalAuthorImage").src = post.authorImage;
+            document.getElementById("modalAuthorImage").alt = post.author;
+            document.getElementById("modalHeroImg").src = post.heroImage;
+            document.getElementById("modalHeroImg").alt = post.title;
             document.getElementById("modalContent").innerHTML = post.content;
 
-            console.log("Showing modal...");
+            // Show modal
             blogModal.show();
-          } else {
-            console.warn("Post data not found for ID:", postId);
           }
+
+          // Attach to grid and featured sections
+          const grid = document.getElementById("blogGrid");
+          const featured = document.querySelector(".blog-featured-swiper");
+          if (grid) grid.addEventListener("click", handleBlogClick);
+          if (featured) featured.addEventListener("click", handleBlogClick);
+
+          // Add pointer cursor to all cards
+          document
+            .querySelectorAll(".blog-card, .featured-card")
+            .forEach((c) => (c.style.cursor = "pointer"));
         }
 
-        // Attach event listeners to containers (event delegation)
-        if (blogGridContainer) {
-          blogGridContainer.addEventListener("click", handleBlogClick);
-          console.log("Event listener attached to blog grid container");
-        } else {
-          console.warn("Blog grid container not found");
-        }
-
-        if (swiperContainer) {
-          swiperContainer.addEventListener("click", handleBlogClick);
-          console.log("Event listener attached to swiper container");
-        } else {
-          console.warn("Swiper container not found");
-        }
-
-        // Close modal handler
-        document
-          .getElementById("blogModal")
-          .addEventListener("hidden.bs.modal", function () {
-            console.log("Modal hidden");
-            // Clear content or reset if needed
-          });
-
-        // Also add direct listeners as fallback
-        document
-          .querySelectorAll(".tp-blog-item, .blog-grid-slider")
-          .forEach((item, index) => {
-            item.style.cursor = "pointer";
-            console.log(
-              `Found clickable item ${index + 1}:`,
-              item,
-              "with postId:",
-              item.dataset.postId,
-            );
-          });
-      });
+        // ── Boot ──
+        document.addEventListener("DOMContentLoaded", function () {
+          initSwiper();
+          initIsotope();
+          initModal();
+        });
+      })();
     </script>
   </body>
 </html>

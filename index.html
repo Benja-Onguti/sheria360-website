@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -11,7 +11,6 @@
       content="Sheria360 combines AI-powered contract analysis, legal practice management, and intelligent automation to transform how law firms and corporate legal teams work."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -101,30 +100,6 @@
         background: var(--sheria-primary);
       }
 
-      /* Announcement */
-      .sheria-announcement {
-        background: linear-gradient(
-          90deg,
-          var(--sheria-navy-deep) 0%,
-          var(--sheria-navy) 100%
-        );
-        color: #fff;
-        font-size: 13px;
-        padding: 10px 0;
-        text-align: center;
-        position: relative;
-        z-index: 1001;
-      }
-      .sheria-announcement a {
-        color: #93c5fd;
-        font-weight: 600;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-      .sheria-announcement a:hover {
-        color: #fff;
-      }
-
       /* Header */
       .header-bottom__area {
         background: rgba(255, 255, 255, 0.95) !important;
@@ -152,7 +127,7 @@
         white-space: nowrap;
       }
       .header-bottom__main-menu nav > ul > li > a {
-        padding: 35px 8px;
+        padding: 35px 10px;
         display: inline-block;
         font-size: 13px;
         font-weight: 500;
@@ -167,13 +142,14 @@
         top: 100%;
         left: 0;
         background: #fff;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        padding: 12px 0;
-        min-width: 200px;
+        box-shadow: var(--sheria-shadow-xl);
+        border: 1px solid var(--sheria-border-light);
+        padding: 8px 0;
+        min-width: 220px;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        border-radius: 4px;
+        border-radius: var(--sheria-radius);
         z-index: 999;
       }
       .header-bottom__main-menu nav > ul > li:hover > .submenu {
@@ -184,12 +160,17 @@
         display: block;
       }
       .header-bottom__main-menu nav ul.submenu li a {
-        padding: 8px 18px;
+        padding: 10px 20px;
         display: block;
         font-size: 13px;
+        font-weight: 500;
+        color: var(--sheria-slate);
+        transition: var(--sheria-transition);
       }
       .header-bottom__main-menu nav ul.submenu li a:hover {
-        background: #f5f5f5;
+        background: var(--sheria-primary-light);
+        color: var(--sheria-primary);
+        padding-left: 24px;
       }
       .header-bottom__main-menu nav > ul > li > a::after {
         content: "";
@@ -205,26 +186,6 @@
       }
       .header-bottom__main-menu nav > ul > li:hover > a::after {
         transform: scaleX(1);
-      }
-      .header-bottom__main-menu nav ul.submenu {
-        border-radius: var(--sheria-radius);
-        box-shadow: var(--sheria-shadow-xl);
-        border: 1px solid var(--sheria-border-light);
-        padding: 8px 0;
-        min-width: 220px;
-        margin-top: -1px;
-      }
-      .header-bottom__main-menu nav ul.submenu li a {
-        padding: 10px 20px;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--sheria-slate);
-        transition: var(--sheria-transition);
-      }
-      .header-bottom__main-menu nav ul.submenu li a:hover {
-        background: var(--sheria-primary-light);
-        color: var(--sheria-primary);
-        padding-left: 24px;
       }
       .header__action-btn .tp-btn-border {
         min-width: 80px;
@@ -321,128 +282,6 @@
         border-radius: 50%;
         pointer-events: none;
       }
-      .tp-hero-title-3 {
-        font-size: clamp(2.2rem, 5vw, 3.8rem);
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
-      }
-      .tp-hero-title-3 span {
-        background: linear-gradient(
-          135deg,
-          var(--sheria-primary) 0%,
-          #3b82f6 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .tp-char-animation-2 {
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
-        color: var(--sheria-slate-light);
-        max-width: 640px;
-        margin: 0 auto 32px;
-        line-height: 1.7;
-      }
-      .tp-hero-btn-3 {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .tp-hero-btn-3 .tp-btn-blue-lg {
-        background: linear-gradient(
-          135deg,
-          var(--sheria-primary) 0%,
-          var(--sheria-primary-dark) 100%
-        );
-        color: #fff;
-        font-weight: 600;
-        font-size: 15px;
-        padding: 16px 36px;
-        border-radius: var(--sheria-radius);
-        box-shadow: 0 8px 24px rgba(26, 86, 219, 0.35);
-        transition: var(--sheria-transition);
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .tp-hero-btn-3 .tp-btn-blue-lg:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 32px rgba(26, 86, 219, 0.45);
-      }
-      .tp-hero-btn-3 .tp-btn-ghost {
-        background: transparent;
-        color: var(--sheria-navy-deep);
-        font-weight: 600;
-        font-size: 15px;
-        padding: 16px 36px;
-        border-radius: var(--sheria-radius);
-        border: 1.5px solid var(--sheria-border);
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: var(--sheria-transition);
-      }
-      .tp-hero-btn-3 .tp-btn-ghost:hover {
-        border-color: var(--sheria-primary);
-        color: var(--sheria-primary);
-        background: var(--sheria-primary-light);
-      }
-      .tp-hero-3-main-thumb {
-        border-radius: var(--sheria-radius-xl);
-        overflow: hidden;
-        box-shadow: var(--sheria-shadow-xl);
-        border: 1px solid var(--sheria-border-light);
-        background: #fff;
-        padding: 8px;
-      }
-      .tp-hero-3-main-thumb img {
-        border-radius: var(--sheria-radius-lg);
-        width: 100%;
-        object-fit: cover;
-      }
-
-      /* Two-Column Hero Layout */
-      .tp-hero-content {
-        padding-top: 40px;
-        padding-bottom: 20px;
-      }
-
-      .tp-hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: rgba(30, 64, 175, 0.08);
-        border: 1px solid rgba(30, 64, 175, 0.2);
-        border-radius: 50px;
-        padding: 8px 20px;
-        font-size: 13px;
-        font-weight: 500;
-        color: #1e40af;
-        letter-spacing: 0.5px;
-      }
-
-      .tp-hero-badge .badge-dot {
-        width: 8px;
-        height: 8px;
-        background: #1e40af;
-        border-radius: 50%;
-        animation: pulse-dot 2s infinite;
-      }
-
-      @keyframes pulse-dot {
-        0%,
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.5;
-          transform: scale(0.8);
-        }
-      }
-
       .tp-hero-title {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
@@ -451,14 +290,12 @@
         margin-bottom: 24px;
         letter-spacing: -0.02em;
       }
-
       .tp-hero-title .highlight {
         background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-
       .tp-hero-subtitle {
         font-size: 1.125rem;
         line-height: 1.7;
@@ -466,14 +303,12 @@
         max-width: 540px;
         margin-bottom: 32px;
       }
-
       .tp-hero-cta {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
         margin-bottom: 32px;
       }
-
       .tp-hero-cta .btn-primary-hero {
         display: inline-flex;
         align-items: center;
@@ -490,13 +325,11 @@
         box-shadow: 0 4px 20px rgba(30, 64, 175, 0.3);
         cursor: pointer;
       }
-
       .tp-hero-cta .btn-primary-hero:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 28px rgba(30, 64, 175, 0.4);
         color: #fff;
       }
-
       .tp-hero-cta .btn-secondary-hero {
         display: inline-flex;
         align-items: center;
@@ -512,7 +345,6 @@
         transition: all 0.3s ease;
         cursor: pointer;
       }
-
       .tp-hero-cta .btn-secondary-hero:hover {
         background: #f8fafc;
         border-color: #cbd5e1;
@@ -520,64 +352,17 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         color: #374151;
       }
-
-      .tp-hero-trust {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      /* Right side visual */
       .tp-hero-visual {
         padding: 20px 0;
       }
-
-      .dashboard-mockup {
-        position: relative;
+      .tp-hero-visual img {
+        border-radius: var(--sheria-radius-xl);
+        box-shadow: var(--sheria-shadow-xl);
+        border: 1px solid var(--sheria-border-light);
+        background: #fff;
+        padding: 8px;
         width: 100%;
-        max-width: 620px;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow:
-          0 25px 80px rgba(0, 0, 0, 0.15),
-          0 0 0 1px rgba(255, 255, 255, 0.08);
-        transform: perspective(1000px) rotateY(-5deg) rotateX(3deg);
-        transition: transform 0.5s ease;
-        margin-left: auto;
-      }
-
-      .dashboard-mockup img {
-        width: 100%;
-
-        display: block;
-      }
-
-      /* Responsive */
-      @media (max-width: 991px) {
-        .tp-hero-content {
-          text-align: center;
-          padding-top: 0;
-        }
-        .tp-hero-subtitle {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .tp-hero-cta {
-          justify-content: center;
-        }
-        .tp-hero-trust {
-          justify-content: center;
-        }
-        .tp-hero-visual {
-          margin-top: 40px;
-        }
-        .dashboard-mockup {
-          transform: none;
-          max-width: 500px;
-        }
-        .float-card {
-          display: none;
-        }
+        object-fit: cover;
       }
 
       /* Trust Bar */
@@ -608,6 +393,59 @@
         width: auto;
         max-height: 40px;
         object-fit: contain;
+      }
+
+      /* About Platform */
+      .sheria-about-area {
+        background: var(--sheria-bg);
+        padding: 100px 0;
+      }
+      .sheria-about-area .tp-section-title {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+        color: var(--sheria-navy-deep);
+      }
+      .sheria-about-text {
+        color: var(--sheria-slate-light);
+        line-height: 1.75;
+        font-size: 1.05rem;
+      }
+      .sheria-stat-box {
+        text-align: center;
+        padding: 24px 16px;
+        background: var(--sheria-bg-alt);
+        border-radius: var(--sheria-radius);
+        border: 1px solid var(--sheria-border-light);
+        transition: var(--sheria-transition);
+      }
+      .sheria-stat-box:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--sheria-shadow-md);
+        border-color: var(--sheria-primary-light);
+      }
+      .sheria-stat-box h4 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--sheria-primary);
+        margin-bottom: 4px;
+        line-height: 1.2;
+      }
+      .sheria-stat-box span {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--sheria-gray);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .sheria-stat-box p {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--sheria-slate);
       }
 
       /* Counter */
@@ -703,18 +541,6 @@
         box-shadow: var(--sheria-shadow-xl);
         border: 1px solid var(--sheria-border-light);
       }
-      .tp-ai-feature-thumb::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          transparent 60%,
-          rgba(14, 43, 92, 0.04) 100%
-        );
-        pointer-events: none;
-        z-index: 1;
-      }
       .tp-ai-feature-thumb img {
         width: 100%;
         height: auto;
@@ -756,6 +582,75 @@
         font-size: 15px;
         color: var(--sheria-slate-light);
         line-height: 1.6;
+      }
+
+      /* Core Features Grid (from About) */
+      .sheria-core-features {
+        background: var(--sheria-bg-alt);
+        padding: 100px 0;
+      }
+      .sheria-feature-card {
+        background: #fff;
+        border-radius: var(--sheria-radius-xl);
+        padding: 40px 32px;
+        border: 1px solid var(--sheria-border-light);
+        transition: var(--sheria-transition);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .sheria-feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--sheria-shadow-xl);
+        border-color: var(--sheria-primary-light);
+      }
+      .sheria-feature-card .feature-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--sheria-primary-light);
+        border-radius: var(--sheria-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--sheria-primary);
+        font-size: 24px;
+        margin-bottom: 20px;
+        transition: var(--sheria-transition);
+      }
+      .sheria-feature-card:hover .feature-icon {
+        background: var(--sheria-primary);
+        color: #fff;
+      }
+      .sheria-feature-card h4 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--sheria-navy-deep);
+      }
+      .sheria-feature-card p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+      .sheria-feature-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .sheria-feature-card ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        color: var(--sheria-slate-light);
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .sheria-feature-card ul li i {
+        color: var(--sheria-primary);
+        font-size: 12px;
+        margin-top: 4px;
       }
 
       /* Services */
@@ -956,80 +851,57 @@
         margin: 0;
       }
 
-      /* Rated / CTA */
-      .tp-rated-area {
-        background: linear-gradient(
-          135deg,
-          var(--sheria-navy-deep) 0%,
-          var(--sheria-navy) 100%
-        );
-        position: relative;
-        overflow: hidden;
+      /* Industries / Audience */
+      .sheria-industries-area {
+        background: var(--sheria-bg);
+        padding: 100px 0;
       }
-      .tp-rated-area::before {
-        content: "";
-        position: absolute;
-        top: -20%;
-        right: -10%;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(
-          circle,
-          rgba(26, 86, 219, 0.2) 0%,
-          transparent 60%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-      }
-      .tp-rated-area::after {
-        content: "";
-        position: absolute;
-        bottom: -30%;
-        left: -10%;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle,
-          rgba(14, 159, 110, 0.1) 0%,
-          transparent 60%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-      }
-      .tp-rated-title-box .tp-section-title-3 {
-        color: #fff;
-        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      }
-      .tp-rated-title-box .tp-section-title-3 span {
-        color: #93c5fd;
-      }
-      .author-rated {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+      .sheria-industry-card {
+        background: #fff;
         border-radius: var(--sheria-radius-xl);
-        padding: 32px 24px;
+        padding: 36px 28px;
+        border: 1px solid var(--sheria-border-light);
+        text-align: center;
+        transition: var(--sheria-transition);
+        height: 100%;
+      }
+      .sheria-industry-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--sheria-shadow-lg);
+        border-color: var(--sheria-primary-light);
+      }
+      .sheria-industry-card .industry-icon {
+        font-size: 2rem;
+        color: var(--sheria-primary);
+        margin-bottom: 16px;
+      }
+      .sheria-industry-card h5 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .sheria-industry-card p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .sheria-sector-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--sheria-bg-alt);
+        border: 1px solid var(--sheria-border-light);
+        border-radius: var(--sheria-radius-sm);
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--sheria-slate);
         transition: var(--sheria-transition);
       }
-      .author-rated:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-4px);
-      }
-      .author-rated-icon span {
-        color: var(--sheria-warning);
-        font-size: 14px;
-        margin: 0 2px;
-      }
-      .author-rated p {
-        color: rgba(255, 255, 255, 0.85);
-        font-style: italic;
-        font-size: 15px;
-        margin: 16px 0;
-      }
-      .author-rated-logo img {
-        max-height: 28px;
-        opacity: 0.7;
-        filter: brightness(0) invert(1);
+      .sheria-sector-badge:hover {
+        background: var(--sheria-primary-light);
+        color: var(--sheria-primary);
+        border-color: var(--sheria-primary-light);
       }
 
       /* Testimonials */
@@ -1082,7 +954,6 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-
         background: linear-gradient(
           135deg,
           var(--sheria-navy-deep) 0%,
@@ -1171,6 +1042,78 @@
         font-size: 15px;
         color: var(--sheria-slate-light);
         line-height: 1.7;
+      }
+
+      /* CTA Section */
+      .sheria-cta-area {
+        background: linear-gradient(
+          135deg,
+          var(--sheria-navy-deep) 0%,
+          var(--sheria-navy) 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding: 100px 0;
+      }
+      .sheria-cta-area::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(26, 86, 219, 0.2) 0%,
+          transparent 60%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .sheria-cta-area h3 {
+        color: #fff;
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      .sheria-cta-area p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        max-width: 600px;
+      }
+      .sheria-cta-area .btn-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        color: var(--sheria-navy-deep);
+        font-weight: 700;
+        font-size: 15px;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        transition: var(--sheria-transition);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      }
+      .sheria-cta-area .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      }
+      .sheria-cta-area .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 16px 32px;
+        border-radius: var(--sheria-radius);
+        border: 1.5px solid rgba(255, 255, 255, 0.3);
+        transition: var(--sheria-transition);
+      }
+      .sheria-cta-area .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.6);
       }
 
       /* Footer */
@@ -1490,39 +1433,33 @@
         .tp-counter-item:not(:last-child)::after {
           display: none;
         }
-        .tp-hero-title-3 {
+        .tp-hero-title {
           font-size: 2.2rem;
         }
         .tp-hero-area {
           padding-top: 140px !important;
+        }
+        .tp-hero-content {
+          text-align: center;
+          padding-top: 0;
+        }
+        .tp-hero-subtitle {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .tp-hero-cta {
+          justify-content: center;
+        }
+        .tp-hero-visual {
+          margin-top: 40px;
         }
       }
       @media (max-width: 767px) {
         .options-grid {
           grid-template-columns: 1fr;
         }
-        .tp-hero-title-3 {
+        .tp-hero-title {
           font-size: 1.9rem;
-        }
-        .tp-hero-btn-3 {
-          flex-direction: column;
-          align-items: center;
-        }
-        .tp-hero-btn-3 .tp-btn-blue-lg,
-        .tp-hero-btn-3 .tp-btn-ghost {
-          width: 100%;
-          max-width: 320px;
-          justify-content: center;
-        }
-        .sheria-announcement {
-          font-size: 12px;
-          padding: 8px 16px;
-        }
-        .onboarding-modal {
-          padding: 36px 24px;
-        }
-        .step h3 {
-          font-size: 1.3rem;
         }
       }
       @media (max-width: 575px) {
@@ -1533,6 +1470,9 @@
           padding: 32px 24px;
         }
         .sheria-testimonial-card {
+          padding: 32px 24px;
+        }
+        .sheria-feature-card {
           padding: 32px 24px;
         }
       }
@@ -1551,6 +1491,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -1563,9 +1504,6 @@
       }
       gtag("js", new Date());
       gtag("config", "AW-18205858668");
-    </script>
-    <!-- Event snippet for Page view conversion page -->
-    <script>
       gtag("event", "conversion", {
         send_to: "AW-18205858668/0-p4CM2HvbccEOy2nelD",
         value: 1.0,
@@ -1578,10 +1516,15 @@
     <div id="preloader">
       <div class="preloader"><span></span><span></span></div>
     </div>
-    <button class="scroll-top scroll-to-target" data-target="html">
+    <button
+      class="scroll-top scroll-to-target"
+      data-target="html"
+      aria-label="Scroll to top"
+    >
       <i class="far fa-angle-double-up"></i>
     </button>
 
+    <!-- Header -->
     <header class="tp-header-height">
       <div
         id="header-sticky"
@@ -1604,8 +1547,38 @@
                 <nav id="mobile-menu">
                   <ul class="d-flex">
                     <li class="me-20"><a href="index.html">Home</a></li>
-                    <li class="me-20">
-                      <a href="about-sheria.html">About Sheria360</a>
+
+                    <li class="me-20 has-dropdown">
+                      <a href="javascript:void(0)"
+                        >Features
+                        <i
+                          class="fas fa-chevron-down"
+                          style="
+                            font-size: 10px;
+                            margin-left: 4px;
+                            opacity: 0.6;
+                          "
+                        ></i
+                      ></a>
+                      <ul class="submenu">
+                        <li><a href="features.html">All Features</a></li>
+                        <li>
+                          <a href="legalservices.html">Legal Services </a>
+                        </li>
+                        <li>
+                          <a href="case-management.html">Cases Management</a>
+                        </li>
+                        <li>
+                          <a href="contracts-management.html"
+                            >Contracts Management</a
+                          >
+                        </li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li>
+                          <a href="clientportal.html">Collaboration Portals</a>
+                        </li>
+                        <li><a href="billing.html">Billing</a></li>
+                      </ul>
                     </li>
                     <li class="me-20 has-dropdown">
                       <a href="javascript:void(0)"
@@ -1688,6 +1661,7 @@
       </div>
     </header>
 
+    <!-- Mobile offcanvas -->
     <div class="tpoffcanvas-area">
       <div class="tpoffcanvas">
         <div class="tpoffcanvas__close-btn">
@@ -1724,61 +1698,43 @@
                 loading="lazy"
               />
             </div>
-            <!-- <div class="tp-hero-gradient-bg">
-              <img
-                src="assets/img/hero/hero-gradient-3.jpg"
-                alt=""
-                loading="lazy"
-              />
-            </div> -->
             <div class="container">
               <div class="row align-items-center z-index-3">
-                <!-- Left Content -->
                 <div class="col-xl-6 col-lg-6">
                   <div
                     class="tp-hero-content sr-reveal"
                     style="padding-top: 3px"
                   >
-                    <!-- Headline -->
                     <h1 class="tp-hero-title mb-3">
                       AI-Powered
-                      <span class="highlight"> Legal Intelligence </span> for
+                      <span class="highlight">Legal Intelligence</span> for
                       Modern Legal Practice
                     </h1>
-
-                    <!-- Subtitle -->
                     <p class="tp-hero-subtitle mb-4">
-                      Empower legal excellence with an AI-powered Integrated
-                      Legal, Case, and Contracts Lifecycle Management System.
-                      Built to support organizations in managing complex legal
-                      processes with precision and efficiency, Sheria360 offers
-                      unrestricted data accessibility across all locations and
-                      time zones. Trusted by Kenya's leading institutions.
+                      Sheria360 is an AI-Powered Integrated Legal, Case, and
+                      Contracts Lifecycle Management System built to manage
+                      complex legal processes with precision, speed, and
+                      absolute efficiency. Trusted by Kenya's leading government
+                      institutions and legal firms.
                     </p>
-
-                    <!-- CTAs -->
                     <div class="tp-hero-cta mb-4">
                       <a
                         href="javascript:void(0)"
                         class="btn-primary-hero"
                         id="tryFreeBtnHero"
                       >
-                        <span>Start Free Trial</span>
-                        <i class="fas fa-arrow-right"></i>
+                        <span>Start Free Trial</span
+                        ><i class="fas fa-arrow-right"></i>
                       </a>
-                      <a href="about-sheria.html" class="btn-secondary-hero">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Explore Features</span>
+                      <a href="features.html" class="btn-secondary-hero">
+                        <i class="fas fa-play-circle"></i
+                        ><span>Explore Features</span>
                       </a>
                     </div>
                   </div>
                 </div>
-
-                <!-- Right Visual -->
                 <div class="col-xl-6 col-lg-6">
                   <div class="tp-hero-visual mt-5 mt-lg-0">
-                    <!-- Dashboard Mockup -->
-
                     <img
                       src="assets/img/clients/heroi.png"
                       alt="Sheria360 AI Legal Dashboard"
@@ -1814,6 +1770,35 @@
           </div>
           <!-- end trust bar -->
 
+          <!-- ===== ABOUT PLATFORM ===== -->
+          <section id="about" class="sheria-about-area pt-100 pb-60">
+            <div class="container">
+              <div class="row align-items-center mb-60">
+                <div class="col-xl-6 mb-4 mb-xl-0 sr-reveal">
+                  <h3 class="tp-section-title">
+                    Engineered to Transform Legal Operations Today.
+                  </h3>
+                </div>
+                <div class="col-xl-6 sr-reveal sr-delay-1">
+                  <p class="sheria-about-text mb-3">
+                    Sheria360 was developed to transform how legal ecosystems
+                    operate. By seamlessly connecting advanced AI automations
+                    with intuitive day-to-day administrative frameworks, our
+                    platform handles the heavily demanding routine workflows so
+                    legal professionals can prioritize impactful strategic
+                    execution.
+                  </p>
+                  <p class="sheria-about-text">
+                    Today, we empower modern entities globally, providing
+                    enterprise-grade modules for meticulous contract lifecycle
+                    automation, dynamic legal research repositories, and robust
+                    case tracking systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <!-- ===== COUNTER SECTION ===== -->
           <div class="tp-counter-area tp-counter-space p-relative pb-24 pt-24">
             <div class="container">
@@ -1828,7 +1813,7 @@
                             data-purecounter-end="5"
                             class="purecounter"
                             >5</span
-                          ><em></em>+
+                          >+
                         </h4>
                         <p>Enterprise Clients</p>
                       </div>
@@ -1840,30 +1825,16 @@
                         <h4>
                           <span
                             data-purecounter-duration="1"
-                            data-purecounter-end="10"
+                            data-purecounter-end="200"
                             class="purecounter"
-                            >10</span
+                            >200</span
                           >+
                         </h4>
-                        <p>Legal Practitioners</p>
+                        <p>Users</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 col-lg-3">
-                    <div class="tp-counter-wrap d-flex justify-content-center">
-                      <div class="tp-counter-item">
-                        <h4>
-                          <span
-                            data-purecounter-duration="1"
-                            data-purecounter-end="10"
-                            class="purecounter"
-                            >10</span
-                          >+
-                        </h4>
-                        <p>Industry Leaders</p>
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="col-6 col-lg-3">
                     <div class="tp-counter-wrap d-flex justify-content-center">
                       <div class="tp-counter-item">
@@ -1879,439 +1850,379 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-6 col-lg-3">
+                    <div class="tp-counter-wrap d-flex justify-content-center">
+                      <div class="tp-counter-item">
+                        <h4>
+                          <span
+                            data-purecounter-duration="1"
+                            data-purecounter-end="1"
+                            class="purecounter"
+                            >1</span
+                          >
+                        </h4>
+                        <p>Jurisdictions</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- end counter -->
 
-          <!-- ===== AI FEATURES SECTION ===== -->
-          <div class="tp-ai-features-area pt-50 pb-40">
-            <div class="container">
-              <div class="row align-items-center">
-                <div
-                  class="col-xl-6 col-lg-6 wow tpfadeLeft sr-reveal"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                >
-                  <div class="tp-ai-feature-thumb mb-50">
-                    <img
-                      src="assets/img/clients/AI in Sheria"
-                      alt="SheriAI Legal Intelligence"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="col-xl-6 col-lg-6 wow tpfadeRight sr-reveal sr-delay-1"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".7s"
-                >
-                  <div class="tp-ai-feature-content">
-                    <h3 class="tp-section-title-3 mb-30">
-                      Meet <span>SheriAI</span> — Your Intelligent Legal
-                      Assistant
-                    </h3>
-                    <p class="mb-25">
-                      SheriAI leverages cutting-edge artificial intelligence to
-                      revolutionize your legal workflow, saving hours every
-                      week.
-                    </p>
-                    <ul class="tp-feature-list mb-35">
-                      <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                          <strong>AI Contract Review:</strong> Automatically
-                          analyze contracts, identify risks, and suggest
-                          amendments in seconds.
-                        </div>
-                      </li>
-                      <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                          <strong>Legal Document Automation:</strong> Generate
-                          complex legal documents with AI-powered templates and
-                          smart clauses.
-                        </div>
-                      </li>
-                      <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                          <strong>Intelligent Legal Research:</strong> Access
-                          case law, precedents, and statutes with AI-enhanced
-                          semantic search.
-                        </div>
-                      </li>
-                      <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                          <strong>Predictive Analytics:</strong> Forecast case
-                          outcomes and litigation risks using machine learning
-                          models.
-                        </div>
-                      </li>
-                      <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                          <strong>Smart Billing & Time Tracking:</strong>
-                          AI-captured billable hours and automated invoice
-                          generation.
-                        </div>
-                      </li>
-                    </ul>
-                    <a
-                      class="tp-btn-blue-lg tp-btn-hover alt-color-black"
-                      href="contact.html"
-                      ><span>Request Demo</span
-                      ><i class="far fa-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end ai features -->
-
-          <!-- ===== SERVICES SECTION ===== -->
-          <div class="tp-service-area pb-90 pt-110 z-index">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-12">
-                  <div
-                    class="tp-service-section-wrapper mb-60 d-flex flex-wrap justify-content-between align-items-end"
-                  >
-                    <div class="sr-reveal">
-                      <h3
-                        class="tp-section-title-3 wow tpfadeLeft"
-                        data-wow-duration=".9s"
-                        data-wow-delay=".3s"
-                      >
-                        What Sheria360<br />Can Do For <span>You.</span>
-                      </h3>
-                    </div>
-                    <a
-                      class="tp-btn-blue-lg tp-btn-hover mb-10 alt-color-black wow tpfadeRight sr-reveal sr-delay-1"
-                      data-wow-duration=".9s"
-                      data-wow-delay=".5s"
-                      href="about-sheria.html"
-                      ><span>See All Features</span
-                      ><i class="far fa-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="row g-4">
-                <div
-                  class="col-xl-8 wow tpfadeLeft sr-reveal"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                >
-                  <div
-                    class="tp-service-3-item mb-0 p-relative z-index"
-                    data-background="assets/img/service/service-3-bg.png"
-                  >
-                    <div class="tp-service-3-icon mb-20">
-                      <img
-                        src="assets/img/service/sv-icon-3-1.png"
-                        alt=""
-                        loading="lazy"
-                        style="max-height: 56px"
-                      />
-                    </div>
-                    <div class="tp-service-3-content">
-                      <span>SheriAI Engine</span>
-                      <h4 class="tp-service-3-title-sm">
-                        <a href="about-sheria.html"
-                          >AI-Powered Contract<br />Lifecycle Management</a
-                        >
-                      </h4>
-                    </div>
-                    <div class="tp-service-3-btn">
-                      <a class="tp-btn-white-solid" href="about-sheria.html"
-                        >Learn More</a
-                      >
-                    </div>
-                    <div class="tp-service-3-shape">
-                      <img
-                        src="assets/img/service/service-shape-3-1.png"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 wow tpfadeRight sr-reveal sr-delay-1"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".6s"
-                >
-                  <div class="tp-service-sm-item">
-                    <div class="tp-service-sm-icon">
-                      <svg
-                        width="66"
-                        height="53"
-                        viewBox="0 0 66 53"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.5323 8.40774C4.17742 10.9497 1 12.2206 1 13.8C1 15.3794 4.17742 16.6503 10.5323 19.1923L19.5194 22.7871C25.8742 25.329 29.0516 26.6 33 26.6C36.9484 26.6 40.1258 25.329 46.4806 22.7871L55.4677 19.1923C61.8226 16.6503 65 15.3794 65 13.8C65 12.2206 61.8226 10.9497 55.4677 8.40774L46.4806 4.8129C40.1258 2.27097 36.9484 1 33 1C29.9474 1 27.3556 1.7597 23.4 3.27909"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M13.0516 20.2002L10.5323 21.2079C4.17742 23.7499 1 25.0208 1 26.6002C1 28.1795 4.17742 29.4505 10.5323 31.9925L19.5194 35.5873C25.8742 38.1292 29.0516 39.4002 33 39.4002C36.9484 39.4002 40.1258 38.1292 46.4806 35.5873L55.4677 31.9925C61.8226 29.4505 65 28.1795 65 26.6002C65 25.0208 61.8226 23.7499 55.4677 21.2079L52.9484 20.2002"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                        />
-                        <path
-                          d="M55.4677 44.7923C61.8226 42.2503 65 40.9794 65 39.4C65 37.8206 61.8226 36.5497 55.4677 34.0077L52.9484 33M13.0516 33L10.5323 34.0077C4.17742 36.5497 1 37.8206 1 39.4C1 40.9794 4.17742 42.2503 10.5323 44.7923L19.5194 48.3871C25.8742 50.929 29.0516 52.2 33 52.2C36.0526 52.2 38.6444 51.4403 42.6 49.9209"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <div class="tp-service-sm-content">
-                      <span>AI Practice Management</span>
-                      <h3 class="tp-service-sm-title">
-                        <a href="about-sheria.html"
-                          >Smart case management with AI-driven insights &amp;
-                          automation.</a
-                        >
-                      </h3>
-                      <div class="tp-service-sm-link">
-                        <a href="about-sheria.html"
-                          >Learn more <i class="far fa-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp sr-reveal"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                >
-                  <div class="tp-service-sm-item">
-                    <div class="tp-service-sm-icon">
-                      <svg
-                        width="56"
-                        height="56"
-                        viewBox="0 0 56 56"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M15.0303 22.0693C14.7374 21.7764 14.2626 21.7764 13.9697 22.0693C13.6768 22.3622 13.6768 22.837 13.9697 23.1299L15.0303 22.0693ZM20.6908 28.7904L21.2211 28.26V28.26L20.6908 28.7904ZM24.5091 28.7904L25.0394 29.3207L24.5091 28.7904ZM28.7907 24.5088L28.2604 23.9785L28.2604 23.9785L28.7907 24.5088ZM32.6091 24.5088L33.1394 23.9785V23.9785L32.6091 24.5088ZM41.4998 33.3995V34.1495C41.914 34.1495 42.2498 33.8137 42.2498 33.3995H41.4998ZM42.2498 26.6496C42.2498 26.2354 41.914 25.8996 41.4998 25.8996C41.0856 25.8996 40.7498 26.2354 40.7498 26.6496H42.2498ZM34.7498 32.6495C34.3356 32.6495 33.9998 32.9853 33.9998 33.3995C33.9998 33.8137 34.3356 34.1495 34.7498 34.1495V32.6495ZM13.9697 23.1299L20.1604 29.3207L21.2211 28.26L15.0303 22.0693L13.9697 23.1299ZM25.0394 29.3207L29.321 25.0391L28.2604 23.9785L23.9788 28.26L25.0394 29.3207ZM32.0787 25.0391L40.9695 33.9299L42.0301 32.8692L33.1394 23.9785L32.0787 25.0391ZM42.2498 33.3995V26.6496H40.7498V33.3995H42.2498ZM41.4998 32.6495H34.7498V34.1495H41.4998V32.6495ZM29.321 25.0391C30.0825 24.2776 31.3172 24.2776 32.0787 25.0391L33.1394 23.9785C31.7921 22.6312 29.6077 22.6312 28.2604 23.9785L29.321 25.0391ZM20.1604 29.3207C21.5077 30.668 23.6921 30.668 25.0394 29.3207L23.9788 28.26C23.2173 29.0216 21.9826 29.0216 21.2211 28.26L20.1604 29.3207Z"
-                          fill="CurrentColor"
-                        />
-                        <circle
-                          cx="46.9007"
-                          cy="9.09994"
-                          r="8.09994"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                        />
-                        <path
-                          d="M54.9996 23.9498V27.9998C54.9996 40.7276 54.9996 47.0915 51.0456 51.0456C47.0915 54.9996 40.7276 54.9996 27.9998 54.9996C15.272 54.9996 8.90806 54.9996 4.95403 51.0456C1 47.0915 1 40.7276 1 27.9998C1 24.9533 1 22.2714 1.05422 19.8999M32.0498 1H27.9998C15.272 1 8.90806 1 4.95403 4.95403C3.76357 6.14449 2.93152 7.5534 2.34999 9.28867"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <div class="tp-service-sm-content">
-                      <span>AI Billing Intelligence</span>
-                      <h3 class="tp-service-sm-title">
-                        <a href="about-sheria.html"
-                          >Smart time capture &amp; AI-optimized billing
-                          workflows.</a
-                        >
-                      </h3>
-                      <div class="tp-service-sm-link">
-                        <a href="about-sheria.html"
-                          >Learn More <i class="far fa-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp sr-reveal sr-delay-1"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".7s"
-                >
-                  <div class="tp-service-sm-item">
-                    <div class="tp-service-sm-icon">
-                      <svg
-                        width="52"
-                        height="48"
-                        viewBox="0 0 52 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M51 6.62001C51 4.63217 49.0236 2.80248 45.7074 1.34903C42.7708 0.0619693 39.75 2.51698 39.75 5.72523V13.7748M51 6.62001C51 9.61027 46.5278 12.2426 39.75 13.7748M51 6.62001V14.4762M1 6.62001C1 4.63217 2.97638 2.80248 6.29262 1.34903C9.22923 0.0619696 12.25 2.51698 12.25 5.72523V13.7748M1 6.62001V38.4345C1 43.1651 12.1929 47 26 47C39.8071 47 51 43.1651 51 38.4345V24.4835M1 6.62001C1 9.61027 5.47222 12.2426 12.25 13.7748M12.25 13.7748C16.1947 14.6665 20.9205 15.1856 26 15.1856C31.0795 15.1856 35.8053 14.6665 39.75 13.7748"
-                          stroke="currentcolor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M44.7539 24.4847C44.7539 26.5573 43.075 28.2374 41.0039 28.2374C38.9328 28.2374 37.2539 26.5573 37.2539 24.4847C37.2539 22.4121 38.9328 20.7319 41.0039 20.7319C43.075 20.7319 44.7539 22.4121 44.7539 24.4847Z"
-                          stroke="currentcolor"
-                          stroke-width="1.5"
-                        />
-                        <path
-                          d="M48.4961 41.9963L42.257 36.621C40.245 34.8875 37.2487 34.7149 35.034 36.2048L34.4569 36.5931C32.9179 37.6285 30.8241 37.4549 29.4939 36.1816L21.1912 28.2335C19.5341 26.6471 16.8758 26.5624 15.1121 28.0397L11.7219 30.8794L2.24609 39.7535"
-                          stroke="currentcolor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <div class="tp-service-sm-content">
-                      <span>Smart Document AI</span>
-                      <h3 class="tp-service-sm-title">
-                        <a href="about-sheria.html"
-                          >AI document generation &amp; intelligent clause
-                          library.</a
-                        >
-                      </h3>
-                      <div class="tp-service-sm-link">
-                        <a href="about-sheria.html"
-                          >Learn More <i class="far fa-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp sr-reveal sr-delay-2"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".9s"
-                >
-                  <div class="tp-service-sm-item">
-                    <div class="tp-service-sm-icon">
-                      <svg
-                        width="56"
-                        height="56"
-                        viewBox="0 0 56 56"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M11.125 53.8111L11.6018 53.2322H11.6018L11.125 53.8111ZM9.67571 52.6175L10.1525 52.0386H10.1525L9.67571 52.6175ZM46.3243 52.6175L45.8475 52.0386L46.3243 52.6175ZM44.875 53.8111L44.3982 53.2322L44.875 53.8111ZM50.1757 52.6175L49.6989 53.1965L49.6989 53.1965L50.1757 52.6175ZM5.82429 52.6175L5.3475 52.0386L5.82429 52.6175ZM48.8818 1.43904L48.6577 2.15476L48.8818 1.43904ZM54.5261 6.66855L55.2307 6.41151V6.41151L54.5261 6.66855ZM7.11817 1.43904L7.3423 2.15476L7.11817 1.43904ZM1.47386 6.66855L2.17844 6.92558L1.47386 6.66855ZM54.25 14.5C54.25 14.9142 54.5858 15.25 55 15.25C55.4142 15.25 55.75 14.9142 55.75 14.5H54.25ZM55.75 25.3C55.75 24.8858 55.4142 24.55 55 24.55C54.5858 24.55 54.25 24.8858 54.25 25.3H55.75ZM1.75 46.9C1.75 46.4858 1.41421 46.15 1 46.15C0.585786 46.15 0.25 46.4858 0.25 46.9H1.75ZM0.25 36.1C0.25 36.5142 0.585786 36.85 1 36.85C1.41421 36.85 1.75 36.5142 1.75 36.1H0.25ZM13.7351 1.75H42.2649V0.25H13.7351V1.75ZM11.6018 53.2322L10.1525 52.0386L9.19892 53.1965L10.6482 54.3901L11.6018 53.2322ZM45.8475 52.0386L44.3982 53.2322L45.3518 54.3901L46.8011 53.1965L45.8475 52.0386ZM50.6525 52.0386C49.2773 50.9061 47.2227 50.9061 45.8475 52.0386L46.8011 53.1965C47.6224 52.5201 48.8776 52.5201 49.6989 53.1965L50.6525 52.0386ZM38.6018 53.2322C36.4001 51.4189 33.0999 51.4189 30.8982 53.2322L31.8518 54.3901C33.4996 53.033 36.0004 53.033 37.6482 54.3901L38.6018 53.2322ZM25.1018 53.2322C22.9001 51.4189 19.5999 51.4189 17.3982 53.2322L18.3518 54.3901C19.9996 53.033 22.5004 53.033 24.1482 54.3901L25.1018 53.2322ZM10.1525 52.0386C8.77733 50.9061 6.72267 50.9061 5.3475 52.0386L6.30108 53.1965C7.12237 52.5201 8.37763 52.5201 9.19892 53.1965L10.1525 52.0386ZM10.6482 54.3901C12.8499 56.2033 16.1501 56.2033 18.3518 54.3901L17.3982 53.2322C15.7504 54.5893 13.2496 54.5893 11.6018 53.2322L10.6482 54.3901ZM37.6482 54.3901C39.8499 56.2033 43.1501 56.2033 45.3518 54.3901L44.3982 53.2322C42.7504 54.5893 40.2496 54.5893 38.6018 53.2322L37.6482 54.3901ZM24.1482 54.3901C26.3499 56.2033 29.6501 56.2033 31.8518 54.3901L30.8982 53.2322C29.2504 54.5893 26.7496 54.5893 25.1018 53.2322L24.1482 54.3901ZM0.25 50.6103C0.25 52.1242 1.22269 53.2532 2.42305 53.7527C3.62151 54.2513 5.12794 54.1626 6.30108 53.1965L5.3475 52.0386C4.65134 52.6119 3.74563 52.6783 2.99926 52.3677C2.25481 52.058 1.75 51.4137 1.75 50.6103H0.25ZM54.25 50.6103C54.25 51.4137 53.7452 52.058 53.0007 52.3677C52.2544 52.6783 51.3487 52.6119 50.6525 52.0386L49.6989 53.1965C50.8721 54.1626 52.3785 54.2513 53.5769 53.7527C54.7773 53.2532 55.75 52.1242 55.75 50.6103H54.25ZM42.2649 1.75C45.7983 1.75 47.3929 1.75867 48.6577 2.15476L49.106 0.723313C47.5669 0.241331 45.6848 0.25 42.2649 0.25V1.75ZM55.75 12.7992C55.75 9.64279 55.7614 7.8662 55.2307 6.41151L53.8216 6.92558C54.2386 8.06875 54.25 9.51329 54.25 12.7992H55.75ZM48.6577 2.15476C51.1096 2.92259 53.0086 4.69724 53.8216 6.92558L55.2307 6.41151C54.2465 3.71358 51.9711 1.62057 49.106 0.723313L48.6577 2.15476ZM13.7351 0.25C10.3152 0.25 8.43312 0.241331 6.89403 0.723313L7.3423 2.15476C8.60713 1.75867 10.2017 1.75 13.7351 1.75V0.25ZM1.75 12.7992C1.75 9.51329 1.7614 8.06875 2.17844 6.92558L0.769283 6.41151C0.238596 7.8662 0.25 9.64279 0.25 12.7992H1.75ZM6.89403 0.723313C4.02888 1.62057 1.75351 3.71358 0.769283 6.41151L2.17844 6.92558C2.99136 4.69724 4.89044 2.92259 7.3423 2.15476L6.89403 0.723313ZM54.25 12.7992V14.5H55.75V12.7992H54.25ZM54.25 25.3V50.6103H55.75V25.3H54.25ZM1.75 50.6103V46.9H0.25V50.6103H1.75ZM1.75 36.1V12.7992H0.25V36.1H1.75Z"
-                          fill="CurrentColor"
-                        />
-                        <path
-                          d="M21.0604 25.7002C20.7846 25.3913 20.3104 25.3644 20.0015 25.6403C19.6925 25.9162 19.6657 26.3903 19.9415 26.6993L21.0604 25.7002ZM24.7867 30.9998L24.2272 31.4993C24.3695 31.6586 24.573 31.7498 24.7867 31.7498C25.0003 31.7498 25.2038 31.6586 25.3461 31.4993L24.7867 30.9998ZM36.0604 19.4993C36.3363 19.1903 36.3095 18.7162 36.0005 18.4403C35.6915 18.1644 35.2174 18.1913 34.9415 18.5002L36.0604 19.4993ZM19.9415 26.6993L24.2272 31.4993L25.3461 30.5002L21.0604 25.7002L19.9415 26.6993ZM25.3461 31.4993L36.0604 19.4993L34.9415 18.5002L24.2272 30.5002L25.3461 31.4993Z"
-                          fill="CurrentColor"
-                        />
-                        <path
-                          d="M14.5 41.5H19M41.5 41.5H28"
-                          stroke="CurrentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <div class="tp-service-sm-content">
-                      <span>Legal Analytics BI</span>
-                      <h3 class="tp-service-sm-title">
-                        <a href="about-sheria.html"
-                          >Data-driven insights &amp; predictive case
-                          analytics.</a
-                        >
-                      </h3>
-                      <div class="tp-service-sm-link">
-                        <a href="about-sheria.html"
-                          >Learn More <i class="far fa-arrow-right"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end services -->
-
-          <!-- ===== SOLUTIONS SECTION ===== -->
-          <div class="tp-solutions-area pt-120 pb-120">
+          <!-- ===== CORE FEATURES GRID (from About) ===== -->
+          <section id="features" class="sheria-core-features pt-100 pb-100">
             <div class="container">
               <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10">
-                  <div class="tp-section-title-box text-center mb-60 sr-reveal">
-                    <h3 class="tp-section-title-3">
-                      Built for <span>Every Legal Team</span>
-                    </h3>
-                    <p class="mt-15">
-                      Whether you are a law firm, in-house legal team, or
-                      corporate legal department, Sheria360 adapts to your
-                      workflow.
-                    </p>
-                  </div>
+                <div class="col-lg-8 text-center mb-60 sr-reveal">
+                  <h3 class="tp-section-title-3">
+                    Powerful Core Features for <span>All Legal Teams</span>
+                  </h3>
+                  <p class="mt-15">
+                    Everything you need to manage legal operations end-to-end,
+                    powered by AI and built for scale.
+                  </p>
                 </div>
               </div>
               <div class="row g-4">
-                <div class="col-xl-3 col-lg-3 col-md-6 sr-reveal">
-                  <div class="tp-solution-item text-center">
-                    <div class="tp-solution-icon">
-                      <i class="fas fa-building"></i>
+                <!-- 1. Legal Services Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h5>Law Firms</h5>
-                    <p class="mt-15">
-                      Streamline case management, billing, and client
-                      communications with AI-powered tools.
+                    <h4>Legal Services Management</h4>
+                    <p>
+                      A central hub for managing diverse legal processes
+                      including ADR, Civil Litigation, Criminal Cases, and
+                      Intellectual Property.
                     </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> ADR, litigation & IP
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Legislative drafting
+                        support
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Legal opinion & advisory
+                        management
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 sr-reveal sr-delay-1">
-                  <div class="tp-solution-item text-center">
-                    <div class="tp-solution-icon">
-                      <i class="fas fa-briefcase"></i>
+                <!-- 2. Case Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-folder-open"></i>
                     </div>
-                    <h5>In-House Legal</h5>
-                    <p class="mt-15">
-                      Manage contracts, compliance, and corporate governance
-                      with intelligent automation.
+                    <h4>Case Management</h4>
+                    <p>
+                      Seamless end-to-end case tracking with intake,
+                      investigations, court monitoring, and evidence management.
                     </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Case intake & investigation
+                        tracking
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Court & regulatory status
+                        monitoring
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Evidence & exhibits
+                        management
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 sr-reveal sr-delay-2">
-                  <div class="tp-solution-item text-center">
-                    <div class="tp-solution-icon">
-                      <i class="fas fa-university"></i>
+                <!-- 3. CLM -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-file-signature"></i>
                     </div>
-                    <h5>Financial Services</h5>
-                    <p class="mt-15">
-                      Enhanced compliance, regulatory reporting, and contract
-                      management for banking &amp; finance.
+                    <h4>Contract Lifecycle Management</h4>
+                    <p>
+                      Streamlines the entire contracting process from initiation
+                      through e-signing, milestone tracking, and renewals.
                     </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Multi-channel initiation &
+                        drafting
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Sequential & parallel
+                        approvals
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> E-signing (DocuSign &
+                        emSigner)
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 sr-reveal sr-delay-3">
-                  <div class="tp-solution-item text-center">
-                    <div class="tp-solution-icon">
-                      <i class="fas fa-users"></i>
-                    </div>
-                    <h5>HR &amp; Procurement</h5>
-                    <p class="mt-15">
-                      Automate employment contracts, vendor agreements, and
-                      compliance documentation.
+                <!-- 4. AI Summarization -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <h4>AI-Powered Summarization</h4>
+                    <p>
+                      Automatically generates executive summaries for legal
+                      matters and lengthy contracts, saving hours of manual
+                      review.
                     </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Executive summaries for
+                        matters
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Contract summarization
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Automated key point
+                        extraction
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 5. Smart Drafting -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-pen-ruler"></i>
+                    </div>
+                    <h4>Smart Drafting & Review</h4>
+                    <p>
+                      AI-powered redlining, contextual drafting assistance,
+                      missing clause detection, and risk identification.
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Redlining & contextual
+                        suggestions
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Missing clause & risk
+                        detection
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Key terms & obligations
+                        extraction
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 6. AI Research -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>AI Legal Research & Chat Agent</h4>
+                    <p>
+                      A conversational AI agent that assists with legal research
+                      using natural language and your document repository.
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Conversational AI assistant
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Natural language legal
+                        research
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Context-aware document
+                        queries
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 7. Billing -->
+                <div class="col-xl-4 col-lg-6 sr-reveal">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h4>Billing Management</h4>
+                    <p>
+                      Comprehensive billing dashboards for tracking expenses,
+                      bills, invoicing, fee notes, and external counsel
+                      finances.
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Expense & bill tracking
+                        dashboards
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Invoicing & fee note
+                        management
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> External counsel financial
+                        oversight
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 8. Document Management -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon">
+                      <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Embedded Document Management</h4>
+                    <p>
+                      Full-text search, embedded OCR for digitization, inline
+                      editing, and sync with Google Drive, SharePoint, and
+                      Dropbox.
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Full-text search & OCR
+                        digitization
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Inline document editing
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Cloud storage integrations
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 9. Collaboration -->
+                <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
+                  <div class="sheria-feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h4>Collaboration Portals</h4>
+                    <p>
+                      Dedicated Client and External Counsel portals for
+                      initiating legal requests, managing tickets, and sharing
+                      documents securely.
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i> Client portal for legal
+                        requests
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> External counsel
+                        collaboration
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i> Secure document sharing &
+                        ticketing
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- end solutions -->
+          </section>
+
+          <!-- ===== INDUSTRIES / TARGET AUDIENCE ===== -->
+          <section class="sheria-industries-area">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-60 sr-reveal">
+                  <h3 class="tp-section-title-3">
+                    Tailored Solution for <span>Every Legal Ecosystem</span>
+                  </h3>
+                  <p class="mt-15">
+                    From government institutions to private corporations,
+                    Sheria360 scales to meet your needs.
+                  </p>
+                </div>
+              </div>
+              <div class="row g-4 mb-60">
+                <div class="col-lg-4 col-md-6 sr-reveal">
+                  <div class="sheria-industry-card">
+                    <div class="industry-icon">
+                      <i class="fas fa-building"></i>
+                    </div>
+                    <h5>In-House Legal Departments</h5>
+                    <p>
+                      Streamline corporate governance, mitigate regulatory
+                      issues, and unify legal request tracking across internal
+                      functions.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 sr-reveal sr-delay-1">
+                  <div class="sheria-industry-card">
+                    <div class="industry-icon">
+                      <i class="fas fa-gavel"></i>
+                    </div>
+                    <h5>Law Firms &amp; Consultancies</h5>
+                    <p>
+                      Optimize active case indexing, client communication
+                      transparency, trust accounting oversight, and complex
+                      billable time documentation.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 sr-reveal sr-delay-2">
+                  <div class="sheria-industry-card">
+                    <div class="industry-icon">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h5>Procurement &amp; Supply Chain</h5>
+                    <p>
+                      Automate contract lifecycle generation milestones,
+                      standard vendor risk assessments, and execution compliance
+                      reviews.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-xl-10">
+                  <h5
+                    class="text-center mb-30 text-uppercase tracking-wider"
+                    style="font-size: 14px; font-weight: 700; color: #666"
+                  >
+                    Sectors We Proudly Support
+                  </h5>
+                  <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+                    <div class="col sr-reveal">
+                      <div class="sheria-sector-badge">
+                        <i class="fas fa-university me-2"></i> Government
+                      </div>
+                    </div>
+                    <div class="col sr-reveal sr-delay-1">
+                      <div class="sheria-sector-badge">
+                        <i class="fas fa-hands-helping me-2"></i> NGOs &amp;
+                        Non-Profits
+                      </div>
+                    </div>
+                    <div class="col sr-reveal sr-delay-2">
+                      <div class="sheria-sector-badge">
+                        <i class="fas fa-briefcase me-2"></i> Private Sector
+                      </div>
+                    </div>
+                    <div class="col sr-reveal sr-delay-3">
+                      <div class="sheria-sector-badge">
+                        <i class="fas fa-industry me-2"></i> Manufacturing
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <!-- ===== TESTIMONIAL SECTION ===== -->
-          <section class="tp-testimonial-area">
+          <!--<section class="tp-testimonial-area">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-7 text-center mb-60 sr-reveal">
@@ -2319,7 +2230,7 @@
                     What Our <span>Clients Say</span>
                   </h3>
                   <p style="color: #6c757d; font-size: 16px; line-height: 1.7">
-                    Trusted by Law Firms & Legal Teams Countrywide.
+                    Trusted by Law Firms &amp; Legal Teams Countrywide.
                   </p>
                 </div>
               </div>
@@ -2364,7 +2275,7 @@
                       <div>
                         <h6 class="sheria-testimonial-name">Sarah Okonjo</h6>
                         <span class="sheria-testimonial-role"
-                          >Legal Oficer, KEBS</span
+                          >Legal Officer, KEBS</span
                         >
                       </div>
                     </div>
@@ -2395,9 +2306,35 @@
                   </div>
                 </div>
               </div>
+            </div> 
+          </section> -->
+          <!-- end testimonial -->
+
+          <!-- ===== CTA SECTION ===== -->
+          <section class="sheria-cta-area">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-7 mb-4 mb-xl-0 sr-reveal">
+                  <h3>Ready to Modernize Your Legal Architecture?</h3>
+                  <p>
+                    Get in touch with the Sheria360 team today for a custom demo
+                    and see how AI can transform your legal operations.
+                  </p>
+                </div>
+                <div class="col-xl-5 text-xl-end sr-reveal sr-delay-1">
+                  <a href="contact.html" class="btn-white mb-2 mb-md-0 me-md-3"
+                    ><span>Request Demo</span><i class="far fa-arrow-right"></i
+                  ></a>
+                  <a
+                    href="https://demo.sheria360.com/modules/central/start-trial"
+                    target="_blank"
+                    class="btn-outline-white"
+                    ><span>Start Free Trial</span></a
+                  >
+                </div>
+              </div>
             </div>
           </section>
-          <!-- end testimonial -->
 
           <!-- ===== FAQ SECTION ===== -->
           <section class="sheria-faq-area">
@@ -2499,8 +2436,8 @@
           <!-- end faq -->
         </main>
 
+        <!-- Footer -->
         <footer>
-          <!-- tp-footer-area-start -->
           <div class="tp-footer__pl-pr">
             <div class="tp-footer__area tp-footer__tp-border-bottom">
               <div class="container">
@@ -2514,12 +2451,11 @@
                       class="tp-footer__widget footer-widget-3 footer-col-3-1"
                     >
                       <div class="tp-footer__logo mb-25">
-                        <a href="index.html">
-                          <img
+                        <a href="index.html"
+                          ><img
                             src="assets/img/logo/logo-black.png"
                             alt="Sheria360"
-                          />
-                        </a>
+                        /></a>
                       </div>
                       <div class="tp-footer__contact-info">
                         <p>
@@ -2544,7 +2480,7 @@
                                   fill="#01103D"
                                 />
                                 <path
-                                  d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
+                                  d="M10.8646 0.739036C10.9423 0.25925 11.3959 -0.0662177 11.8757 0.0114575C11.9054 0.0171423 12.0009 0.0350017 12.051 0.046152C12.1511 0.0684501 12.2908 0.102781 12.4649 0.153502C12.8132 0.254933 13.2996 0.422028 13.8835 0.689721C15.0526 1.22567 16.6083 2.16321 18.2226 3.77756C19.8369 5.3919 20.7745 6.9476 21.3104 8.11662C21.5781 8.70051 21.7452 9.187 21.8467 9.53524C21.8974 9.70938 21.9317 9.84904 21.954 9.94917C21.9652 9.99923 21.9733 10.0394 21.979 10.0691L21.9857 10.1057C22.0634 10.5855 21.7409 11.0578 21.2611 11.1355C20.7827 11.213 20.332 10.8891 20.2524 10.4115C20.25 10.3987 20.2432 10.3643 20.236 10.3318C20.2215 10.2668 20.1965 10.1637 20.1568 10.0274C20.0774 9.75482 19.9395 9.34961 19.7105 8.85013C19.2531 7.85239 18.4305 6.47462 16.978 5.02212C15.5255 3.56963 14.1478 2.74709 13.15 2.28967C12.6505 2.06068 12.2453 1.92277 11.9727 1.84336C11.8364 1.80366 11.6651 1.76434 11.6001 1.74987C11.1226 1.67029 10.7872 1.21745 10.8646 0.739036Z"
                                   fill="#01103D"
                                 />
                                 <path
@@ -2555,9 +2491,9 @@
                                 />
                               </svg>
                             </span>
-                            <a class="first-child" href="tel:+254721779429">
-                              +254-721-779-429
-                            </a>
+                            <a class="first-child" href="tel:+254721779429"
+                              >+254-721-779-429</a
+                            >
                           </li>
                           <li>
                             <span>
@@ -2583,9 +2519,9 @@
                                 />
                               </svg>
                             </span>
-                            <a href="mailto:contact@info.com">
-                              info@sheria360.com
-                            </a>
+                            <a href="mailto:info@sheria360.com"
+                              >info@sheria360.com</a
+                            >
                           </li>
                         </ul>
                       </div>
@@ -2603,13 +2539,9 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="index.html">Home</a></li>
-                          <li><a href="about-sheria.html">About</a></li>
-                          <li>
-                            <a href="price.html">Pricing</a>
-                          </li>
-                          <li>
-                            <a href="solutions.html">Solutions</a>
-                          </li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="price.html">Pricing</a></li>
+                          <li><a href="solutions.html">Solutions</a></li>
                           <li><a href="contact.html">Contact</a></li>
                         </ul>
                       </div>
@@ -2628,7 +2560,6 @@
                         <ul>
                           <li><a href="faq.html">FAQs</a></li>
                           <li><a href="blog.html">Blogs</a></li>
-                          <!-- <li><a href="marketplace.html">Market Place</a></li> -->
                           <li>
                             <a href="https://docs.sheria360.com/"
                               >Documentation</a
@@ -2640,9 +2571,7 @@
                             >
                           </li>
                           <li><a href="terms.html">Privacy Policy</a></li>
-                          <li>
-                            <a href="terms.html">Terms of Service</a>
-                          </li>
+                          <li><a href="terms.html">Terms of Service</a></li>
                         </ul>
                       </div>
                     </div>
@@ -2659,8 +2588,8 @@
                       <div class="tp-footer__input mb-35 p-relative">
                         <form action="#">
                           <input
-                            type="text"
-                            placeholder="Business email adress"
+                            type="email"
+                            placeholder="Business email address"
                           />
                           <span>
                             <svg
@@ -2676,7 +2605,6 @@
                                 stroke-width="1.5"
                                 stroke-miterlimit="10"
                                 stroke-linecap="round"
-                                stroke-linejoin="round"
                               />
                               <path
                                 opacity="0.4"
@@ -2685,7 +2613,6 @@
                                 stroke-width="1.5"
                                 stroke-miterlimit="10"
                                 stroke-linecap="round"
-                                stroke-linejoin="round"
                               />
                             </svg>
                           </span>
@@ -2702,14 +2629,12 @@
                                 stroke="currentColor"
                                 stroke-width="2"
                                 stroke-linecap="round"
-                                stroke-linejoin="round"
                               />
                               <path
                                 d="M7.00098 1L13.001 7L7.00098 13"
                                 stroke="currentColor"
                                 stroke-width="2"
                                 stroke-linecap="round"
-                                stroke-linejoin="round"
                               />
                             </svg>
                           </button>
@@ -2723,8 +2648,12 @@
                         <a href="https://x.com/sheria360"
                           ><i class="fab fa-twitter"></i
                         ></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="https://instagram.com/sheria360"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="https://linkedin.com/company/sheria360"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
                       </div>
                     </div>
                   </div>
@@ -2738,18 +2667,16 @@
                     <div
                       class="tp-copyright__text tp-copyright__text-3 text-center"
                     >
-                      <span>
-                        Copyright &copy; 2026 Sheria360. All Rights Reserved.
-                        <!--<a href="#">Privacy Policy</a> |
-                <a href="#">Terms of Services</a></span-->
-                      </span>
+                      <span
+                        >Copyright &copy; 2026 Sheria360. All Rights
+                        Reserved.</span
+                      >
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- tp-footer-area-end -->
         </footer>
       </div>
     </div>
@@ -2897,7 +2824,6 @@
         const closeBtn = document.getElementById("closeModalBtn");
         const tryBtn = document.getElementById("tryFreeBtn");
         const tryBtnHero = document.getElementById("tryFreeBtnHero");
-        const announcementTry = document.getElementById("announcementTry");
         const progressDots = document.querySelectorAll("#modalProgress span");
         const steps = {
           step0: document.getElementById("step0"),
@@ -2963,17 +2889,11 @@
             e.preventDefault();
             openModal();
           });
-        if (announcementTry)
-          announcementTry.addEventListener("click", function (e) {
-            e.preventDefault();
-            openModal();
-          });
         closeBtn.addEventListener("click", closeModal);
         overlay.addEventListener("click", function (e) {
           if (e.target === overlay) closeModal();
         });
 
-        // Keyboard support
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape" && overlay.classList.contains("active"))
             closeModal();
@@ -3069,6 +2989,46 @@
           }, 1500);
         }
       })();
+    </script>
+    <script type="text/javascript">
+      !(function (w, h, a, t, s, p) {
+        w.whatsapp ||
+          ((s = h.createElement(a)),
+          (s.src = t),
+          (p = h.getElementsByTagName(a)[0]),
+          p.parentNode.insertBefore(s, p));
+      })(
+        window,
+        document,
+        "script",
+        "https://cdn.jsdelivr.net/gh/miguelcolmenares/whatsapp-widget/dist/js/whatsapp-widget.js",
+      );
+
+      window.addEventListener("load", function () {
+        new whatsapp({
+          title: "WhatsApp",
+          description: "Chat with us on WhatsApp",
+          agents: [
+            {
+              name: "Sheria360",
+              phone: "+254776669581",
+              hours: "9am - 6pm",
+              cta: "Start chat",
+              message:
+                "Hello there, Welcome to Sheria360. How can we help you today?",
+              schedule: [
+                ["08:00", "18:00"],
+                ["08:00", "18:00"],
+                ["08:01", "18:00"],
+                ["08:01", "18:00"],
+                ["08:00", "18:00"],
+                ["08:00", "22:00"],
+                ["09:00", "18:00"],
+              ],
+            },
+          ],
+        });
+      });
     </script>
   </body>
 </html>
