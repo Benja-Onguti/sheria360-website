@@ -706,7 +706,9 @@
         animation: spin 0.8s linear infinite;
       }
       @keyframes spin {
-        to { transform: rotate(360deg); }
+        to {
+          transform: rotate(360deg);
+        }
       }
       .pricing-error {
         text-align: center;
@@ -991,7 +993,6 @@
             <a href="https://facebook.com/sheria360"
               ><i class="fab fa-facebook-square"></i
             ></a>
-            
           </div>
         </div>
       </div>
@@ -1013,7 +1014,7 @@
           <div class="toggle-wrap">
             <span class="label active" id="labelMonthly">Monthly</span>
             <div
-              class="toggle active"
+              class="toggle"
               id="billingToggle"
               role="button"
               tabindex="0"
@@ -1022,7 +1023,8 @@
               <div class="thumb"></div>
             </div>
             <span class="label" id="labelYearly"
-              >Yearly <span class="save-badge" id="saveBadge">Save 20%</span></span
+              >Yearly
+              <span class="save-badge" id="saveBadge">Save 20%</span></span
             >
           </div>
 
@@ -1267,36 +1269,41 @@
     <!-- ===== PRICING INTERACTIVITY ===== -->
     <script>
       (function () {
-        const API_URL = 'https://demo.sheria360.com/modules/central/api/publicSubscriptionCatalog';
+        const API_URL =
+          "https://demo.sheria360.com/modules/central/api/publicSubscriptionCatalog";
         let catalogData = null;
-        let isYearly = true; // Default to yearly (toggle starts active)
+        let isYearly = false; // Default to monthly
 
         // ── Fetch Catalog ──
         async function loadCatalog() {
-          const container = document.getElementById('pricingCards');
+          const container = document.getElementById("pricingCards");
           try {
             const res = await fetch(API_URL);
             const json = await res.json();
-            if (!json.success || !json.success.data) throw new Error('Invalid API response');
+            if (!json.success || !json.success.data)
+              throw new Error("Invalid API response");
             catalogData = json.success.data;
             renderCards(catalogData);
             updateSaveBadge(catalogData.annual_discount_percent);
           } catch (err) {
-            console.error('Pricing catalog load failed:', err);
-            container.className = 'pricing-grid';
-            container.innerHTML = '<div class="pricing-error">Unable to load pricing. Please refresh or <a href="contact.html">contact us</a>.</div>';
+            console.error("Pricing catalog load failed:", err);
+            container.className = "pricing-grid";
+            container.innerHTML =
+              '<div class="pricing-error">Unable to load pricing. Please refresh or <a href="contact.html">contact us</a>.</div>';
           }
         }
 
         // ── Render Cards ──
         function renderCards(data) {
-          const container = document.getElementById('pricingCards');
-          const currency = data.currency || 'KES';
+          const container = document.getElementById("pricingCards");
+          const currency = data.currency || "KES";
           const trial = data.trial || { days: 14, users_count: 5 };
           const discount = data.annual_discount_percent || 0;
-          const packages = (data.packages || []).filter(p => p.price_per_user > 1); // Skip placeholder packages
+          const packages = (data.packages || [])
+            .filter((p) => p.price_per_user > 1) // Skip placeholder packages
+            .filter((p) => p.code !== "standard"); // Skip the legacy Standard plan
 
-          let html = '';
+          let html = "";
 
           // 1. Free Trial Card
           html += `
@@ -1320,47 +1327,57 @@
           `;
 
           // 2. Package Cards
-          packages.forEach(pkg => {
-            const isEnterprise = pkg.code === 'enterprise';
-            const isPopular = pkg.code === 'professional';
+          packages.forEach((pkg) => {
+            const isEnterprise = pkg.code === "enterprise";
+            const isPopular = pkg.code === "professional";
             const monthlyPrice = pkg.price_per_user;
             const yearlyPrice = Math.round(monthlyPrice * (1 - discount / 100));
             const displayPrice = isYearly ? yearlyPrice : monthlyPrice;
 
             // Card styling class
-            let cardClass = 'card';
-            if (isPopular) cardClass += ' standard';
-            else if (isEnterprise) cardClass += ' custom';
-            else cardClass += ' professional';
+            let cardClass = "card";
+            if (isPopular) cardClass += " standard";
+            else if (isEnterprise) cardClass += " custom";
+            else cardClass += " professional";
 
             // Badge
-            const badge = isPopular ? '<div class="badge">Most popular</div>' : '';
+            const badge = isPopular
+              ? '<div class="badge">Most popular</div>'
+              : "";
 
             // CTA
-            const btnText = isEnterprise ? 'Contact sales' : 'Subscribe';
+            const btnText = isEnterprise ? "Contact sales" : "Subscribe";
             const btnHref = isEnterprise
-              ? 'contact.html'
+              ? "contact.html"
               : `https://demo.sheria360.com/modules/central/subscribe?plan_id=${pkg.id}`;
 
             // Features list
             const feats = pkg.features_preview || pkg.features || [];
-            const featuresHtml = feats.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('');
+            const featuresHtml = feats
+              .map((f) => `<li><i class="fas fa-check"></i> ${f}</li>`)
+              .join("");
 
             // Min users note
             const minUsersNote = pkg.min_users
               ? `<li><i class="fas fa-info-circle" style="color:var(--p-gray);"></i> <span class="muted">Min ${pkg.min_users} users</span></li>`
-              : '';
+              : "";
+
+            // Enterprise has custom pricing — no price tag, just a "Custom" label
+            const priceHtml = isEnterprise
+              ? `<div class="price-tag" style="font-size:1.4rem; color:var(--p-slate-light);">Custom</div>
+                 <div class="billing-note">Custom billing</div>`
+              : `<div class="price-tag" data-monthly="${monthlyPrice}" data-yearly="${yearlyPrice}">
+                  <span class="currency">${currency}</span> ${displayPrice.toLocaleString("en-KE")}
+                  <span class="per-unit">/user /mo</span>
+                </div>
+                <div class="billing-note">${isYearly ? "Billed annually" : "Billed monthly"}</div>`;
 
             html += `
               <div class="${cardClass}" data-code="${pkg.code}">
                 ${badge}
-                <div class="plan-name" style="${isPopular ? 'margin-top:22px;' : ''}">${pkg.name}</div>
-                <div class="price-tag" data-monthly="${monthlyPrice}" data-yearly="${yearlyPrice}">
-                  <span class="currency">${currency}</span> ${displayPrice.toLocaleString('en-KE')}
-                  <span class="per-unit">/user /mo</span>
-                </div>
-                <div class="billing-note">${isYearly ? 'Billed annually' : 'Billed monthly'}</div>
-                <div class="desc">${pkg.tagline || pkg.description || ''}</div>
+                <div class="plan-name" style="${isPopular ? "margin-top:22px;" : ""}">${pkg.name}</div>
+                ${priceHtml}
+                <div class="desc">${pkg.tagline || pkg.description || ""}</div>
                 <a href="${btnHref}" class="btn-plan">${btnText}</a>
                 <ul class="features">
                   ${featuresHtml}
@@ -1370,54 +1387,61 @@
             `;
           });
 
-          container.className = 'pricing-grid';
+          container.className = "pricing-grid";
           container.innerHTML = html;
         }
 
         // ── Update Save Badge ──
         function updateSaveBadge(percent) {
-          const badge = document.getElementById('saveBadge');
+          const badge = document.getElementById("saveBadge");
           if (badge && percent) badge.textContent = `Save ${percent}%`;
         }
 
         // ── Billing Toggle ──
-        const toggle = document.getElementById('billingToggle');
-        const labelMonthly = document.getElementById('labelMonthly');
-        const labelYearly = document.getElementById('labelYearly');
+        const toggle = document.getElementById("billingToggle");
+        const labelMonthly = document.getElementById("labelMonthly");
+        const labelYearly = document.getElementById("labelYearly");
 
         function setBilling(year) {
           isYearly = year;
-          toggle.classList.toggle('active', isYearly);
-          labelMonthly.classList.toggle('active', !isYearly);
-          labelYearly.classList.toggle('active', isYearly);
+          toggle.classList.toggle("active", isYearly);
+          labelMonthly.classList.toggle("active", !isYearly);
+          labelYearly.classList.toggle("active", isYearly);
 
           // Update all dynamic price tags
-          document.querySelectorAll('.card .price-tag[data-monthly]').forEach(el => {
-            const monthly = parseInt(el.dataset.monthly, 10);
-            const yearly = parseInt(el.dataset.yearly, 10);
-            const price = isYearly ? yearly : monthly;
-            const currency = el.querySelector('.currency')?.textContent || 'KES';
-            el.innerHTML = `
-              <span class="currency">${currency}</span> ${price.toLocaleString('en-KE')}
+          document
+            .querySelectorAll(".card .price-tag[data-monthly]")
+            .forEach((el) => {
+              const monthly = parseInt(el.dataset.monthly, 10);
+              const yearly = parseInt(el.dataset.yearly, 10);
+              const price = isYearly ? yearly : monthly;
+              const currency =
+                el.querySelector(".currency")?.textContent || "KES";
+              el.innerHTML = `
+              <span class="currency">${currency}</span> ${price.toLocaleString("en-KE")}
               <span class="per-unit">/user /mo</span>
             `;
-          });
+            });
 
           // Update billing notes
-          document.querySelectorAll('.card .billing-note').forEach(el => {
-            const card = el.closest('.card');
-            if (card && !card.classList.contains('free-trial')) {
-              el.textContent = isYearly ? 'Billed annually' : 'Billed monthly';
+          document.querySelectorAll(".card .billing-note").forEach((el) => {
+            const card = el.closest(".card");
+            if (
+              card &&
+              !card.classList.contains("free-trial") &&
+              card.dataset.code !== "enterprise"
+            ) {
+              el.textContent = isYearly ? "Billed annually" : "Billed monthly";
             }
           });
         }
 
         if (toggle) {
-          toggle.addEventListener('click', function () {
-            setBilling(!this.classList.contains('active'));
+          toggle.addEventListener("click", function () {
+            setBilling(!this.classList.contains("active"));
           });
-          toggle.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
+          toggle.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
               this.click();
             }
@@ -1426,26 +1450,28 @@
 
         // ── FAQ Accordion ──
         window.toggleFaq = function (el) {
-          const item = el.closest('.faq-item');
-          const answer = item.querySelector('.a');
-          document.querySelectorAll('.faq-item .a.open').forEach((a) => {
+          const item = el.closest(".faq-item");
+          const answer = item.querySelector(".a");
+          document.querySelectorAll(".faq-item .a.open").forEach((a) => {
             if (a !== answer) {
-              a.classList.remove('open');
-              a.closest('.faq-item').querySelector('.q').classList.remove('open');
+              a.classList.remove("open");
+              a.closest(".faq-item")
+                .querySelector(".q")
+                .classList.remove("open");
             }
           });
-          answer.classList.toggle('open');
-          el.classList.toggle('open');
+          answer.classList.toggle("open");
+          el.classList.toggle("open");
         };
 
         // Open first FAQ by default
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener("DOMContentLoaded", function () {
           loadCatalog();
-          const firstQ = document.querySelector('.faq-item .q');
+          const firstQ = document.querySelector(".faq-item .q");
           if (firstQ) {
-            const answer = firstQ.closest('.faq-item').querySelector('.a');
-            answer.classList.add('open');
-            firstQ.classList.add('open');
+            const answer = firstQ.closest(".faq-item").querySelector(".a");
+            answer.classList.add("open");
+            firstQ.classList.add("open");
           }
         });
       })();
