@@ -991,7 +991,7 @@
             <a href="https://facebook.com/sheria360"
               ><i class="fab fa-facebook-square"></i
             ></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
+            
           </div>
         </div>
       </div>
@@ -1338,7 +1338,9 @@
 
             // CTA
             const btnText = isEnterprise ? 'Contact sales' : 'Subscribe';
-            const btnHref = isEnterprise ? 'contact.html' : '#';
+            const btnHref = isEnterprise
+              ? 'contact.html'
+              : `https://demo.sheria360.com/modules/central/subscribe?plan_id=${pkg.id}`;
 
             // Features list
             const feats = pkg.features_preview || pkg.features || [];
