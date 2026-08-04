@@ -81,6 +81,32 @@
           display: none !important;
         }
       }
+
+      /* Enhanced select styling */
+      .postbox__select select {
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 15px;
+        background: #fff;
+        color: #1e293b;
+        transition: all 0.3s ease;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 44px;
+      }
+      .postbox__select select:focus {
+        outline: none;
+        border-color: #5b6dff;
+        box-shadow: 0 0 0 3px rgba(91, 109, 255, 0.15);
+      }
+      .postbox__select select option {
+        padding: 8px;
+      }
     </style>
     <link
       rel="shortcut icon"
@@ -241,7 +267,7 @@
                 class="header-bottom__right d-flex align-items-center justify-content-end"
               >
                 <div class="header__action-btn d-flex align-items-center">
-                  <a
+                  <!-- <a
                     class="tp-btn-border tp-btn-hover me-10 d-none d-md-inline-block"
                     href="https://demo.sheria360.com/users/login/"
                     target="_blank"
@@ -256,6 +282,12 @@
                   >
                     <span>Try It Free</span>
                     <b></b>
+                  </a> -->
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="contact.html"
+                  >
+                    <span>Contact Us</span><b></b>
                   </a>
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
@@ -339,7 +371,7 @@
                                 id="image0_2106_35"
                                 width="83"
                                 height="66"
-                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABCCAYAAAArOOo+AAADcklEQVR4nO2bP0wTURzHP5RqQhyMtyJNTCcTnKCLnVhs4sRmHRk10U0WFhcXiQskuDPhxirRQZMagn8WB1gatTqQiMV/qRBM6nB99oDe9Y7+3mvf8T5j03u/yyfv97vvK8dQs9ls4hAh0+8bSBNOpiBOpiBOpiBOpiBOpiBOpiBOpiCnWma1AmvzUK/JrJeVWcYeqhWovoKnDw9/fu1e72ufCplhAhUXLsrUSa3MbgKD5IsyNVMlM4nAIF5Opr71Mk8qUFEoy92LlTJ7FRgkf7X3NRRDtvyeKSkwyKOvcmsN9M6UEuiNQf3z8c8lWxwGUKbkDvTGoHAzfC3JFocBkamjhfNFKC/Ag4no70jSN5m6ZiBAadY/0SxNR39PKhIpjMrUKRD8ti4v+jtubd6vF4b0vAQDMnULVOSLcHu1XbNbPel5CZqiUb0Gb57oF6hQba1qR81JhWQkUmjZmY+nO0cRaYJtrVi52/06HS0OmmTeWm239+sVHRUOt7Wi25z8f62GFgcDJ6B6TV5ssK0V1Ur3p7di7q38kxwMHyd7FduprdW6ceakQse8BBg6OPjbzGaH9aweQVKxndpasTQdr73Bn5flxfj3mYTMyxfv9KzcBS/nH/XKi37blRfCHwyl2XCRceekQte8BBg+N3Lp/tRUgTNn+3eyHDkPo1dg/LovdHTc/2zvB8wsh0uuVmDlTrJaM8u9328Y2efPNtjc/MDE5GV9VRLg5dq7Nop6Lf4DR6ErEiky29vfWF9/r7eKBuLkyaPobHFo/d18a+sjjcae3kqCJJ2TCulfiY6SAah92rZGZpxzdxg6smWQDMDOznd2d3/qrSRE0jmp0D0voSXzT2OP/f0D/dUEKM2e7Drd8xJaMqvVL/z+1dBfTYDJGye7rls6kMC6F7e8XPKWNdHiYKFMSP6SlYkWB0tlerlkMUd3JFJYKROglGB36o5ECmtl5ovxdpypeQkWywQoxHiym5qXYLnMWDvTQCRSWC3Ty0WHeJMtDpbLhOgQb7LFIQUyo0K8qUiksF4mhId4U5FIkQqZnUK86XkJKZEJx0O86XkJKZJ5NMSbjESK1MiEdojvR4tDymTmi61Xr/skcyBew5bCy8Fcf96pAFK2M/uNkymINf9UZQNuZwriZAriZAriZAriZAriZAriZAriZAryD4xxER8vOFEDAAAAAElFTkSuQmCC"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABCCAYAAAArOOo+AAADcklEQVR4nO2bP0wTURzHP5RqQhyMtyJNTCcTnKCLnVhs4sRmHRk10U0WFhcXiQskuDPhxirRQZMagn8WB1gatTqQiMV/qRBM6nB99oDe9Y7+3mvf8T5j03u/yyfv97vvK8dQs9ls4hAh0+8bSBNOpiBOpiBOpiBOpiBOpiBOpiBOpiCnWma1AmvzUK/JrJeVWcYeqhWovoKnDw9/fu1e72ufCplhAhUXLsrUSa3MbgKD5IsyNVMlM4nAIF5Opr71Mk8qUFEoy92LlTJ7FRgkf7X3NRRDtvyeKSkwyKOvcmsN9M6UEuiNQf3z8c8lWxwGUKbkDvTGoHAzfC3JFocBkamjhfNFKC/Ag4no70jSN5m6ZiBAadY/0SxNR39PKhIpjMrUKRD8ti4v+jtubd6vF4b0vAQDMnULVOSLcHu1XbNbPel5CZqiUb0Gb57oF6hQba1qR81JhWQkUmjZmY+nO0cRaYJtrVi52/06HS0OmmTeWm239+sVHRUOt7Wi25z8/306WhwMnIB6T15ssK0V1Ur3p7di7q38kxwMHyd7FduprdW6ceakQse8BBg6OPjbzGaH9aweQVKxndpasTQdr73Bn5flxfj3mYTMyxfv9KzcBS/nH/XKi37blRfCHwyl2XCRceekQte8BBg+N3Lp/tRUgTNn+3eyHDkPo1dg/LovdHTc/2zvB8wsh0uuVmDlTrJaM8u9328Y2efPNtjc/MDE5GV9VRLg5dq7Nop6Lf4DR6ErEimy29vfWF9/r7eKBuLkyaPobHFo/d18a+sjjcae3kqCJJ2TCulfiY6SAah92rZGZpxzdxg6smWQDMDOznd2d3/qrSRE0jmp0D0voSXzT2OP/f0D/dUEKM2e7Drd8xJaMqvVL/z+1dBfTYDJGye7rls6kMC6F7e8XPKWNdHiYKFMSP6SlYkWB0tlerlkMUd3JFJYKROglGB36o5ECmtl5ovxdpypeQkWywQoxHiym5qXYLnMWDvTQCRSWC3Ty0WHeJMtDpbLhOgQb7LFIQUyo0K8qUiksF4mhId4U5FIkQqZnUK86XkJKZEJx0O86XkJKZJ5NMSbjESK1MiEdojvR4tDymTmi61Xr/skcyBew5bCy8Fcf96pAFK2M/uNkymINf9UZQNuZwriZAriZAriZAriZAriZAriZAriZAryD4xxER8vOFEDAAAAAElFTkSuQmCC"
                               />
                             </defs>
                           </svg>
@@ -365,7 +397,6 @@
                         <a href="https://linkedin.com/company/sheria360"
                           ><i class="fab fa-linkedin-in"></i
                         ></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
                       </div>
                       <div class="contact-form-section-img">
                         <img
@@ -404,7 +435,7 @@
                                 class="inputText"
                                 required
                               />
-                              <span class="floating-label">Full Name</span>
+                              <span class="floating-label">Full Name *</span>
                             </div>
                           </div>
                           <div class="col-12">
@@ -415,7 +446,7 @@
                                 class="inputText"
                                 required
                               />
-                              <span class="floating-label">Your Email</span>
+                              <span class="floating-label">Your Email *</span>
                             </div>
                           </div>
                           <div class="col-12">
@@ -424,23 +455,61 @@
                                 type="tel"
                                 name="phone"
                                 class="inputText"
+                                required
                               />
-                              <span class="floating-label">Phone Number</span>
+                              <span class="floating-label">Phone Number *</span>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="text"
+                                name="organization"
+                                class="inputText"
+                                required
+                              />
+                              <span class="floating-label"
+                                >Organization Name *</span
+                              >
                             </div>
                           </div>
                           <div class="col-12">
                             <div class="postbox__select mb-20">
-                              <select name="inquiry_type">
-                                <option value="">Select</option>
-
+                              <select name="organization_size" required>
+                                <option value="">Organization Size *</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">
+                                  201-500 employees
+                                </option>
+                                <option value="501-1000">
+                                  501-1000 employees
+                                </option>
+                                <option value="1001-5000">
+                                  1001-5000 employees
+                                </option>
+                                <option value="5000+">5000+ employees</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__select mb-20">
+                              <select name="inquiry_type" required>
+                                <option value="">Inquiry Type *</option>
                                 <option value="Solo-Practice">
                                   Solo Practice
                                 </option>
-                                <option value="Law Firms">Law Firm</option>
+                                <option value="Law-Firm">Law Firm</option>
+                                <option value="In-House-Legal">
+                                  In-House Legal
+                                </option>
                                 <option value="Procurement">Procurement</option>
-                                <option value="General Inquiry">
+                                <option value="General-Inquiry">
                                   General Inquiry
                                 </option>
+                                <option value="Support">Support</option>
+                                <option value="Partnership">Partnership</option>
                               </select>
                             </div>
                           </div>
@@ -451,7 +520,7 @@
                                 class="textareaText"
                                 required
                               ></textarea>
-                              <span class="floating-label-2">Message...</span>
+                              <span class="floating-label-2">Message *</span>
                             </div>
                           </div>
                           <div class="col-xxl-12">

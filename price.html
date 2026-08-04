@@ -423,6 +423,12 @@
         font-weight: 600;
         color: var(--p-slate-light);
       }
+      .card .price-tag .price-from {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--p-slate-light);
+        margin-right: 2px;
+      }
       .card .price-tag .per-unit {
         font-size: 0.75rem;
         font-weight: 500;
@@ -946,7 +952,7 @@
                 <div
                   class="header__action-btn d-flex align-items-center gap-10"
                 >
-                  <a
+                  <!-- <a
                     class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
                     href="https://demo.sheria360.com/users/login/"
                     target="_blank"
@@ -959,6 +965,12 @@
                     target="_blank"
                   >
                     <span>Try It Free</span><b></b>
+                  </a> -->
+                  <a
+                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
+                    href="contact.html"
+                  >
+                    <span>Contact Us</span><b></b>
                   </a>
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
@@ -1270,7 +1282,7 @@
     <script>
       (function () {
         const API_URL =
-          "https://demo.sheria360.com/modules/central/api/publicSubscriptionCatalog";
+          "https://app.sheria360.com/modules/central/api/publicSubscriptionCatalog";
         let catalogData = null;
         let isYearly = false; // Default to monthly
 
@@ -1315,7 +1327,7 @@
               </div>
               <div class="billing-note" style="color:var(--p-primary); font-weight:500; font-size:0.7rem;">No credit card</div>
               <div class="desc">Experience Sheria360 with zero commitment.</div>
-              <a href="https://demo.sheria360.com/modules/central/start-trial" target="_blank" class="btn-plan">Start Free →</a>
+              <a href="contact.html" target="_blank" class="btn-plan">Contact Us</a>
               <ul class="features">
                 <li><i class="fas fa-check"></i> Full feature access</li>
                 <li><i class="fas fa-check"></i> ${trial.days} days · no risk</li>
@@ -1346,10 +1358,8 @@
               : "";
 
             // CTA
-            const btnText = isEnterprise ? "Contact sales" : "Subscribe";
-            const btnHref = isEnterprise
-              ? "contact.html"
-              : `https://demo.sheria360.com/modules/central/subscribe?plan_id=${pkg.id}`;
+            const btnText = isEnterprise ? "Contact Us" : "Contact Us";
+            const btnHref = isEnterprise ? "contact.html" : "contact.html";
 
             // Features list
             const feats = pkg.features_preview || pkg.features || [];
@@ -1367,6 +1377,7 @@
               ? `<div class="price-tag" style="font-size:1.4rem; color:var(--p-slate-light);">Custom</div>
                  <div class="billing-note">Custom billing</div>`
               : `<div class="price-tag" data-monthly="${monthlyPrice}" data-yearly="${yearlyPrice}">
+                  <span class="price-from">From</span>
                   <span class="currency">${currency}</span> ${displayPrice.toLocaleString("en-KE")}
                   <span class="per-unit">/user /mo</span>
                 </div>
@@ -1418,6 +1429,7 @@
               const currency =
                 el.querySelector(".currency")?.textContent || "KES";
               el.innerHTML = `
+              <span class="price-from">From</span>
               <span class="currency">${currency}</span> ${price.toLocaleString("en-KE")}
               <span class="per-unit">/user /mo</span>
             `;

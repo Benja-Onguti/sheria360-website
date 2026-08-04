@@ -579,7 +579,7 @@
                 class="header-bottom__right d-flex align-items-center justify-content-end"
               >
                 <div class="header__action-btn d-flex align-items-center">
-                  <a
+                  <!-- <a
                     class="tp-btn-border d-none d-md-inline-block gap-2"
                     href="https://demo.sheria360.com/users/login/"
                     ><span>Log In</span></a
@@ -590,6 +590,11 @@
                     href="javascript:void(0)"
                     id="tryFreeBtn"
                     ><span>Try It Free</span></a
+                  > -->
+                  <a
+                    class="tp-btn-blue-sm d-none d-md-inline-block"
+                    href="contact.html"
+                    ><span>Contact Us</span></a
                   >
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
@@ -2288,12 +2293,14 @@
       });
 
       // Try Free button
-      document.getElementById("tryFreeBtn").addEventListener("click", () => {
-        window.open(
-          "https://demo.sheria360.com/modules/central/start-trial",
-          "_blank",
-        );
-      });
+      const tryFreeBtn = document.getElementById("tryFreeBtn");
+      if (tryFreeBtn)
+        tryFreeBtn.addEventListener("click", () => {
+          window.open(
+            "https://demo.sheria360.com/modules/central/start-trial",
+            "_blank",
+          );
+        });
     </script>
   </body>
 </html>
