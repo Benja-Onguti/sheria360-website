@@ -320,7 +320,7 @@
         letter-spacing: -0.03em;
       }
       .tp-features-hero .tp-hero-title .highlight {
-        background:#5b6dff;
+        background: #5b6dff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -1157,7 +1157,7 @@
                     <h3 class="tp-section-title">
                       Comprehensive <span>Legal Operations</span>
                     </h3>
-                    
+
                     <p class="mt-20">
                       Sheria360 provides a unified platform for managing all
                       legal services with precision, speed, and AI-powered
@@ -1938,6 +1938,45 @@
           });
         });
       })();
+    </script>
+    <script type="text/javascript">
+      !(function (w, h, a, t, s, p) {
+        w.whatsapp ||
+          ((s = h.createElement(a)),
+          (s.src = t),
+          (p = h.getElementsByTagName(a)[0]),
+          p.parentNode.insertBefore(s, p));
+      })(
+        window,
+        document,
+        "script",
+        "https://cdn.jsdelivr.net/gh/miguelcolmenares/whatsapp-widget/dist/js/whatsapp-widget.js",
+      );
+
+      window.addEventListener("load", function () {
+        new whatsapp({
+          title: "WhatsApp",
+          description: "Chat with us on WhatsApp",
+          agents: [
+            {
+              name: "Sheria360",
+              phone: "+254715360360",
+              hours: "9am - 6pm",
+              cta: "Start chat",
+              message: "",
+              schedule: [
+                ["08:00", "18:00"],
+                ["08:00", "18:00"],
+                ["08:01", "18:00"],
+                ["08:01", "18:00"],
+                ["08:00", "18:00"],
+                ["08:00", "22:00"],
+                ["09:00", "18:00"],
+              ],
+            },
+          ],
+        });
+      });
     </script>
   </body>
 </html>
