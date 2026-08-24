@@ -1,0 +1,925 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Contact Us - Sheria360</title>
+    <meta
+      name="description"
+      content="Get in touch with Sheria360. We'd love to hear from you."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      .header-bottom__main-menu nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li {
+        position: relative;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .header-bottom__main-menu nav > ul > li > a {
+        padding: 35px 8px;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .header-bottom__main-menu nav ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 12px 0;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        z-index: 999;
+      }
+      .header-bottom__main-menu nav > ul > li:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .header-bottom__main-menu nav ul.submenu li {
+        display: block;
+      }
+      .header-bottom__main-menu nav ul.submenu li a {
+        padding: 8px 18px;
+        display: block;
+        font-size: 13px;
+      }
+      .header-bottom__main-menu nav ul.submenu li a:hover {
+        background: #f5f5f5;
+      }
+      .header__action-btn .tp-btn-border {
+        min-width: 80px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 36px !important;
+        border-radius: 6px;
+        margin-right: 10px;
+      }
+      .header__action-btn .tp-btn-blue-sm {
+        min-width: 110px;
+        padding: 0 20px !important;
+        font-size: 0.8125rem !important;
+        height: 38px !important;
+        line-height: 38px !important;
+        border-radius: 6px;
+      }
+      @media (max-width: 767.98px) {
+        .header__action-btn .tp-btn-border,
+        .header__action-btn .tp-btn-blue-sm {
+          display: none !important;
+        }
+      }
+
+      /* Enhanced select styling */
+      .postbox__select select {
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 15px;
+        background: #fff;
+        color: #1e293b;
+        transition: all 0.3s ease;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 44px;
+      }
+      .postbox__select select:focus {
+        outline: none;
+        border-color: #5b6dff;
+        box-shadow: 0 0 0 3px rgba(91, 109, 255, 0.15);
+      }
+      .postbox__select select option {
+        padding: 8px;
+      }
+
+      /* Toast notification styles */
+      .toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        max-width: 400px;
+        width: 100%;
+      }
+      .toast {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px 25px;
+        margin-bottom: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        animation: slideInRight 0.5s ease;
+        border-left: 4px solid #5b6dff;
+      }
+      .toast.success {
+        border-left-color: #22c55e;
+      }
+      .toast.error {
+        border-left-color: #ef4444;
+      }
+      .toast-icon {
+        font-size: 24px;
+        flex-shrink: 0;
+      }
+      .toast-icon.success {
+        color: #22c55e;
+      }
+      .toast-icon.error {
+        color: #ef4444;
+      }
+      .toast-content {
+        flex: 1;
+      }
+      .toast-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1e293b;
+        margin-bottom: 4px;
+      }
+      .toast-message {
+        font-size: 14px;
+        color: #64748b;
+      }
+      .toast-close {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #94a3b8;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        transition: color 0.3s;
+      }
+      .toast-close:hover {
+        color: #1e293b;
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .btn-loading {
+        opacity: 0.7;
+        pointer-events: none;
+        position: relative;
+      }
+      .btn-loading::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Debug panel */
+      #debugPanel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #1e293b;
+        color: #e2e8f0;
+        padding: 15px;
+        border-radius: 8px;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        max-width: 400px;
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 10000;
+        display: none;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      #debugPanel.show {
+        display: block;
+      }
+      #debugPanel .log-entry {
+        border-bottom: 1px solid #334155;
+        padding: 4px 0;
+      }
+      #debugPanel .log-entry.error {
+        color: #f87171;
+      }
+      #debugPanel .log-entry.success {
+        color: #34d399;
+      }
+      #debugPanel .log-entry.info {
+        color: #60a5fa;
+      }
+      #debugPanel .log-time {
+        color: #64748b;
+        margin-right: 8px;
+      }
+      .debug-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #1a237e;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 10001;
+        font-size: 12px;
+      }
+    </style>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.png?v=2"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/custom-animation.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-18205858668");
+    </script>
+  </head>
+  <body>
+    <!-- Debug Panel -->
+    <button class="debug-toggle" id="debugToggle">🐛 Debug</button>
+    <div id="debugPanel">
+      <div style="font-weight: bold; margin-bottom: 10px; color: #fff">
+        Debug Log
+      </div>
+      <div id="debugLog"></div>
+    </div>
+
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Rest of your header content... -->
+    <!-- (Keep your existing header, navigation, etc.) -->
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <div class="contact-form-area pb-120 pt-110">
+            <div class="container">
+              <div class="row gx-0">
+                <div class="col-xl-5 col-lg-6">
+                  <div class="contact-form-left">
+                    <div class="contact-form-section-box pb-80">
+                      <h4 class="tp-section-title pb-10">
+                        We'd love to <br />hear From
+                        <span>
+                          <svg
+                            width="44"
+                            height="44"
+                            viewBox="0 0 44 44"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                          >
+                            <rect
+                              width="44"
+                              height="44"
+                              fill="url(#pattern0)"
+                            />
+                            <defs>
+                              <pattern
+                                id="pattern0"
+                                patternContentUnits="objectBoundingBox"
+                                width="1"
+                                height="1"
+                              >
+                                <use
+                                  xlink:href="#image0_2106_35"
+                                  transform="translate(-0.425532 -0.170213) scale(0.0212766)"
+                                />
+                              </pattern>
+                              <image
+                                id="image0_2106_35"
+                                width="83"
+                                height="66"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABCCAYAAAArOOo+AAADcklEQVR4nO2bP0wTURzHP5RqQhyMtyJNTCcTnKCLnVhs4sRmHRk10U0WFhcXiQskuDPhxirRQYMagn8WB1gatTqQiMV/qRBM6nB99oDe9Y7+3mvf8T5j03u/yyfv97vvK8dQs9ls4hAh0+8bSBNOpiBOpiBOpiBOpiBOpiBOpiBOpiCnWma1AmvzUK/JrJeVWcYeqhWovoKnDw9/fu1e72ufCplhAhUXLsrUSa3MbgKD5IsyNVMlM4nAIF5Opr71Mk8qUFEoy92LlTJ7FRgkf7X3NRRDtvyeKSkwyKOvcmsN9M6UEuiNQf3z8c8lWxwGUKbkDvTGoHAzfC3JFocBkamjhfNFKC/Ag4no70jSN5m6ZiBAadY/0SxNR39PKhIpjMrUKRD8ti4v+jtubd6vF4b0vAQDMnULVOSLcHu1XbNbPel5CZqiUb0Gb57oF6hQba1qR81JhWQkUmjZmY+nO0cRaYJtrVi52/06HS0OmmTeWm239+sVHRUOt7Wi25z8/306WhwMnIB6T15ssK0V1Ur3p7di7q38kxwMHyd7FduprdW6ceakQse8BBg6OPjbzGaH9aweQVKxndpasTQdr73Bn5flxfj3mYTMyxfv9KzcBS/nH/XKi37blRfCHwyl2XCRceekQte8BBg+N3Lp/tRUgTNn+3eyHDkPo1dg/LovdHTc/2zvB8wsh0uuVmDlTrJaM8u9328Y2efPNtjc/MDE5GV9VRLg5dq7Nop6Lf4DR6ErEimy29vfWF9/r7eKBuLkyaPobHFo/d18a+sjjcae3kqCJJ2TCulfiY6SAah92rZGZpxzdxg6smWQDMDOznd2d3/qrSRE0jmp0D0voSXzT2OP/f0D/dUEKM2e7Drd8xJaMqvVL/z+1dBfTYDJGye7rls6kMC6F7e8XPKWNdHiYKFMSP6SlYkWB0tlerlkMUd3JFJYKROglGB36o5ECmtl5ovxdpypeQkWywQoxHiym5qXYLnMWDvTQCRSWC3Ty0WHeJMtDpbLhOgQb7LFIQUyo0K8qUiksF4mhId4U5FIkQqZnUK86XkJKZEJx0O86XkJKZJ5NMSbjESK1MiEdojvR4tDymTmi61Xr/skcyBew5bCy8Fcf96pAFK2M/uNkymINf9UZQNuZwriZAriZAriZAriZAriZAriZAriZAryD4xxER8vOFEDAAAAAElFTkSuQmCC"
+                              />
+                            </defs>
+                          </svg>
+                        </span>
+                        you.
+                      </h4>
+                      <p>
+                        While we're good with smoke signals, there<br />are
+                        easier ways to get in touch.
+                      </p>
+                    </div>
+                    <div class="contact-form-social-box p-relative">
+                      <div class="contact-form-social-item">
+                        <a href="https://facebook.com/sheria360" target="_blank"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="https://x.com/sheria360" target="_blank">
+                          <i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="https://instagram.com/sheria360"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="https://linkedin.com/company/sheria360"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </div>
+                      <div class="contact-form-section-img">
+                        <img
+                          src="assets/img/contact/contact-icon-sm-4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                  <div class="contact-form-right-warp">
+                    <div class="postbox__comment-form">
+                      <!-- FORM STARTS HERE -->
+                      <form id="contactForm" class="box" novalidate>
+                        <div class="row gx-20">
+                          <div class="col-12">
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                class="inputText"
+                                required
+                                placeholder=" "
+                              />
+                              <span class="floating-label">Full Name *</span>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="inputText"
+                                required
+                                placeholder=" "
+                              />
+                              <span class="floating-label">Your Email *</span>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                class="inputText"
+                                required
+                                placeholder=" "
+                              />
+                              <span class="floating-label">Phone Number *</span>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__comment-input mb-20">
+                              <input
+                                type="text"
+                                name="organization"
+                                id="organization"
+                                class="inputText"
+                                required
+                                placeholder=" "
+                              />
+                              <span class="floating-label"
+                                >Organization Name *</span
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__select mb-20">
+                              <select
+                                name="organization_size"
+                                id="organization_size"
+                                required
+                              >
+                                <option value="">Organization Size *</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">
+                                  201-500 employees
+                                </option>
+                                <option value="501-1000">
+                                  501-1000 employees
+                                </option>
+                                <option value="1001-5000">
+                                  1001-5000 employees
+                                </option>
+                                <option value="5000+">5000+ employees</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="postbox__select mb-20">
+                              <select
+                                name="inquiry_type"
+                                id="inquiry_type"
+                                required
+                              >
+                                <option value="">Inquiry Type *</option>
+                                <option value="Solo Practice">
+                                  Solo Practice
+                                </option>
+                                <option value="Law Firm">Law Firm</option>
+                                <option value="In-House Legal">
+                                  In-House Legal
+                                </option>
+                                <option value="Procurement">Procurement</option>
+                                <option value="General Inquiry">
+                                  General Inquiry
+                                </option>
+                                <option value="Support">Support</option>
+                                <option value="Partnership">Partnership</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xxl-12">
+                            <div class="postbox__comment-input mb-20">
+                              <textarea
+                                name="message"
+                                id="message"
+                                class="textareaText"
+                                required
+                                placeholder=" "
+                              ></textarea>
+                              <span class="floating-label-2">Message *</span>
+                            </div>
+                          </div>
+                          <div class="col-xxl-12">
+                            <div class="postbox__btn-box">
+                              <button
+                                type="submit"
+                                class="submit-btn w-100"
+                                id="submitBtn"
+                              >
+                                Send your Request
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <!-- FORM ENDS HERE -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rest of your content... -->
+          <!-- (Keep your existing footer, contact info, etc.) -->
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/tilt.jquery.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/split-text.min.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== N8N FORM INTEGRATION WITH DEBUGGING ====== -->
+    <script>
+      (function () {
+        "use strict";
+
+        // For local n8n:
+        // const WEBHOOK_URL =
+        //"https://ai.sheria360.com/webhook-test/sheria360-lead";
+
+        // DEBUGGING SETUP
+        // ============================================
+        let debugEnabled = false;
+        const debugPanel = document.getElementById("debugPanel");
+        const debugLog = document.getElementById("debugLog");
+        const debugToggle = document.getElementById("debugToggle");
+
+        debugToggle.addEventListener("click", function () {
+          debugEnabled = !debugEnabled;
+          debugPanel.classList.toggle("show");
+          debugToggle.textContent = debugEnabled ? "🔍 Hide Debug" : "🐛 Debug";
+        });
+
+        function logToDebug(message, type = "info") {
+          const entry = document.createElement("div");
+          entry.className = `log-entry ${type}`;
+          const time = new Date().toLocaleTimeString();
+          entry.innerHTML = `<span class="log-time">[${time}]</span> ${message}`;
+          debugLog.appendChild(entry);
+          debugLog.scrollTop = debugLog.scrollHeight;
+          console.log(`[${type.toUpperCase()}]`, message);
+        }
+
+        // ============================================
+        // DOM ELEMENTS
+        // ============================================
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const toastContainer = document.getElementById("toastContainer");
+
+        if (!form) {
+          logToDebug("❌ Form not found! Check ID: contactForm", "error");
+          return;
+        }
+
+        logToDebug("✅ Form found, initializing...", "success");
+
+        // ============================================
+        // TOAST NOTIFICATIONS
+        // ============================================
+        function showToast(title, message, type = "success") {
+          const toast = document.createElement("div");
+          toast.className = `toast ${type}`;
+          const icon = type === "success" ? "✅" : "❌";
+
+          toast.innerHTML = `
+                <div class="toast-icon ${type}">${icon}</div>
+                <div class="toast-content">
+                    <div class="toast-title">${title}</div>
+                    <div class="toast-message">${message}</div>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+            `;
+
+          toastContainer.appendChild(toast);
+          logToDebug(`${type.toUpperCase()}: ${title} - ${message}`, type);
+
+          setTimeout(() => {
+            if (toast.parentElement) {
+              toast.style.opacity = "0";
+              toast.style.transform = "translateX(100%)";
+              toast.style.transition = "all 0.5s ease";
+              setTimeout(() => toast.remove(), 500);
+            }
+          }, 6000);
+        }
+
+        // ============================================
+        // LOADING STATE
+        // ============================================
+        function setLoading(isLoading) {
+          if (isLoading) {
+            submitBtn.classList.add("btn-loading");
+            submitBtn.innerHTML = "Sending...";
+            submitBtn.disabled = true;
+            logToDebug("⏳ Submitting form...", "info");
+          } else {
+            submitBtn.classList.remove("btn-loading");
+            submitBtn.innerHTML = "Send your Request";
+            submitBtn.disabled = false;
+          }
+        }
+
+        // ============================================
+        // FIELD MAPPING
+        // ============================================
+        function mapFormData(formData) {
+          const data = {
+            name: formData.get("name") || "",
+            email: formData.get("email") || "",
+            phone: formData.get("phone") || "",
+            organization: formData.get("organization") || "",
+            organization_size: formData.get("organization_size") || "",
+            company_type: formData.get("inquiry_type") || "",
+            message: formData.get("message") || "",
+          };
+
+          logToDebug(
+            `📝 Mapped data: ${JSON.stringify(data, null, 2)}`,
+            "info",
+          );
+          return data;
+        }
+
+        // ============================================
+        // SUBMIT TO N8N
+        // ============================================
+        async function submitToN8n(data) {
+          logToDebug(`🚀 Sending to: ${WEBHOOK_URL}`, "info");
+          logToDebug(`📦 Payload: ${JSON.stringify(data, null, 2)}`, "info");
+
+          const response = await fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          logToDebug(
+            `📡 Response status: ${response.status} ${response.statusText}`,
+            "info",
+          );
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            logToDebug(`❌ Error response: ${errorText}`, "error");
+            throw new Error(
+              `Server responded with ${response.status}: ${errorText}`,
+            );
+          }
+
+          const result = await response.json();
+          logToDebug(
+            `✅ Success response: ${JSON.stringify(result, null, 2)}`,
+            "success",
+          );
+          return result;
+        }
+
+        // ============================================
+        // FORM SUBMISSION HANDLER
+        // ============================================
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          logToDebug("🔄 Form submission triggered", "info");
+
+          // 1. Collect and validate fields
+          const name = document.getElementById("name")?.value?.trim() || "";
+          const email = document.getElementById("email")?.value?.trim() || "";
+          const phone = document.getElementById("phone")?.value?.trim() || "";
+          const organization =
+            document.getElementById("organization")?.value?.trim() || "";
+          const organizationSize =
+            document.getElementById("organization_size")?.value || "";
+          const inquiryType =
+            document.getElementById("inquiry_type")?.value || "";
+          const message =
+            document.getElementById("message")?.value?.trim() || "";
+
+          logToDebug(
+            `📋 Form values: Name=${name}, Email=${email}, Phone=${phone}, Org=${organization}`,
+            "info",
+          );
+
+          // 2. Validation
+          if (!name) {
+            showToast(
+              "Validation Error",
+              "Please enter your full name.",
+              "error",
+            );
+            return;
+          }
+          if (!email) {
+            showToast(
+              "Validation Error",
+              "Please enter your email address.",
+              "error",
+            );
+            return;
+          }
+          if (!phone) {
+            showToast(
+              "Validation Error",
+              "Please enter your phone number.",
+              "error",
+            );
+            return;
+          }
+          if (!organization) {
+            showToast(
+              "Validation Error",
+              "Please enter your organization name.",
+              "error",
+            );
+            return;
+          }
+          if (!organizationSize) {
+            showToast(
+              "Validation Error",
+              "Please select your organization size.",
+              "error",
+            );
+            return;
+          }
+          if (!inquiryType) {
+            showToast(
+              "Validation Error",
+              "Please select your inquiry type.",
+              "error",
+            );
+            return;
+          }
+          if (!message) {
+            showToast(
+              "Validation Error",
+              "Please enter your message.",
+              "error",
+            );
+            return;
+          }
+
+          // 3. Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showToast(
+              "Validation Error",
+              "Please enter a valid email address.",
+              "error",
+            );
+            return;
+          }
+
+          // 4. Phone validation
+          const phoneRegex = /^[\+\d\s\-()]{10,}$/;
+          if (!phoneRegex.test(phone)) {
+            showToast(
+              "Validation Error",
+              "Please enter a valid phone number.",
+              "error",
+            );
+            return;
+          }
+
+          logToDebug("✅ All validations passed", "success");
+
+          // 5. Prepare data
+          const formData = new FormData(form);
+          const mappedData = mapFormData(formData);
+
+          // 6. Submit
+          setLoading(true);
+          try {
+            const result = await submitToN8n(mappedData);
+
+            showToast(
+              "🎉 Message Sent Successfully!",
+              "Thank you for contacting Sheria360. Our team will get back to you within 24 hours.",
+              "success",
+            );
+
+            form.reset();
+            logToDebug("✅ Form reset successfully", "success");
+
+            // Trigger Google Ads
+            if (typeof gtag !== "undefined") {
+              gtag("event", "conversion", {
+                send_to: "AW-18205858668/0-p4CM2HvbccEOy2nelD",
+                value: 1.0,
+                currency: "USD",
+              });
+              logToDebug("📊 Google Ads conversion tracked", "info");
+            }
+          } catch (error) {
+            logToDebug(`❌ Error: ${error.message}`, "error");
+
+            let errorMessage =
+              "Please try again or contact us directly at info@sheria360.com";
+            if (
+              error.message.includes("Failed to fetch") ||
+              error.message.includes("NetworkError")
+            ) {
+              errorMessage =
+                "Network error. Please check your internet connection and make sure n8n is running.";
+            }
+            if (error.message.includes("404")) {
+              errorMessage =
+                "Webhook not found. Please check the URL and make sure n8n is running.";
+            }
+            if (error.message.includes("500")) {
+              errorMessage = "Server error. Please check n8n logs for details.";
+            }
+
+            showToast("❌ Submission Failed", errorMessage, "error");
+          } finally {
+            setLoading(false);
+          }
+        });
+
+        // ============================================
+        // TEST CONNECTION ON LOAD
+        // ============================================
+        async function testConnection() {
+          try {
+            logToDebug(`🔌 Testing connection to ${WEBHOOK_URL}...`, "info");
+            const response = await fetch(WEBHOOK_URL, {
+              method: "OPTIONS",
+              headers: { "Content-Type": "application/json" },
+            });
+            logToDebug(`✅ Connection test: ${response.status}`, "success");
+          } catch (error) {
+            logToDebug(`⚠️ Connection test failed: ${error.message}`, "error");
+            logToDebug(
+              "💡 Make sure n8n is running and the webhook URL is correct",
+              "error",
+            );
+          }
+        }
+
+        // Test on load
+        setTimeout(testConnection, 1000);
+
+        logToDebug("🚀 Sheria360 Contact Form initialized", "success");
+        logToDebug(`🔗 Webhook URL: ${WEBHOOK_URL}`, "info");
+        logToDebug("💡 Click the Debug button to see logs", "info");
+
+        // ============================================
+        // KEYBOARD SHORTCUT: Ctrl+Shift+D to toggle debug
+        // ============================================
+        document.addEventListener("keydown", function (e) {
+          if (e.ctrlKey && e.shiftKey && e.key === "D") {
+            e.preventDefault();
+            debugToggle.click();
+          }
+        });
+
+        console.log(
+          "%c Sheria360 Contact Form ",
+          "background: #1a237e; color: white; font-size: 16px; padding: 10px;",
+        );
+        console.log(`Webhook URL: ${WEBHOOK_URL}`);
+        console.log("Press Ctrl+Shift+D to toggle debug panel");
+      })();
+    </script>
+  </body>
+</html>
+i
