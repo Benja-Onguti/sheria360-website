@@ -107,6 +107,32 @@
       .postbox__select select option {
         padding: 8px;
       }
+      /* Compact contact form */
+      .contact-form-area .postbox__comment-input .inputText {
+        height: 46px;
+      }
+      .contact-form-area .postbox__comment-input .textareaText {
+        height: 110px;
+        padding: 14px 18px;
+      }
+      .contact-form-area .postbox__comment-input .floating-label-2 {
+        top: 15px;
+        left: 19px;
+      }
+      .contact-form-area .postbox__select select {
+        padding-top: 11px;
+        padding-bottom: 11px;
+      }
+      .contact-form-area .postbox__comment-input.mb-20,
+      .contact-form-area .postbox__select.mb-20 {
+        margin-bottom: 14px;
+      }
+      @media (max-width: 767.98px) {
+        .contact-form-area .postbox__comment-input.mb-20,
+        .contact-form-area .postbox__select.mb-20 {
+          margin-bottom: 12px;
+        }
+      }
     </style>
     <link
       rel="shortcut icon"
@@ -427,7 +453,7 @@
                         />
 
                         <div class="row gx-20">
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__comment-input mb-20">
                               <input
                                 type="text"
@@ -438,7 +464,7 @@
                               <span class="floating-label">Full Name *</span>
                             </div>
                           </div>
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__comment-input mb-20">
                               <input
                                 type="email"
@@ -449,7 +475,7 @@
                               <span class="floating-label">Your Email *</span>
                             </div>
                           </div>
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__comment-input mb-20">
                               <input
                                 type="tel"
@@ -460,7 +486,7 @@
                               <span class="floating-label">Phone Number *</span>
                             </div>
                           </div>
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__comment-input mb-20">
                               <input
                                 type="text"
@@ -473,7 +499,7 @@
                               >
                             </div>
                           </div>
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__select mb-20">
                               <select name="organization_size" required>
                                 <option value="">Organization Size *</option>
@@ -493,7 +519,7 @@
                               </select>
                             </div>
                           </div>
-                          <div class="col-12">
+                          <div class="col-md-6 col-12">
                             <div class="postbox__select mb-20">
                               <select name="inquiry_type" required>
                                 <option value="">Inquiry Type *</option>
