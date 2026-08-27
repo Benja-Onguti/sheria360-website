@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Pricing Plans | Sheria360 — AI-Powered Legal Practice</title>
+    <title>Pricing Plans | Sheria360 � AI-Powered Legal Practice</title>
     <meta
       name="description"
       content="Simple, transparent pricing for Sheria's AI-powered legal practice management. Start with a 14-day free trial."
@@ -913,7 +913,6 @@
                         ></i
                       ></a>
                       <ul class="submenu">
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="faq.html">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li>
@@ -1022,7 +1021,7 @@
             >
           </div>
 
-          <!-- ===== PRICING CARDS — dynamically rendered ===== -->
+          <!-- ===== PRICING CARDS � dynamically rendered ===== -->
           <div class="pricing-grid loading" id="pricingCards">
             <div class="pricing-spinner"></div>
           </div>
@@ -1181,7 +1180,7 @@
               Do you offer a free trial? <i class="fas fa-chevron-down"></i>
             </div>
             <div class="a">
-              Absolutely. All paid plans come with a 14-day free trial — no
+              Absolutely. All paid plans come with a 14-day free trial � no
               credit card required. You get full access to all features.
             </div>
           </div>
@@ -1268,7 +1267,7 @@
         let catalogData = null;
         let isYearly = false; // Default to monthly
 
-        // ── Fetch Catalog ──
+        // -- Fetch Catalog --
         async function loadCatalog() {
           const container = document.getElementById("pricingCards");
           try {
@@ -1287,7 +1286,7 @@
           }
         }
 
-        // ── Render Cards ──
+        // -- Render Cards --
         function renderCards(data) {
           const container = document.getElementById("pricingCards");
           const currency = data.currency || "KES";
@@ -1312,7 +1311,7 @@
               <a href="contact.html" target="_blank" class="btn-plan">Contact Us</a>
               <ul class="features">
                 <li><i class="fas fa-check"></i> Full feature access</li>
-                <li><i class="fas fa-check"></i> ${trial.days} days · no risk</li>
+                <li><i class="fas fa-check"></i> ${trial.days} days � no risk</li>
                 <li><i class="fas fa-check"></i> Up to ${trial.users_count} users</li>
                 <li><i class="fas fa-check"></i> Priority onboarding</li>
                 <li><i class="fas fa-check"></i> Cancel anytime</li>
@@ -1354,7 +1353,7 @@
               ? `<li><i class="fas fa-info-circle" style="color:var(--p-gray);"></i> <span class="muted">Min ${pkg.min_users} users</span></li>`
               : "";
 
-            // Enterprise has custom pricing — no price tag, just a "Custom" label
+            // Enterprise has custom pricing � no price tag, just a "Custom" label
             const priceHtml = isEnterprise
               ? `<div class="price-tag" style="font-size:1.4rem; color:var(--p-slate-light);">Custom</div>
                  <div class="billing-note">Custom billing</div>`
@@ -1384,13 +1383,13 @@
           container.innerHTML = html;
         }
 
-        // ── Update Save Badge ──
+        // -- Update Save Badge --
         function updateSaveBadge(percent) {
           const badge = document.getElementById("saveBadge");
           if (badge && percent) badge.textContent = `Save ${percent}%`;
         }
 
-        // ── Billing Toggle ──
+        // -- Billing Toggle --
         const toggle = document.getElementById("billingToggle");
         const labelMonthly = document.getElementById("labelMonthly");
         const labelYearly = document.getElementById("labelYearly");
@@ -1442,7 +1441,7 @@
           });
         }
 
-        // ── FAQ Accordion ──
+        // -- FAQ Accordion --
         window.toggleFaq = function (el) {
           const item = el.closest(".faq-item");
           const answer = item.querySelector(".a");
@@ -1711,7 +1710,7 @@
         </div>
         <div class="wa-chat-body">
           <div class="wa-message-bubble">
-            <p>👋 Hi there! How can we help you today?</p>
+            <p>?? Hi there! How can we help you today?</p>
             <div class="wa-message-time">Just now</div>
           </div>
         </div>
@@ -1808,8 +1807,8 @@
           const statusEl = document.querySelector('.wa-chat-status');
           if (statusEl) {
             statusEl.textContent = inHours 
-              ? `Online now · ${CONFIG.businessHours}` 
-              : `Offline · ${CONFIG.businessHours}`;
+              ? `Online now � ${CONFIG.businessHours}` 
+              : `Offline � ${CONFIG.businessHours}`;
           }
         }
         updateStatus();

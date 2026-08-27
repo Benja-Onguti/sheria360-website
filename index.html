@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -1614,7 +1614,6 @@
                         ></i
                       ></a>
                       <ul class="submenu">
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="faq.html">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li>
@@ -2003,7 +2002,7 @@
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
-                      <i class="fas fa-pen-ruler"></i>
+                      <i class="fas fa-brain"></i>
                     </div>
                     <h4>Smart Drafting & Review</h4>
                     <p>
@@ -2388,7 +2387,7 @@
                         Our SheriAI engine scans contracts using natural
                         language processing to identify risks, flag unfavorable
                         clauses, suggest amendments, and compare against your
-                        precedent library — all in seconds, not hours.
+                        precedent library � all in seconds, not hours.
                       </p>
                     </div>
                   </div>
@@ -2565,7 +2564,6 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="faq.html">FAQs</a></li>
-                          <li><a href="blog.html">Blogs</a></li>
                           <li>
                             <a href="https://docs.sheria360.com/"
                               >Documentation</a
@@ -2710,7 +2708,7 @@
     <!-- Enhanced Onboarding & Interactions -->
     <script>
       (function () {
-        /* ─── Scroll Reveal (Intersection Observer) ─── */
+        /* --- Scroll Reveal (Intersection Observer) --- */
         const revealEls = document.querySelectorAll(".sr-reveal");
         if ("IntersectionObserver" in window) {
           const revealObserver = new IntersectionObserver(
@@ -2729,7 +2727,7 @@
           revealEls.forEach((el) => el.classList.add("sr-visible"));
         }
 
-        /* ─── FAQ Accordion ─── */
+        /* --- FAQ Accordion --- */
         document.querySelectorAll(".sheria-faq-question").forEach((btn) => {
           btn.addEventListener("click", function () {
             const item = this.closest(".sheria-faq-item");
@@ -2741,7 +2739,7 @@
           });
         });
 
-        /* ─── Onboarding Modal ─── */
+        /* --- Onboarding Modal --- */
         const overlay = document.getElementById("onboardingOverlay");
         const closeBtn = document.getElementById("closeModalBtn");
         const tryBtn = document.getElementById("tryFreeBtn");
@@ -3153,7 +3151,7 @@
         </div>
         <div class="wa-chat-body">
           <div class="wa-message-bubble">
-            <p>👋 Hi there! How can we help you today?</p>
+            <p>?? Hi there! How can we help you today?</p>
             <div class="wa-message-time">Just now</div>
           </div>
         </div>
@@ -3250,8 +3248,8 @@
           const statusEl = document.querySelector('.wa-chat-status');
           if (statusEl) {
             statusEl.textContent = inHours 
-              ? `Online now · ${CONFIG.businessHours}` 
-              : `Offline · ${CONFIG.businessHours}`;
+              ? `Online now � ${CONFIG.businessHours}` 
+              : `Offline � ${CONFIG.businessHours}`;
           }
         }
         updateStatus();
