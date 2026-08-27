@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8" />
@@ -126,18 +126,6 @@
         z-index: 2;
         animation: fadeInLeft 0.8s ease-out;
       }
-      .hero-badge {
-        display: inline-block;
-        background: #2563eb;
-        color: #fff;
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 6px 16px;
-        border-radius: 30px;
-        margin-bottom: 24px;
-        letter-spacing: 0.02em;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-      }
       .hero-content h1 {
         font-size: 3.2rem;
         font-weight: 700;
@@ -193,23 +181,6 @@
         color: #fff;
         transform: translateY(-2px);
         box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
-      }
-      .hero-trust {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        font-size: 0.85rem;
-        color: #64748b;
-      }
-      .hero-trust .trust-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .hero-trust .trust-item i {
-        color: #10b981;
-        font-size: 1rem;
       }
 
       /* Right side dashboard graphic */
@@ -469,9 +440,6 @@
         .hero-cta {
           justify-content: center;
         }
-        .hero-trust {
-          justify-content: center;
-        }
         .hero-visual {
           margin-top: 50px;
         }
@@ -621,7 +589,6 @@
                       <ul class="submenu">
                         <li><a href="faq.html">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <!-- <li><a href="marketplace.html">Marketplace</a></li> -->
                         <li>
                           <a href="https://docs.sheria360.com/" target="_blank"
                             >Documentation</a
@@ -640,16 +607,6 @@
                 <div
                   class="header__action-btn d-flex align-items-center gap-10"
                 >
-                  <!-- <a
-                    class="tp-btn-border tp-btn-hover d-none d-md-inline-block"
-                    href="https://demo.sheria360.com/users/login/"
-                    ><span>Log In</span><b></b
-                  ></a>
-                  <a
-                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
-                    href="https://demo.sheria360.com/users/register/"
-                    ><span>Try It Free</span><b></b
-                  ></a> -->
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
                     href="contact.html"
@@ -694,17 +651,6 @@
                         >Start Free Trial</a
                       >
                     </div>
-                    <!--<div class="hero-trust">
-                      <div class="trust-item">
-                        <i class="fas fa-shield-alt"></i> SOC 2 Type II
-                      </div>
-                      <div class="trust-item">
-                        <i class="fas fa-clock"></i> 99.9% Uptime
-                      </div>
-                      <div class="trust-item">
-                        <i class="fas fa-check-circle"></i> 500+ Teams
-                      </div>
-                    </div> -->
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -1270,7 +1216,6 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="faq.html">FAQs</a></li>
-                          <!-- <li><a href="marketplace.html">Market Place</a></li> -->
                           <li>
                             <a href="https://docs.sheria360.com/"
                               >Documentation</a
@@ -1377,7 +1322,7 @@
                       class="tp-copyright__text tp-copyright__text-3 text-center"
                     >
                       <span
-                        >Copyright � 2026 Sheria360. All Rights Reserved.</span
+                        >Copyright © 2026 Sheria360. All Rights Reserved.</span
                       >
                     </div>
                   </div>
@@ -1405,45 +1350,344 @@
     <script>
       new PureCounter();
     </script>
-    <script type="text/javascript">
-      !(function (w, h, a, t, s, p) {
-        w.whatsapp ||
-          ((s = h.createElement(a)),
-          (s.src = t),
-          (p = h.getElementsByTagName(a)[0]),
-          p.parentNode.insertBefore(s, p));
-      })(
-        window,
-        document,
-        "script",
-        "https://cdn.jsdelivr.net/gh/miguelcolmenares/whatsapp-widget/dist/js/whatsapp-widget.js",
-      );
 
-      window.addEventListener("load", function () {
-        new whatsapp({
-          title: "WhatsApp",
-          description: "Chat with us on WhatsApp",
-          agents: [
-            {
-              name: "Sheria360",
-              phone: "+254715360360",
-              hours: "9am - 6pm",
-              cta: "Start chat",
-              message: "",
-              schedule: [
-                ["08:00", "18:00"],
-                ["08:00", "18:00"],
-                ["08:01", "18:00"],
-                ["08:01", "18:00"],
-                ["08:00", "18:00"],
-                ["08:00", "22:00"],
-                ["09:00", "18:00"],
-              ],
-            },
-          ],
+    <!-- WhatsApp Widget - Modern Version -->
+    <style>
+      :root {
+        --wa-bg: #25d366;
+        --wa-bg-dark: #1ebe5d;
+        --wa-text: #ffffff;
+        --wa-chat-bg: #f5f5f5;
+        --wa-chat-header: #075e54;
+        --wa-chat-header-text: #ffffff;
+        --wa-border-radius: 12px;
+        --wa-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        --wa-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Floating Button */
+      .wa-float-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        background: var(--wa-bg);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--wa-shadow);
+        cursor: pointer;
+        z-index: 9999;
+        transition: transform var(--wa-transition), background var(--wa-transition);
+        border: none;
+      }
+
+      .wa-float-btn:hover {
+        background: var(--wa-bg-dark);
+        transform: scale(1.1);
+      }
+
+      .wa-float-btn svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--wa-text);
+      }
+
+      /* Chat Popup */
+      .wa-chat-popup {
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        width: 350px;
+        max-width: calc(100vw - 48px);
+        height: 450px;
+        max-height: calc(100vh - 150px);
+        background: var(--wa-chat-bg);
+        border-radius: var(--wa-border-radius);
+        box-shadow: var(--wa-shadow);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        pointer-events: none;
+        transition: opacity var(--wa-transition), transform var(--wa-transition);
+      }
+
+      .wa-chat-popup.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+
+      /* Chat Header */
+      .wa-chat-header {
+        background: var(--wa-chat-header);
+        color: var(--wa-chat-header-text);
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .wa-chat-header-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .wa-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--wa-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .wa-chat-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      .wa-chat-status {
+        font-size: 12px;
+        opacity: 0.8;
+      }
+
+      .wa-close-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: transform var(--wa-transition);
+      }
+
+      .wa-close-btn:hover {
+        transform: scale(1.2);
+      }
+
+      /* Chat Body */
+      .wa-chat-body {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        background: #e5ddd5;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10 10 L20 20 M30 10 L40 20 M50 10 L60 20 M70 10 L80 20 M90 10 L100 20" stroke="%23d5d0c8" stroke-width="1"/></svg>');
+      }
+
+      .wa-message-bubble {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 12px;
+        margin-bottom: 12px;
+        max-width: 85%;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .wa-message-bubble p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      .wa-message-time {
+        font-size: 11px;
+        color: #999;
+        margin-top: 6px;
+        text-align: right;
+      }
+
+      /* Chat Footer */
+      .wa-chat-footer {
+        padding: 12px;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .wa-input {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      .wa-send-btn {
+        background: var(--wa-bg);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background var(--wa-transition);
+      }
+
+      .wa-send-btn:hover {
+        background: var(--wa-bg-dark);
+      }
+
+      .wa-send-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 480px) {
+        .wa-chat-popup {
+          right: 12px;
+          left: 12px;
+          width: auto;
+          bottom: 90px;
+        }
+        .wa-float-btn {
+          bottom: 16px;
+          right: 16px;
+          width: 54px;
+          height: 54px;
+        }
+      }
+    </style>
+
+    <!-- HTML Structure -->
+    <div id="wa-widget">
+      <!-- Floating Button -->
+      <button id="wa-float-btn" class="wa-float-btn" aria-label="Open WhatsApp chat">
+        <!-- WhatsApp SVG Icon -->
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.004 4C9.383 4 4 9.383 4 16.004c0 2.11.553 4.17 1.596 5.988L4 28l6.176-1.621A11.94 11.94 0 0 0 16.004 28C22.625 28 28 22.617 28 15.996 28 9.383 22.625 4 16.004 4zm0 21.84a9.82 9.82 0 0 1-5.004-1.371l-.359-.213-3.664.962.978-3.574-.234-.373a9.804 9.804 0 0 1-1.508-5.267c0-5.439 4.428-9.867 9.867-9.867s9.867 4.428 9.867 9.867-4.428 9.867-9.867 9.867zm5.414-7.395c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.149-.67.149-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.474-.883-.787-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.605.134-.134.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.074-.149-.669-1.611-.916-2.205-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.793.371-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.117.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+      </button>
+
+      <!-- Chat Popup -->
+      <div id="wa-chat-popup" class="wa-chat-popup">
+        <div class="wa-chat-header">
+          <div class="wa-chat-header-info">
+            <div class="wa-avatar">SA</div>
+            <div>
+              <div class="wa-chat-title">Sheria360</div>
+              <div class="wa-chat-status">Typically replies within 1 hour</div>
+            </div>
+          </div>
+          <button id="wa-close-btn" class="wa-close-btn" aria-label="Close chat">&times;</button>
+        </div>
+        <div class="wa-chat-body">
+          <div class="wa-message-bubble">
+            <p>Hi there👋. Thank you for contacting Sheria360. How can we help you today?</p>
+            <div class="wa-message-time">Just now</div>
+          </div>
+        </div>
+        <div class="wa-chat-footer">
+          <input type="text" id="wa-input" class="wa-input" placeholder="Type a message..." />
+          <button id="wa-send-btn" class="wa-send-btn" aria-label="Send message">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      (function() {
+        // ===== CONFIGURATION =====
+        const CONFIG = {
+          phoneNumber: "254715360360",
+          welcomeMessage: "Hello Sheria360! I need assistance.",
+          autoOpenDelay: 1500,
+          autoOpenOncePerSession: true,
+          agentName: "Sheria360",
+          avatarText: "SA",
+          statusText: "Typically replies within 1 hour",
+          businessHours: "8am - 6pm",
+        };
+
+        // ===== DOM ELEMENTS =====
+        const floatBtn = document.getElementById('wa-float-btn');
+        const chatPopup = document.getElementById('wa-chat-popup');
+        const closeBtn = document.getElementById('wa-close-btn');
+        const inputField = document.getElementById('wa-input');
+        const sendBtn = document.getElementById('wa-send-btn');
+
+        // ===== OPEN/CLOSE FUNCTIONS =====
+        function openChat() {
+          chatPopup.classList.add('open');
+          floatBtn.style.display = 'none';
+          inputField.focus();
+        }
+
+        function closeChat() {
+          chatPopup.classList.remove('open');
+          floatBtn.style.display = 'flex';
+        }
+
+        // ===== EVENT LISTENERS =====
+        floatBtn.addEventListener('click', openChat);
+        closeBtn.addEventListener('click', closeChat);
+
+        function sendMessage() {
+          const message = inputField.value.trim() || CONFIG.welcomeMessage;
+          const url = `https://wa.me/${CONFIG.phoneNumber}?text=${encodeURIComponent(message)}`;
+          window.open(url, '_blank');
+          inputField.value = '';
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        inputField.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') sendMessage();
         });
-      });
+
+        // ===== AUTO-OPEN LOGIC =====
+        function autoOpen() {
+          if (CONFIG.autoOpenOncePerSession) {
+            if (!sessionStorage.getItem('wa_auto_opened')) {
+              setTimeout(() => {
+                openChat();
+                sessionStorage.setItem('wa_auto_opened', 'true');
+              }, CONFIG.autoOpenDelay);
+            }
+          } else {
+            setTimeout(openChat, CONFIG.autoOpenDelay);
+          }
+        }
+
+        autoOpen();
+
+        // ===== SET STATUS =====
+        function updateStatus() {
+          const now = new Date();
+          const hours = now.getHours();
+          const minutes = now.getMinutes();
+          const currentTime = hours * 100 + minutes;
+          const inHours = (currentTime >= 800 && currentTime <= 1800);
+          const statusEl = document.querySelector('.wa-chat-status');
+          if (statusEl) {
+            statusEl.textContent = inHours 
+              ? `Online now · ${CONFIG.businessHours}` 
+              : `Offline · ${CONFIG.businessHours}`;
+          }
+        }
+        updateStatus();
+      })();
     </script>
   </body>
 </html>
-
