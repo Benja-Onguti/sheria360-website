@@ -5,23 +5,23 @@ This directory lists clean markdown context files, core system capabilities, dep
 
 ## Core Platform & Features
 * [Homepage](https://sheria360.com): Platform overview and legal operations dashboard.
-* [All Features](https://sheria360.comfeatures.html): Comprehensive platform feature lists and integrations.
-* [Legal Services Management](https://sheria360.comlegalservices.html): Alternative dispute resolution, civil, and criminal case modules.
-* [Case Management](https://sheria360.comcase-management.html): Complete client intake, active investigations, and evidence custody tracking.
-* [Contract Lifecycle Management](https://sheria360.comcontracts-management.html): Multi-channel drafting automation, template parameters, and signature tracking.
-* [Artificial Intelligence Engine](https://sheria360.comai.html): Contextual contract suggestions, redlining tools, and research utilities.
-* [Client Collaboration Portal](https://sheria360.comclientportal.html): Secure external messaging pipelines, file exchanges, and client onboarding.
-* [Billing Management](https://sheria360.combilling.html): Time-tracking captures, automatic invoice distribution, and financial ledgers.
+* [All Features](https://sheria360.com/features.html): Comprehensive platform feature lists and integrations.
+* [Legal Services Management](https://sheria360.com/legalservices.html): Alternative dispute resolution, civil, and criminal case modules.
+* [Case Management](https://sheria360.com/case-management.html): Complete client intake, active investigations, and evidence custody tracking.
+* [Contract Lifecycle Management](https://sheria360.com/contracts-management.html): Multi-channel drafting automation, template parameters, and signature tracking.
+* [Artificial Intelligence Engine](https://sheria360.com/ai.html): Contextual contract suggestions, redlining tools, and research utilities.
+* [Client Collaboration Portal](https://sheria360.com/clientportal.html): Secure external messaging pipelines, file exchanges, and client onboarding.
+* [Billing Management](https://sheria360.com/billing.html): Time-tracking captures, automatic invoice distribution, and financial ledgers.
 
 ## Tailored Solutions
-* [All Solutions](https://sheria360.comsolutions.html): Complete list of corporate and consulting structural workflows.
-* [In-House Legal Departments](https://sheria360.cominhouse.html): Tailored setups optimized for corporate entities and internal workflow routing.
-* [Law Firms](https://sheria360.comlaw-firms.html): Software features adapted for modern practicing firms and firm analytics tracking.
-* [Procurement & Supply Chain](https://sheria360.comprocurement.html): Automated vendor intake parameters and structural supply risks analysis.
-* [Finance & Legal Ops](https://sheria360.comfinance.html): Cost allocation engines, automated invoice reviews, and ledger tracking.
+* [All Solutions](https://sheria360.com/solutions.html): Complete list of corporate and consulting structural workflows.
+* [In-House Legal Departments](https://sheria360.com/inhouse.html): Tailored setups optimized for corporate entities and internal workflow routing.
+* [Law Firms](https://sheria360.com/law-firms.html): Software features adapted for modern practicing firms and firm analytics tracking.
+* [Procurement & Supply Chain](https://sheria360.com/procurement.html): Automated vendor intake parameters and structural supply risks analysis.
+* [Finance & Legal Ops](https://sheria360.com/finance.html): Cost allocation engines, automated invoice reviews, and ledger tracking.
 
 ## Corporate & Support Resources
-* [About Sheria360](https://sheria360.comabout-sheria.html): Background details,State institution partnerships, and system architecture metrics.
-* [Pricing Plans](https://sheria360.comprice.html): Comparative summary of Core, Professional, and Enterprise system tiers.
-* [Frequently Asked Questions](https://sheria360.comfaq.html): Categorized self-service troubleshooting, support layers, and framework details.
-* [Contact Us](https://sheria360.comcontact.html): Interactive booking inquiry routing, phone channels, and headquarters directions.
+* [About Sheria360](https://sheria360.com/about-sheria.html): Background details,State institution partnerships, and system architecture metrics.
+* [Pricing Plans](https://sheria360.com/price.html): Comparative summary of Core, Professional, and Enterprise system tiers.
+* [Frequently Asked Questions](https://sheria360.com/faq.html): Categorized self-service troubleshooting, support layers, and framework details.
+* [Contact Us](https://sheria360.com/contact.html): Interactive booking inquiry routing, phone channels, and headquarters directions.
