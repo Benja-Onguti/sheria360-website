@@ -1,110 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
-  <!-- Core Hub Pages (5 Links) -->
+  <!-- Core Hub Pages -->
   <url>
-    <loc>https://sheria360.com/</loc>
+    <loc>https://sheria360.com</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/about-sheria.html</loc>
+    <loc>https://sheria360.comabout-sheria.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/price.html</loc>
+    <loc>https://sheria360.comprice.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/faq.html</loc>
+    <loc>https://sheria360.comfaq.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/contact.html</loc>
+    <loc>https://sheria360.comcontact.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
 
-  <!-- Product & Core Feature Modules (7 Links) -->
+  <!-- Product & Core Feature Modules -->
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comfeatures.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comlegalservices.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comcase-management.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comcontracts-management.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comai.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comclientportal.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.combilling.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Dedicated Target Audience Solutions (5 Links) -->
+  <!-- Dedicated Target Audience Solutions -->
   <url>
-    <loc>https://sheria360.com</loc>
+    <loc>https://sheria360.comsolutions.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/inhouse.html</loc>
+    <loc>https://sheria360.cominhouse.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/law-firms.html</loc>
+    <loc>https://sheria360.comlaw-firms.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/procurement.html</loc>
+    <loc>https://sheria360.comprocurement.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://sheria360.com/finance.html</loc>
+    <loc>https://sheria360.comfinance.html</loc>
     <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
 </urlset>
