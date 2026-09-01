@@ -1,0 +1,25 @@
+# Sheria360
+> AI-Powered Integrated Legal, Case, and Contracts Lifecycle Management System engineered to manage complex legal workflows with precision, speed, and efficiency for law firms and corporate legal departments.
+
+## Core Platform & Features
+* [Homepage](https://sheria360.com/): Platform overview, dynamic legal dashboard, and core value proposition for modern legal operations.
+* [All Features](https://sheria360.com): Comprehensive list of underlying capabilities, modular architectures, and configuration plug-ins.
+* [Legal Services Management](https://sheria360.com): Workflows for Alternative Dispute Resolution (ADR), Civil Litigation, and Criminal Cases alongside IP management.
+* [Case Management](https://sheria360.com): Complete case tracking suite handling intake forms, active investigations, suspect tracing, and evidence custody.
+* [Contract Lifecycle Management](https://sheria360.com): Full CLM coverage detailing multi-channel initiation, dynamic template embedding, execution tracking, and automated renewals.
+* [Artificial Intelligence Engine](https://sheria360.com): Capabilities overview of the SheriAI assistant including automated contract redlining, missing clause detection, and natural language legal research.
+* [Client Collaboration Portal](https://sheria360.com): Secure external hub for legal requests, automated ticketing, conveyance management, and encrypted file sharing.
+* [Billing Management](https://sheria360.com): Financial tracking tools covering billable hours capture, invoice automation, trust accounting, and external counsel oversight.
+
+## Tailored Solutions
+* [All Solutions](https://sheria360.com): Index of operational workflows customized by organizational department and role boundaries.
+* [In-House Legal Departments](https://sheria360.com): Centralized workspace configurations built for corporate compliance, enterprise document OCR, and risk maps.
+* [Law Firms](https://sheria360.com/law-firms.html): Legal practice modules optimized for attorney utilization metrics, calendar conflict checking, and automatic bill capture.
+* [Procurement & Supply Chain](https://sheria360.com/procurement.html): Supplier management tools featuring automated onboarding checksheets, compliance alerts, and risk assessments.
+* [Finance & Legal Ops](https://sheria360.com/finance.html): Budget control pipelines including line-item invoice parsing, department cost allocation, and bidirectional ERP syncing.
+
+## Corporate & Support Resources
+* [About Sheria360](https://sheria360.com/about-sheria.html): Enterprise company history, engineering background, and strategic validation profiles across public sectors.
+* [Pricing Plans](https://sheria360.com/price.html): Comparative feature matrix across Core, Professional, and Enterprise subscription tiers.
+* [Frequently Asked Questions](https://sheria360.com/faq.html): Categorized self-service knowledge base explaining security parameters, data export options, and multi-language support.
+* [Contact Us](https://sheria360.com/contact.html): Client support channels, inquiry form routing, and physical office locations in Westlands, Nairobi.
