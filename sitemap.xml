@@ -1,110 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
-  <!-- Core Hub Pages -->
-  <url>
-    <loc>https://sheria360.com</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://sheria360.comabout-sheria.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://sheria360.comprice.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://sheria360.comfaq.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://sheria360.comcontact.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Product & Core Feature Modules -->
   <url>
-    <loc>https://sheria360.comfeatures.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+       <loc>https://sheria360.com/</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comlegalservices.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/features.html</loc>
+       <lastmod>2026-08-28T08:48:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comcase-management.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/legalservices.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comcontracts-management.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/case-management.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comai.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/contracts-management.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comclientportal.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+       <loc>https://sheria360.com/ai.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.combilling.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Dedicated Target Audience Solutions -->
-  <url>
-    <loc>https://sheria360.comsolutions.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+       <loc>https://sheria360.com/clientportal.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.cominhouse.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/billing.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comlaw-firms.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+       <loc>https://sheria360.com/solutions.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comprocurement.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+       <loc>https://sheria360.com/inhouse.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://sheria360.comfinance.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+       <loc>https://sheria360.com/law-firms.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/procurement.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/finance.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/price.html</loc>
+       <lastmod>2026-08-28T08:48:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/faq.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/contact.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/terms.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/about-sheria.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/register.html</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/contact</loc>
+       <lastmod>2026-08-28T08:48:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/register</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://sheria360.com/solutions</loc>
+       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
   </url>
 </urlset>
