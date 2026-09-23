@@ -125,9 +125,11 @@
         --sheria-font-body:
           "Inter", "DM Sans", system-ui, -apple-system, sans-serif;
       }
+
       html {
         scroll-behavior: smooth;
       }
+
       body {
         font-family: var(--sheria-font-body);
         color: var(--sheria-slate);
@@ -136,6 +138,7 @@
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
       }
+
       h1,
       h2,
       h3,
@@ -148,18 +151,22 @@
         line-height: 1.2;
         letter-spacing: -0.02em;
       }
+
       p {
         line-height: 1.75;
         color: var(--sheria-slate-light);
       }
+
       a {
         text-decoration: none;
         transition: var(--sheria-transition);
       }
+
       img {
         max-width: 100%;
         height: auto;
       }
+
       #preloader {
         background: var(--sheria-bg);
       }
@@ -182,6 +189,7 @@
         max-height: 36px;
         transition: var(--sheria-transition);
       }
+
       .header-bottom__main-menu nav > ul {
         display: flex;
         align-items: center;
@@ -204,6 +212,7 @@
       .header-bottom__main-menu nav > ul > li:hover > a {
         color: var(--sheria-primary);
       }
+
       .header-bottom__main-menu nav ul.submenu {
         position: absolute;
         top: 100%;
@@ -254,6 +263,7 @@
       .header-bottom__main-menu nav > ul > li:hover > a::after {
         transform: scaleX(1);
       }
+
       .header__action-btn .tp-btn-border {
         min-width: 80px;
         padding: 0 20px !important;
@@ -296,6 +306,7 @@
         transform: translateY(-1px);
         box-shadow: 0 6px 20px rgba(26, 86, 219, 0.4);
       }
+
       .header-bottom__bar {
         width: 40px;
         height: 40px;
@@ -651,7 +662,7 @@
         line-height: 1.6;
       }
 
-      /* Core Features Grid (from About) */
+      /* Core Features Grid */
       .sheria-core-features {
         background: var(--sheria-bg-alt);
         padding: 100px 0;
@@ -792,6 +803,7 @@
         background: #fff;
         color: var(--sheria-navy-deep);
       }
+
       .tp-service-sm-item {
         background: #fff;
         border-radius: var(--sheria-radius-xl);
@@ -969,83 +981,6 @@
         background: var(--sheria-primary-light);
         color: var(--sheria-primary);
         border-color: var(--sheria-primary-light);
-      }
-
-      /* Testimonials */
-      .tp-testimonial-area {
-        background: var(--sheria-bg-alt) !important;
-        padding: 100px 0 !important;
-      }
-      .sheria-testimonial-card {
-        background: #fff;
-        border-radius: var(--sheria-radius-xl);
-        padding: 40px 32px;
-        box-shadow: var(--sheria-shadow);
-        height: 100%;
-        transition: var(--sheria-transition);
-        border: 1px solid var(--sheria-border-light);
-        position: relative;
-      }
-      .sheria-testimonial-card::before {
-        content: '"';
-        position: absolute;
-        top: 20px;
-        right: 28px;
-        font-size: 4rem;
-        line-height: 1;
-        color: var(--sheria-primary-light);
-        font-family: Georgia, serif;
-        font-weight: 700;
-        pointer-events: none;
-      }
-      .sheria-testimonial-card:hover {
-        transform: translateY(-6px);
-        box-shadow: var(--sheria-shadow-xl);
-        border-color: var(--sheria-primary-light);
-      }
-      .sheria-testimonial-stars {
-        margin-bottom: 20px;
-        color: var(--sheria-warning);
-        font-size: 14px;
-      }
-      .sheria-testimonial-text {
-        font-size: 15px;
-        line-height: 1.8;
-        color: var(--sheria-slate);
-        margin-bottom: 28px;
-        font-style: italic;
-        position: relative;
-        z-index: 1;
-      }
-      .sheria-testimonial-avatar {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: linear-gradient(
-          135deg,
-          var(--sheria-navy-deep) 0%,
-          var(--sheria-primary) 100%
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-weight: 700;
-        font-size: 15px;
-        flex-shrink: 0;
-        font-family: var(--sheria-font-heading);
-        margin-right: 12px;
-      }
-      .sheria-testimonial-name {
-        margin: 0;
-        font-weight: 700;
-        font-size: 15px;
-        color: var(--sheria-navy-deep);
-        font-family: var(--sheria-font-heading);
-      }
-      .sheria-testimonial-role {
-        font-size: 13px;
-        color: var(--sheria-gray);
       }
 
       /* FAQ */
@@ -1543,9 +1478,205 @@
           padding: 32px 24px;
         }
       }
+
+      /* WhatsApp Widget - Modern Version */
+      :root {
+        --wa-bg: #25d366;
+        --wa-bg-dark: #1ebe5d;
+        --wa-text: #ffffff;
+        --wa-chat-bg: #f5f5f5;
+        --wa-chat-header: #075e54;
+        --wa-chat-header-text: #ffffff;
+        --wa-border-radius: 12px;
+        --wa-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        --wa-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .wa-float-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        background: var(--wa-bg);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--wa-shadow);
+        cursor: pointer;
+        z-index: 9999;
+        transition:
+          transform var(--wa-transition),
+          background var(--wa-transition);
+        border: none;
+      }
+      .wa-float-btn:hover {
+        background: var(--wa-bg-dark);
+        transform: scale(1.1);
+      }
+      .wa-float-btn svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--wa-text);
+      }
+
+      .wa-chat-popup {
+        position: fixed;
+        bottom: 100px;
+        right: 24px;
+        width: 350px;
+        max-width: calc(100vw - 48px);
+        height: 450px;
+        max-height: calc(100vh - 150px);
+        background: var(--wa-chat-bg);
+        border-radius: var(--wa-border-radius);
+        box-shadow: var(--wa-shadow);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        pointer-events: none;
+        transition:
+          opacity var(--wa-transition),
+          transform var(--wa-transition);
+      }
+      .wa-chat-popup.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+
+      .wa-chat-header {
+        background: var(--wa-chat-header);
+        color: var(--wa-chat-header-text);
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .wa-chat-header-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .wa-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--wa-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .wa-chat-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+      .wa-chat-status {
+        font-size: 12px;
+        opacity: 0.8;
+      }
+      .wa-close-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: transform var(--wa-transition);
+      }
+      .wa-close-btn:hover {
+        transform: scale(1.2);
+      }
+
+      .wa-chat-body {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        background: #e5ddd5;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10 10 L20 20 M30 10 L40 20 M50 10 L60 20 M70 10 L80 20 M90 10 L100 20" stroke="%23d5d0c8" stroke-width="1"/></svg>');
+      }
+      .wa-message-bubble {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 12px;
+        margin-bottom: 12px;
+        max-width: 85%;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .wa-message-bubble p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+      }
+      .wa-message-time {
+        font-size: 11px;
+        color: #999;
+        margin-top: 6px;
+        text-align: right;
+      }
+
+      .wa-chat-footer {
+        padding: 12px;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .wa-input {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+        outline: none;
+      }
+      .wa-send-btn {
+        background: var(--wa-bg);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background var(--wa-transition);
+      }
+      .wa-send-btn:hover {
+        background: var(--wa-bg-dark);
+      }
+      .wa-send-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+
+      @media (max-width: 480px) {
+        .wa-chat-popup {
+          right: 12px;
+          left: 12px;
+          width: auto;
+          bottom: 90px;
+        }
+        .wa-float-btn {
+          bottom: 16px;
+          right: 16px;
+          width: 54px;
+          height: 54px;
+        }
+      }
     </style>
 
-    <!-- CSS here -->
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/custom-animation.css" />
@@ -1558,25 +1689,6 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "AW-18205858668");
-      gtag("event", "conversion", {
-        send_to: "AW-18205858668/0-p4CM2HvbccEOy2nelD",
-        value: 1.0,
-        currency: "USD",
-      });
-    </script>
 
     <!-- Structured Data: Organization -->
     <script type="application/ld+json">
@@ -1680,6 +1792,7 @@
     <div id="preloader">
       <div class="preloader"><span></span><span></span></div>
     </div>
+
     <button
       class="scroll-top scroll-to-target"
       data-target="html"
@@ -1698,23 +1811,24 @@
           <div class="row align-items-center">
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
               <div class="header-bottom__logo">
-                <a href="index.html"
-                  ><img
+                <a href="index.html">
+                  <img
                     src="assets/img/logo/logo-black.png"
                     alt="Sheria360 Logo"
                     style="max-height: 35px"
-                /></a>
+                  />
+                </a>
               </div>
             </div>
+
             <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
               <div class="header-bottom__main-menu header-bottom__main-menu-3">
                 <nav id="mobile-menu">
                   <ul class="d-flex">
                     <li class="me-20"><a href="index.html">Home</a></li>
-
                     <li class="me-20 has-dropdown">
-                      <a href="javascript:void(0)"
-                        >Features
+                      <a href="javascript:void(0)">
+                        Features
                         <i
                           class="fas fa-chevron-down"
                           style="
@@ -1722,13 +1836,11 @@
                             margin-left: 4px;
                             opacity: 0.6;
                           "
-                        ></i
-                      ></a>
+                        ></i>
+                      </a>
                       <ul class="submenu">
                         <li><a href="features.html">All Features</a></li>
-                        <li>
-                          <a href="legalservices.html">Legal Services </a>
-                        </li>
+                        <li><a href="legalservices.html">Legal Services</a></li>
                         <li>
                           <a href="case-management.html">Cases Management</a>
                         </li>
@@ -1745,8 +1857,8 @@
                       </ul>
                     </li>
                     <li class="me-20 has-dropdown">
-                      <a href="javascript:void(0)"
-                        >Solutions
+                      <a href="javascript:void(0)">
+                        Solutions
                         <i
                           class="fas fa-chevron-down"
                           style="
@@ -1754,8 +1866,8 @@
                             margin-left: 4px;
                             opacity: 0.6;
                           "
-                        ></i
-                      ></a>
+                        ></i>
+                      </a>
                       <ul class="submenu">
                         <li><a href="solutions.html">All Solutions</a></li>
                         <li><a href="inhouse.html">In-House Legal</a></li>
@@ -1766,8 +1878,8 @@
                     </li>
                     <li class="me-20"><a href="price.html">Pricing</a></li>
                     <li class="me-20 has-dropdown">
-                      <a href="javascript:void(0)"
-                        >Resources
+                      <a href="javascript:void(0)">
+                        Resources
                         <i
                           class="fas fa-chevron-down"
                           style="
@@ -1775,8 +1887,8 @@
                             margin-left: 4px;
                             opacity: 0.6;
                           "
-                        ></i
-                      ></a>
+                        ></i>
+                      </a>
                       <ul class="submenu">
                         <li><a href="faq.html">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -1791,6 +1903,7 @@
                 </nav>
               </div>
             </div>
+
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-6">
               <div
                 class="header-bottom__right d-flex align-items-center justify-content-end"
@@ -1798,19 +1911,6 @@
                 <div
                   class="header__action-btn d-flex align-items-center gap-10"
                 >
-                  <!-- <a
-                    class="tp-btn-border d-none d-md-inline-block"
-                    href="https://demo.sheria360.com/users/login/"
-                    target="_blank"
-                    ><span>Log In</span><b></b
-                  ></a>
-                  <a
-                    class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
-                    href="https://demo.sheria360.com/modules/central/trial"
-                    target="_blank"
-                    id="tryFreeBtn"
-                    ><span>Try It Free</span><b></b
-                  ></a> -->
                   <a
                     class="tp-btn-blue-sm tp-btn-hover alt-color-black d-none d-md-inline-block"
                     href="contact.html"
@@ -1820,8 +1920,9 @@
                   <a
                     class="header-bottom__bar tp-menu-bar d-lg-none ms-10"
                     href="javascript:void(0)"
-                    ><i class="fal fa-bars"></i
-                  ></a>
+                  >
+                    <i class="fal fa-bars"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1837,9 +1938,9 @@
           <button class="close-btn"><i class="fal fa-times"></i></button>
         </div>
         <div class="tpoffcanvas__logo text-center">
-          <a href="index.html"
-            ><img src="assets/img/logo/logo-white.png" alt="Sheria360"
-          /></a>
+          <a href="index.html">
+            <img src="assets/img/logo/logo-white.png" alt="Sheria360" />
+          </a>
         </div>
         <div class="mobile-menu"></div>
         <div class="tpoffcanvas__social">
@@ -1853,6 +1954,7 @@
         </div>
       </div>
     </div>
+
     <div class="body-overlay"></div>
 
     <div id="smooth-wrapper">
@@ -1985,6 +2087,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="col-6 col-lg-3">
                     <div class="tp-counter-wrap d-flex justify-content-center">
                       <div class="tp-counter-item">
@@ -2016,6 +2119,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="col-6 col-lg-3">
                     <div class="tp-counter-wrap d-flex justify-content-center">
                       <div class="tp-counter-item">
@@ -2037,7 +2141,7 @@
           </div>
           <!-- end counter -->
 
-          <!-- ===== CORE FEATURES GRID (from About) ===== -->
+          <!-- ===== CORE FEATURES GRID ===== -->
           <section id="features" class="sheria-core-features pt-100 pb-100">
             <div class="container">
               <div class="row justify-content-center">
@@ -2051,8 +2155,9 @@
                   </p>
                 </div>
               </div>
+
               <div class="row g-4">
-                <!-- 1. Legal Services Management -->
+                <!-- Feature 1 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2080,7 +2185,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 2. Case Management -->
+
+                <!-- Feature 2 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2107,7 +2213,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 3. CLM -->
+
+                <!-- Feature 3 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2134,7 +2241,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 4. AI Summarization -->
+
+                <!-- Feature 4 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal">
                   <div class="sheria-feature-card">
                     <div class="feature-icon"><i class="fas fa-robot"></i></div>
@@ -2159,12 +2267,11 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 5. Smart Drafting -->
+
+                <!-- Feature 5 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
                   <div class="sheria-feature-card">
-                    <div class="feature-icon">
-                      <i class="fas fa-brain"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
                     <h4>Smart Drafting & Review</h4>
                     <p>
                       AI-powered redlining, contextual drafting assistance,
@@ -2186,7 +2293,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 6. AI Research -->
+
+                <!-- Feature 6 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2212,7 +2320,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 7. Billing -->
+
+                <!-- Feature 7 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2240,7 +2349,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 8. Document Management -->
+
+                <!-- Feature 8 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-1">
                   <div class="sheria-feature-card">
                     <div class="feature-icon">
@@ -2266,7 +2376,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 9. Collaboration -->
+
+                <!-- Feature 9 -->
                 <div class="col-xl-4 col-lg-6 sr-reveal sr-delay-2">
                   <div class="sheria-feature-card">
                     <div class="feature-icon"><i class="fas fa-users"></i></div>
@@ -2310,6 +2421,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="row g-4 mb-60">
                 <div class="col-lg-4 col-md-6 sr-reveal">
                   <div class="sheria-industry-card">
@@ -2324,6 +2436,7 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 sr-reveal sr-delay-1">
                   <div class="sheria-industry-card">
                     <div class="industry-icon">
@@ -2337,6 +2450,7 @@
                     </p>
                   </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 sr-reveal sr-delay-2">
                   <div class="sheria-industry-card">
                     <div class="industry-icon">
@@ -2351,6 +2465,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="row justify-content-center">
                 <div class="col-xl-10">
                   <h5
@@ -2387,95 +2502,6 @@
             </div>
           </section>
 
-          <!-- ===== TESTIMONIAL SECTION ===== -->
-          <!--<section class="tp-testimonial-area">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 text-center mb-60 sr-reveal">
-                  <h3 class="tp-section-title-3">
-                    What Our <span>Clients Say</span>
-                  </h3>
-                  <p style="color: #6c757d; font-size: 16px; line-height: 1.7">
-                    Trusted by Law Firms &amp; Legal Teams Countrywide.
-                  </p>
-                </div>
-              </div>
-              <div class="row g-4">
-                <div class="col-xl-4 col-lg-4 col-md-6 sr-reveal">
-                  <div class="sheria-testimonial-card">
-                    <div class="sheria-testimonial-stars">
-                      <i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i>
-                    </div>
-                    <p class="sheria-testimonial-text">
-                      "Sheria360 has transformed how we manage cases. The
-                      document drafting and hearing tracking features are
-                      invaluable for our firm."
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div class="sheria-testimonial-avatar">JK</div>
-                      <div>
-                        <h6 class="sheria-testimonial-name">John Kamau</h6>
-                        <span class="sheria-testimonial-role"
-                          >Legal Officer, KRA</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 sr-reveal sr-delay-1">
-                  <div class="sheria-testimonial-card">
-                    <div class="sheria-testimonial-stars">
-                      <i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i>
-                    </div>
-                    <p class="sheria-testimonial-text">
-                      "The AI-powered contract analysis saves us hours every
-                      week. It is like having an extra associate who never
-                      sleeps."
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div class="sheria-testimonial-avatar">SO</div>
-                      <div>
-                        <h6 class="sheria-testimonial-name">Sarah Okonjo</h6>
-                        <span class="sheria-testimonial-role"
-                          >Legal Officer, KEBS</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 sr-reveal sr-delay-2">
-                  <div class="sheria-testimonial-card">
-                    <div class="sheria-testimonial-stars">
-                      <i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i>
-                    </div>
-                    <p class="sheria-testimonial-text">
-                      "Clean, organized, and accessible from anywhere. Sheria360
-                      keeps our entire team aligned and our clients happy."
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div class="sheria-testimonial-avatar">MM</div>
-                      <div>
-                        <h6 class="sheria-testimonial-name">
-                          Morris M. Mungai
-                        </h6>
-                        <span class="sheria-testimonial-role"
-                          >Senior Advocate, Ghosh Legal</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> 
-          </section> -->
-          <!-- end testimonial -->
-
           <!-- ===== CTA SECTION ===== -->
           <section class="sheria-cta-area">
             <div class="container">
@@ -2488,15 +2514,16 @@
                   </p>
                 </div>
                 <div class="col-xl-5 text-xl-end sr-reveal sr-delay-1">
-                  <a href="contact.html" class="btn-white mb-2 mb-md-0 me-md-3"
-                    ><span>Request Demo</span><i class="far fa-arrow-right"></i
-                  ></a>
+                  <a href="contact.html" class="btn-white mb-2 mb-md-0 me-md-3">
+                    <span>Request Demo</span><i class="far fa-arrow-right"></i>
+                  </a>
                   <a
                     href="contact.html"
                     target="_blank"
                     class="btn-outline-white"
-                    ><span>Start Free Trial</span></a
                   >
+                    <span>Start Free Trial</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2521,6 +2548,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10">
                   <div class="sheria-faq-item sr-reveal active">
@@ -2538,6 +2566,7 @@
                       </p>
                     </div>
                   </div>
+
                   <div class="sheria-faq-item sr-reveal sr-delay-1">
                     <button class="sheria-faq-question">
                       How does the AI contract review work?
@@ -2552,6 +2581,7 @@
                       </p>
                     </div>
                   </div>
+
                   <div class="sheria-faq-item sr-reveal sr-delay-2">
                     <button class="sheria-faq-question">
                       Is my client data secure on Sheria360?
@@ -2567,6 +2597,7 @@
                       </p>
                     </div>
                   </div>
+
                   <div class="sheria-faq-item sr-reveal sr-delay-3">
                     <button class="sheria-faq-question">
                       Can I integrate Sheria360 with my existing tools?
@@ -2581,6 +2612,7 @@
                       </p>
                     </div>
                   </div>
+
                   <div class="sheria-faq-item sr-reveal sr-delay-4">
                     <button class="sheria-faq-question">
                       What kind of support do you offer?
@@ -2617,11 +2649,12 @@
                       class="tp-footer__widget footer-widget-3 footer-col-3-1"
                     >
                       <div class="tp-footer__logo mb-25">
-                        <a href="index.html"
-                          ><img
+                        <a href="index.html">
+                          <img
                             src="assets/img/logo/logo-black.png"
                             alt="Sheria360"
-                        /></a>
+                          />
+                        </a>
                       </div>
                       <div class="tp-footer__contact-info">
                         <p>
@@ -2693,6 +2726,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div
                     class="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp"
                     data-wow-duration=".9s"
@@ -2705,7 +2739,6 @@
                       <div class="tp-footer__content">
                         <ul>
                           <li><a href="index.html">Home</a></li>
-                          <li><a href="#about">About</a></li>
                           <li><a href="price.html">Pricing</a></li>
                           <li><a href="solutions.html">Solutions</a></li>
                           <li><a href="contact.html">Contact</a></li>
@@ -2713,6 +2746,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div
                     class="col-xl-2 col-lg-2 col-md-6 pb-30 wow tpfadeUp"
                     data-wow-duration=".9s"
@@ -2730,13 +2764,13 @@
                               >Documentation</a
                             >
                           </li>
-
                           <li><a href="terms.html">Privacy Policy</a></li>
                           <li><a href="terms.html">Terms of Service</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
                   <div
                     class="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp"
                     data-wow-duration=".9s"
@@ -2821,6 +2855,7 @@
                 </div>
               </div>
             </div>
+
             <div class="tp-copyright__area pt-25 pb-40">
               <div class="container">
                 <div class="row justify-content-center">
