@@ -104,34 +104,12 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+
   <url>
-       <loc>https://sheria360.com/about-sheria.html</loc>
-       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://sheria360.com/register.html</loc>
-       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://sheria360.com/contact</loc>
+       <loc>https://sheria360.com/contact.html</loc>
        <lastmod>2026-08-28T08:48:40+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
-  <url>
-       <loc>https://sheria360.com/register</loc>
-       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://sheria360.com/solutions</loc>
-       <lastmod>2026-08-28T08:48:39+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
+  
 </urlset>
