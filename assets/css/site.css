@@ -3935,7 +3935,7 @@ input[type="color"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f7f7f7;
+  background-color: #f7f7f75b;
   z-index: 999999;
 }
 

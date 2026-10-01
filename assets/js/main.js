@@ -121,9 +121,9 @@
 	
 	$(window).on('load', function () {
 
-		$('#preloader').delay(350).fadeOut('slow');
+		$('#preloader').delay(50).fadeOut('fast');
 
-		$('body').delay(350).css({ 'overflow': 'visible' });
+		$('body').delay(50).css({ 'overflow': 'visible' });
 
 	})
 
