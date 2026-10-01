@@ -18522,7 +18522,8 @@ input[type="color"] {
 }
 .tp-footer__tp-border-bottom {
   border-bottom: 1px solid #dfdfea;
-  padding-bottom: 45px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 .tp-footer__input input {
   background-color: var(--tp-common-white);

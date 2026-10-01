@@ -304,7 +304,7 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        background: var(--sheria-primary-dark);
         color: #fff;
         font-size: 15px;
         font-weight: 600;
@@ -961,11 +961,7 @@
 
       /* CTA Section */
       .sheria-cta-area {
-        background: linear-gradient(
-          135deg,
-          var(--sheria-navy-deep) 0%,
-          var(--sheria-navy) 100%
-        );
+        background: var(--sheria-primary-dark);
         position: relative;
         overflow: hidden;
         padding: 100px 0;
