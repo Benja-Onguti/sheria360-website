@@ -1,30 +1,29 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://googletagmanager.com"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <script async src="https://googletagmanager.com"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-// Tracks data for your Google Ads account
-gtag('config', 'AW-18205858668');
+      // Tracks data for your Google Ads account
+      gtag('config', 'AW-18205858668');
 
-// Tracks deep behavior in Google Analytics 4
-gtag('config', 'G-L42Z7VQ5CK');
-</script>
+      // Tracks deep behavior in Google Analytics 4
+      gtag('config', 'G-L42Z7VQ5CK');
+    </script>
 
-<!-- Microsoft Clarity Site Analytics Tag -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "yb0bdqlh56");
-</script>
+    <!-- Microsoft Clarity Site Analytics Tag -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "yb0bdqlh56");
+    </script>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -78,6 +77,83 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <link rel="stylesheet" href="assets/css/site.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/fix.css" />
+
+    <!-- Custom CSS for Interactive Hero -->
+    <style>
+      /* Typewriter Cursor */
+      .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: #0d6efd;
+        margin-left: 5px;
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* Enhanced Stats Hover Effects */
+      .enhanced-stats {
+        gap: 20px;
+      }
+      .interactive-stat {
+        transition: all 0.3s ease-in-out;
+        padding: 20px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid transparent;
+      }
+      .interactive-stat:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 15px 30px rgba(1, 16, 61, 0.08);
+        border: 1px solid rgba(13, 110, 253, 0.1);
+      }
+
+      /* Initial Load Fade In */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Optional Subtle Floating Background Shapes */
+      .hero-bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 1;
+        opacity: 0.4;
+        animation: float 8s ease-in-out infinite;
+      }
+      .shape-1 {
+        width: 300px;
+        height: 300px;
+        background: #0d6efd;
+        top: -10%;
+        left: -5%;
+      }
+      .shape-2 {
+        width: 250px;
+        height: 250px;
+        background: #00d084;
+        bottom: -5%;
+        right: -5%;
+        animation-delay: -4s;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(20px) scale(1.05); }
+      }
+    </style>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18205858668"></script>
     <script>
@@ -284,47 +360,66 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <main class="fix">
-          <!-- Hero Banner -->
-          <div
-            class="tp-page-banner pt-140 pb-80"
-            data-background="assets/img/hero/hero-gradient-3.jpg"
-          >
-            <div class="container">
+          
+          <!-- Enhanced Interactive Hero Banner -->
+          <div class="tp-page-banner pt-140 pb-80 position-relative overflow-hidden" data-background="assets/img/hero/hero-gradient-3.jpg">
+            
+            <!-- Subtle animated background elements -->
+            <div class="hero-bg-shape shape-1"></div>
+            <div class="hero-bg-shape shape-2"></div>
+
+            <div class="container position-relative" style="z-index: 2;">
               <div class="row justify-content-center">
                 <div class="col-xl-10">
                   <div class="tp-page-title text-center">
+                    
+                    <!-- Interactive Headline -->
                     <h1 class="mb-25">
-                      Solutions for <span>Every Legal Team</span>
+                      Solutions for <br class="d-md-none" />
+                      <span id="typewriter-text" style="color: #0d6efd;">Every Legal Team</span><span class="cursor">|</span>
                     </h1>
-                    <p class="tp-lead">
-                      Tailored legal technology solutions for teams across
-                      industries and roles powered by AI, built for
-                      productivity.
+                    
+                    <p class="tp-lead mb-40 fade-in-up">
+                      Tailored legal technology solutions for teams across industries and roles. 
+                      Powered by AI, built for productivity and seamless compliance.
                     </p>
-                    <!-- Stats Row -->
-                    <div class="tp-stats-row">
-                      <div class="tp-stat-item">
-                        <div class="tp-stat-number">10+</div>
+
+                    <!-- Call-to-Action Group -->
+                    <div class="hero-cta-group mb-50 fade-in-up" style="animation-delay: 0.2s;">
+                      <a class="tp-btn-blue-lg tp-btn-hover alt-color-black me-3 mb-3 d-inline-block" href="contact.html">
+                        <span>Book a Demo</span><b></b>
+                      </a>
+                      <a class="tp-btn-border tp-btn-hover d-inline-block mb-3" href="#solution-filters">
+                        <span>Explore Solutions <i class="fas fa-arrow-down ms-1"></i></span><b></b>
+                      </a>
+                    </div>
+
+                    <!-- Interactive Stats Row -->
+                    <div class="tp-stats-row enhanced-stats fade-in-up" style="animation-delay: 0.4s;">
+                      <div class="tp-stat-item interactive-stat">
+                        <div class="tp-stat-number"><span class="counter" data-target="10">0</span>+</div>
                         <div class="tp-stat-label">Legal Professionals</div>
                       </div>
-                      <div class="tp-stat-item">
-                        <div class="tp-stat-number">5 +</div>
+                      <div class="tp-stat-item interactive-stat">
+                        <div class="tp-stat-number"><span class="counter" data-target="5">0</span>+</div>
                         <div class="tp-stat-label">Organizations</div>
                       </div>
-                      <div class="tp-stat-item">
-                        <div class="tp-stat-number">99.9%</div>
+                      <div class="tp-stat-item interactive-stat">
+                        <div class="tp-stat-number"><span class="counter" data-target="99.9">0</span>%</div>
                         <div class="tp-stat-label">Uptime SLA</div>
                       </div>
-                      <div class="tp-stat-item">
-                        <div class="tp-stat-number">60%</div>
-                        <div class="tp-stat-label">Avg. Time Saved <br />saving 30% on cost</div>
+                      <div class="tp-stat-item interactive-stat">
+                        <div class="tp-stat-number"><span class="counter" data-target="60">0</span>%</div>
+                        <div class="tp-stat-label">Avg. Time Saved <br /><span style="font-size: 0.85em; opacity: 0.8;">Saving 30% on costs</span></div>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Hero Banner End -->
 
           <!-- Trusted By Strip -->
          <!-- <div class="tp-trusted-strip">
@@ -821,5 +916,6 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     <!-- Filter & Intersection Observer Script -->
     <script src="assets/js/solution-filter.js"></script>
     <script src="assets/js/bot.js"></script>
+    <script src="assets/js/solutions.js"></script>
   </body>
 </html>
