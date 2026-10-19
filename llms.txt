@@ -21,7 +21,6 @@ This directory lists clean markdown context files, core system capabilities, dep
 * [Finance & Legal Ops](https://sheria360.com/finance.html): Cost allocation engines, automated invoice reviews, and ledger tracking.
 
 ## Corporate & Support Resources
-* [About Sheria360](https://sheria360.com/about-sheria.html): Background details,State institution partnerships, and system architecture metrics.
 * [Pricing Plans](https://sheria360.com/price.html): Comparative summary of Core, Professional, and Enterprise system tiers.
 * [Frequently Asked Questions](https://sheria360.com/faq.html): Categorized self-service troubleshooting, support layers, and framework details.
 * [Contact Us](https://sheria360.com/contact.html): Interactive booking inquiry routing, phone channels, and headquarters directions.
